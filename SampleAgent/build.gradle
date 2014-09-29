@@ -1,0 +1,44 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'eclipse'
+
+//Team Name (use jar name) [default : name(working directory name)][example : 'SampleTeam']
+String teamName = name
+
+dependencies {
+    compile fileTree(dir: 'lib/util', include: '*.jar')
+    compile fileTree(dir: 'lib/rescue/core', include: '*.jar')
+    compile fileTree(dir: 'lib/rescue/util', include: '*.jar')
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src/java'
+        }
+        resources {
+            srcDir 'src/resources'
+        }
+    }
+}
+
+jar.baseName = teamName
+
+/*task run (type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+    main = 'adk.launch.LaunchAgent'
+}*/
+
+[compileJava, compileTestJava].each {
+    it.options.encoding = 'UTF-8'
+    it.options.compilerArgs += ['-source', '1.7', '-target', '1.7']
+}
+javadoc.options.encoding = 'UTF-8'
+
+repositories {
+    jcenter()
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.1'
+}
