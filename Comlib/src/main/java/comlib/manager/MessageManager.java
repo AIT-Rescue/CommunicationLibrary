@@ -3,10 +3,13 @@ package comlib.manager;
 
 import rescuecore2.Constants;
 import rescuecore2.config.Config;
+import rescuecore2.messages.Command;
 import rescuecore2.standard.kernel.comms.ChannelCommunicationModel;
+import rescuecore2.standard.messages.AKSpeak;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 
 public class MessageManager {
@@ -52,6 +55,59 @@ public class MessageManager {
     
     public boolean canUseRadio() {
         return this.useRadio;
+    }
+    
+    public void receiveMessage(int count, Collection<Command> heard) {
+        this.time = count;
+        
+        for(Command command : heard)
+        {
+            if(command instanceof AKSpeak)
+            {
+                byte[] data = ((AKSpeak)command).getContent();
+                String voice = new String(data);
+                if("Help".equalsIgnoreCase(voice) || "Ouch".equalsIgnoreCase(voice))
+                    continue;
+                
+                String[] voiceData = voice.split(this.voiceConfig.getVoiceSeparator());
+                if(this.voiceConfig.getKeyWord().equals(voiceData[0]))
+                    this.receiveVoiceMessage(Arrays.copyOfRange(voiceData, 1, voiceData.length - 1), this.receivedMessages);
+                else
+                    this.receiveRadioMessage(data, this.receivedMessages);
+            }
+        }
+    }
+    
+    //noise??
+    public void receiveRadioMessage(byte[] datas, List<CommunicationMessage> list) {
+        if(datas == null || list == null)
+            return;
+        BitStreamReader bsr = new BitStreamReader(data);
+        int border = this.radioConfig.getSizeOfMessageID() + this.radioConfig.getSizeOfTime();
+        while(bsr.getRemainBuffer() >= border)
+        {
+            try(CommunicationMessage msg = this.creatorList[bsr.getBits(this.radioConfig.getSizeOfMessageID())].create(this.radioConfig, bsr))
+            {
+                list.add(msg);
+            }
+            catch(Exception e)
+            {
+                //System.err.println("Received message is corrupt or format is different.");
+                e.printStackTrace();
+                return;
+            }
+        }
+    }
+    
+    public void receiveVoiceMessage(String[] datas, List<CommunicationMessage> list)
+    {
+        if(datas == null || (datas.length & 0x01) == 1 || list == null)
+            return;
+        for(int count = 0; count < datas.length; count += 2) {
+            int id = Integer.parseInt(datas[count]);
+            String[] messageData = datas[count + 1].split(this.voiceConfig.getDataSeparator());
+            list.add(this.creatorList[id].create(this.voiceConfig, messageData));
+        }
     }
     
     public List<CommunicationMessage> getReceivedMessage() {
