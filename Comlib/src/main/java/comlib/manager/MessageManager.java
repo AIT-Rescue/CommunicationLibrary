@@ -40,8 +40,12 @@ public class MessageManager
 		this.event = messageEvent;
 		this.init(config);
 	}
-	
-	private void init(Config config)
+
+    public MessageManager(Config config) {
+        this.init(config);
+    }
+
+    private void init(Config config)
 	{
 		this.developerMode    = config.getBooleanValue("comlib.develop.developerMode", false);
 		this.radioConfig      = new RadioConfig(config);
