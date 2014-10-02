@@ -1,7 +1,5 @@
 package comlib.message;
 
-import comlib.message.InformationMessage;
-
 public class MapMessage extends InformationMessage
 {
 	public MapMessage(int id, int t)

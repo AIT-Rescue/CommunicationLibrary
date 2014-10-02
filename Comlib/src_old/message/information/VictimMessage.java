@@ -1,9 +1,10 @@
 package comlib.message.information;
 
+import comlib.message.CommunicationMessage;
+import comlib.message.HumanMessage;
 import rescuecore2.standard.entities.Civilian;
 import rescuecore2.standard.entities.Human;
-
-import comlib.message.CommunicationMessage;
+import rescuecore2.worldmodel.EntityID;
 
 public class VictimMessage extends HumanMessage
 {
@@ -12,18 +13,23 @@ public class VictimMessage extends HumanMessage
 		super(CommunicationMessage.victimMessageID, t, victim);
 	}
 	
-	public VictimMesage(int t, int l, Civilian victim)
+	public VictimMessage(int t, int l, Civilian victim)
 	{
 		super(CommunicationMessage.victimMessageID, t, l, victim);
 	}
 	
-	public VictimMesage(int t, EntityID e, int h, int b, int d, EntityID p)
+	public VictimMessage(int t, EntityID e, int h, int b, int d, EntityID p)
 	{
 		super(CommunicationMessage.victimMessageID, t, e, h, b, d, p);
 	}
 	
-	public VictimMesage(int t, int l, EntityID e, int h, int b, int d, EntityID p)
+	public VictimMessage(int t, int l, EntityID e, int h, int b, int d, EntityID p)
 	{
 		super(CommunicationMessage.victimMessageID, t, l, e, h, b, d, p);
 	}
+
+    @Override
+    public Class<? extends Human> getHumanClass() {
+        return Civilian.class;
+    }
 }

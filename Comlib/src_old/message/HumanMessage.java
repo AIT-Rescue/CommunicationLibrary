@@ -3,9 +3,7 @@ package comlib.message;
 import rescuecore2.standard.entities.Human;
 import rescuecore2.worldmodel.EntityID;
 
-import comlib.message.InformationMessage;
-
-public class HumanMessage extends InformationMessage
+public abstract class HumanMessage extends InformationMessage
 {
 	protected EntityID humanID;
 	protected int hp;
@@ -54,7 +52,7 @@ public class HumanMessage extends InformationMessage
 		this.position   = human.getPosition();
 	}
 	
-	public abstract Class<H extends Human> getHumanClass();
+	public abstract Class<? extends Human> getHumanClass();
 	
 	public EntityID getID()
 	{

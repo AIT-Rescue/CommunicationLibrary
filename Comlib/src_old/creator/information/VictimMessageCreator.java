@@ -1,37 +1,37 @@
-package comlib.creator;
+package comlib.creator.information;
 
-import rescuecore2.worldmodel.EntityID;
-
-import comlib.agent.MessageEvent;
+import comlib.creator.HumanMessageCreator;
+import comlib.manager.RadioConfig;
+import comlib.manager.VoiceConfig;
 import comlib.message.CommunicationMessage;
 import comlib.message.information.VictimMessage;
-import comlbi.util.BitOutputStream;
+import comlib.util.BitOutputStream;
 import comlib.util.BitStreamReader;
-import comlib.util.RadioConfig;
-import comlib.util.VoiceConfig;
+import rescuecore2.standard.entities.Civilian;
+import rescuecore2.worldmodel.EntityID;
 
 public class VictimMessageCreator extends HumanMessageCreator<VictimMessage>
 {
-	protected MessageEvent event;
+	//protected MessageEvent event;
 	
-	private VictimMessageCreator(){}
+	public VictimMessageCreator(){}
 	
-	public VcitimMessageCreator(MessageEvent messageEvent)
+	/*public VcitimMessageCreator(MessageEvent messageEvent)
 	{
-		this.event = messageEvent;
-	}
+		//this.event = messageEvent;
+	}*/
 	
 	@Override
 	public CommunicationMessage createMessage(RadioConfig config, int time, BitStreamReader bsr)
 	{
 		EntityID e = new EntityID(bsr.readBits(config.getSizeOfEntityID(Civilian.class)));
-		int      h = bsr.readBits(config.getSizeOfHumanHP());
-		int      b = bsr.readBits(config.getSizeOfHumanBuriedness());
-		int      d = bsr.readBits(config.getSizeOfHumanDamage());
+		int h = bsr.readBits(config.getSizeOfHumanHP());
+		int b = bsr.readBits(config.getSizeOfHumanBuriedness());
+		int d = bsr.readBits(config.getSizeOfHumanDamage());
 		EntityID p = new EntityID(bsr.readBits(config.getSizeOfPosition()));
 		
 		VictimMessage msg = new VictimMessage(time, e, h, b, d, p);
-		this.event.receive(msg);
+		//this.event.receive(msg);
 		return msg;
 	}
 	
@@ -45,7 +45,7 @@ public class VictimMessageCreator extends HumanMessageCreator<VictimMessage>
 		EntityID p = new EntityID(Integer.parseInt(datas[6]));
 		
 		VictimMessage msg = new VictimMessage(time, ttl, e, h, b, d, p);
-		this.event.receive(msg);
+		//this.event.receive(msg);
 		return msg;
 	}
 	

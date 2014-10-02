@@ -144,12 +144,12 @@ public class IntegerDataHelper
 		return ((0x01 << size) - 1) << start;
 	}
 	
-	public int getBitSize(int value)
+	public static int getBitSize(int value)
 	{
 		int size = 0;
 		for(int i = 0; i < 31; i++)
 			if(((value >> i) & 0x01) == 1)
 				size = i;
-		return size;
+		return (size + 1);
 	}
 }

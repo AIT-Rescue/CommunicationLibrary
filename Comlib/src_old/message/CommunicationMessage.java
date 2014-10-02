@@ -9,7 +9,7 @@ public class CommunicationMessage
 	public static final int victimMessageID   = 2;
 	public static final int positionMessageID = 3;
 	
-	protected final int messageID;
+	protected int messageID;
 	
 	protected int time;
 	
