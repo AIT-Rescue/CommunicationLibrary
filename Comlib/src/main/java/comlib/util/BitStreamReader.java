@@ -7,9 +7,9 @@ public class BitStreamReader {
 
 	@SuppressWarnings("unused")
 	private BitStreamReader() {
-	};
+	}
 
-	public BitStreamReader(byte[] stream) {
+    public BitStreamReader(byte[] stream) {
 		this.stream = stream;
 		this.index = 0;
 	}
