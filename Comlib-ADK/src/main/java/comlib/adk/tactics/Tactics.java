@@ -8,6 +8,11 @@ public class Tactics {
     public Preparation preparation;
     public Thinking thinking;
 
+    public Tactics(Preparation p, Thinking t) {
+        this.preparation = p;
+        this.thinking = t;
+    }
+
     public void postConnect()
     {
         this.preparation.start();

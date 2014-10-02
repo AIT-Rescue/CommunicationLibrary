@@ -1,10 +1,8 @@
 package comlib.adk.agent;
 
-import rescuecore2.standard.entities.StandardEntity;
 import comlib.agent.CommunicationAgent;
-import comlib.adk.tactics.Tactics;
+import rescuecore2.standard.entities.StandardEntity;
 
 public abstract class BaseAgent<E extends StandardEntity> extends CommunicationAgent<E>
 {
-    private 
 }
