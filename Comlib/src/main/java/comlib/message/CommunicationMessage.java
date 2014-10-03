@@ -1,6 +1,8 @@
 package comlib.message;
 
 
+import comlib.manager.VoiceConfig;
+
 public abstract class CommunicationMessage {
     
     protected int messageID;
@@ -41,20 +43,21 @@ public abstract class CommunicationMessage {
 		bos.writeBits(this.time, config.getSizeOfTime());
 		this.createSendMessage(config, bos);
 	}
-	
-	public abstract void createSendMessage(VoiceConfig config, StringBuilder sb);
-	
-	public void create(VoiceConfig config, StringBuilder sb)
-	{
-		if(this.ttl == 0)
-			return;
-		if(this.ttl < 0)
-			this.ttl = config.getLimit();
-		
-		config.appendMessageID(sb, String.valueOf(this.messageID));
+
+    public abstract void createSendMessage(VoiceConfig config, StringBuilder sb);
+
+    public void create(VoiceConfig config, StringBuilder sb)
+    {
+        if(this.ttl == 0)
+            return;
+
+		config.appendMessageID(sb, this.messageID);
 		config.appendData(sb, String.valueOf(this.time));
-		config.appendData(sb, String.valueOf(this.ttl - 1));
+		if(this.ttl < 0)
+            config.appendLimit(sb);
+        else
+            config.appendData(sb, String.valueOf(this.ttl - 1));
 		this.createSendMessage(config, sb);
-		config.appendVoiceSeparator(sb);
+		config.appendMessageSeparator(sb);
 	}
 }

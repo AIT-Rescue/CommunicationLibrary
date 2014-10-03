@@ -2,6 +2,8 @@ package comlib.creator;
 
 
 import comlib.manager.MessageManager;
+import comlib.manager.RadioConfig;
+import comlib.manager.VoiceConfig;
 import comlib.message.CommunicationMessage;
 
 public abstract class MessageCreator<M extends CommunicationMessage, E extends ReceiveEvent> {

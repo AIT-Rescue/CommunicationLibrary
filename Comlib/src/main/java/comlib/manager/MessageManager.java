@@ -59,6 +59,10 @@ public class MessageManager {
     public boolean canUseRadio() {
         return this.useRadio;
     }
+
+    public void setLimit(int l) {
+        this.voiceConfig.setLimit(l);
+    }
     
     public void receiveMessage(int count, Collection<Command> heard) {
         this.time = count;
@@ -73,7 +77,7 @@ public class MessageManager {
                     continue;
                 
                 String[] voiceData = voice.split(this.voiceConfig.getVoiceSeparator());
-                if(this.voiceConfig.getKeyWord().equals(voiceData[0]))
+                if(this.voiceConfig.getKeyword().equals(voiceData[0]))
                     this.receiveVoiceMessage(Arrays.copyOfRange(voiceData, 1, voiceData.length - 1), this.receivedMessages);
                 else
                     this.receiveRadioMessage(data, this.receivedMessages);
