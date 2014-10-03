@@ -2,6 +2,7 @@ package comlib.agent;
 
 
 import comlib.manager.MessageManager;
+import comlib.message.CommunicationMessage;
 import rescuecore2.messages.Command;
 import rescuecore2.messages.Message;
 import rescuecore2.standard.components.StandardAgent;

@@ -1,7 +1,7 @@
 package comlib.message;
 
 
-public class CommunicationMessage {
+public abstract class CommunicationMessage {
     
     protected int messageID;
     
@@ -33,5 +33,28 @@ public class CommunicationMessage {
         return this.ttl;
     }
     
+    public abstract void createSendMessage(RadioConfig config, BitOutputStream bos);
     
+    public void create(RadioConfig config, BitOutputStream bos)
+	{
+		bos.writeBits(this.messageID, config.getSizeOfMessageID());
+		bos.writeBits(this.time, config.getSizeOfTime());
+		this.createSendMessage(config, bos);
+	}
+	
+	public abstract void createSendMessage(VoiceConfig config, StringBuilder sb);
+	
+	public void create(VoiceConfig config, StringBuilder sb)
+	{
+		if(this.ttl == 0)
+			return;
+		if(this.ttl < 0)
+			this.ttl = config.getLimit();
+		
+		config.appendMessageID(sb, String.valueOf(this.messageID));
+		config.appendData(sb, String.valueOf(this.time));
+		config.appendData(sb, String.valueOf(this.ttl - 1));
+		this.createSendMessage(config, sb);
+		config.appendVoiceSeparator(sb);
+	}
 }
