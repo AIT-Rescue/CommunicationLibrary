@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Comlib/Comlib.iml" filepath="$PROJECT_DIR$/Comlib/Comlib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Comlib-ADK/Comlib-ADK.iml" filepath="$PROJECT_DIR$/Comlib-ADK/Comlib-ADK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CommunicationLibrary.iml" filepath="$PROJECT_DIR$/CommunicationLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SampleAgent/SampleAgent.iml" filepath="$PROJECT_DIR$/SampleAgent/SampleAgent.iml" />
+    </modules>
+  </component>
+</project>
+
