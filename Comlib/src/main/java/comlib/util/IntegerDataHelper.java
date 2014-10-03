@@ -117,10 +117,27 @@ public class IntegerDataHelper
         return ((0x01 << size) - 1) << start;
     }
 
-    public static int getBitSize(int value) {
-        for(int i = 31; i > 0; i++)
+    /*public static int getBitSize(int value) {
+        for(int i = 31; i > 0; i--)
             if(((value >> i) & 0x01) == 1)
                 return i + 1;
+        return 1;
+    }*/
+
+    /*public static int getBitSize(int value) {
+        for(int i = (value >> 16) != 0 ? 31 : 15; i > 0; i--)
+            if(((value >> i) & 0x01) == 1)
+                return i + 1;
+        return 1;
+    }*/
+
+    public static int getBitSize(int value) {
+        int i = (value >> 16) != 0 ? (value >> 24) != 0 ? 31 : 23 : (value >> 8) != 0 ? 15 : 7;
+        do {
+            if (((value >> i) & 0x01) == 1)
+                return i + 1;
+            i--;
+        } while (i > 0);
         return 1;
     }
 }
