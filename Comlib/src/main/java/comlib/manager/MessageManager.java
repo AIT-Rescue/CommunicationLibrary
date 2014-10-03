@@ -1,9 +1,12 @@
 package comlib.manager;
 
 
+import comlib.creator.MessageCreator;
+import comlib.message.CommunicationMessage;
 import rescuecore2.Constants;
 import rescuecore2.config.Config;
 import rescuecore2.messages.Command;
+import rescuecore2.messages.Message;
 import rescuecore2.standard.kernel.comms.ChannelCommunicationModel;
 import rescuecore2.standard.messages.AKSpeak;
 
@@ -110,6 +113,21 @@ public class MessageManager {
         }
     }
     
+    //public List<Message> createSendMessage(){return null;}
+    public Message createSendMessage() {
+        if(this.useRadio) {
+            BitOutputStream bos = null;
+            for(CommunicationMessage msg : this.sendMessages)
+                msg.create(this.radioConfig, bos);
+            return null;
+        }
+        else {
+            StringBuilder sb = new StringBuilder();
+            for(CommunicationMessage msg : this.sendMessages)
+                msg.create(this.voiceConfig, sb);
+            return null;
+        }
+    }
     public List<CommunicationMessage> getReceivedMessage() {
         return this.receivedMessages;
     }
@@ -155,7 +173,7 @@ public class MessageManager {
         return true;
     }
     
-    public void searchCreator(Object event) {
+    private void searchCreator(Object event) {
         for(MessageCreator creator : this.creatorList)
             creator.setEvent(event);
     }
