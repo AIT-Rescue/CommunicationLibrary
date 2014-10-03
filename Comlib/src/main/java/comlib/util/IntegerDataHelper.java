@@ -141,6 +141,7 @@ public class IntegerDataHelper
         return 1;
     }*/
 
+    //TODO: どちらが速いか
     public static int getBitSizeOld(int value) {
         for(int i = (value >> 16) != 0 ? 31 : 15; i > 0; i--)
             if(((value >> i) & 0x01) == 1)
