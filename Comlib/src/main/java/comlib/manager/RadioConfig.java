@@ -2,7 +2,7 @@ package comlib.manager;
 
 import comlib.util.IntegerDataHelper;
 import rescuecore2.config.Config;
-import rescuecore2.standard.entities.Building;
+import rescuecore2.standard.entities.*;
 
 public class RadioConfig {
     private int channel;
@@ -37,6 +37,52 @@ public class RadioConfig {
 
     public int getSizeOfEntityID(Class<? extends Building> c) {
 
-        return c != null ? 32: 0;
+        return c != null ? 32 : 0;
     }
+
+    public int getSizeOfEntityID(Class<? extends Civilian> c) {
+        return c != null ? 32 : 0;
+    }
+
+    public int getSizeOfEntityID(Class<? extends FireBrigade> c)
+    {
+        return 32;
+    }
+
+    public int getSizeOfEntityID(Class<? extends GasStation> c)
+    {
+        return 32;
+    }
+
+    public int getSizeOfEntityID(Class<? extends PoliceForce> c)
+    {
+        return 32;
+    }
+
+    public int getSizeOfEntityID(Class<? extends Refuge> c)
+    {
+        return 32;
+    }
+
+    public int getSizeOfEntityID(Class<? extends Road> c)
+    {
+        return 32;
+    }
+
+    public int getSizeOfHumanHP() {
+        return 32;
+    }
+
+    public int getSizeOfHumanBuriedness() {
+        return 32;
+    }
+
+    public int getSizeOfHumanDamage() {
+        return 32;
+    }
+
+    public int getSizeOfPosition() {
+        return 32;
+    }
+
 }
