@@ -1,4 +1,4 @@
-package comlib.creator;
+package comlib.provider;
 
 
 import comlib.manager.MessageManager;
@@ -7,12 +7,13 @@ import comlib.manager.VoiceConfig;
 import comlib.message.CommunicationMessage;
 import comlib.util.BitStreamReader;
 
-public abstract class MessageCreator<M extends CommunicationMessage, E extends ReceiveEvent> {
+public abstract class MessageProvider<M extends CommunicationMessage, E extends ReceiveEvent> {
+
     protected int messageID;
     
     protected E event;
     
-    public MessageCreator(MessageManager manager) {
+    public MessageProvider(MessageManager manager) {
         this.messageID = -1;
         this.event = this.getDefaultEvent(manager);
     }
@@ -39,8 +40,7 @@ public abstract class MessageCreator<M extends CommunicationMessage, E extends R
         return msg;
     }
     
-    public CommunicationMessage create(VoiceConfig config, String[] datas)
-    {
+    public CommunicationMessage create(VoiceConfig config, String[] datas) {
         int time = Integer.parseInt(datas[0]);
         int ttl  = Integer.parseInt(datas[1]);
         M msg = this.createMessage(config, time, ttl, datas, 2);

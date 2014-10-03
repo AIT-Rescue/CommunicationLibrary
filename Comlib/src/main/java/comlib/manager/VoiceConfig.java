@@ -19,11 +19,11 @@ public class VoiceConfig {
         this.dataSeparator = config.getValue("comlib.message.dataSeparator", ":");
     }
 
-    public int getLimit() {
+    public int getTimeToLive() {
         return this.ttl;
     }
 
-    public void setLimit(int l) {
+    public void setTimeToLive(int l) {
         if (l > 0) {
             this.ttl = l;
         }
