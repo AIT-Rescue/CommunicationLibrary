@@ -132,7 +132,7 @@ public class IntegerDataHelper
     }*/
 
     public static int getBitSize(int value) {
-        int i = (value >> 16) != 0 ? (value >> 24) != 0 ? 31 : 23 : (value >> 8) != 0 ? 15 : 7;
+        int i = (value >> 16) != 0 ? (value >> 24) != 0 ? 31 : 23 : (value & 0xFF00) != 0 ? 15 : 7;
         do {
             if (((value >> i) & 0x01) == 1)
                 return i + 1;

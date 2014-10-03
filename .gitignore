@@ -1,6 +1,6 @@
 *.class
 
-#idea file
+#idea module
 *.iml
 .idea/
 
