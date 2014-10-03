@@ -3,6 +3,8 @@ package comlib.manager;
 
 import comlib.creator.MessageCreator;
 import comlib.message.CommunicationMessage;
+import comlib.util.BitOutputStream;
+import comlib.util.BitStreamReader;
 import rescuecore2.Constants;
 import rescuecore2.config.Config;
 import rescuecore2.messages.Command;
@@ -43,7 +45,7 @@ public class MessageManager {
         this.useRadio = this.searchRadio(config);
         this.time = -1;
         this.creatorList = new MessageCreator[config.getIntValue("comlib.default.messageID", 16)];
-        this.eventList = new ArrayList<>();;
+        this.eventList = new ArrayList<>();
         this.receivedMessages = new ArrayList<>();
         this.sendMessages = new ArrayList<>();
         
@@ -76,7 +78,7 @@ public class MessageManager {
                 if("Help".equalsIgnoreCase(voice) || "Ouch".equalsIgnoreCase(voice))
                     continue;
                 
-                String[] voiceData = voice.split(this.voiceConfig.getVoiceSeparator());
+                String[] voiceData = voice.split(this.voiceConfig.getMessageSeparator());
                 if(this.voiceConfig.getKeyword().equals(voiceData[0]))
                     this.receiveVoiceMessage(Arrays.copyOfRange(voiceData, 1, voiceData.length - 1), this.receivedMessages);
                 else
@@ -162,7 +164,7 @@ public class MessageManager {
             return false;
         
         this.register(id, creator);
-        this.radioConfig.updateSize(id);
+        this.radioConfig.updateMessageIDSize(id);
         this.searchEvent(this.creatorList[id]);
         return true;
     }

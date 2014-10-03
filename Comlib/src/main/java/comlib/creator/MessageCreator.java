@@ -5,6 +5,7 @@ import comlib.manager.MessageManager;
 import comlib.manager.RadioConfig;
 import comlib.manager.VoiceConfig;
 import comlib.message.CommunicationMessage;
+import comlib.util.BitStreamReader;
 
 public abstract class MessageCreator<M extends CommunicationMessage, E extends ReceiveEvent> {
     protected int messageID;

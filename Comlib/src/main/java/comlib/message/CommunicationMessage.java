@@ -1,7 +1,9 @@
 package comlib.message;
 
 
+import comlib.manager.RadioConfig;
 import comlib.manager.VoiceConfig;
+import comlib.util.BitOutputStream;
 
 public abstract class CommunicationMessage {
     
