@@ -1,5 +1,8 @@
 *.class
 
+#gradle
+.gradle/
+
 #idea module
 *.iml
 .idea/
