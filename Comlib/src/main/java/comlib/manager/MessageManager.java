@@ -127,14 +127,14 @@ public class MessageManager {
 		{
 			BitOutputStream bos = null;
 			for (CommunicationMessage msg : this.sendMessages)
-			{ msg.create(this.radioConfig, bos); }
+			{ this.providerList[msg.getMessageID()].write(this.radioConfig, bos); }
 			return null;
 		}
 		else
 		{
 			StringBuilder sb = new StringBuilder();
 			for (CommunicationMessage msg : this.sendMessages)
-			{ msg.create(this.voiceConfig, sb); }
+			{ this.providerList[msg.getMessageID()].write(this.voiceConfig, sb); }
 			return null;
 		}
 	}
