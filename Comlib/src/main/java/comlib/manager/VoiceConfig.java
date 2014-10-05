@@ -24,7 +24,7 @@ public class VoiceConfig {
     }
 
     public void setTTL(int value) {
-        if (l > 0) {
+        if (value > 0) {
             this.ttl = value;
         }
     }

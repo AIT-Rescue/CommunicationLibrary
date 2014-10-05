@@ -2,6 +2,7 @@ package comlib.provider;
 
 
 import comlib.event.MessageEvent;
+import comlib.manager.MessageManeger;
 import comlib.manager.RadioConfig;
 import comlib.manager.VoiceConfig;
 import comlib.message.CommunicationMessage;
@@ -11,7 +12,6 @@ import comlib.util.BitStreamReader;
 public abstract class MessageProvider<M extends CommunicationMessage, E extends MessageEvent> {
 
 	protected int messageID;
-	// final int messageTypeID = -1;
 
 	protected E event;
 
@@ -38,37 +38,41 @@ public abstract class MessageProvider<M extends CommunicationMessage, E extends 
 
 	protected abstract M createMessageVoice(VoiceConfig config, int time, int ttl, String[] datas, int next);
 	
-	public void write(RadioConfig config, BitOutputStream bos, M msg)
+	public void write(MessageManager manager, BitOutputStream bos, M msg)
 	{
 		//TODO: Think about argument order
+		RadioConfig config = manager.getRadioConfig();
 		bos.writeBits(this.messageID, config.getSizeOfMessageID());
-		bos.writeBits(this.time, config.getSizeOfTime());
-		this.writeMessageRadio(config, bos);
+		bos.writeBits(manager.getTime(), config.getSizeOfTime());
+		this.writeMessageRadio(config, bos, msg);
 	}
 	
-	public void write(VoiceConfig config, StringBuilder sb, M msg)
+	public void write(MessageManager manager, StringBuilder sb, M msg)
 	{
 		if(msg.getTTL() == 0)
-			return;
+		{ return; }
 	
+		VoiceConfig config = manager.getVoiceConfig();
 		config.appendMessageID(sb, this.messageID);
-		config.appendData(sb, String.valueOf(this.time));
+		config.appendData(sb, String.valueOf(manager.getTime()));
 		if(msg.getTTL() < 0)
-			config.appendLimit(sb);
+		{ config.appendLimit(sb); }
 		else
-			config.appendData(sb, String.valueOf(msg.getTTL() - 1));
-		this.writeMessageVoice(config, sb);
+		{ config.appendData(sb, String.valueOf(msg.getTTL() - 1)); }
+		this.writeMessageVoice(config, sb, msg);
 		config.appendMessageSeparator(sb);
 	}
 
-	public CommunicationMessage create(RadioConfig config, BitStreamReader bsr) {
+	public CommunicationMessage create(MessageManager manager, BitStreamReader bsr) {
+		RadioConfig config = manager.getRadioConfig();
 		int time = bsr.getBits(config.getSizeOfTime());
 		M msg = this.createMessageRadio(config, time, bsr);
 		this.event.receivedRadio(msg);
 		return msg;
 	}
 
-	public CommunicationMessage create(VoiceConfig config, String[] datas) {
+	public CommunicationMessage create(MessageManager manager, String[] datas) {
+		VoiceConfig config = manager.getVoiceConfig();
 		int time = Integer.parseInt(datas[0]);
 		int ttl  = Integer.parseInt(datas[1]);
 		M msg = this.createMessageVoice(config, time, ttl, datas, 2);
@@ -78,9 +82,7 @@ public abstract class MessageProvider<M extends CommunicationMessage, E extends 
 
 	public void trySetEvent(MessageEvent ev) {
 		//if (ev instanceof E) //こうかけないからクソ
-        if (ev != null)
-		{
-			this.event = (E) ev;
-		}
+		if (ev != null)
+		{ this.event = (E) ev; }
 	}
 }

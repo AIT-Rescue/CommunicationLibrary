@@ -9,6 +9,6 @@ public abstract class DummyMessageEvent<DummyMessage> {
 
 	public void receivedVoice(M msg)
 	{
-		this.receivedRadio();
+		this.receivedRadio(msg);
 	}
 }

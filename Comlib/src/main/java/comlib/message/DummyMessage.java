@@ -9,8 +9,6 @@ public abstract class DummyMessage extends CommunicationMessage {
 
 	private int dummyTest;
 
-	private DummyMessage() {}
-
 	public DummyMessage(int test) {
 		super(MessageID.dummyMessage);
 		dummyTest = test;

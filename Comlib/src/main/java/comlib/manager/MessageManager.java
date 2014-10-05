@@ -2,6 +2,9 @@ package comlib.manager;
 
 
 import comlib.provider.MessageProvider;
+import comlib.provider.DummyMessageProvider;
+import comlib.event.MessageEvent;
+import comlib.message.MessageID;
 import comlib.message.CommunicationMessage;
 import comlib.util.BitOutputStream;
 import comlib.util.BitStreamReader;
@@ -62,8 +65,16 @@ public class MessageManager {
 		return this.useRadio;
 	}
 
-	public void setTTL(int ttl) {
-		this.voiceConfig.setTTL(ttl);
+	public RadioConfig getRadioConfig() {
+		return this.radioConfig;
+	}
+
+	public VoiceConfig getVoiceConfig() {
+		return this.voiceConfig;
+	}
+
+	public int getTime() {
+		return this.kernelTime;
 	}
 
 	public void receiveMessage(int time, Collection<Command> heard) {
@@ -96,8 +107,9 @@ public class MessageManager {
 		int border = this.radioConfig.getSizeOfMessageID() + this.radioConfig.getSizeOfTime();
 		while(bsr.getRemainBuffer() >= border)
 		{
-			try(CommunicationMessage msg = this.providerList[bsr.getBits(this.radioConfig.getSizeOfMessageID())].create(this.radioConfig, bsr))
+			try
 			{
+				CommunicationMessage msg = this.providerList[bsr.getBits(this.radioConfig.getSizeOfMessageID())].create(this, bsr);
 				list.add(msg);
 			}
 			catch(Exception e)
@@ -116,8 +128,8 @@ public class MessageManager {
 		for (int count = 0; count < data.length; count += 2)
 		{
 			int id = Integer.parseInt(data[count]);
-			String[] messageData = data[count + 1].split(this.voiceConfig.getdataeparator());
-			list.add(this.providerList[id].create(this.voiceConfig, messageData));
+			String[] messageData = data[count + 1].split(this.voiceConfig.getDataSeparator());
+			list.add(this.providerList[id].create(this, messageData));
 		}
 	}
 
@@ -127,14 +139,14 @@ public class MessageManager {
 		{
 			BitOutputStream bos = null;
 			for (CommunicationMessage msg : this.sendMessages)
-			{ this.providerList[msg.getMessageID()].write(this.radioConfig, bos, msg); }
+			{ this.providerList[msg.getMessageID()].write(this, bos, msg); }
 			return null;
 		}
 		else
 		{
 			StringBuilder sb = new StringBuilder();
 			for (CommunicationMessage msg : this.sendMessages)
-			{ this.providerList[msg.getMessageID()].write(this.voiceConfig, sb, msg); }
+			{ this.providerList[msg.getMessageID()].write(this, sb, msg); }
 			return null;
 		}
 	}
@@ -193,7 +205,7 @@ public class MessageManager {
 	private void searchEvent(MessageProvider provider) {
 		// if (this.eventList.size() < 1)
 		// {	return; }
-		for (ReceiveEvent event : this.eventList)
+		for (MessageEvent event : this.eventList)
 		{ provider.trySetEvent(event); }
 	}
 }
