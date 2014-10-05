@@ -2,7 +2,6 @@ package comlib.manager;
 
 import comlib.util.IntegerDataHelper;
 import rescuecore2.config.Config;
-import rescuecore2.standard.entities.*;
 
 public class RadioConfig {
     private int channel;
@@ -35,7 +34,7 @@ public class RadioConfig {
         return this.sizeOfTime;
     }
 
-    public int getSizeOfEntityID(Class<? extends Building> c) {
+    /*public int getSizeOfEntityID(Class<? extends Building> c) {
 
         return c != null ? 32 : 0;
     }
@@ -83,6 +82,6 @@ public class RadioConfig {
 
     public int getSizeOfPosition() {
         return 32;
-    }
+    }*/
 
 }
