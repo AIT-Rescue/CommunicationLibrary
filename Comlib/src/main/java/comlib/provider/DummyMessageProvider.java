@@ -4,6 +4,7 @@ package comlib.provider;
 import comlib.manager.RadioConfig;
 import comlib.manager.VoiceConfig;
 import comlib.message.CommunicationMessage;
+import comlib.message.DummyMessage;
 import comlib.message.MessageID;
 import comlib.util.BitOutputStream;
 import comlib.util.BitStreamReader;
