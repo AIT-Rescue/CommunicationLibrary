@@ -1,5 +1,11 @@
 package comlib.adk.agent;
 
+import comlib.adk.tactics.Tactics;
+import comlib.agent.CommunicationAgent;
+import comlib.manager.MessageManager;
+import rescuecore2.standard.entities.StandardEntity;
+import rescuecore2.worldmodel.ChangeSet;
+
 public abstract class TacticsAgent<E extends StandardEntity> extends CommunicationAgent<E> {
     
     public Tactics tactics;

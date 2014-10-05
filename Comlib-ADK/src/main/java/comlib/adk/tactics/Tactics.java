@@ -1,6 +1,12 @@
 package comlib.adk.tactics;
 
-public class Tactics {
+import comlib.manager.MessageManager;
+import rescuecore2.config.Config;
+import rescuecore2.messages.Message;
+import rescuecore2.standard.entities.StandardWorldModel;
+import rescuecore2.worldmodel.ChangeSet;
+
+public abstract class Tactics {
     //public Preparation preparation;
     //public Thinking thinking;
     
@@ -27,6 +33,7 @@ public class Tactics {
     
     public Message think(int time, ChangeSet changed) {
         //return this.thinking.start(time, changed);
+        return null;
     }
     
     /*public void setWorld(StandardWorldModel swm) {

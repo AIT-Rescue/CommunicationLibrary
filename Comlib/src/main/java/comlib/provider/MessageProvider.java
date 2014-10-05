@@ -1,10 +1,11 @@
 package comlib.provider;
 
 
-import comlib.manager.MessageManager;
+import comlib.event.MessageEvent;
 import comlib.manager.RadioConfig;
 import comlib.manager.VoiceConfig;
 import comlib.message.CommunicationMessage;
+import comlib.util.BitOutputStream;
 import comlib.util.BitStreamReader;
 
 public abstract class MessageProvider<M extends CommunicationMessage, E extends MessageEvent> {
@@ -75,9 +76,10 @@ public abstract class MessageProvider<M extends CommunicationMessage, E extends 
 	}
 
 	public void trySetEvent(MessageEvent ev) {
-		if (ev instanceof E)
+		//if (ev instanceof E) //こうかけないからクソ
+        if (ev != null)
 		{
-			this event = ev;
+			this.event = (E) ev;
 		}
 	}
 }

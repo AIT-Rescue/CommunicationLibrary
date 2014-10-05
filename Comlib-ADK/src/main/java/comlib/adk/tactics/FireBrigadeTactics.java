@@ -1,9 +1,6 @@
 package comlib.adk.tactics;
 
-import comlib.adk.tactics.preparation.Preparation;
-import comlib.adk.tactics.thinking.Thinking;
-
-public class FireBrigadeTactics extends Tactics {
+public abstract class FireBrigadeTactics extends Tactics {
     public FireBrigadeTactics() {
     }
     

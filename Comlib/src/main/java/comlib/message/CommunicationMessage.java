@@ -1,10 +1,6 @@
 package comlib.message;
 
 
-import comlib.manager.RadioConfig;
-import comlib.manager.VoiceConfig;
-import comlib.util.BitOutputStream;
-
 public abstract class CommunicationMessage {
 
 	protected int messageID;
@@ -16,7 +12,7 @@ public abstract class CommunicationMessage {
 	private CommunicationMessage(){}
 
 	public CommunicationMessage(int id) {
-		CommunicationMessage(id, -1, -1);
+		this(id, -1, -1);
 	}
 
 	// private CommunicationMessage(){}
@@ -37,7 +33,7 @@ public abstract class CommunicationMessage {
 	}
 
 	public int getTime() {
-		return this.time;
+		return this.kernelTime;
 	}
 
 	public int getTTL() {
