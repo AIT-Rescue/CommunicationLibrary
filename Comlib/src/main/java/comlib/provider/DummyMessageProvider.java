@@ -22,19 +22,14 @@ public class DummyMessageProvider<DummyMessage extends CommunicationMessage, Dum
 	{
 	}
 
-    @Override
     public DummyMessage createMessage(RadioConfig config, int time, BitStreamReader bsr)
 	{
-        try {
-            DummyMessage a;
-            a = new DummyMessage(time, -1, -1);
-        }
-        catch (Exception e) {
-            return null;
-        }
+        /*DummyMessage a;
+        a = new DummyMessage(time, -1, -1);
+        return a;*/
+        return DummyMessage.getInstance(-1);
 	}
 
-    @Override
 	public DummyMessage createMessage(VoiceConfig config, int time, int ttl, String[] datas, int next)
 	{
         try {

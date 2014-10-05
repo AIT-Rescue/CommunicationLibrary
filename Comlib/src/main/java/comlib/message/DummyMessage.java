@@ -24,6 +24,10 @@ public class DummyMessage extends CommunicationMessage {
         return this.dummyTest;
     }
 
+    public static DummyMessage getInstance(int test) {
+        return new DummyMessage(test);
+    }
+
 
 	// public abstract void createSendMessage(RadioConfig config, BitOutputStream bos);
 	//
