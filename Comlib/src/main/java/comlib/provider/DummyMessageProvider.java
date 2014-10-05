@@ -7,19 +7,23 @@ public class DummyMessageProvider<DummyMessage, DummyMessageEvent> extends Messa
 	// {
 	// }
 
-	public void writeMessage(RadioConfig config, BitOutputStream bos)
+	@Override
+	protected void writeMessage(RadioConfig config, BitOutputStream bos)
 	{
 	}
 
-	public void writeMessage(VoiceConfig config, StringBuilder sb)
+	@Override
+	protected void writeMessage(VoiceConfig config, StringBuilder sb)
 	{
 	}
 
-	public DummyMessage createMessage(RadioConfig config, int time, BitStreamReader bsr)
+	@Override
+	protected M createMessage(RadioConfig config, int time, BitStreamReader bsr)
 	{
 	}
 
-	public DummyMessage createMessage(VoiceConfig config, int time, int ttl, String[] datas, int next)
+	@Override
+	protected M createMessage(VoiceConfig config, int time, int ttl, String[] datas, int next)
 	{
 	}
 }

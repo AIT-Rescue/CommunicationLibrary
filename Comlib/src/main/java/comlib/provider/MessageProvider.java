@@ -30,39 +30,40 @@ public abstract class MessageProvider<M extends CommunicationMessage, E extends 
 
 	// public abstract E getDefaultEvent(MessageManager manager);
 
-	public abstract void writeMessage(RadioConfig config, BitOutputStream bos);
+	protected abstract void writeMessageRadio(RadioConfig config, BitOutputStream bos, M msg);
 
-	public abstract void writeMessage(VoiceConfig config, StringBuilder sb);
+	protected abstract void writeMessageVoice(VoiceConfig config, StringBuilder sb, M msg);
 
-	public abstract M createMessage(RadioConfig config, int time, BitStreamReader bsr);
+	protected abstract M createMessageRadio(RadioConfig config, int time, BitStreamReader bsr);
 
-	public abstract M createMessage(VoiceConfig config, int time, int ttl, String[] datas, int next);
+	protected abstract M createMessageVoice(VoiceConfig config, int time, int ttl, String[] datas, int next);
 	
-	public void write(RadioConfig config, BitOutputStream bos)
+	public void write(RadioConfig config, BitOutputStream bos, M msg)
 	{
+		//TODO: Think about argument order
 		bos.writeBits(this.messageID, config.getSizeOfMessageID());
 		bos.writeBits(this.time, config.getSizeOfTime());
-		this.createSendMessage(config, bos);
+		this.writeMessageRadio(config, bos);
 	}
 	
-	public void write(VoiceConfig config, StringBuilder sb)
+	public void write(VoiceConfig config, StringBuilder sb, M msg)
 	{
-		if(this.ttl == 0)
+		if(msg.getTTL() == 0)
 			return;
 	
 		config.appendMessageID(sb, this.messageID);
 		config.appendData(sb, String.valueOf(this.time));
-		if(this.ttl < 0)
+		if(msg.getTTL() < 0)
 			config.appendLimit(sb);
 		else
-			config.appendData(sb, String.valueOf(this.ttl - 1));
-		this.createSendMessage(config, sb);
+			config.appendData(sb, String.valueOf(msg.getTTL() - 1));
+		this.writeMessageVoice(config, sb);
 		config.appendMessageSeparator(sb);
 	}
 
 	public CommunicationMessage create(RadioConfig config, BitStreamReader bsr) {
 		int time = bsr.getBits(config.getSizeOfTime());
-		M msg = this.createMessage(config, time, bsr);
+		M msg = this.createMessageRadio(config, time, bsr);
 		this.event.receivedRadio(msg);
 		return msg;
 	}
@@ -70,7 +71,7 @@ public abstract class MessageProvider<M extends CommunicationMessage, E extends 
 	public CommunicationMessage create(VoiceConfig config, String[] datas) {
 		int time = Integer.parseInt(datas[0]);
 		int ttl  = Integer.parseInt(datas[1]);
-		M msg = this.createMessage(config, time, ttl, datas, 2);
+		M msg = this.createMessageVoice(config, time, ttl, datas, 2);
 		this.event.receivedVoice(msg);
 		return msg;
 	}
