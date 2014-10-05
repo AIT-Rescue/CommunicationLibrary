@@ -1,15 +1,13 @@
 package comlib.message;
 
 
-public abstract class CommunicationMessage {
+public class CommunicationMessage {
 
 	protected int messageID;
 
 	protected int kernelTime;
 
 	protected int messageTTL;
-
-	private CommunicationMessage(){}
 
 	public CommunicationMessage(int id) {
 		this(id, -1, -1);
@@ -18,6 +16,7 @@ public abstract class CommunicationMessage {
 	// private CommunicationMessage(){}
 	//
 	public CommunicationMessage(int id,int time, int ttl) {
+        this.messageID =id;
 		this.kernelTime = time;
 		this.messageTTL = ttl;
 	}

@@ -34,20 +34,25 @@ public abstract class MessageProvider<M extends CommunicationMessage, E extends 
 
 	public abstract void writeMessage(VoiceConfig config, StringBuilder sb);
 
-	public abstract M createMessage(RadioConfig config, int time, BitStreamReader bsr);
+	//public abstract <C extends CommunicationMessage> C createMessage(RadioConfig config, int time, BitStreamReader bsr);
+    public abstract M createMessage(RadioConfig config, int time, BitStreamReader bsr);
+    //public abstract CommunicationMessage createMessage(RadioConfig config, int time, BitStreamReader bsr);
 
 	public abstract M createMessage(VoiceConfig config, int time, int ttl, String[] datas, int next);
-	
+    //public abstract CommunicationMessage createMessage(VoiceConfig config, int time, int ttl, String[] datas, int next);
+
+    //TODO: 送信処理
 	public void write(RadioConfig config, BitOutputStream bos)
 	{
-		bos.writeBits(this.messageID, config.getSizeOfMessageID());
+		/*bos.writeBits(this.messageID, config.getSizeOfMessageID());
 		bos.writeBits(this.time, config.getSizeOfTime());
-		this.createSendMessage(config, bos);
+		this.writeMessage(config, bos);
+		*/
 	}
 	
 	public void write(VoiceConfig config, StringBuilder sb)
 	{
-		if(this.ttl == 0)
+		/*if(this.ttl == 0)
 			return;
 	
 		config.appendMessageID(sb, this.messageID);
@@ -56,14 +61,16 @@ public abstract class MessageProvider<M extends CommunicationMessage, E extends 
 			config.appendLimit(sb);
 		else
 			config.appendData(sb, String.valueOf(this.ttl - 1));
-		this.createSendMessage(config, sb);
+		this.writeMessage(config, sb);
 		config.appendMessageSeparator(sb);
+		*/
 	}
 
 	public CommunicationMessage create(RadioConfig config, BitStreamReader bsr) {
 		int time = bsr.getBits(config.getSizeOfTime());
 		M msg = this.createMessage(config, time, bsr);
-		this.event.receivedRadio(msg);
+        //CommunicationMessage msg = this.createMessage(config, time, bsr);
+		this.event.receivedRadio((M)msg);
 		return msg;
 	}
 
@@ -71,7 +78,8 @@ public abstract class MessageProvider<M extends CommunicationMessage, E extends 
 		int time = Integer.parseInt(datas[0]);
 		int ttl  = Integer.parseInt(datas[1]);
 		M msg = this.createMessage(config, time, ttl, datas, 2);
-		this.event.receivedVoice(msg);
+        //CommunicationMessage msg = this.createMessage(config, time, ttl, datas, 2);
+		this.event.receivedVoice((M)msg);
 		return msg;
 	}
 

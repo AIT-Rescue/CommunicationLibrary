@@ -1,8 +1,11 @@
 package comlib.manager;
 
 
-import comlib.provider.MessageProvider;
+import comlib.event.MessageEvent;
 import comlib.message.CommunicationMessage;
+import comlib.message.MessageID;
+import comlib.provider.DummyMessageProvider;
+import comlib.provider.MessageProvider;
 import comlib.util.BitOutputStream;
 import comlib.util.BitStreamReader;
 import rescuecore2.Constants;
@@ -94,19 +97,16 @@ public class MessageManager {
 		{ return; }
 		BitStreamReader bsr = new BitStreamReader(data);
 		int border = this.radioConfig.getSizeOfMessageID() + this.radioConfig.getSizeOfTime();
-		while(bsr.getRemainBuffer() >= border)
-		{
-			try(CommunicationMessage msg = this.providerList[bsr.getBits(this.radioConfig.getSizeOfMessageID())].create(this.radioConfig, bsr))
-			{
-				list.add(msg);
-			}
-			catch(Exception e)
-			{
-				//System.err.println("Received message is corrupt or format is different.");
-				e.printStackTrace();
-				return;
-			}
-		}
+		while(bsr.getRemainBuffer() >= border) {
+            try {
+                CommunicationMessage msg = this.providerList[bsr.getBits(this.radioConfig.getSizeOfMessageID())].create(this.radioConfig, bsr);
+                list.add(msg);
+            } catch (Exception e) {
+                //System.err.println("Received message is corrupt or format is different.");
+                e.printStackTrace();
+                return;
+            }
+        }
 	}
 
 	private void receiveVoiceMessage(String[] data, List<CommunicationMessage> list)
@@ -116,7 +116,7 @@ public class MessageManager {
 		for (int count = 0; count < data.length; count += 2)
 		{
 			int id = Integer.parseInt(data[count]);
-			String[] messageData = data[count + 1].split(this.voiceConfig.getdataeparator());
+			String[] messageData = data[count + 1].split(this.voiceConfig.getDataSeparator());
 			list.add(this.providerList[id].create(this.voiceConfig, messageData));
 		}
 	}
@@ -193,7 +193,7 @@ public class MessageManager {
 	private void searchEvent(MessageProvider provider) {
 		// if (this.eventList.size() < 1)
 		// {	return; }
-		for (ReceiveEvent event : this.eventList)
+		for (MessageEvent event : this.eventList)
 		{ provider.trySetEvent(event); }
 	}
 }

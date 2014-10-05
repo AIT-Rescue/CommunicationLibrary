@@ -1,15 +1,14 @@
 package comlib.message;
 
 
-import comlib.manager.RadioConfig;
-import comlib.manager.VoiceConfig;
-import comlib.util.BitOutputStream;
-
-public abstract class DummyMessage extends CommunicationMessage {
+//public abstract class DummyMessage extends CommunicationMessage {
+public class DummyMessage extends CommunicationMessage {
 
 	private int dummyTest;
 
-	private DummyMessage() {}
+	private DummyMessage() {
+        super(MessageID.dummyMessage);
+    }
 
 	public DummyMessage(int test) {
 		super(MessageID.dummyMessage);
@@ -20,6 +19,10 @@ public abstract class DummyMessage extends CommunicationMessage {
 		super(MessageID.dummyMessage, time, ttl);
 		dummyTest = test;
 	}
+
+    public int getValue() {
+        return this.dummyTest;
+    }
 
 
 	// public abstract void createSendMessage(RadioConfig config, BitOutputStream bos);
