@@ -6,13 +6,6 @@ public class DummyMessage extends CommunicationMessage {
 
 	private int dummyTest;
 
-<<<<<<< HEAD
-=======
-	private DummyMessage() {
-        super(MessageID.dummyMessage);
-    }
-
->>>>>>> 8ddf4120c27cedcf9376284bdd193507f021b4e3
 	public DummyMessage(int test) {
 		super(MessageID.dummyMessage);
 		dummyTest = test;

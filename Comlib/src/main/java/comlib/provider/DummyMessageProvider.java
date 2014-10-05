@@ -23,11 +23,7 @@ public class DummyMessageProvider<DummyMessage extends CommunicationMessage, Dum
 	{
 	}
 
-<<<<<<< HEAD
 	protected DummyMessage createMessageRadio(RadioConfig config, int time, BitStreamReader bsr)
-=======
-    public DummyMessage createMessage(RadioConfig config, int time, BitStreamReader bsr)
->>>>>>> 8ddf4120c27cedcf9376284bdd193507f021b4e3
 	{
         /*DummyMessage a;
         a = new DummyMessage(time, -1, -1);

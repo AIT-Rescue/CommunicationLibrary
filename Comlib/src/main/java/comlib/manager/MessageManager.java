@@ -1,14 +1,10 @@
 package comlib.manager;
 
 
-<<<<<<< HEAD
 import comlib.provider.MessageProvider;
 import comlib.provider.DummyMessageProvider;
 import comlib.event.MessageEvent;
 import comlib.message.MessageID;
-=======
-import comlib.event.MessageEvent;
->>>>>>> 8ddf4120c27cedcf9376284bdd193507f021b4e3
 import comlib.message.CommunicationMessage;
 import comlib.message.MessageID;
 import comlib.provider.DummyMessageProvider;
@@ -112,33 +108,18 @@ public class MessageManager {
 		{ return; }
 		BitStreamReader bsr = new BitStreamReader(data);
 		int border = this.radioConfig.getSizeOfMessageID() + this.radioConfig.getSizeOfTime();
-<<<<<<< HEAD
 		while(bsr.getRemainBuffer() >= border)
 		{
 			try
 			{
 				CommunicationMessage msg = this.providerList[bsr.getBits(this.radioConfig.getSizeOfMessageID())].create(this, bsr);
 				list.add(msg);
-			}
-			catch(Exception e)
-			{
+			} catch(Exception e) {
 				//System.err.println("Received message is corrupt or format is different.");
 				e.printStackTrace();
 				return;
 			}
 		}
-=======
-		while(bsr.getRemainBuffer() >= border) {
-            try {
-                CommunicationMessage msg = this.providerList[bsr.getBits(this.radioConfig.getSizeOfMessageID())].create(this.radioConfig, bsr);
-                list.add(msg);
-            } catch (Exception e) {
-                //System.err.println("Received message is corrupt or format is different.");
-                e.printStackTrace();
-                return;
-            }
-        }
->>>>>>> 8ddf4120c27cedcf9376284bdd193507f021b4e3
 	}
 
 	private void receiveVoiceMessage(String[] data, List<CommunicationMessage> list)
@@ -149,11 +130,7 @@ public class MessageManager {
 		{
 			int id = Integer.parseInt(data[count]);
 			String[] messageData = data[count + 1].split(this.voiceConfig.getDataSeparator());
-<<<<<<< HEAD
 			list.add(this.providerList[id].create(this, messageData));
-=======
-			list.add(this.providerList[id].create(this.voiceConfig, messageData));
->>>>>>> 8ddf4120c27cedcf9376284bdd193507f021b4e3
 		}
 	}
 
