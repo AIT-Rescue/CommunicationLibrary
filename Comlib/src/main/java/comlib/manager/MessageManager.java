@@ -29,7 +29,7 @@ public class MessageManager {
 	private int kernelTime;
 
 	private MessageProvider[] providerList;
-	private List<Object> eventList;
+	private List<MessageEvent> eventList;
 
 	private List<CommunicationMessage> receivedMessages; // For compatible
 	private List<CommunicationMessage> sendMessages;
@@ -62,8 +62,8 @@ public class MessageManager {
 		return this.useRadio;
 	}
 
-	public void setTimeToLive(int ttl) {
-		this.voiceConfig.setTimeToLive(ttl);
+	public void setTTL(int ttl) {
+		this.voiceConfig.setTTL(ttl);
 	}
 
 	public void receiveMessage(int time, Collection<Command> heard) {
@@ -121,8 +121,8 @@ public class MessageManager {
 		}
 	}
 
-	//public List<Message> createSendMessage(){return null;}
 	public Message createSendMessage() {
+		// TODO: return data
 		if (this.useRadio)
 		{
 			BitOutputStream bos = null;
@@ -149,33 +149,34 @@ public class MessageManager {
 	}
 
 	private void initLoadProvider() {
+		this.registerStanderdProvider(MessageID.dummyMessage, new DummyMessageProvider());
 		//this.register(CommunicationMessage.buildingMessageID, new BuildingMessageProvider(this.event));
 		//this.register(CommunicationMessage.blockadeMessageID, new BlockadeMessageProvider(this.event));
 		//this.register(CommunicationMessage.victimMessageID,   new VictimMessageProvider());
 		//this.register(CommunicationMessage.positionMessageID, new PositionMessageProvider(this.event));
 	}
 
-	private void registerProvider(int messageTypeID, MessageProvider provider) {
-		provider.setMessageID(messageTypeID);
-		this.providerList[messageTypeID] = provider;
+	private void registerStanderdProvider(int messageID, MessageProvider provider) {
+		provider.setMessageID(messageID);
+		this.providerList[messageID] = provider;
 	}
 
-	public boolean registerCustomProvider(int messageTypeID, MessageProvider provider) {
-		if (!this.developerMode || this.kernelTime != -1 || provider == null || messageTypeID < 0)
+	public boolean registerProvider(int messageID, MessageProvider provider) {
+		if (!this.developerMode || this.kernelTime != -1 || provider == null || messageID < 0)
 		{ return false; }
 
-		if (messageTypeID >= this.providerList.length)
-		{ this.providerList = Arrays.copyOf(this.providerList, messageTypeID +1); }
-		else if (this.providerList[messageTypeID] != null)
+		if (messageID >= this.providerList.length)
+		{ this.providerList = Arrays.copyOf(this.providerList, messageID +1); }
+		else if (this.providerList[messageID] != null)
 		{ return false; }
 
-		this.registerProvider(messageTypeID, provider);
-		this.radioConfig.updateMessageIDSize(messageTypeID);
-		this.searchEvent(this.providerList[messageTypeID]);
+		this.registerProvider(messageID, provider);
+		this.radioConfig.updateMessageIDSize(messageID);
+		this.searchEvent(this.providerList[messageID]);
 		return true;
 	}
 
-	public boolean registerEvent(Object event) {
+	public boolean registerEvent(MessageEvent event) {
 		if (event == null)
 		{ return false; }
 
@@ -184,14 +185,14 @@ public class MessageManager {
 		return true;
 	}
 
-	private void searchProvider(Object event) {
+	private void searchProvider(MessageEvent event) {
 		for (MessageProvider provider : this.providerList)
 		{ provider.trySetEvent(event); }
 	}
 
 	private void searchEvent(MessageProvider provider) {
-		if (this.eventList.size() < 1)
-		{	return; }
+		// if (this.eventList.size() < 1)
+		// {	return; }
 		for (ReceiveEvent event : this.eventList)
 		{ provider.trySetEvent(event); }
 	}

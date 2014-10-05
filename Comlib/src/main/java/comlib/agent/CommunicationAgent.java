@@ -20,13 +20,12 @@ public abstract class CommunicationAgent<E extends StandardEntity> extends Stand
         super();
     }
     
+    public abstract void registerProvider(MessageManager manager);
+    
     public abstract void registerEvent(MessageManager manager);
     //public abstract void registerEvent();
     
     public abstract void think(int time, ChangeSet changed);
-    
-    public void registerCreator(MessageManager manager) {
-    }
     //public void registerCreator(){}
     
     public void sendSpeak(CommunicationMessage msg) {
@@ -37,7 +36,7 @@ public abstract class CommunicationAgent<E extends StandardEntity> extends Stand
     public void postConnect() {
         super.postConnect();
         this.manager = new MessageManager(this.config);
-        this.registerCreator(this.manager);
+        this.registerProvider(this.manager);
         this.registerEvent(this.manager);
     }
     

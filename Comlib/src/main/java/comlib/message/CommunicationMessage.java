@@ -6,60 +6,42 @@ import comlib.manager.VoiceConfig;
 import comlib.util.BitOutputStream;
 
 public abstract class CommunicationMessage {
-    
-    protected int messageID;
-    
-    protected int time;
-    
-    protected int ttl;
-    
-    private CommunicationMessage(){}
-    
-    public CommunicationMessage(int id, int t) {
-        this(id, t, -1);
-    }
-    
-    public CommunicationMessage(int id, int t, int l) {
-        this.messageID = id;
-        this.time = t;
-        this.ttl = l;
-    }
-    
-    public int getMessageID() {
-        return this.messageID;
-    }
-    
-    public int getTime() {
-        return this.time;
-    }
-    
-    public int getLimit() {
-        return this.ttl;
-    }
-    
-    public abstract void createSendMessage(RadioConfig config, BitOutputStream bos);
-    
-    public void create(RadioConfig config, BitOutputStream bos)
-	{
-		bos.writeBits(this.messageID, config.getSizeOfMessageID());
-		bos.writeBits(this.time, config.getSizeOfTime());
-		this.createSendMessage(config, bos);
+
+	protected int messageID;
+
+	protected int kernelTime;
+
+	protected int messageTTL;
+
+	private CommunicationMessage(){}
+
+	public CommunicationMessage(int id) {
+		CommunicationMessage(id, -1, -1);
 	}
 
-    public abstract void createSendMessage(VoiceConfig config, StringBuilder sb);
-
-    public void create(VoiceConfig config, StringBuilder sb)
-    {
-        if(this.ttl == 0)
-            return;
-
-		config.appendMessageID(sb, this.messageID);
-		config.appendData(sb, String.valueOf(this.time));
-		if(this.ttl < 0)
-            config.appendLimit(sb);
-        else
-            config.appendData(sb, String.valueOf(this.ttl - 1));
-		this.createSendMessage(config, sb);
-		config.appendMessageSeparator(sb);
+	// private CommunicationMessage(){}
+	//
+	public CommunicationMessage(int id,int time, int ttl) {
+		this.kernelTime = time;
+		this.messageTTL = ttl;
 	}
+	//
+	// public CommunicationMessage(int id, int t, int l) {
+	// 	this.messageID = id;
+	// 	this.time = t;
+	// 	this.ttl = l;
+	// }
+
+	public int getMessageID() {
+		return messageID;
+	}
+
+	public int getTime() {
+		return this.time;
+	}
+
+	public int getTTL() {
+		return this.messageTTL;
+	}
+
 }
