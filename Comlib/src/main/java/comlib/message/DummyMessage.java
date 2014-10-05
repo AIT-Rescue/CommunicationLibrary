@@ -16,13 +16,13 @@ public class DummyMessage extends CommunicationMessage {
 		dummyTest = test;
 	}
 
-    public int getValue() {
-        return this.dummyTest;
-    }
+	public int getValue() {
+		return this.dummyTest;
+	}
 
-    public static DummyMessage getInstance(int test) {
-        return new DummyMessage(test);
-    }
+	public static DummyMessage getInstance(int test) {
+		return new DummyMessage(test);
+	}
 
 
 	// public abstract void createSendMessage(RadioConfig config, BitOutputStream bos);

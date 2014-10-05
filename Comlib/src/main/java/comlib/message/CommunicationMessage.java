@@ -16,7 +16,7 @@ public class CommunicationMessage {
 	// private CommunicationMessage(){}
 	//
 	public CommunicationMessage(int id,int time, int ttl) {
-        this.messageID =id;
+		this.messageID = id;
 		this.kernelTime = time;
 		this.messageTTL = ttl;
 	}
