@@ -6,6 +6,7 @@ import comlib.manager.VoiceConfig;
 import comlib.message.CommunicationMessage;
 import comlib.message.DummyMessage;
 import comlib.message.MessageID;
+import comlib.event.DummyMessageEvent;
 import comlib.util.BitOutputStream;
 import comlib.util.BitStreamReader;
 
@@ -15,15 +16,15 @@ public class DummyMessageProvider<DummyMessage, DummyMessageEvent> extends Messa
 	// {
 	// }
 
-	protected void writeMessageRadio(RadioConfig config, BitOutputStream bos, M msg)
+	protected void writeMessageRadio(RadioConfig config, BitOutputStream bos, DummyMessage msg)
 	{
 	}
 
-	protected void writeMessageVoice(VoiceConfig config, StringBuilder sb, M msg)
+	protected void writeMessageVoice(VoiceConfig config, StringBuilder sb, DummyMessage msg)
 	{
 	}
 
-	protected DummyMessage createMessageRadio(RadioConfig config, int time, BitStreamReader bsr)
+    protected DummyMessage createMessageRadio(RadioConfig config, int time, BitStreamReader bsr)
 	{
         /*DummyMessage a;
         a = new DummyMessage(time, -1, -1);

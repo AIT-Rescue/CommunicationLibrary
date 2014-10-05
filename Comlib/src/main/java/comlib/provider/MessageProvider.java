@@ -2,7 +2,7 @@ package comlib.provider;
 
 
 import comlib.event.MessageEvent;
-import comlib.manager.MessageManeger;
+import comlib.manager.MessageManager;
 import comlib.manager.RadioConfig;
 import comlib.manager.VoiceConfig;
 import comlib.message.CommunicationMessage;
