@@ -159,14 +159,14 @@ public class MessageManager {
 	}
 
 	private void initLoadProvider() {
-		this.registerStanderdProvider(new DummyMessageProvider(MessageID.dummyMessage));
+		this.registerStandardProvider(new DummyMessageProvider(MessageID.dummyMessage));
 		//this.register(CommunicationMessage.buildingMessageID, new BuildingMessageProvider(this.event));
 		//this.register(CommunicationMessage.blockadeMessageID, new BlockadeMessageProvider(this.event));
 		//this.register(CommunicationMessage.victimMessageID,   new VictimMessageProvider());
 		//this.register(CommunicationMessage.positionMessageID, new PositionMessageProvider(this.event));
 	}
 
-	private void registerStanderdProvider(MessageProvider provider) {
+	private void registerStandardProvider(MessageProvider provider) {
 		//provider.setMessageID(messageID);
 		this.providerList[provider.getMessageID()] = provider;
 	}
@@ -181,7 +181,7 @@ public class MessageManager {
 		else if (this.providerList[messageID] != null)
 		{ return false; }
 
-		this.registerStanderdProvider(provider);
+		this.registerStandardProvider(provider);
 		this.radioConfig.updateMessageIDSize(messageID);
 		this.searchEvent(this.providerList[messageID]);
 		return true;
