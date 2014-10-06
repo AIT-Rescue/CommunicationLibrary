@@ -14,11 +14,7 @@ public class DummyMessageProvider extends MessageProvider<DummyMessage, DummyMes
 	// {
 	// }
 
-<<<<<<< HEAD
 	protected void writeMessage(RadioConfig config, BitOutputStream bos, DummyMessage msg)
-=======
-    protected void writeMessageRadio(RadioConfig config, BitOutputStream bos, DummyMessage msg)
->>>>>>> 5bcad29141f28be83b9b478aaededb52d6f4a0b7
 	{
 	}
 

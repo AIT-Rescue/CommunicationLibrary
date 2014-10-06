@@ -45,11 +45,7 @@ public abstract class MessageProvider<M extends CommunicationMessage, E extends 
 		RadioConfig config = manager.getRadioConfig();
 		bos.writeBits(this.messageID, config.getSizeOfMessageID());
 		bos.writeBits(manager.getTime(), config.getSizeOfTime());
-<<<<<<< HEAD
-		this.writeMessage(config, bos, msg);
-=======
-		this.writeMessageRadio(config, bos, (M)msg);
->>>>>>> 5bcad29141f28be83b9b478aaededb52d6f4a0b7
+		this.writeMessage(config, bos, (M)msg);
 // =======
 // 	//public abstract <C extends CommunicationMessage> C createMessage(RadioConfig config, int time, BitStreamReader bsr);
 //     public abstract M createMessage(RadioConfig config, int time, BitStreamReader bsr);
@@ -86,11 +82,7 @@ public abstract class MessageProvider<M extends CommunicationMessage, E extends 
 		else
 // <<<<<<< HEAD
 		{ config.appendData(sb, String.valueOf(msg.getTTL() - 1)); }
-<<<<<<< HEAD
-		this.writeMessage(config, sb, msg);
-=======
-		this.writeMessageVoice(config, sb, (M)msg);
->>>>>>> 5bcad29141f28be83b9b478aaededb52d6f4a0b7
+		this.writeMessage(config, sb, (M)msg);
 // =======
 // 			config.appendData(sb, String.valueOf(this.ttl - 1));
 // 		this.writeMessage(config, sb);
