@@ -1,12 +1,10 @@
 package comlib.provider;
 
 
+import comlib.event.DummyMessageEvent;
 import comlib.manager.RadioConfig;
 import comlib.manager.VoiceConfig;
-import comlib.message.CommunicationMessage;
 import comlib.message.DummyMessage;
-import comlib.message.MessageID;
-import comlib.event.DummyMessageEvent;
 import comlib.util.BitOutputStream;
 import comlib.util.BitStreamReader;
 
@@ -16,7 +14,11 @@ public class DummyMessageProvider extends MessageProvider<DummyMessage, DummyMes
 	// {
 	// }
 
+<<<<<<< HEAD
 	protected void writeMessage(RadioConfig config, BitOutputStream bos, DummyMessage msg)
+=======
+    protected void writeMessageRadio(RadioConfig config, BitOutputStream bos, DummyMessage msg)
+>>>>>>> 5bcad29141f28be83b9b478aaededb52d6f4a0b7
 	{
 	}
 

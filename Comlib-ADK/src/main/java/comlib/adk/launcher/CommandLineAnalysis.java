@@ -1,11 +1,10 @@
 package comlib.adk.launcher;
 
-import rescuecore2.config.Config;
-import rescuecore2.config.ConfigException;
 import rescuecore2.Constants;
+import rescuecore2.config.Config;
 
-import java.util.List;
 import java.util.ArrayList;
+import java.util.List;
 
 public final class CommandLineAnalysis {
     /**
@@ -43,7 +42,7 @@ public final class CommandLineAnalysis {
     /**
      * launch team name (all agent) .
      * <p>
-     * -a:name:ambulanceCount:fireCount:policeCount
+     * -t:name:ambulanceCount:fireCount:policeCount
      * </p>
      */
     public static final String FLAG_TEAM = "-t";
@@ -70,7 +69,7 @@ public final class CommandLineAnalysis {
      * -ap:name:count
      * </p>
      */
-    public static final String FLAFG_AGENT_POLICE ="-pf";
+    public static final String FLAG_AGENT_POLICE ="-pf";
     
     // (server)-s:ip:port -s:port -s:ip (ambulance)-a:name:count (fire)-f:name:count (police)-p:name:count
     
@@ -78,7 +77,7 @@ public final class CommandLineAnalysis {
         List<String> unknown = new ArrayList<>();
         for(String option : args) {
             String[] strArray = option.split(":");
-            switch (sttrArray[0]) {
+            switch (strArray[0]) {
                 case FLAG_DIRECTORY:
                     if (strArray.length == 2) {
                         config.setValue(ConfigKey.KEY_DIRECTORY, strArray[1]);
@@ -90,7 +89,7 @@ public final class CommandLineAnalysis {
                 case FLAG_SERVER:
                     if (strArray.length == 3) {
                         config.setValue(Constants.KERNEL_HOST_NAME_KEY, strArray[1]);
-                        config.setValue(Constants.KERNEL_PORT_NUMBBER_KEY, strArray[2]);
+                        config.setValue(Constants.KERNEL_PORT_NUMBER_KEY, strArray[2]);
                     }
                     else {
                         unknown.add(option);
@@ -156,6 +155,6 @@ public final class CommandLineAnalysis {
                     unknown.add(option);
             }
         }
-        return unknown.toArray(new String[0]);
+        return unknown.toArray(new String[unknown.size()]);
     }
 }

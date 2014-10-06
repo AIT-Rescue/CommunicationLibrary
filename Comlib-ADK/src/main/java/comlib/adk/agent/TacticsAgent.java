@@ -6,9 +6,9 @@ import comlib.manager.MessageManager;
 import rescuecore2.standard.entities.StandardEntity;
 import rescuecore2.worldmodel.ChangeSet;
 
-public abstract class TacticsAgent<E extends StandardEntity> extends CommunicationAgent<E> {
+public abstract class TacticsAgent<T extends Tactics, E extends StandardEntity> extends CommunicationAgent<E> {
     
-    public Tactics tactics;
+    public T tactics;
     
     public TacticsAgent(Tactics t) {
         super();
@@ -20,8 +20,11 @@ public abstract class TacticsAgent<E extends StandardEntity> extends Communicati
         super.postConnect();
         this.tactics.model = this.model; //this.tactics.setWorld(this.model);
         this.tactics.config = this.config; //this.tactics.setConfig(this.config);
+        this.
         this.tactics.postConnect();
     }
+    
+    public abstract void 
     
     @Override
     public void registerEvent(MessageManager manager) {
