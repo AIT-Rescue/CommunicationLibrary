@@ -15,14 +15,15 @@ public abstract class MessageProvider<M extends CommunicationMessage, E extends 
 
 	protected E event;
 
-	public MessageProvider() {
+	public MessageProvider(int id) {
 		// this.event = this.getDefaultEvent(manager);
+        this.messageID = id;
 	}
 
-	public void setMessageID(int id) {
+	/*public void setMessageID(int id) {
 		if(id >= 0 && this.messageID == -1)
 			this.messageID = id;
-	}
+	}*/
 
 	public int getMessageID() {
 		return this.messageID;

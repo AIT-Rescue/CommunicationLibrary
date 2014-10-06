@@ -1,10 +1,7 @@
 package comlib.manager;
 
 
-import comlib.provider.MessageProvider;
-import comlib.provider.DummyMessageProvider;
 import comlib.event.MessageEvent;
-import comlib.message.MessageID;
 import comlib.message.CommunicationMessage;
 import comlib.message.MessageID;
 import comlib.provider.DummyMessageProvider;
@@ -162,19 +159,20 @@ public class MessageManager {
 	}
 
 	private void initLoadProvider() {
-		this.registerStanderdProvider(MessageID.dummyMessage, new DummyMessageProvider());
+		this.registerStanderdProvider(new DummyMessageProvider(MessageID.dummyMessage));
 		//this.register(CommunicationMessage.buildingMessageID, new BuildingMessageProvider(this.event));
 		//this.register(CommunicationMessage.blockadeMessageID, new BlockadeMessageProvider(this.event));
 		//this.register(CommunicationMessage.victimMessageID,   new VictimMessageProvider());
 		//this.register(CommunicationMessage.positionMessageID, new PositionMessageProvider(this.event));
 	}
 
-	private void registerStanderdProvider(int messageID, MessageProvider provider) {
-		provider.setMessageID(messageID);
-		this.providerList[messageID] = provider;
+	private void registerStanderdProvider(MessageProvider provider) {
+		//provider.setMessageID(messageID);
+		this.providerList[provider.getMessageID()] = provider;
 	}
 
-	public boolean registerProvider(int messageID, MessageProvider provider) {
+	public boolean registerProvider(MessageProvider provider) {
+        int messageID = provider.getMessageID();
 		if (!this.developerMode || this.kernelTime != -1 || provider == null || messageID < 0)
 		{ return false; }
 
@@ -183,7 +181,7 @@ public class MessageManager {
 		else if (this.providerList[messageID] != null)
 		{ return false; }
 
-		this.registerProvider(messageID, provider);
+		this.registerStanderdProvider(provider);
 		this.radioConfig.updateMessageIDSize(messageID);
 		this.searchEvent(this.providerList[messageID]);
 		return true;
