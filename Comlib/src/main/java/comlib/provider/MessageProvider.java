@@ -30,14 +30,14 @@ public abstract class MessageProvider<M extends CommunicationMessage, E extends 
 
 	// public abstract E getDefaultEvent(MessageManager manager);
 
-	protected abstract void writeMessageRadio(RadioConfig config, BitOutputStream bos, M msg);
+	protected abstract void writeMessage(RadioConfig config, BitOutputStream bos, M msg);
 
-	protected abstract void writeMessageVoice(VoiceConfig config, StringBuilder sb, M msg);
+	protected abstract void writeMessage(VoiceConfig config, StringBuilder sb, M msg);
 
 //<<<<<<< HEAD
-	protected abstract M createMessageRadio(RadioConfig config, int time, BitStreamReader bsr);
+	protected abstract M createMessage(RadioConfig config, int time, BitStreamReader bsr);
 
-	protected abstract M createMessageVoice(VoiceConfig config, int time, int ttl, String[] datas, int next);
+	protected abstract M createMessage(VoiceConfig config, int time, int ttl, String[] datas, int next);
 	
 	public void write(MessageManager manager, BitOutputStream bos, M msg)
 	{
@@ -45,7 +45,7 @@ public abstract class MessageProvider<M extends CommunicationMessage, E extends 
 		RadioConfig config = manager.getRadioConfig();
 		bos.writeBits(this.messageID, config.getSizeOfMessageID());
 		bos.writeBits(manager.getTime(), config.getSizeOfTime());
-		this.writeMessageRadio(config, bos, msg);
+		this.writeMessage(config, bos, msg);
 // =======
 // 	//public abstract <C extends CommunicationMessage> C createMessage(RadioConfig config, int time, BitStreamReader bsr);
 //     public abstract M createMessage(RadioConfig config, int time, BitStreamReader bsr);
@@ -82,7 +82,7 @@ public abstract class MessageProvider<M extends CommunicationMessage, E extends 
 		else
 // <<<<<<< HEAD
 		{ config.appendData(sb, String.valueOf(msg.getTTL() - 1)); }
-		this.writeMessageVoice(config, sb, msg);
+		this.writeMessage(config, sb, msg);
 // =======
 // 			config.appendData(sb, String.valueOf(this.ttl - 1));
 // 		this.writeMessage(config, sb);
@@ -95,7 +95,7 @@ public abstract class MessageProvider<M extends CommunicationMessage, E extends 
 		RadioConfig config = manager.getRadioConfig();
 		int time = bsr.getBits(config.getSizeOfTime());
 // <<<<<<< HEAD
-		M msg = this.createMessageRadio(config, time, bsr);
+		M msg = this.createMessage(config, time, bsr);
 		this.event.receivedRadio(msg);
 // =======
 // 		M msg = this.createMessage(config, time, bsr);
@@ -110,7 +110,7 @@ public abstract class MessageProvider<M extends CommunicationMessage, E extends 
 		int time = Integer.parseInt(datas[0]);
 		int ttl  = Integer.parseInt(datas[1]);
 // <<<<<<< HEAD
-		M msg = this.createMessageVoice(config, time, ttl, datas, 2);
+		M msg = this.createMessage(config, time, ttl, datas, 2);
 		this.event.receivedVoice(msg);
 // =======
 // 		M msg = this.createMessage(config, time, ttl, datas, 2);
