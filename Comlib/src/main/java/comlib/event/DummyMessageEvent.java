@@ -1,7 +1,8 @@
 package comlib.event;
 
+import comlib.message.DummyMessage;
 
-public abstract class DummyMessageEvent<DummyMessage> {
+public abstract class DummyMessageEvent extends MessageEvent<DummyMessage> {
 
 	public void receivedRadio(DummyMessage msg)
 	{

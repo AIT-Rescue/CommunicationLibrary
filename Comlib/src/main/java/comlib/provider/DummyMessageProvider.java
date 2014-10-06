@@ -10,7 +10,7 @@ import comlib.event.DummyMessageEvent;
 import comlib.util.BitOutputStream;
 import comlib.util.BitStreamReader;
 
-public class DummyMessageProvider<DummyMessage, DummyMessageEvent> extends MessageProvider {
+public class DummyMessageProvider extends MessageProvider<DummyMessage, DummyMessageEvent>{
 
 	// public DummyEvent getDefaultEvent(MessageManager manager)
 	// {
