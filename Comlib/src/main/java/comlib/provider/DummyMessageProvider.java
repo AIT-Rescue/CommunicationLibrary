@@ -10,9 +10,9 @@ import comlib.util.BitStreamReader;
 
 public class DummyMessageProvider extends MessageProvider<DummyMessage, DummyMessageEvent>{
 
-    public DummyMessageProvider(int id) {
-        super(id);
-    }
+	public DummyMessageProvider(int id) {
+		super(id);
+	}
 
 	// public DummyEvent getDefaultEvent(MessageManager manager)
 	// {
