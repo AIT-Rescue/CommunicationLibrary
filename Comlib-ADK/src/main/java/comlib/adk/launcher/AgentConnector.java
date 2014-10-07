@@ -48,7 +48,6 @@ public class AgentConnector {
         this.host = config.getValue(Constants.KERNEL_HOST_NAME_KEY, Constants.DEFAULT_KERNEL_HOST_NAME);
         this.port = config.getIntValue(Constants.KERNEL_PORT_NUMBER_KEY, Constants.DEFAULT_KERNEL_PORT_NUMBER);
         File tacticsDir = new File(this.launchDir, "tactics");
-        tacticsDir.mkdirs();
         this.loader = new TeamLoader(tacticsDir);
         this.ambulanceName = this.config.getValue(ConfigKey.KEY_AMBULANCE_NAME);
         this.ambulanceCount = this.config.getIntValue(ConfigKey.KEY_AMBULANCE_COUNT);

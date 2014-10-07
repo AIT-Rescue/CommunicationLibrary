@@ -20,7 +20,7 @@ public abstract class TacticsAgent<T extends Tactics, E extends StandardEntity> 
         super.postConnect();
         this.tactics.model = this.model; //this.tactics.setWorld(this.model);
         this.tactics.config = this.config; //this.tactics.setConfig(this.config);
-        this.
+        //this.
         this.tactics.postConnect();
     }
     

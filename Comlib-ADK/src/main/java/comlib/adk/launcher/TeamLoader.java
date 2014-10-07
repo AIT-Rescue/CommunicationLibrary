@@ -3,6 +3,7 @@ package comlib.adk.launcher;
 import comlib.adk.team.Team;
 
 import java.io.File;
+import java.net.URLClassLoader;
 import java.util.*;
 
 public class TeamLoader {
@@ -17,6 +18,22 @@ public class TeamLoader {
     }
 
     private void load(File dir) {
+        if (!dir.exists()) {
+            dir.mkdir();
+        }
+        URLClassLoader loader= (URLClassLoader)this.getClass().getClassLoader();
+
+        for(File file : dir.listFiles()) {
+            if(file.isDirectory()) {
+                this.load(file);
+            }
+            else if(file.getName().endsWith(".jar")) {
+                this.loadTeam(file, loader);
+            }
+        }
+    }
+
+    private void loadTeam(File file, URLClassLoader loader) {
 
     }
 
