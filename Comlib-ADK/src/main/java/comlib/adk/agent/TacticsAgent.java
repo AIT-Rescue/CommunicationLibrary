@@ -1,6 +1,6 @@
 package comlib.adk.agent;
 
-import comlib.adk.tactics.Tactics;
+import comlib.adk.team.tactics.Tactics;
 import comlib.agent.CommunicationAgent;
 import comlib.manager.MessageManager;
 import rescuecore2.standard.entities.StandardEntity;
@@ -12,7 +12,7 @@ public abstract class TacticsAgent<T extends Tactics, E extends StandardEntity> 
     
     public TacticsAgent(Tactics t) {
         super();
-        this.tactics = t;
+        this.tactics = (T)t;
     }
     
     @Override
@@ -20,12 +20,13 @@ public abstract class TacticsAgent<T extends Tactics, E extends StandardEntity> 
         super.postConnect();
         this.tactics.model = this.model; //this.tactics.setWorld(this.model);
         this.tactics.config = this.config; //this.tactics.setConfig(this.config);
-        //this.
+        this.tactics.agentID = this.getID(); //AgentのEntityIDはかわるのか？？
+        //  this.
         this.tactics.postConnect();
     }
     
-    public abstract void 
-    
+    //public abstract void
+
     @Override
     public void registerEvent(MessageManager manager) {
         this.tactics.registerEvent(manager);
@@ -35,6 +36,7 @@ public abstract class TacticsAgent<T extends Tactics, E extends StandardEntity> 
     public void think(int time, ChangeSet changed) {
         this.tactics.model = this.model; //this.tactics.setWorld(this.model);
         this.tactics.config = this.config; //this.tactics.setConfig(this.config);
+        this.tactics.agentID = this.getID();
         this.send(this.tactics.think(time, changed));
     }
 }
