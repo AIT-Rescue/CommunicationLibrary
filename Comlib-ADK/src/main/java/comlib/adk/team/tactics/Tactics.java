@@ -8,8 +8,6 @@ import rescuecore2.standard.entities.StandardWorldModel;
 import rescuecore2.worldmodel.ChangeSet;
 import rescuecore2.worldmodel.EntityID;
 
-import java.util.List;
-
 public class Tactics {
     public StandardWorldModel model;
     public Config config;
@@ -17,6 +15,11 @@ public class Tactics {
 
     public Tactics() {
 
+    }
+
+    @Override
+    public String toString() {
+        return "Test";
     }
 
     public void postConnect() {

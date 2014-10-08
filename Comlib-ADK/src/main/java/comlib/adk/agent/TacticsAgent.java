@@ -28,6 +28,11 @@ public abstract class TacticsAgent<T extends Tactics, E extends StandardEntity> 
     //public abstract void
 
     @Override
+    public void registerProvider(MessageManager manager) {
+
+    }
+
+    @Override
     public void registerEvent(MessageManager manager) {
         this.tactics.registerEvent(manager);
     }

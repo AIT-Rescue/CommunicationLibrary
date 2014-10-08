@@ -1,11 +1,15 @@
 package comlib.adk.launcher;
 
+import comlib.adk.agent.AmbulanceTeamAgent;
+import comlib.adk.agent.FireBrigadeAgent;
+import comlib.adk.agent.PoliceForceAgent;
 import comlib.adk.team.Team;
 import rescuecore2.Constants;
 import rescuecore2.components.ComponentConnectionException;
 import rescuecore2.components.ComponentLauncher;
 import rescuecore2.components.TCPComponentLauncher;
 import rescuecore2.config.Config;
+import rescuecore2.connection.ConnectionException;
 
 import java.io.File;
 
@@ -48,7 +52,7 @@ public class AgentConnector {
         this.host = config.getValue(Constants.KERNEL_HOST_NAME_KEY, Constants.DEFAULT_KERNEL_HOST_NAME);
         this.port = config.getIntValue(Constants.KERNEL_PORT_NUMBER_KEY, Constants.DEFAULT_KERNEL_PORT_NUMBER);
         File tacticsDir = new File(this.launchDir, "tactics");
-        this.loader = new TeamLoader(tacticsDir);
+        this.loader = new TeamLoader(tacticsDir, config);
         this.ambulanceName = this.config.getValue(ConfigKey.KEY_AMBULANCE_NAME);
         this.ambulanceCount = this.config.getIntValue(ConfigKey.KEY_AMBULANCE_COUNT);
         this.fireName = this.config.getValue(ConfigKey.KEY_FIRE_NAME);
@@ -72,10 +76,11 @@ public class AgentConnector {
         Team team = this.loader.get(name);
         try {
             for (int i = 0; i != count; ++i) {
-                cl.connect(new AmbulanceTeamAgent(team.getAmbulanceTactics()));
+                cl.connect(new AmbulanceTeamAgent(team.getAmbulanceTeamTactics()));
             }
-        }
-        catch (ComponentConnectionException e) {
+        } catch (ComponentConnectionException e) {
+        } catch (InterruptedException e) {
+        } catch (ConnectionException e) {
         }
     }
     
@@ -87,10 +92,11 @@ public class AgentConnector {
         Team team = this.loader.get(name);
         try {
             for (int i = 0; i != count; ++i) {
-                cl.connect(new FireBrigadeAgent(team.getFireTactics()));
+                cl.connect(new FireBrigadeAgent(team.getFireBrigadeTactics()));
             }
-        }
-        catch (ComponentConnectionException e) {
+        } catch (ComponentConnectionException e) {
+        } catch (InterruptedException e) {
+        } catch (ConnectionException e) {
         }
     }
     
@@ -102,10 +108,11 @@ public class AgentConnector {
         Team team = this.loader.get(name);
         try {
             for (int i = 0; i != count; ++i) {
-                cl.connect(new PoliceForceAgent(team.getPoliceTactics()));
+                cl.connect(new PoliceForceAgent(team.getPoliceForceTactics()));
             }
-        }
-        catch (ComponentConnectionException e) {
+        } catch (ComponentConnectionException e) {
+        } catch (InterruptedException e) {
+        } catch (ConnectionException e) {
         }
     }
 }
