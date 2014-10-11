@@ -17,7 +17,7 @@ version = '1.0.0'
 		it.options.compilerArgs += ['-source', '1.7', '-target', '1.7', '-Xlint:none']
 }
 javadoc.options.encoding = 'UTF-8'
-
+''
 repositories {
     jcenter()
 }

@@ -10,7 +10,7 @@ dependencies {
     testCompile 'junit:junit:4.11'
 }
 
-jar.baseName = 'adk'
+jar.baseName = 'comlib-adk'
 version = '1.0.0'
 
 [compileJava, compileTestJava].each {
@@ -27,6 +27,7 @@ task wrapper(type: Wrapper) {
     gradleVersion = '2.1'
 }
 
+//need remake
 task start (type: JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
     main = "comlib.adk.launcher.AgentConnector"

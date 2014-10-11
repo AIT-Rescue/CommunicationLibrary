@@ -18,6 +18,7 @@ public class TeamLoader {
     private Map<String, Team> teamMap;
     private List<String> nameList;
     private Random random;
+    
     public TeamLoader(File dir, Config config) {
         this.teamMap = new HashMap<>();
         this.nameList = new ArrayList<>();
