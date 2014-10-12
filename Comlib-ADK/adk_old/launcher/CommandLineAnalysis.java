@@ -157,4 +157,9 @@ public final class CommandLineAnalysis {
         }
         return unknown.toArray(new String[unknown.size()]);
     }
+    
+    public static void setNotExistValue(Config config, String key, String value) {
+        if(value.equals(config.getValue(key, value)))
+            config.setValue(key, value);
+    }
 }
