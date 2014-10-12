@@ -3,6 +3,7 @@ package comlib.adk.launcher;
 import comlib.adk.agent.AmbulanceTeamAgent;
 import comlib.adk.agent.FireBrigadeAgent;
 import comlib.adk.agent.PoliceForceAgent;
+import comlib.adk.team.Team;
 import rescuecore2.Constants;
 import rescuecore2.components.ComponentConnectionException;
 import rescuecore2.components.ComponentLauncher;
@@ -14,23 +15,9 @@ import java.io.File;
 
 public class AgentConnector {
 
-    private File launchDir;
-
-    private String host;
-    private int port;
-
-    private TeamLoader loader;
-
     private Config config;
 
-    private String ambulanceName;
-    private int ambulanceCount;
-
-    private String fireName;
-    private int fireCount;
-
-    private String policeName;
-    private int policeCount;
+    private TeamLoader loader;
 
     public AgentConnector(String[] args) {
         this.init(args);
@@ -38,29 +25,20 @@ public class AgentConnector {
 
     private void init(String[] args) {
         this.config = ConfigInitializer.getConfig(args);
-        //this.launchDir = new File(config.getValue("ConfigKey.KEY_DIRECTORY", "."));
-        this.host = config.getValue(Constants.KERNEL_HOST_NAME_KEY, Constants.DEFAULT_KERNEL_HOST_NAME);
-        this.port = config.getIntValue(Constants.KERNEL_PORT_NUMBER_KEY, Constants.DEFAULT_KERNEL_PORT_NUMBER);
-        //File tacticsDir = new File(this.launchDir, "tactics");
-        //this.loader = new TeamLoader(tacticsDir, config);
-
-        this.ambulanceName = this.config.getValue(ConfigKey.KEY_AMBULANCE_NAME);
-        this.ambulanceCount = this.config.getIntValue(ConfigKey.KEY_AMBULANCE_COUNT);
-        this.fireName = this.config.getValue(ConfigKey.KEY_FIRE_NAME);
-        this.fireCount = this.config.getIntValue(ConfigKey.KEY_FIRE_COUNT);
-        this.policeName = this.config.getValue(ConfigKey.KEY_POLICE_NAME);
-        this.policeCount = this.config.getIntValue(ConfigKey.KEY_POLICE_COUNT);
+        this.loader = new TeamLoader(new File(config.getValue(ConfigKey.KEY_DIRECTORY, "."), "tactics"), config);
     }
 
     public void start() {
-        ComponentLauncher cl = new TCPComponentLauncher(this.host, this.port, this.config);
+        String host = config.getValue(Constants.KERNEL_HOST_NAME_KEY, Constants.DEFAULT_KERNEL_HOST_NAME);
+        int port = config.getIntValue(Constants.KERNEL_PORT_NUMBER_KEY, Constants.DEFAULT_KERNEL_PORT_NUMBER);
+        ComponentLauncher cl = new TCPComponentLauncher(host, port, this.config);
         this.connectAmbulance(cl);
         this.connectFire(cl);
         this.connectPolice(cl);
     }
 
     private void connectAmbulance(ComponentLauncher cl) {
-        this.connectAmbulance(cl, this.ambulanceName, this.ambulanceCount);
+        this.connectAmbulance(cl, this.config.getValue(ConfigKey.KEY_AMBULANCE_NAME), this.config.getIntValue(ConfigKey.KEY_AMBULANCE_COUNT));
     }
 
     private void connectAmbulance(ComponentLauncher cl, String name, int count) {
@@ -69,14 +47,12 @@ public class AgentConnector {
             for (int i = 0; i != count; ++i) {
                 cl.connect(new AmbulanceTeamAgent(team.getAmbulanceTeamTactics()));
             }
-        } catch (ComponentConnectionException e) {
-        } catch (InterruptedException e) {
-        } catch (ConnectionException e) {
+        } catch (ComponentConnectionException | InterruptedException | ConnectionException ignored) {
         }
     }
 
-    private void connectFire(ComponentLauncher cl) { //throws InterruptedException, ConnectionException
-        this.connectAmbulance(cl, this.fireName, this.fireCount);
+    private void connectFire(ComponentLauncher cl) {
+        this.connectFire(cl, this.config.getValue(ConfigKey.KEY_FIRE_NAME), this.config.getIntValue(ConfigKey.KEY_FIRE_COUNT));
     }
 
     private void connectFire(ComponentLauncher cl, String name, int count) {
@@ -85,14 +61,12 @@ public class AgentConnector {
             for (int i = 0; i != count; ++i) {
                 cl.connect(new FireBrigadeAgent(team.getFireBrigadeTactics()));
             }
-        } catch (ComponentConnectionException e) {
-        } catch (InterruptedException e) {
-        } catch (ConnectionException e) {
+        } catch (ComponentConnectionException | InterruptedException | ConnectionException ignored) {
         }
     }
 
-    private void connectPolice(ComponentLauncher cl) { //throws InterruptedException, ConnectionException
-        this.connectAmbulance(cl, this.policeName, this.policeCount);
+    private void connectPolice(ComponentLauncher cl) {
+        this.connectPolice(cl, this.config.getValue(ConfigKey.KEY_POLICE_NAME), this.config.getIntValue(ConfigKey.KEY_POLICE_COUNT));
     }
 
     private void connectPolice(ComponentLauncher cl, String name, int count) {
@@ -101,9 +75,7 @@ public class AgentConnector {
             for (int i = 0; i != count; ++i) {
                 cl.connect(new PoliceForceAgent(team.getPoliceForceTactics()));
             }
-        } catch (ComponentConnectionException e) {
-        } catch (InterruptedException e) {
-        } catch (ConnectionException e) {
+        } catch (ComponentConnectionException | InterruptedException | ConnectionException ignored) {
         }
     }
 }

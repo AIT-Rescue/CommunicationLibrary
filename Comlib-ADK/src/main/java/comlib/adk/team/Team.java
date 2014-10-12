@@ -8,7 +8,7 @@ import rescuecore2.config.Config;
 public interface Team {
     public String getTeamName();
     public void readConfig(Config config);
-    public FireBrigadeTactics getFireBrigadeTactics();
     public AmbulanceTeamTactics getAmbulanceTeamTactics();
+    public FireBrigadeTactics getFireBrigadeTactics();
     public PoliceForceTactics getPoliceForceTactics();
 }

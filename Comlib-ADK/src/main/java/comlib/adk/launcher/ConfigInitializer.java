@@ -13,6 +13,11 @@ public class ConfigInitializer {
     public static Config getConfig(String[] args) {
         Config commandLine = analysis(args);
         File configDir = new File(commandLine.getValue(ConfigKey.KEY_DIRECTORY, "."), "config");
+        if (!configDir.exists()) {
+            if(!configDir.mkdir()) {
+                return commandLine;
+            }
+        }
         try {
             Config config = new Config(configDir);
             config.merge(commandLine);

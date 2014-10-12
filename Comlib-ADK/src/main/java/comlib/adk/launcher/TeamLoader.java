@@ -1,5 +1,6 @@
 package comlib.adk.launcher;
 
+import comlib.adk.sample.SampleTeam;
 import comlib.adk.team.Team;
 import rescuecore2.config.Config;
 
@@ -15,8 +16,10 @@ import java.util.jar.JarFile;
 import java.util.jar.Manifest;
 
 public class TeamLoader {
+
     private Map<String, Team> teamMap;
     private List<String> nameList;
+
     private Random random;
     
     public TeamLoader(File dir, Config config) {
@@ -27,9 +30,17 @@ public class TeamLoader {
     }
 
     private void load(File dir, Config config) {
+        Team team = new SampleTeam();
+        String name = team.getTeamName();
+        this.nameList.add(name);
+        this.teamMap.put(name, team);
+
         if (!dir.exists()) {
-            dir.mkdir();
+            if(!dir.mkdir()) {
+                return;
+            }
         }
+
         URLClassLoader loader= (URLClassLoader)this.getClass().getClassLoader();
 
         for(File file : dir.listFiles()) {
@@ -83,7 +94,7 @@ public class TeamLoader {
     }
 
     public Team get(String name) {
-        return "random".equals(name) ? this.getTeam(name) : this.getRandomTeam();
+        return "random".equals(name) ? this.getRandomTeam() : this.getTeam(name);
     }
 
     public Team getTeam(String name) {
