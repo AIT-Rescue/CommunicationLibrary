@@ -42,6 +42,7 @@ public class AgentConnector {
     }
 
     private void connectAmbulance(ComponentLauncher cl, String name, int count) {
+        System.out.println("Connect : " + name);
         Team team = this.loader.get(name);
         try {
             for (int i = 0; i != count; ++i) {
@@ -56,6 +57,7 @@ public class AgentConnector {
     }
 
     private void connectFire(ComponentLauncher cl, String name, int count) {
+        System.out.println("Connect : " + name);
         Team team = this.loader.get(name);
         try {
             for (int i = 0; i != count; ++i) {
@@ -70,6 +72,7 @@ public class AgentConnector {
     }
 
     private void connectPolice(ComponentLauncher cl, String name, int count) {
+        System.out.println("Connect : " + name);
         Team team = this.loader.get(name);
         try {
             for (int i = 0; i != count; ++i) {
