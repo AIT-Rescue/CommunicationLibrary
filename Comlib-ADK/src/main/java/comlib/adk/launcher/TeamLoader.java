@@ -166,8 +166,8 @@ public class TeamLoader {
 
     public Team getTeam(String name) {
         Team team = this.teamMap.get(name);
-        if(team != null)
-            System.out.println("load teamMap : " + team.getTeamName());
+        //if(team != null)
+            //System.out.println("load teamMap : " + team.getTeamName());
         return team == null ? this.getRandomTeam() : team;
     }
 
