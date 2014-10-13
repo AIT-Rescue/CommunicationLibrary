@@ -1,3 +1,9 @@
 task wrapper(type: Wrapper) {
     gradleVersion = '2.1'
 }
+
+task copyLibrary(type: Copy) {
+    from 'Comlib-ADK/build/libs'
+    from 'Comlib/build/libs'
+    into 'AgentWorkspace/lib/rescue/util'
+}

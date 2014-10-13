@@ -11,7 +11,7 @@ dependencies {
 }
 
 jar.baseName = 'comlib-adk'
-version = '0.1.0'
+version = '0.2.0'
 
 [compileJava, compileTestJava].each {
     it.options.encoding = 'UTF-8'
@@ -27,7 +27,6 @@ task wrapper(type: Wrapper) {
     gradleVersion = '2.1'
 }
 
-//need remake
 task start (type: JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
     main = "comlib.adk.launcher.Main"

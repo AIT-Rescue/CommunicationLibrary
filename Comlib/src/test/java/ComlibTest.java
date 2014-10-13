@@ -1,8 +1,5 @@
-import junit.framework.*;
-
-import java.io.*;
-import comlib.manager.*;
-import rescuecore2.config.*;
+import comlib.manager.MessageManager;
+import junit.framework.TestCase;
 
 
 public class ComlibTest extends TestCase{
@@ -14,12 +11,12 @@ public class ComlibTest extends TestCase{
 	}
 
 	public void testDummyMessage() {
-		try
-			{
-				manager = new MessageManager(new Config(new File("src/test/resources/config/kernel.cfg")));
-			} catch (ConfigException e) {
-				e.printStackTrace();
-			}
+		//try
+			//{
+				//manager = new MessageManager(new Config());//new File("src/test/resources/config/kernel.cfg")));
+			//} catch (ConfigException e) {
+			//	e.printStackTrace();
+			//}
 		assertEquals(1, 1);
 	}
 }
