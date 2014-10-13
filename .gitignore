@@ -1,9 +1,12 @@
 *.class
 
-#gradle
+# rescue
+test-results/
+
+# gradle
 .gradle/
 
-#idea module
+# idea module
 *.iml
 .idea/
 
@@ -11,7 +14,7 @@
 .mtj.tmp/
 
 # Package Files #
-# *.jar
+*.jar
 *.war
 *.ear
 
