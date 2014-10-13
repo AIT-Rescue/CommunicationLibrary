@@ -2,13 +2,13 @@ apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'eclipse'
 
-//Team Name (use jar name) [default : name(working directory name)][example : 'SampleTeam']
+//チーム名です。コンパイル時に、Jarのファイル名になります。デフォルトでは、プロジェクトのディレクトリ名になります。
 String teamName = name
 
-//Team Class Name (use launch agent) [default : name(working directory name)][example : 'SampleTeam']
-String teamClassName = name
+//Jarを読み込むための記述です。Teamを実装したクラスを、パッケージを含めて記述してください。
+String teamClassName = 'comlib.adk.sample.SampleTeam'
 
-//Agent Version (jar name -> teamName + '-' + version)
+//バージョンの記述です。設定すると、Jarの名前が、[teamName]-[version].jarになります。
 //version = '1.0.0'
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -24,14 +24,8 @@ dependencies {
 }
 
 sourceSets {
-    main {
-        java {
-            srcDir 'src/java'
-        }
-        resources {
-            srcDir 'src/resources'
-        }
-    }
+    main.java.srcDirs = ['src/java']
+    main.resources.srcDirs = ['src/resources']
 }
 
 jar {
@@ -52,7 +46,7 @@ task start (type: JavaExec) {
     main = "comlib.adk.launcher.Main"
     //-Pargs="hoge fuga piyo"
     if (project.hasProperty('args')) {
-        args project.args.split('\\s+') //空白
+        args project.args.split('\\s+')
     }
     //maxHeapSize = '4096m'
     jvmArgs '-Xms512m', '-Xmx4g'

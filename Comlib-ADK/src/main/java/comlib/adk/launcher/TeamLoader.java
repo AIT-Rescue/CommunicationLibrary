@@ -48,33 +48,43 @@ public class TeamLoader {
                 this.load(file, config);
             }
             else if (file.getName().endsWith(".jar")) {
+                //System.out.println("load jar : " + file.getName());
                 this.loadTeam(file, loader, config);
             }
         }
     }
 
+    //Teamが入っていないライブラリの読み込みどうするか
     private void loadTeam(File file, URLClassLoader loader, Config config) {
         try {
-            //add url
+            //System.out.println("add url");
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////////
             Method m = URLClassLoader.class.getDeclaredMethod("addURL", new Class[]{URL.class});
             m.setAccessible(true);
             m.invoke(loader, new Object[]{file.toURI().toURL()});
-            //Team load
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            //System.out.println("load manifest");
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////////
             JarFile jar = new JarFile(file);
             Manifest manifest = jar.getManifest();
             Attributes attributes = manifest.getMainAttributes();
-            String teamClass = attributes.getValue("Team-Class");
-            if (teamClass != null) {
-                Class<?> plugin = null;
-                plugin = loader.loadClass(teamClass);
-                Object obj = null;
-                obj = plugin.newInstance();
-                if(obj instanceof Team){
+            String target = attributes.getValue("Team-Class");
+            if (target != null) {
+                ////////////////////////////////////////////////////////////////////////////////////////////////////////
+                //System.out.println("target class : " + targetClass);
+                ////////////////////////////////////////////////////////////////////////////////////////////////////////
+                //loader = (URLClassLoader) getClass().getClassLoader();
+                Class<?> teamClass = loader.loadClass(target);
+                Object obj = teamClass.newInstance();
+                if(obj instanceof Team) {
+                    ////////////////////////////////////////////////////////////////////////////////////////////////////
+                    //System.out.println("init Team");
+                    ////////////////////////////////////////////////////////////////////////////////////////////////////
                     Team team = (Team) obj;
                     String name = team.getTeamName();
                     this.nameList.add(name);
                     this.teamMap.put(name, team);
-                    //loadedPluginFiles.add(file.getName());
+                    //System.out.println("load Team : " + team.getTeamName());
                     team.readConfig(config);
                 }
             }
@@ -93,12 +103,71 @@ public class TeamLoader {
         }
     }
 
+    /*private void loadTeam(File file, URLClassLoader loader, Config config) {
+        try {
+            System.out.println("add url");
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            Method m = URLClassLoader.class.getDeclaredMethod("addURL", new Class[]{URL.class});
+            m.setAccessible(true);
+            m.invoke(loader, new Object[]{file.toURI().toURL()});
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            System.out.println("load Team");
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            JarFile jar = new JarFile(file);
+            Manifest manifest = jar.getManifest();
+            Attributes attributes = manifest.getMainAttributes();
+            String teamClass = attributes.getValue("Team-Class");
+            if (teamClass != null) {
+                ////////////////////////////////////////////////////////////////////////////////////////////////////////
+                System.out.println("Target Class : " + teamClass);
+                ////////////////////////////////////////////////////////////////////////////////////////////////////////
+                loader = (URLClassLoader) getClass().getClassLoader();//URLClassLoaderを受け取る
+                Method m1 = URLClassLoader.class.getDeclaredMethod("addURL", new Class[]{URL.class});//addURLメソッドのMethodインスタンスを取得
+                m1.setAccessible(true);//アクセスできるようにする
+                m1.invoke(loader, new Object[]{file.toURI().toURL()});//fileのURLを引数に渡してaddURLメソッドを実行
+
+                loader = (URLClassLoader) getClass().getClassLoader();
+                URL url = file.getCanonicalFile().toURI().toURL();
+                loader = new URLClassLoader( new URL[] { url });
+                //Class clazz=loader.load(name);
+                Class<?> plugin = loader.loadClass(teamClass);
+                Object obj = null;
+                obj = plugin.newInstance();
+                if(obj instanceof Team){
+                    ////////////////////////////////////////////////////////////////////////////////////////////////////
+                    System.out.println("init Team");
+                    Team team = (Team) obj;
+                    String name = team.getTeamName();
+                    this.nameList.add(name);
+                    this.teamMap.put(name, team);
+                    //loadedPluginFiles.add(file.getName());
+                    System.out.println("load Team : " + team.getTeamName());
+                    team.readConfig(config);
+                }
+            }
+        } catch (IOException e) { //FileOpen
+            e.printStackTrace();
+        } catch (NoSuchMethodException e) { //reflection
+            e.printStackTrace();
+        } catch (IllegalAccessException e) { //reflection
+            e.printStackTrace();
+        } catch (InvocationTargetException e) { //reflection
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) { //load class
+            e.printStackTrace();
+        } catch (InstantiationException e) { //load class
+            e.printStackTrace();
+        }
+    }*/
+
     public Team get(String name) {
         return "random".equals(name) ? this.getRandomTeam() : this.getTeam(name);
     }
 
     public Team getTeam(String name) {
         Team team = this.teamMap.get(name);
+        if(team != null)
+            System.out.println("load teamMap : " + team.getTeamName());
         return team == null ? this.getRandomTeam() : team;
     }
 
