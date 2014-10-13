@@ -7,3 +7,6 @@ task copyLibrary(type: Copy) {
     from 'Comlib/build/libs'
     into 'AgentWorkspace/lib/rescue/util'
 }
+
+//task removeOldLibrary
+//task makeWorkspaceZip

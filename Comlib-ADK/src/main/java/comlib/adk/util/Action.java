@@ -10,8 +10,6 @@ import java.util.List;
 
 public class Action {
 
-    //インスタンスいるか？？
-
     public static Message move(EntityID id, int time, List<EntityID> path) {
         return new AKMove(id, time, path);
     }
