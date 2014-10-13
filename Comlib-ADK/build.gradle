@@ -31,12 +31,10 @@ task wrapper(type: Wrapper) {
 task start (type: JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
     main = "comlib.adk.launcher.Main"
-    //args '',''
-
-    /*if (project.hasProperty('args')) {
-        args project.args.split('\\s+')
-    }*/
-
+    //-Pargs="hoge fuga piyo"
+    if (project.hasProperty('args')) {
+        args project.args.split('\\s+') //空白
+    }
     //maxHeapSize = '4096m'
     jvmArgs '-Xms512m', '-Xmx4g'
 }

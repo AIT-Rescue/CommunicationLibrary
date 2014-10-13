@@ -1,0 +1,63 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'eclipse'
+
+//Team Name (use jar name) [default : name(working directory name)][example : 'SampleTeam']
+String teamName = name
+
+//Team Class Name (use launch agent) [default : name(working directory name)][example : 'SampleTeam']
+String teamClassName = name
+
+//Agent Version (jar name -> teamName + '-' + version)
+//version = '1.0.0'
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile fileTree(dir: 'lib/util', include: '*.jar')
+    compile fileTree(dir: 'lib/rescue/core', include: '*.jar')
+    compile fileTree(dir: 'lib/rescue/util', include: '*.jar')
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src/java'
+        }
+        resources {
+            srcDir 'src/resources'
+        }
+    }
+}
+
+jar {
+    destinationDir = new File(projectDir, 'tactics')
+    baseName = teamName
+    manifest.attributes('Team-Class': teamClassName)
+    from configurations.runtime.collect { it.isDirectory() ? it : zipTree(it) }
+}
+
+[compileJava, compileTestJava].each {
+    it.options.encoding = 'UTF-8'
+    it.options.compilerArgs += ['-source', '1.7', '-target', '1.7']
+}
+javadoc.options.encoding = 'UTF-8'
+
+task start (type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+    main = "comlib.adk.launcher.Main"
+    //-Pargs="hoge fuga piyo"
+    if (project.hasProperty('args')) {
+        args project.args.split('\\s+') //‹ó”’
+    }
+    //maxHeapSize = '4096m'
+    jvmArgs '-Xms512m', '-Xmx4g'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.1'
+}
