@@ -52,7 +52,7 @@ task start (type: JavaExec) {
     main = "comlib.adk.launcher.Main"
     //-Pargs="hoge fuga piyo"
     if (project.hasProperty('args')) {
-        args project.args.split('\\s+') //‹ó”’
+        args project.args.split('\\s+') //ç©ºç™½
     }
     //maxHeapSize = '4096m'
     jvmArgs '-Xms512m', '-Xmx4g'

@@ -2,6 +2,7 @@
 
 # rescue
 test-results/
+!comlib*.jar
 
 # gradle
 .gradle/
