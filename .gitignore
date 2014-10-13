@@ -5,6 +5,7 @@ test-results/
 
 # gradle
 .gradle/
+build/
 
 # idea module
 *.iml
