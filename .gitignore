@@ -3,7 +3,6 @@
 # rescue
 test-results/
 
-
 # gradle
 .gradle/
 build/
@@ -16,7 +15,7 @@ build/
 .mtj.tmp/
 
 # Package Files #
-*.jar
+# *.jar
 *.war
 *.ear
 
