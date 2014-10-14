@@ -25,6 +25,7 @@ public class AgentConnector {
 
     private void init(String[] args) {
         this.config = ConfigInitializer.getConfig(args);
+        System.out.println("Load Team");
         this.loader = new TeamLoader(new File(config.getValue(ConfigKey.KEY_DIRECTORY, "."), "tactics"), config);
     }
 
@@ -32,6 +33,7 @@ public class AgentConnector {
         String host = config.getValue(Constants.KERNEL_HOST_NAME_KEY, Constants.DEFAULT_KERNEL_HOST_NAME);
         int port = config.getIntValue(Constants.KERNEL_PORT_NUMBER_KEY, Constants.DEFAULT_KERNEL_PORT_NUMBER);
         ComponentLauncher cl = new TCPComponentLauncher(host, port, this.config);
+        System.out.println("Start Connect (Server Info : " + host + ":" + port + ")");
         this.connectAmbulance(cl);
         this.connectFire(cl);
         this.connectPolice(cl);
@@ -42,10 +44,14 @@ public class AgentConnector {
     }
 
     private void connectAmbulance(ComponentLauncher cl, String name, int count) {
-        System.out.println("Connect : " + name);
         Team team = this.loader.get(name);
+        if(team.getAmbulanceTeamTactics() == null) {
+            team = this.loader.getRandomTeam();
+        }
+        name = team.getTeamName();
         try {
             for (int i = 0; i != count; ++i) {
+                System.out.println("Connect Ambulance Team (Team Name : " + name + ")");
                 cl.connect(new AmbulanceTeamAgent(team.getAmbulanceTeamTactics()));
             }
         } catch (ComponentConnectionException | InterruptedException | ConnectionException ignored) {
@@ -57,10 +63,14 @@ public class AgentConnector {
     }
 
     private void connectFire(ComponentLauncher cl, String name, int count) {
-        System.out.println("Connect : " + name);
         Team team = this.loader.get(name);
+        if(team.getFireBrigadeTactics() == null) {
+            team = this.loader.getRandomTeam();
+        }
+        name = team.getTeamName();
         try {
             for (int i = 0; i != count; ++i) {
+                System.out.println("Connect Fire Brigade   (Team Name : " + name + ")");
                 cl.connect(new FireBrigadeAgent(team.getFireBrigadeTactics()));
             }
         } catch (ComponentConnectionException | InterruptedException | ConnectionException ignored) {
@@ -72,13 +82,18 @@ public class AgentConnector {
     }
 
     private void connectPolice(ComponentLauncher cl, String name, int count) {
-        //System.out.println("Connect : " + name);
         Team team = this.loader.get(name);
+        if(team.getPoliceForceTactics() == null) {
+            team = this.loader.getRandomTeam();
+        }
+        name = team.getTeamName();
         try {
             for (int i = 0; i != count; ++i) {
+                System.out.println("Connect Police Force   (Team Name : " + name + ")");
                 cl.connect(new PoliceForceAgent(team.getPoliceForceTactics()));
             }
         } catch (ComponentConnectionException | InterruptedException | ConnectionException ignored) {
         }
+
     }
 }

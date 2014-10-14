@@ -11,7 +11,7 @@ dependencies {
 }
 
 jar.baseName = 'comlib-adk'
-version = '0.2.1'
+version = '0.2.3'
 
 [compileJava, compileTestJava].each {
     it.options.encoding = 'UTF-8'
