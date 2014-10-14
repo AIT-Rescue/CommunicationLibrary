@@ -30,9 +30,9 @@ task wrapper(type: Wrapper) {
 task start (type: JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
     main = "comlib.adk.launcher.Main"
-    //-Pargs="hoge fuga piyo"
+    //-Pargs="-s:localhost:7000 -t:sample:-1:-1:-1"
     if (project.hasProperty('args')) {
-        args project.args.split('\\s+') //空白
+        args project.args.split('\\s+')
     }
     //maxHeapSize = '4096m'
     jvmArgs '-Xms512m', '-Xmx4g'
