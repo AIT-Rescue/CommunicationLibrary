@@ -1,6 +1,6 @@
 package comlib.adk.team.tactics;
 
-import comlib.adk.util.Action;
+import comlib.adk.util.action.Action;
 import comlib.manager.MessageManager;
 import rescuecore2.config.Config;
 import rescuecore2.messages.Message;

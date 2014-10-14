@@ -1,4 +1,4 @@
-package comlib.adk.util;
+package comlib.adk.util.action;
 
 import comlib.adk.team.tactics.Tactics;
 import rescuecore2.messages.Message;
@@ -15,7 +15,7 @@ public class Action {
     }
 
     public static Message move(Tactics tactics, int time, List<EntityID> path) {
-        return new AKMove(tactics.agentID, time, path);
+        return move(tactics.agentID, time, path);
     }
 
     public static Message move(EntityID id, int time, List<EntityID> path, int destX, int destY) {
@@ -23,7 +23,7 @@ public class Action {
     }
 
     public static Message move(Tactics tactics, int time, List<EntityID> path, int destX, int destY) {
-        return new AKMove(tactics.agentID, time, path, destX, destY);
+        return move(tactics.agentID, time, path, destX, destY);
     }
 
     public static Message rest(EntityID id, int time) {
@@ -31,6 +31,6 @@ public class Action {
     }
 
     public static Message rest(Tactics tactics, int time) {
-        return new AKRest(tactics.agentID, time);
+        return rest(tactics.agentID, time);
     }
 }
