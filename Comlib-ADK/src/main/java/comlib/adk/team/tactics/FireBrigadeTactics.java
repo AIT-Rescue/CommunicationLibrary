@@ -3,9 +3,9 @@ package comlib.adk.team.tactics;
 import rescuecore2.standard.entities.StandardEntityURN;
 
 public class FireBrigadeTactics extends Tactics {
-    private static final String MAX_WATER_KEY = "fire.tank.maximum";
-    private static final String MAX_DISTANCE_KEY = "fire.extinguish.max-distance";
-    private static final String MAX_POWER_KEY = "fire.extinguish.max-sum";
+    public static final String MAX_WATER_KEY = "fire.tank.maximum";
+    public static final String MAX_DISTANCE_KEY = "fire.extinguish.max-distance";
+    public static final String MAX_POWER_KEY = "fire.extinguish.max-sum";
 
     public int maxWater;
     public int maxDistance;
