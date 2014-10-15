@@ -11,7 +11,7 @@ dependencies {
 }
 
 jar.baseName = 'comlib-adk'
-version = '0.2.6'
+version = '0.3.0'
 
 [compileJava, compileTestJava].each {
     it.options.encoding = 'UTF-8'
@@ -21,6 +21,11 @@ javadoc.options.encoding = 'UTF-8'
 
 repositories {
     jcenter()
+}
+
+task buildJar(dependsOn: [build]) {
+    mustRunAfter 'clean'
+    println 'build Comlib-ADK'
 }
 
 task wrapper(type: Wrapper) {
@@ -36,9 +41,4 @@ task start (type: JavaExec) {
     }
     //maxHeapSize = '4096m'
     jvmArgs '-Xms512m', '-Xmx4g'
-}
-
-task test00 << {
-    println projectDir //CommunicationLibrary\Comlib-ADK
-    println rootDir //CommunicationLibrary
 }

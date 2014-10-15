@@ -1,34 +1,32 @@
-import java.nio.file.Files
-
 apply plugin: 'java'
 
 task wrapper(type: Wrapper) {
     gradleVersion = '2.1'
 }
 
-/*task deleteOldLibrary << {
-    File libDir = new File(projectDir, 'AgentWorkspace/lib/rescue/util');
-    for (File jarFile : libDir.listFiles()) {
-        Files.delete(jarFile.toPath());
-    }
-}*/
-
-task deleteOldLibrary(type: Delete) {
-    delete 'AgentWorkspace/lib/rescue/util'
-}
-
-task copyLibrary(type: Copy, dependsOn: [build, deleteOldLibrary]) {
-    from 'Comlib-ADK/build/libs'
-    from 'Comlib/build/libs'
-    into 'AgentWorkspace/lib/rescue/util'
-}
-
 //http://www.gradle.org/docs/current/dsl/org.gradle.api.tasks.bundling.Zip.html#org.gradle.api.tasks.bundling.Zip
-task zipWorkspace(type: Zip, dependsOn: copyLibrary) {
+task buildWorkspace(type: Zip,  dependsOn: [':Comlib:buildJar', ':Comlib-ADK:buildJar']) {
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     destinationDir = new File(projectDir, 'archive')
     archiveName = 'comlib_adk_workspace' + '.zip'
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
     into('workspace') {
-        from 'AgentWorkSpace'
+        //gradle
+        from 'gradlew'
+        from 'gradlew.bat'
+        into('gradle') {
+            from 'gradle'
+        }
+        //workspace
+        from 'basefile'
+        into('library') {
+            from 'library'
+            into('rescue/util') {
+                from 'Comlib-ADK/build/libs'
+                from 'Comlib/build/libs'
+            }
+        }
     }
     from 'LICENSE'
 }

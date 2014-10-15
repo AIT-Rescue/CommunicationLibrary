@@ -10,7 +10,7 @@ dependencies {
 }
 
 jar.baseName = 'comlib'
-version = '0.1.1'
+version = '0.2.0'
 
 [compileJava, compileTestJava].each {
     it.options.encoding = 'UTF-8'
@@ -24,5 +24,10 @@ repositories {
 
 task wrapper(type: Wrapper) {
     gradleVersion = '2.1'
+}
+
+task buildJar(dependsOn: build) {
+    mustRunAfter 'clean'
+    println 'build Comlib'
 }
 
