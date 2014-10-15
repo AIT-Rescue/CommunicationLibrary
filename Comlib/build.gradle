@@ -26,8 +26,9 @@ task wrapper(type: Wrapper) {
     gradleVersion = '2.1'
 }
 
-task buildJar(dependsOn: build) {
-    mustRunAfter 'clean'
-    println 'build Comlib'
+task autoClean(dependsOn: clean) {
+}
+
+task buildJar(dependsOn: [autoClean,  build]) {
 }
 

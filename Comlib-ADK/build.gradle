@@ -23,9 +23,10 @@ repositories {
     jcenter()
 }
 
-task buildJar(dependsOn: [build]) {
-    mustRunAfter 'clean'
-    println 'build Comlib-ADK'
+task autoClean(dependsOn: clean) {
+}
+
+task buildJar(dependsOn: [autoClean,  build]) {
 }
 
 task wrapper(type: Wrapper) {

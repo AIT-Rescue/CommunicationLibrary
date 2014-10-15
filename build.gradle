@@ -19,13 +19,31 @@ task buildWorkspace(type: Zip,  dependsOn: [':Comlib:buildJar', ':Comlib-ADK:bui
             from 'gradle'
         }
         //workspace
-        from 'basefile'
+        from 'basefile/build.gradle'
+        //library
         into('library') {
             from 'library'
             into('rescue/util') {
                 from 'Comlib-ADK/build/libs'
                 from 'Comlib/build/libs'
             }
+        }
+        //src
+        into('src') {
+            into('java') {
+                from 'basefile/.gitkeep'
+            }
+            into('resources') {
+                from 'basefile/.gitkeep'
+            }
+        }
+        //tactics
+        into('tactics') {
+            from 'basefile/.gitkeep'
+        }
+        //config
+        into('config') {
+            from 'basefile/adk.cfg'
         }
     }
     from 'LICENSE'
