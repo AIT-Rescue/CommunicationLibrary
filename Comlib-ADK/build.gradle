@@ -3,12 +3,9 @@ apply plugin: 'idea'
 apply plugin: 'eclipse'
 
 dependencies {
-    //compile fileTree(dir: 'lib/util', include: '*.jar')
-    //compile fileTree(dir: 'lib/rescue/core', include: '*.jar')
-    //compile fileTree(dir: 'lib/rescue/util', include: '*.jar')
-    compile fileTree(dir: new File(rootDir, 'Comlib/lib/util'), include: '*.jar')
-    compile fileTree(dir: new File(rootDir, 'Comlib/lib/rescue/core'), include: '*.jar')
-    compile fileTree(dir: new File(rootDir, 'Comlib/lib/rescue/util'), include: '*.jar')
+    compile fileTree(dir: new File(rootDir, 'library/util'), include: '*.jar')
+    compile fileTree(dir: new File(rootDir, 'library/rescue/core'), include: '*.jar')
+    compile fileTree(dir: new File(rootDir, 'library/rescue/util'), include: '*.jar')
     compile project(':Comlib')
     testCompile 'junit:junit:4.11'
 }
