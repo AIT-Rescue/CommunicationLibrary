@@ -10,7 +10,7 @@ dependencies {
 }
 
 jar.baseName = 'comlib'
-version = '0.1.0'
+version = '0.1.1'
 
 [compileJava, compileTestJava].each {
     it.options.encoding = 'UTF-8'
