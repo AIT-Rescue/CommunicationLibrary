@@ -7,6 +7,9 @@ import rescuecore2.standard.entities.StandardEntityURN;
 import java.util.EnumSet;
 
 public class AmbulanceTeamAgent extends TacticsAgent<AmbulanceTeamTactics, AmbulanceTeam> {
+
+    public AmbulanceTeamTactics tactics;
+
     public AmbulanceTeamAgent(AmbulanceTeamTactics ambulanceTactics) {
         super(ambulanceTactics);
     }

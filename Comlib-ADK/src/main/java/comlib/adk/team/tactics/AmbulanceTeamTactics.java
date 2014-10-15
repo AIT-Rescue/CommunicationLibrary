@@ -1,4 +1,7 @@
 package comlib.adk.team.tactics;
 
-public class AmbulanceTeamTactics extends Tactics{
+import rescuecore2.standard.entities.AmbulanceTeam;
+
+public class AmbulanceTeamTactics extends Tactics<AmbulanceTeam>{
+    public AmbulanceTeam me;
 }

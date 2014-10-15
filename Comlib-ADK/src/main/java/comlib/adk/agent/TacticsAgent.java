@@ -18,10 +18,14 @@ public abstract class TacticsAgent<T extends Tactics, E extends StandardEntity> 
     @Override
     public void postConnect() {
         super.postConnect();
+        this.tactics.random = this.random;
         this.tactics.model = this.model; //this.tactics.setWorld(this.model);
         this.tactics.config = this.config; //this.tactics.setConfig(this.config);
-        this.tactics.agentID = this.getID(); //AgentのEntityIDはかわるのか？？
-        //  this.
+        //this.tactics.agentID = this.getID(); //AgentのEntityIDはかわるのか？？
+        //this.tactics.me = this.me();
+        //List<Refuge> refuges = this.getRefuges();
+        //this.tactics.manager = this.manager;
+
         this.tactics.postConnect();
     }
     
@@ -42,6 +46,8 @@ public abstract class TacticsAgent<T extends Tactics, E extends StandardEntity> 
         this.tactics.model = this.model; //this.tactics.setWorld(this.model);
         this.tactics.config = this.config; //this.tactics.setConfig(this.config);
         this.tactics.agentID = this.getID();
-        this.send(this.tactics.think(time, changed));
+        this.tactics.me = this.me();
+        this.tactics.location = this.location();
+        this.send(this.tactics.think(time, changed, this.manager));
     }
 }

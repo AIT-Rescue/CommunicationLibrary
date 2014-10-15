@@ -1,11 +1,14 @@
 package comlib.adk.team.tactics;
 
+import rescuecore2.standard.entities.FireBrigade;
 import rescuecore2.standard.entities.StandardEntityURN;
 
-public class FireBrigadeTactics extends Tactics {
+public class FireBrigadeTactics extends Tactics<FireBrigade> {
     public static final String MAX_WATER_KEY = "fire.tank.maximum";
     public static final String MAX_DISTANCE_KEY = "fire.extinguish.max-distance";
     public static final String MAX_POWER_KEY = "fire.extinguish.max-sum";
+
+    public FireBrigade me;
 
     public int maxWater;
     public int maxDistance;

@@ -7,6 +7,9 @@ import rescuecore2.standard.entities.StandardEntityURN;
 import java.util.EnumSet;
 
 public class FireBrigadeAgent extends TacticsAgent<FireBrigadeTactics, FireBrigade> {
+
+    public FireBrigadeTactics tactics;
+
     public FireBrigadeAgent(FireBrigadeTactics fireBrigadeTactics) {
         super(fireBrigadeTactics);
     }

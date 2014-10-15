@@ -7,7 +7,9 @@ import rescuecore2.standard.entities.StandardEntityURN;
 import java.util.EnumSet;
 
 public class PoliceForceAgent extends TacticsAgent<PoliceForceTactics, PoliceForce> {
+
     public PoliceForceTactics tactics;
+
     public PoliceForceAgent(PoliceForceTactics policeForceTactics) {
         super(policeForceTactics);
     }
