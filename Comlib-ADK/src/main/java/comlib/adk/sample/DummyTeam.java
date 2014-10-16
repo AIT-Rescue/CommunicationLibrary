@@ -6,11 +6,11 @@ import comlib.adk.team.tactics.FireBrigadeTactics;
 import comlib.adk.team.tactics.PoliceForceTactics;
 import rescuecore2.config.Config;
 
-public class SampleTeam implements Team {
+public class DummyTeam implements Team {
 
     @Override
     public String getTeamName() {
-        return "sample";
+        return "dummy";
     }
 
     @Override
@@ -19,16 +19,16 @@ public class SampleTeam implements Team {
 
     @Override
     public FireBrigadeTactics getFireBrigadeTactics() {
-        return new SampleFire();
+        return new DummyFire();
     }
 
     @Override
     public AmbulanceTeamTactics getAmbulanceTeamTactics() {
-        return new SampleAmbulance();
+        return new DummyAmbulance();
     }
 
     @Override
     public PoliceForceTactics getPoliceForceTactics() {
-        return new SamplePolice();
+        return new DummyPolice();
     }
 }

@@ -25,15 +25,14 @@ public abstract class TacticsAgent<T extends Tactics, E extends StandardEntity> 
         //this.tactics.me = this.me();
         //List<Refuge> refuges = this.getRefuges();
         //this.tactics.manager = this.manager;
-
+        this.initAgentValue();
         this.tactics.postConnect();
     }
     
-    //public abstract void
+    public abstract void initAgentValue();
 
     @Override
     public void registerProvider(MessageManager manager) {
-
     }
 
     @Override

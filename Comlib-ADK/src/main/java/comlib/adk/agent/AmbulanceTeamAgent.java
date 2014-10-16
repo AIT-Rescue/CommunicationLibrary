@@ -23,4 +23,8 @@ public class AmbulanceTeamAgent extends TacticsAgent<AmbulanceTeamTactics, Ambul
     protected EnumSet<StandardEntityURN> getRequestedEntityURNsEnum() {
         return EnumSet.of(StandardEntityURN.AMBULANCE_TEAM);
     }
+
+    @Override
+    public void initAgentValue() {
+    }
 }

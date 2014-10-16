@@ -1,6 +1,6 @@
 package comlib.adk.launcher;
 
-import comlib.adk.sample.SampleTeam;
+import comlib.adk.sample.DummyTeam;
 import comlib.adk.team.Team;
 import rescuecore2.config.Config;
 
@@ -44,7 +44,7 @@ public class TeamLoader {
     }
 
     private void load(File file, Config config) {
-        this.addSampleAgent();
+        this.addDummyTeam();
         if (!file.exists()) {
             file.mkdir();
             return;
@@ -56,8 +56,8 @@ public class TeamLoader {
         this.loadTeam(loader, list, config);
     }
 
-    private void addSampleAgent() {
-        Team team = new SampleTeam();
+    private void addDummyTeam() {
+        Team team = new DummyTeam();
         String name = team.getTeamName();
         this.nameList.add(name);
         this.teamMap.put(name, team);

@@ -11,7 +11,7 @@ import rescuecore2.worldmodel.EntityID;
 
 import java.util.Random;
 
-public class Tactics<E extends StandardEntity> {
+public abstract class Tactics<E extends StandardEntity> {
     public StandardWorldModel model;
     public Config config;
     public EntityID agentID;
@@ -29,15 +29,12 @@ public class Tactics<E extends StandardEntity> {
         return "Test";
     }
 
-    public void postConnect() {
-    }
+    public abstract void postConnect();
 
     public void registerEvent(MessageManager manager) {
     }
 
-    public Message think(int time, ChangeSet changed, MessageManager manager) {
-        return Action.rest(this, time);
-    }
+    public abstract Message think(int time, ChangeSet changed, MessageManager manager);
 
     public StandardEntity location() {
         return this.location;
