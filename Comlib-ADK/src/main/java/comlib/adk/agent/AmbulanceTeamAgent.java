@@ -12,6 +12,7 @@ public class AmbulanceTeamAgent extends TacticsAgent<AmbulanceTeamTactics, Ambul
 
     public AmbulanceTeamAgent(AmbulanceTeamTactics ambulanceTactics) {
         super(ambulanceTactics);
+        this.tactics = ambulanceTactics;
     }
 
     @Override

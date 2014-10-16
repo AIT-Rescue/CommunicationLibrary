@@ -49,4 +49,6 @@ public abstract class TacticsAgent<T extends Tactics, E extends StandardEntity> 
         this.tactics.location = this.location();
         this.send(this.tactics.think(time, changed, this.manager));
     }
+
+
 }

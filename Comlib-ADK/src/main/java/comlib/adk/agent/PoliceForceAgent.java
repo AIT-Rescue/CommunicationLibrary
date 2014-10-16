@@ -13,6 +13,7 @@ public class PoliceForceAgent extends TacticsAgent<PoliceForceTactics, PoliceFor
 
     public PoliceForceAgent(PoliceForceTactics policeForceTactics) {
         super(policeForceTactics);
+        this.tactics = policeForceTactics;
     }
 
     @Override

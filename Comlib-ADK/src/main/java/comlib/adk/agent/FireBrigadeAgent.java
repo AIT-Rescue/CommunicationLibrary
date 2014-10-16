@@ -15,6 +15,7 @@ public class FireBrigadeAgent extends TacticsAgent<FireBrigadeTactics, FireBriga
 
     public FireBrigadeAgent(FireBrigadeTactics fireBrigadeTactics) {
         super(fireBrigadeTactics);
+        this.tactics = fireBrigadeTactics;
     }
 
     @Override
