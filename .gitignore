@@ -1,5 +1,8 @@
 *.class
 
+#archive (workspace)
+archive/
+
 # rescue
 test-results/
 

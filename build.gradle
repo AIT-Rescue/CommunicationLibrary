@@ -1,3 +1,5 @@
+import java.text.SimpleDateFormat
+
 apply plugin: 'java'
 
 task wrapper(type: Wrapper) {
@@ -6,11 +8,13 @@ task wrapper(type: Wrapper) {
 
 //http://www.gradle.org/docs/current/dsl/org.gradle.api.tasks.bundling.Zip.html#org.gradle.api.tasks.bundling.Zip
 task buildWorkspace(type: Zip,  dependsOn: [':Comlib:makeArchive', ':Comlib-ADK:makeArchive']) {
+    Calendar calendar = Calendar.getInstance()
+    SimpleDateFormat sdf = new SimpleDateFormat('yyyyMMdd')
+    String date = sdf.format(calendar.getTime())
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     destinationDir = new File(projectDir, 'archive')
-    archiveName = 'comlib-adk-workspace' + '.zip'
+    archiveName = 'comlib-adk-workspace-' + date + '.zip'
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
     into('workspace') {
         //gradle
         from 'gradlew'
@@ -48,6 +52,3 @@ task buildWorkspace(type: Zip,  dependsOn: [':Comlib:makeArchive', ':Comlib-ADK:
     }
     from 'LICENSE'
 }
-
-//task removeOldLibrary
-//task makeWorkspaceZip
