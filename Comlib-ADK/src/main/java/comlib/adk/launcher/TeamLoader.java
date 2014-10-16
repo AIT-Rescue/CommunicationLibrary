@@ -1,6 +1,6 @@
 package comlib.adk.launcher;
 
-import comlib.adk.sample.DummyTeam;
+import comlib.adk.dummy.DummyTeam;
 import comlib.adk.team.Team;
 import rescuecore2.config.Config;
 

@@ -16,7 +16,7 @@ public class AmbulanceTeamAgent extends TacticsAgent<AmbulanceTeamTactics, Ambul
 
     @Override
     public String toString() {
-        return "Ambulance Team : " + this.tactics.toString();
+        return "Ambulance Team : "; /*+ this.tactics.toString();*/
     }
 
     @Override

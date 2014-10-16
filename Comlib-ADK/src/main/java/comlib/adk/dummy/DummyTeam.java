@@ -1,5 +1,8 @@
-package comlib.adk.sample;
+package comlib.adk.dummy;
 
+import comlib.adk.dummy.DummyAmbulance;
+import comlib.adk.dummy.DummyFire;
+import comlib.adk.dummy.DummyPolice;
 import comlib.adk.team.Team;
 import comlib.adk.team.tactics.AmbulanceTeamTactics;
 import comlib.adk.team.tactics.FireBrigadeTactics;

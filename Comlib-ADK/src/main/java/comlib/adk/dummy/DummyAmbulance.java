@@ -1,4 +1,4 @@
-package comlib.adk.sample;
+package comlib.adk.dummy;
 
 import comlib.adk.team.tactics.AmbulanceTeamTactics;
 import comlib.adk.util.action.AmbulanceAction;
@@ -15,5 +15,10 @@ public class DummyAmbulance extends AmbulanceTeamTactics {
     @Override
     public Message think(int time, ChangeSet changed, MessageManager manager) {
         return AmbulanceAction.rest(this, time);
+    }
+
+    @Override
+    public String toString() {
+        return "dummy";
     }
 }

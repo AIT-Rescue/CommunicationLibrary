@@ -1,4 +1,4 @@
-package comlib.adk.sample;
+package comlib.adk.dummy;
 
 import comlib.adk.team.tactics.PoliceForceTactics;
 import comlib.adk.util.action.Action;
@@ -17,5 +17,10 @@ public class DummyPolice extends PoliceForceTactics {
     @Override
     public Message think(int time, ChangeSet changed, MessageManager manager) {
         return PoliceAction.rest(this, time);
+    }
+
+    @Override
+    public String toString() {
+        return "dummy";
     }
 }

@@ -17,7 +17,7 @@ public class PoliceForceAgent extends TacticsAgent<PoliceForceTactics, PoliceFor
 
     @Override
     public String toString() {
-        return "Police Force : " + this.tactics.toString();
+        return "Police Force : "; /*+ this.tactics.toString();*/
     }
 
     @Override

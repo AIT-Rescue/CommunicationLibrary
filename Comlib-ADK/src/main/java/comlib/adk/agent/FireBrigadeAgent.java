@@ -19,7 +19,7 @@ public class FireBrigadeAgent extends TacticsAgent<FireBrigadeTactics, FireBriga
 
     @Override
     public String toString() {
-        return "Fire Brigade : " + this.tactics.toString();
+        return "Fire Brigade : "; /*+ this.tactics.toString();*/
     }
 
     @Override
