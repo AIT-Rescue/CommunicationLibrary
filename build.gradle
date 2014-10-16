@@ -13,9 +13,10 @@ task buildWorkspace(type: Zip,  dependsOn: [':Comlib:makeArchive', ':Comlib-ADK:
     String date = sdf.format(calendar.getTime())
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     destinationDir = new File(projectDir, 'archive')
-    archiveName = 'comlib-adk-workspace-' + date + '.zip'
+    String buildName = 'comlib-adk-workspace-' + date
+    archiveName = buildName + '.zip'
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    into(archiveName) {
+    into(buildName) {
         into('workspace') {
             //gradle
             from 'gradlew'
