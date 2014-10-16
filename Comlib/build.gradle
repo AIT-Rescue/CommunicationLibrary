@@ -2,6 +2,13 @@ apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'eclipse'
 
+jar.baseName = 'comlib'
+version = '0.2.0'
+
+repositories {
+    jcenter()
+}
+
 dependencies {
     compile fileTree(dir: new File(rootDir, 'library/util'), include: '*.jar')
     compile fileTree(dir: new File(rootDir, 'library/rescue/core'), include: '*.jar')
@@ -9,26 +16,28 @@ dependencies {
     testCompile 'junit:junit:4.11'
 }
 
-jar.baseName = 'comlib'
-version = '0.2.0'
-
 [compileJava, compileTestJava].each {
     it.options.encoding = 'UTF-8'
     it.options.compilerArgs += ['-source', '1.7', '-target', '1.7', '-Xlint:none']
 }
 javadoc.options.encoding = 'UTF-8'
 
-repositories {
-    jcenter()
+task autoClean(dependsOn: clean) {
+}
+
+task cleanBuild(dependsOn: [autoClean,  build]) {
+}
+
+task makeArchive(type: Zip, dependsOn: cleanBuild) {
+    destinationDir = new File(buildDir, 'libs')
+    archiveName = jar.baseName + '-' + version + '-src.zip'
+    into('comlib') {
+        from 'src/main/java/comlib'
+    }
 }
 
 task wrapper(type: Wrapper) {
     gradleVersion = '2.1'
 }
 
-task autoClean(dependsOn: clean) {
-}
-
-task buildJar(dependsOn: [autoClean,  build]) {
-}
 

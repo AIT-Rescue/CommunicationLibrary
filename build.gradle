@@ -5,10 +5,10 @@ task wrapper(type: Wrapper) {
 }
 
 //http://www.gradle.org/docs/current/dsl/org.gradle.api.tasks.bundling.Zip.html#org.gradle.api.tasks.bundling.Zip
-task buildWorkspace(type: Zip,  dependsOn: [':Comlib:buildJar', ':Comlib-ADK:buildJar']) {
+task buildWorkspace(type: Zip,  dependsOn: [':Comlib:makeArchive', ':Comlib-ADK:makeArchive']) {
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     destinationDir = new File(projectDir, 'archive')
-    archiveName = 'comlib_adk_workspace' + '.zip'
+    archiveName = 'comlib-adk-workspace' + '.zip'
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     into('workspace') {

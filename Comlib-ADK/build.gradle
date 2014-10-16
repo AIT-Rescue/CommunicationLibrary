@@ -2,6 +2,14 @@ apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'eclipse'
 
+
+jar.baseName = 'comlib-adk'
+version = '0.3.0'
+
+repositories {
+    jcenter()
+}
+
 dependencies {
     compile fileTree(dir: new File(rootDir, 'library/util'), include: '*.jar')
     compile fileTree(dir: new File(rootDir, 'library/rescue/core'), include: '*.jar')
@@ -10,27 +18,24 @@ dependencies {
     testCompile 'junit:junit:4.11'
 }
 
-jar.baseName = 'comlib-adk'
-version = '0.3.0'
-
 [compileJava, compileTestJava].each {
     it.options.encoding = 'UTF-8'
     it.options.compilerArgs += ['-source', '1.7', '-target', '1.7']
 }
 javadoc.options.encoding = 'UTF-8'
 
-repositories {
-    jcenter()
-}
-
 task autoClean(dependsOn: clean) {
 }
 
-task buildJar(dependsOn: [autoClean,  build]) {
+task cleanBuild(dependsOn: [autoClean,  build]) {
 }
 
-task wrapper(type: Wrapper) {
-    gradleVersion = '2.1'
+task makeArchive(type: Zip, dependsOn: cleanBuild) {
+    destinationDir = new File(buildDir, 'libs')
+    archiveName = jar.baseName + '-' + version + '-src.zip'
+    into('comlib') {
+        from 'src/main/java/comlib'
+    }
 }
 
 task start (type: JavaExec) {
@@ -42,4 +47,9 @@ task start (type: JavaExec) {
     }
     //maxHeapSize = '4096m'
     jvmArgs '-Xms512m', '-Xmx4g'
+}
+
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.1'
 }
