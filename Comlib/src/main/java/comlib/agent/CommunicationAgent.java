@@ -23,13 +23,16 @@ public abstract class CommunicationAgent<E extends StandardEntity> extends Stand
     public abstract void registerProvider(MessageManager manager);
     
     public abstract void registerEvent(MessageManager manager);
-    //public abstract void registerEvent();
     
     public abstract void think(int time, ChangeSet changed);
-    //public void registerCreator(){}
+
     
     public void sendSpeak(CommunicationMessage msg) {
         this.manager.addSendMessage(msg);
+    }
+    
+    public void sendSay(CommunicationMessage msg) {
+        this.manager.addNearFieldSendMessage(msg);
     }
     
     @Override
@@ -48,13 +51,15 @@ public abstract class CommunicationAgent<E extends StandardEntity> extends Stand
     }
     
     public void send(Message[] msgs) {
-        for(Message msg : msgs) this.send(msg);
+        for(Message msg : msgs) super.send(msg);
     }
     
     public void send(List<Message> msgs) {
-        for(Message msg : msgs) this.send(msg);
+        for(Message msg : msgs) super.send(msg);
     }
     
+		// temp Leave ---
+		/*
     @Override
     protected final void sendSpeak(int time, int channel, byte[] data) {
         //super.sendSpeak(time, channel, data);
@@ -64,4 +69,5 @@ public abstract class CommunicationAgent<E extends StandardEntity> extends Stand
     protected final void sendSay(int time, byte[] data) {
         //super.sendSay(time, data);
     }
+		*/
 }

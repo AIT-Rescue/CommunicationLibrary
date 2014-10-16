@@ -158,6 +158,11 @@ public class MessageManager {
 		this.sendMessages.add(msg);
 	}
 
+	public void addNearFieldSendMessage(CommunicationMessage msg) {
+// TODO: NFCのリストを用意して．．．いろいろ
+		this.sendMessages.add(msg);
+	}
+
 	private void initLoadProvider() {
 		this.registerStandardProvider(new DummyMessageProvider(MessageID.dummyMessage));
 		//this.register(CommunicationMessage.buildingMessageID, new BuildingMessageProvider(this.event));
