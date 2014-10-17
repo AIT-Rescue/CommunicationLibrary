@@ -14,7 +14,7 @@ abstract public class VictimMessage extends HumanMessage
 
 	public VictimMessage(int time, int ttl, EntityID id, int hp, int buriedness, int damage, EntityID position)
 	{
-		super(MessageID.victimMessage, int time, int ttl, EntityID id, int hp, int buriedness, int damage, EntityID position)
+		super(MessageID.victimMessage, int time, int ttl, EntityID id, int hp, int buriedness, int damage, EntityID position);
 	}
 }
 

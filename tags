@@ -2298,15 +2298,19 @@ STEEL	../roborescue-roborescue/modules/misc/src/misc/MiscParameters.java	/^     
 STEEL	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/StandardEntityConstants.java	/^        STEEL,$/;"	e	enum:StandardEntityConstants.BuildingCode	file:
 STEP_TIME_MS	../roborescue-roborescue/modules/traffic3/src/traffic3/simulator/TrafficSimulator.java	/^	private static final double STEP_TIME_MS = 100;$/;"	f	class:TrafficSimulator	file:
 SYSTEM_REGISTRY	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/registry/Registry.java	/^	public static final Registry SYSTEM_REGISTRY = new Registry("System", null);$/;"	f	class:Registry
+SampleAmbulance	./basefile/sample/SampleAmbulance.java	/^public class SampleAmbulance extends AmbulanceTeamTactics {$/;"	c
 SampleAmbulanceTeam	../roborescue-roborescue/modules/sample/src/sample/SampleAmbulanceTeam.java	/^public class SampleAmbulanceTeam extends AbstractSampleAgent<AmbulanceTeam> {$/;"	c
 SampleCentre	../roborescue-roborescue/modules/sample/src/sample/SampleCentre.java	/^public class SampleCentre extends StandardAgent<Building> {$/;"	c
 SampleCivilian	../roborescue-roborescue/modules/sample/src/sample/SampleCivilian.java	/^public class SampleCivilian extends AbstractSampleAgent<Civilian> {$/;"	c
+SampleFire	./basefile/sample/SampleFire.java	/^public class SampleFire extends FireBrigadeTactics {$/;"	c
 SampleFireBrigade	../roborescue-roborescue/modules/sample/src/sample/SampleFireBrigade.java	/^public class SampleFireBrigade extends AbstractSampleAgent<FireBrigade> {$/;"	c
+SamplePolice	./basefile/sample/SamplePolice.java	/^public class SamplePolice extends PoliceForceTactics {$/;"	c
 SamplePoliceForce	../roborescue-roborescue/modules/sample/src/sample/SamplePoliceForce.java	/^public class SamplePoliceForce extends AbstractSampleAgent<PoliceForce> {$/;"	c
 SampleSearch	../roborescue-roborescue/modules/sample/src/sample/SampleSearch.java	/^	public SampleSearch(Map<EntityID, Set<EntityID>> graph) {$/;"	m	class:SampleSearch
 SampleSearch	../roborescue-roborescue/modules/sample/src/sample/SampleSearch.java	/^	public SampleSearch(StandardWorldModel world) {$/;"	m	class:SampleSearch
 SampleSearch	../roborescue-roborescue/modules/sample/src/sample/SampleSearch.java	/^public final class SampleSearch {$/;"	c
 SampleSimulator	../roborescue-roborescue/modules/sample/src/sample/SampleSimulator.java	/^public class SampleSimulator extends AbstractSimulator<DefaultWorldModel<Entity>> {$/;"	c
+SampleTeam	./basefile/sample/SampleTeam.java	/^public class SampleTeam implements Team {$/;"	c
 SampleViewer	../roborescue-roborescue/modules/sample/src/sample/SampleViewer.java	/^public class SampleViewer extends StandardViewer {$/;"	c
 ScaleConversion	../roborescue-roborescue/modules/maps/src/maps/ScaleConversion.java	/^    public ScaleConversion(double xOrigin, double yOrigin, double xScale, double yScale) {$/;"	m	class:ScaleConversion
 ScaleConversion	../roborescue-roborescue/modules/maps/src/maps/ScaleConversion.java	/^public class ScaleConversion implements CoordinateConversion {$/;"	c
@@ -4237,6 +4241,7 @@ getAllViewers	../roborescue-roborescue/modules/kernel/src/kernel/Kernel.java	/^ 
 getAmbulanceCentres	../roborescue-roborescue/modules/gis2/src/gis2/GisScenario.java	/^	public Collection<Integer> getAmbulanceCentres() {$/;"	m	class:GisScenario
 getAmbulanceTeamTactics	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyTeam.java	/^    public AmbulanceTeamTactics getAmbulanceTeamTactics() {$/;"	m	class:DummyTeam
 getAmbulanceTeamTactics	./Comlib-ADK/src/main/java/comlib/adk/team/Team.java	/^    public AmbulanceTeamTactics getAmbulanceTeamTactics();$/;"	m	interface:Team
+getAmbulanceTeamTactics	./basefile/sample/SampleTeam.java	/^    public AmbulanceTeamTactics getAmbulanceTeamTactics() {$/;"	m	class:SampleTeam
 getAmbulanceTeams	../roborescue-roborescue/modules/gis2/src/gis2/GisScenario.java	/^	public Collection<Integer> getAmbulanceTeams() {$/;"	m	class:GisScenario
 getAngle	../roborescue-roborescue/modules/maps/src/maps/convert/osm2gml/ConvertTools.java	/^    private static double getAngle(long first, long second, long third, OSMMap map) {$/;"	m	class:ConvertTools	file:
 getAngleBetweenVectors	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/geometry/GeometryTools2D.java	/^    public static double getAngleBetweenVectors(Vector2D first, Vector2D second) {$/;"	m	class:GeometryTools2D
@@ -4572,6 +4577,7 @@ getFilter	./Comlib/src/main/java/comlib/util/IntegerDataHelper.java	/^    public
 getFinalDestination	../roborescue-roborescue/modules/traffic3/src/traffic3/objects/TrafficAgent.java	/^	public Point2D getFinalDestination() {$/;"	m	class:TrafficAgent
 getFireBrigadeTactics	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyTeam.java	/^    public FireBrigadeTactics getFireBrigadeTactics() {$/;"	m	class:DummyTeam
 getFireBrigadeTactics	./Comlib-ADK/src/main/java/comlib/adk/team/Team.java	/^    public FireBrigadeTactics getFireBrigadeTactics();$/;"	m	interface:Team
+getFireBrigadeTactics	./basefile/sample/SampleTeam.java	/^    public FireBrigadeTactics getFireBrigadeTactics() {$/;"	m	class:SampleTeam
 getFireBrigades	../roborescue-roborescue/modules/gis2/src/gis2/GisScenario.java	/^	public Collection<Integer> getFireBrigades() {$/;"	m	class:GisScenario
 getFireDamage	../roborescue-roborescue/modules/misc/src/misc/HumanAttributes.java	/^    public double getFireDamage() {$/;"	m	class:HumanAttributes
 getFireDamage	../roborescue-roborescue/modules/misc/src/misc/MiscParameters.java	/^    public int getFireDamage(Building b, Human agent) {$/;"	m	class:MiscParameters
@@ -4933,6 +4939,7 @@ getPoints	../roborescue-roborescue/modules/maps/src/maps/gml/GMLDirectedEdge.jav
 getPoints	../roborescue-roborescue/modules/maps/src/maps/gml/GMLEdge.java	/^    public List<GMLCoordinates> getPoints() {$/;"	m	class:GMLEdge
 getPoliceForceTactics	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyTeam.java	/^    public PoliceForceTactics getPoliceForceTactics() {$/;"	m	class:DummyTeam
 getPoliceForceTactics	./Comlib-ADK/src/main/java/comlib/adk/team/Team.java	/^    public PoliceForceTactics getPoliceForceTactics();$/;"	m	interface:Team
+getPoliceForceTactics	./basefile/sample/SampleTeam.java	/^    public PoliceForceTactics getPoliceForceTactics() {$/;"	m	class:SampleTeam
 getPoliceForces	../roborescue-roborescue/modules/gis2/src/gis2/GisScenario.java	/^	public Collection<Integer> getPoliceForces() {$/;"	m	class:GisScenario
 getPoliceOffices	../roborescue-roborescue/modules/gis2/src/gis2/GisScenario.java	/^	public Collection<Integer> getPoliceOffices() {$/;"	m	class:GisScenario
 getPopupMenuItems	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/view/AbstractViewLayer.java	/^    public List<JMenuItem> getPopupMenuItems() {$/;"	m	class:AbstractViewLayer
@@ -5165,6 +5172,7 @@ getTargets	../roborescue-roborescue/modules/sample/src/sample/SampleAmbulanceTea
 getTeam	./Comlib-ADK/src/main/java/comlib/adk/launcher/TeamLoader.java	/^    public Team getTeam(String name) {$/;"	m	class:TeamLoader
 getTeamName	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyTeam.java	/^    public String getTeamName() {$/;"	m	class:DummyTeam
 getTeamName	./Comlib-ADK/src/main/java/comlib/adk/team/Team.java	/^    public String getTeamName();$/;"	m	interface:Team
+getTeamName	./basefile/sample/SampleTeam.java	/^    public String getTeamName() {$/;"	m	class:SampleTeam
 getTemperature	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/Building.java	/^    public int getTemperature() {$/;"	m	class:Building
 getTemperatureProperty	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/Building.java	/^    public IntProperty getTemperatureProperty() {$/;"	m	class:Building
 getTextField	../roborescue-roborescue/modules/handy/src/handy/swing/SliderComponent.java	/^    public JTextField getTextField() {$/;"	m	class:SliderComponent
@@ -6814,6 +6822,9 @@ postConnect	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/Tactics.java	/^  
 postConnect	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/Tactics.java	/^    public void postConnect() {$/;"	m	class:Tactics
 postConnect	./Comlib/src/main/java/comlib/agent/CommunicationAgent.java	/^    public void postConnect() {$/;"	m	class:CommunicationAgent
 postConnect	./Comlib/src_old/agent/CommunicationAgent.java	/^    public void postConnect()$/;"	m	class:CommunicationAgent
+postConnect	./basefile/sample/SampleAmbulance.java	/^    public void postConnect() {$/;"	m	class:SampleAmbulance
+postConnect	./basefile/sample/SampleFire.java	/^    public void postConnect() {$/;"	m	class:SampleFire
+postConnect	./basefile/sample/SamplePolice.java	/^    public void postConnect() {$/;"	m	class:SamplePolice
 postView	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/view/HumanLayer.java	/^    protected void postView() {$/;"	m	class:HumanLayer
 postView	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/view/StandardEntityViewLayer.java	/^    protected void postView() {$/;"	m	class:StandardEntityViewLayer
 postpaint	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/view/LayerViewComponent.java	/^    protected void postpaint() {$/;"	m	class:LayerViewComponent
@@ -7044,6 +7055,7 @@ readCommands	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/log/St
 readConfig	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/log/StreamLogReader.java	/^    private void readConfig(InputStream in) throws IOException, LogException {$/;"	m	class:StreamLogReader	file:
 readConfig	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyTeam.java	/^    public void readConfig(Config config) {$/;"	m	class:DummyTeam
 readConfig	./Comlib-ADK/src/main/java/comlib/adk/team/Team.java	/^    public void readConfig(Config config);$/;"	m	interface:Team
+readConfig	./basefile/sample/SampleTeam.java	/^    public void readConfig(Config config) {$/;"	m	class:SampleTeam
 readDouble	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/EncodingTools.java	/^	public static double readDouble(DataInput in) throws IOException {$/;"	m	class:EncodingTools
 readDouble	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/EncodingTools.java	/^	public static double readDouble(InputStream in) throws IOException {$/;"	m	class:EncodingTools
 readDouble	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/EncodingTools.java	/^	public static double readDouble(byte[] in) {$/;"	m	class:EncodingTools
@@ -7760,6 +7772,10 @@ sample	../roborescue-roborescue/modules/sample/src/sample/SamplePoliceForce.java
 sample	../roborescue-roborescue/modules/sample/src/sample/SampleSearch.java	/^package sample;$/;"	p
 sample	../roborescue-roborescue/modules/sample/src/sample/SampleSimulator.java	/^package sample;$/;"	p
 sample	../roborescue-roborescue/modules/sample/src/sample/SampleViewer.java	/^package sample;$/;"	p
+sample	./basefile/sample/SampleAmbulance.java	/^package sample;$/;"	p
+sample	./basefile/sample/SampleFire.java	/^package sample;$/;"	p
+sample	./basefile/sample/SamplePolice.java	/^package sample;$/;"	p
+sample	./basefile/sample/SampleTeam.java	/^package sample;$/;"	p
 save	../roborescue-roborescue/modules/gis2/src/gis2/scenario/ScenarioEditor.java	/^    public void save() throws ScenarioException {$/;"	m	class:ScenarioEditor
 save	../roborescue-roborescue/modules/maps/src/maps/gml/editor/GMLEditor.java	/^    public void save() throws MapException {$/;"	m	class:GMLEditor
 saveAs	../roborescue-roborescue/modules/gis2/src/gis2/scenario/ScenarioEditor.java	/^    public void saveAs() throws ScenarioException {$/;"	m	class:ScenarioEditor
@@ -8605,6 +8621,9 @@ think	./Comlib/src/main/java/comlib/agent/CommunicationAgent.java	/^    protecte
 think	./Comlib/src/main/java/comlib/agent/CommunicationAgent.java	/^    public abstract void think(int time, ChangeSet changed);$/;"	m	class:CommunicationAgent
 think	./Comlib/src_old/agent/CommunicationAgent.java	/^    protected final void think(int time, ChangeSet changed, Collection<Command> heard)$/;"	m	class:CommunicationAgent
 think	./Comlib/src_old/agent/CommunicationAgent.java	/^    public abstract void think(int time, ChangeSet changed);$/;"	m	class:CommunicationAgent
+think	./basefile/sample/SampleAmbulance.java	/^    public Message think(int time, ChangeSet changed, MessageManager manager) {$/;"	m	class:SampleAmbulance
+think	./basefile/sample/SampleFire.java	/^    public Message think(int time, ChangeSet changed, MessageManager manager) {$/;"	m	class:SampleFire
+think	./basefile/sample/SamplePolice.java	/^    public Message think(int time, ChangeSet changed, MessageManager manager) {$/;"	m	class:SamplePolice
 thinking	./Comlib-ADK/adk_old/tactics/Tactics.java	/^    public Thinking thinking;$/;"	f	class:Tactics
 threshold	../roborescue-roborescue/modules/maps/src/maps/convert/osm2gml/TemporaryMap.java	/^    private double threshold;$/;"	f	class:TemporaryMap	file:
 threshold	../roborescue-roborescue/modules/maps/src/maps/gml/editor/SplitEdgesFunction.java	/^    private double threshold;$/;"	f	class:SplitEdgesFunction	file:
