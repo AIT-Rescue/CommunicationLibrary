@@ -477,6 +477,9 @@ ChildCommandsFetcher	../roborescue-roborescue/modules/kernel/src/kernel/Composit
 Civilian	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/Civilian.java	/^    public Civilian(Civilian other) {$/;"	m	class:Civilian
 Civilian	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/Civilian.java	/^    public Civilian(EntityID id) {$/;"	m	class:Civilian
 Civilian	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/Civilian.java	/^public class Civilian extends Human {$/;"	c
+CivilianMessage	./Comlib/src/main/java/comlib/message/information/VictimMessage.java	/^	public CivilianMessage(Civilian civilian)$/;"	m	class:CivilianMessage
+CivilianMessage	./Comlib/src/main/java/comlib/message/information/VictimMessage.java	/^	public CivilianMessage(int time, int ttl, EntityID id, int hp, int buriedness, int damage, EntityID position)$/;"	m	class:CivilianMessage
+CivilianMessage	./Comlib/src/main/java/comlib/message/information/VictimMessage.java	/^abstract public class CivilianMessage extends HumanMessage$/;"	c
 CiviliansAliveScoreFunction	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/score/CiviliansAliveScoreFunction.java	/^    public CiviliansAliveScoreFunction() {$/;"	m	class:CiviliansAliveScoreFunction
 CiviliansAliveScoreFunction	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/score/CiviliansAliveScoreFunction.java	/^public class CiviliansAliveScoreFunction extends AbstractScoreFunction {$/;"	c
 CiviliansDeadOrRescuedTerminationCondition	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/kernel/CiviliansDeadOrRescuedTerminationCondition.java	/^public class CiviliansDeadOrRescuedTerminationCondition implements TerminationCondition {$/;"	c
@@ -3218,6 +3221,7 @@ civ3Expected	../roborescue-roborescue/modules/standard/test/rescuecore2/standard
 civ4	../roborescue-roborescue/modules/standard/test/rescuecore2/standard/kernel/comms/ChannelCommunicationModelTest.java	/^    private Civilian civ4;$/;"	f	class:ChannelCommunicationModelTest	file:
 civ4Expected	../roborescue-roborescue/modules/standard/test/rescuecore2/standard/kernel/comms/ChannelCommunicationModelTest.java	/^    private Collection<AKSpeak> civ4Expected;$/;"	f	class:ChannelCommunicationModelTest	file:
 civLocations	../roborescue-roborescue/modules/gis2/src/gis2/GisScenario.java	/^	private Collection<Integer> civLocations;$/;"	f	class:GisScenario	file:
+civilianMessage	./Comlib/src/main/java/comlib/message/MessageID.java	/^	int civilianMessage = 0;$/;"	f	interface:MessageID
 classFound	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/java/LoadableTypeCallback.java	/^    void classFound(LoadableType type, String className);$/;"	m	interface:LoadableTypeCallback
 classFound	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/java/LoadableTypeProcessor.java	/^        public void classFound(LoadableType otherType, String className) {$/;"	m	class:LoadableTypeProcessor.ConfigCallback
 classFound	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/java/LoadableTypeProcessor.java	/^        public void classFound(LoadableType type, String className) {$/;"	m	class:LoadableTypeProcessor.EntityFactoryRegisterCallback
@@ -3851,6 +3855,7 @@ drawFieryness	../roborescue-roborescue/modules/standard/src/rescuecore2/standard
 drawObjects	../roborescue-roborescue/modules/traffic3/src/traffic3/simulator/TrafficSimulatorGUI.java	/^		private void drawObjects(Graphics2D g) {$/;"	m	class:TrafficSimulatorGUI.WorldView	file:
 drawnShapes	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/gui/ShapeDebugFrame.java	/^        private Map<Shape, ShapeInfo> drawnShapes;$/;"	f	class:ShapeDebugFrame.ShapeViewer	file:
 dummyMessage	./Comlib/src/main/java/comlib/message/MessageID.java	/^	int dummyMessage = 10;$/;"	f	interface:MessageID
+dummyMessage	./Comlib/src/main/java/comlib/message/MessageID.java	/^	int dummyMessage = 15;$/;"	f	interface:MessageID
 dummyMessage	./Comlib/src/main/java/comlib/message/MessageID.java	/^	public static final int dummyMessage = 0;$/;"	f	class:MessageID
 dummyTest	./Comlib/src/main/java/comlib/message/DummyMessage.java	/^	private int dummyTest;$/;"	f	class:DummyMessage	file:
 dx	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/geometry/Vector2D.java	/^    private double dx;$/;"	f	class:Vector2D	file:
