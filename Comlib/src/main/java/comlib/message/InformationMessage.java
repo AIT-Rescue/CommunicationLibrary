@@ -1,5 +1,6 @@
 package comlib.message;
 
+
 public class InformationMessage extends CommunicationMessage {
 
 	public DummyMessage(int messageID) {

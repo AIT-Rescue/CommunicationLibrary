@@ -1,7 +1,6 @@
 package comlib.message;
 
 
-//public abstract class DummyMessage extends CommunicationMessage {
 public class DummyMessage extends CommunicationMessage {
 
 	private int dummyTest;
@@ -20,34 +19,4 @@ public class DummyMessage extends CommunicationMessage {
 		return this.dummyTest;
 	}
 
-	public static DummyMessage getInstance(int test) {
-		return new DummyMessage(test);
-	}
-
-
-	// public abstract void createSendMessage(RadioConfig config, BitOutputStream bos);
-	//
-	// public void create(RadioConfig config, BitOutputStream bos)
-	// {
-	// 	bos.writeBits(this.messageID, config.getSizeOfMessageID());
-	// 	bos.writeBits(this.time, config.getSizeOfTime());
-	// 	this.createSendMessage(config, bos);
-	// }
-	//
-	// public abstract void createSendMessage(VoiceConfig config, StringBuilder sb);
-	//
-	// public void create(VoiceConfig config, StringBuilder sb)
-	// {
-	// 	if(this.ttl == 0)
-	// 		return;
-	//
-	// 	config.appendMessageID(sb, this.messageID);
-	// 	config.appendData(sb, String.valueOf(this.time));
-	// 	if(this.ttl < 0)
-	// 		config.appendLimit(sb);
-	// 	else
-	// 		config.appendData(sb, String.valueOf(this.ttl - 1));
-	// 	this.createSendMessage(config, sb);
-	// 	config.appendMessageSeparator(sb);
-	// }
 }
