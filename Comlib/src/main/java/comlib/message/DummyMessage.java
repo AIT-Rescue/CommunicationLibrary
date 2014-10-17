@@ -18,5 +18,4 @@ public class DummyMessage extends CommunicationMessage {
 	public int getValue() {
 		return this.dummyTest;
 	}
-
 }

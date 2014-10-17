@@ -1,7 +1,7 @@
 package comlib.message;
 
 
-public class InformationMessage extends CommunicationMessage {
+abstract public class InformationMessage extends CommunicationMessage {
 
 	public DummyMessage(int messageID) {
 		super(messageID);
