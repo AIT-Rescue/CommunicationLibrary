@@ -2,7 +2,7 @@ package comlib.message;
 
 import comlib.message.HumanMessage;
 
-import rescuecore2.standard.entities.Victimt;
+import rescuecore2.standard.entities.Victim;
 import rescuecore2.standard.entities.Human;
 import rescuecore2.worldmodel.EntityID;
 
