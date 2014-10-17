@@ -5320,6 +5320,7 @@ getWallForceCoefficientA	../roborescue-roborescue/modules/traffic3/src/traffic3/
 getWallForceCoefficientB	../roborescue-roborescue/modules/traffic3/src/traffic3/simulator/TrafficConstants.java	/^    public static double getWallForceCoefficientB() {$/;"	m	class:TrafficConstants
 getWater	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/FireBrigade.java	/^    public int getWater() {$/;"	m	class:FireBrigade
 getWater	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/messages/AKExtinguish.java	/^    public int getWater() {$/;"	m	class:AKExtinguish
+getWater	./Comlib/src/main/java/comlib/message/information/FireBrigadeMessage.java	/^	public int getWater() { return this.fireBrigadeWater; }$/;"	m	class:FireBrigadeMessage
 getWater	./Comlib/src_old/message/information/FireBrigadeMessage.java	/^	public int getWater()$/;"	m	class:FireBrigadeMessage
 getWaterProperty	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/FireBrigade.java	/^    public IntProperty getWaterProperty() {$/;"	m	class:FireBrigade
 getWaypoints	../roborescue-roborescue/modules/traffic3/src/traffic3/simulator/PathElement.java	/^    public List<Point2D> getWaypoints() {$/;"	m	class:PathElement
