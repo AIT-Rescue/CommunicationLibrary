@@ -9,7 +9,7 @@ import rescuecore2.worldmodel.EntityID;
 
 abstract public class FireBrigadeMessage extends HumanMessage
 {
-	private fireBrigadeWater;
+	private int fireBrigadeWater;
 
 	public FireBrigadeMessage(FireBrigade fireBrigade)
 	{

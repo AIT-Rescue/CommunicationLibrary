@@ -4101,6 +4101,7 @@ fireAgentAdded	../roborescue-roborescue/modules/kernel/src/kernel/Kernel.java	/^
 fireAgentRemoved	../roborescue-roborescue/modules/kernel/src/kernel/Kernel.java	/^    private void fireAgentRemoved(AgentProxy agent) {$/;"	m	class:Kernel	file:
 fireBrigadeMessage	./Comlib/src/main/java/comlib/message/MessageID.java	/^	int fireBrigadeMessage = 1;$/;"	f	interface:MessageID
 fireBrigadeWater	./Comlib/src/main/java/comlib/message/information/FireBrigadeMessage.java	/^	private fireBrigadeWater;$/;"	f	class:FireBrigadeMessage	file:
+fireBrigadeWater	./Comlib/src/main/java/comlib/message/information/FireBrigadeMessage.java	/^	private int fireBrigadeWater;$/;"	f	class:FireBrigadeMessage	file:
 fireCallback	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/java/LoadableTypeProcessor.java	/^    private void fireCallback(LoadableType type, String classname) {$/;"	m	class:LoadableTypeProcessor	file:
 fireChange	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/worldmodel/AbstractProperty.java	/^    protected void fireChange(Object oldValue, Object newValue) {$/;"	m	class:AbstractProperty
 fireCount	./Comlib-ADK/adk_old/launcher/Launcher.java	/^	private int fireCount;$/;"	f	class:Launcher	file:
