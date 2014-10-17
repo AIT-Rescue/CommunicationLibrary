@@ -6,7 +6,7 @@ import rescuecore2.worldmodel.EntityID;
 abstract public class HumanMessage extends CommunicationMessage {
 
 	protected EntityID humanID;
-	protected int HP;
+	protected int humanHP;
 	protected int humanBuriedness;
 	protected int humanDamage;
 	protected EntityID humanPosition;
@@ -24,5 +24,6 @@ abstract public class HumanMessage extends CommunicationMessage {
 	public int getValue() {
 		return this.dummyTest;
 	}
+
 }
 
