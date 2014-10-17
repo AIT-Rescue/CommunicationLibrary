@@ -6,7 +6,7 @@ apply plugin: 'eclipse'
 String teamName = name
 
 //Jarを読み込むための記述です。Teamを実装したクラスを、パッケージを含めて記述してください。
-String teamClassName = 'comlib.adk.sample.SampleTeam'
+String teamClassName = 'sample.SampleTeam'
 
 //バージョンの記述です。設定すると、Jarの名前が、[teamName]-[version].jarになります。
 //version = '1.0.0'
