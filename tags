@@ -1054,6 +1054,7 @@ FireBrigadeAgent	./Comlib-ADK/src/main/java/comlib/adk/agent/FireBrigadeAgent.ja
 FireBrigadeAgent	./Comlib-ADK/src/main/java/comlib/adk/agent/FireBrigadeAgent.java	/^public class FireBrigadeAgent extends TacticsAgent<FireBrigadeTactics, FireBrigade> {$/;"	c
 FireBrigadeAgentType	../roborescue-roborescue/modules/human/src/human/ControlledAgentGUI.java	/^    private static class FireBrigadeAgentType implements AgentType<ControlledFireBrigade> {$/;"	c	class:ControlledAgentGUI
 FireBrigadeMessage	./Comlib/src/main/java/comlib/message/information/FireBrigadeMessage.java	/^	public FireBrigadeMessage(FireBrigade fireBrigade)$/;"	m	class:FireBrigadeMessage
+FireBrigadeMessage	./Comlib/src/main/java/comlib/message/information/FireBrigadeMessage.java	/^	public FireBrigadeMessage(int time, int ttl, EntityID id, int hp, int buriedness, int damage, EntityID position, int water)$/;"	m	class:FireBrigadeMessage
 FireBrigadeMessage	./Comlib/src/main/java/comlib/message/information/FireBrigadeMessage.java	/^	public FireBrigadeMessage(int time, int ttl, EntityID id, int hp, int buriedness, int damage, EntityID positioni, int water)$/;"	m	class:FireBrigadeMessage
 FireBrigadeMessage	./Comlib/src/main/java/comlib/message/information/FireBrigadeMessage.java	/^abstract public class FireBrigadeMessage extends HumanMessage$/;"	c
 FireBrigadeMessage	./Comlib/src_old/message/information/FireBrigadeMessage.java	/^	public FireBrigadeMessage(int t, FireBrigade fire)$/;"	m	class:FireBrigadeMessage

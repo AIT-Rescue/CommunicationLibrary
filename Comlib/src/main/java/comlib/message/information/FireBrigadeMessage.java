@@ -17,7 +17,7 @@ abstract public class FireBrigadeMessage extends HumanMessage
 		fireBrigadeWater = fireBrigade.getWater();
 	}
 
-	public FireBrigadeMessage(int time, int ttl, EntityID id, int hp, int buriedness, int damage, EntityID positioni, int water)
+	public FireBrigadeMessage(int time, int ttl, EntityID id, int hp, int buriedness, int damage, EntityID position, int water)
 	{
 		super(MessageID.fireBrigadeMessage, time, ttl, id, hp, buriedness, damage, position);
 		this.fireBrigadeWater = water;
