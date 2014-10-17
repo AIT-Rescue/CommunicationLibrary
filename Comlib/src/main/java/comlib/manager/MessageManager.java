@@ -8,6 +8,7 @@ import comlib.provider.DummyMessageProvider;
 import comlib.provider.MessageProvider;
 import comlib.util.BitOutputStream;
 import comlib.util.BitStreamReader;
+
 import rescuecore2.Constants;
 import rescuecore2.config.Config;
 import rescuecore2.messages.Command;
@@ -20,8 +21,9 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
-public class MessageManager {
 
+public class MessageManager
+{
 	private boolean developerMode;
 
 	private RadioConfig radioConfig;
@@ -37,11 +39,13 @@ public class MessageManager {
 	private List<CommunicationMessage> receivedMessages; // For compatible
 	private List<CommunicationMessage> sendMessages;
 
-	public MessageManager(Config config) {
+	public MessageManager(Config config)
+	{
 		this.init(config);
 	}
 
-	private void init(Config config) {
+	private void init(Config config)
+	{
 		this.developerMode = config.getBooleanValue("comlib.develop.developerMode", false);
 		this.radioConfig = new RadioConfig(config);
 		this.voiceConfig = new VoiceConfig(config);
@@ -55,29 +59,35 @@ public class MessageManager {
 		this.initLoadProvider();
 	}
 
-	private boolean searchRadio(Config config) {
+	private boolean searchRadio(Config config)
+	{
 		boolean speakComm = config.getValue(Constants.COMMUNICATION_MODEL_KEY).equals(ChannelCommunicationModel.class.getName());
 		int numChannels = config.getIntValue("comms.channels.count");
 		return speakComm && (numChannels > 1);
 	}
 
-	public boolean canUseRadio() {
+	public boolean canUseRadio()
+	{
 		return this.useRadio;
 	}
 
-	public RadioConfig getRadioConfig() {
+	public RadioConfig getRadioConfig()s
+	{
 		return this.radioConfig;
 	}
 
-	public VoiceConfig getVoiceConfig() {
+	public VoiceConfig getVoiceConfig()
+	{
 		return this.voiceConfig;
 	}
 
-	public int getTime() {
+	public int getTime()
+	{
 		return this.kernelTime;
 	}
 
-	public void receiveMessage(int time, Collection<Command> heard) {
+	public void receiveMessage(int time, Collection<Command> heard)
+	{
 		this.kernelTime = time;
 		this.receivedMessages.clear();
 
@@ -99,8 +109,9 @@ public class MessageManager {
 		}
 	}
 
-	private void receiveRadioMessage(byte[] data, List<CommunicationMessage> list) {
-		// TODO:ノイズ対策をするべき
+	private void receiveRadioMessage(byte[] data, List<CommunicationMessage> list)
+	{
+		// TODO:ノイズ対策をするべき?
 		if (data == null || list == null)
 		{ return; }
 		BitStreamReader bsr = new BitStreamReader(data);
@@ -131,7 +142,8 @@ public class MessageManager {
 		}
 	}
 
-	public Message createSendMessage() {
+	public Message createSendMessage()
+	{
 		// TODO: return data
 		if (this.useRadio)
 		{
@@ -149,28 +161,32 @@ public class MessageManager {
 		}
 	}
 
-	public List<CommunicationMessage> getReceivedMessage() {
+	public List<CommunicationMessage> getReceivedMessage()
+	{
 		// MEMO:For compatible
 		return this.receivedMessages;
 	}
 
+	public <M extends CommunicationMessage> void addSendMessage(M msg)
+	{
+		this.sendMessages.add(msg);
+		BitOutputStream bos = new BitOutputStream();
+		this.providerList[msg.getMessageID()].write(this, bos, msg);
+	}
 
-    public <M extends CommunicationMessage> void addSendMessage(M msg) {
-        this.sendMessages.add(msg);
-        BitOutputStream bos = new BitOutputStream();
-        this.providerList[msg.getMessageID()].write(this, bos, msg);
-    }
-
-	public void old_addSendMessage(CommunicationMessage msg) {
+	public void old_addSendMessage(CommunicationMessage msg)
+	{
 		this.sendMessages.add(msg);
 	}
 
-	public void addNearFieldSendMessage(CommunicationMessage msg) {
-// TODO: NFCのリストを用意して．．．いろいろ
+	public void addNearFieldSendMessage(CommunicationMessage msg)
+	{
+		// TODO: NFCのリストを用意して．．．いろいろ
 		this.sendMessages.add(msg);
 	}
 
-	private void initLoadProvider() {
+	private void initLoadProvider()
+	{
 		this.registerStandardProvider(new DummyMessageProvider(MessageID.dummyMessage));
 		//this.register(CommunicationMessage.buildingMessageID, new BuildingMessageProvider(this.event));
 		//this.register(CommunicationMessage.blockadeMessageID, new BlockadeMessageProvider(this.event));
@@ -178,13 +194,15 @@ public class MessageManager {
 		//this.register(CommunicationMessage.positionMessageID, new PositionMessageProvider(this.event));
 	}
 
-	private void registerStandardProvider(MessageProvider provider) {
+	private void registerStandardProvider(MessageProvider provider)
+	{
 		//provider.setMessageID(messageID);
 		this.providerList[provider.getMessageID()] = provider;
 	}
 
-	public boolean registerProvider(MessageProvider provider) {
-        int messageID = provider.getMessageID();
+	public boolean registerProvider(MessageProvider provider)
+	{
+		int messageID = provider.getMessageID();
 		if (!this.developerMode || this.kernelTime != -1 || provider == null || messageID < 0)
 		{ return false; }
 
@@ -199,7 +217,8 @@ public class MessageManager {
 		return true;
 	}
 
-	public boolean registerEvent(MessageEvent event) {
+	public boolean registerEvent(MessageEvent event)
+	{
 		if (event == null)
 		{ return false; }
 
@@ -208,12 +227,14 @@ public class MessageManager {
 		return true;
 	}
 
-	private void searchProvider(MessageEvent event) {
+	private void searchProvider(MessageEvent event)
+	{
 		for (MessageProvider provider : this.providerList)
 		{ provider.trySetEvent(event); }
 	}
 
-	private void searchEvent(MessageProvider provider) {
+	private void searchEvent(MessageProvider provider)
+	{
 		// if (this.eventList.size() < 1)
 		// {	return; }
 		for (MessageEvent event : this.eventList)

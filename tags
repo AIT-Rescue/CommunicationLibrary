@@ -867,6 +867,8 @@ DummyMessage	./Comlib/src/main/java/comlib/message/InformationMessage.java	/^	pu
 DummyMessage	./Comlib/src/main/java/comlib/message/InformationMessage.java	/^	public DummyMessage(int messageID, int time, int ttl) {$/;"	m	class:InformationMessage
 DummyMessageEvent	./Comlib/src/main/java/comlib/event/DummyMessageEvent.java	/^public abstract class DummyMessageEvent extends MessageEvent<DummyMessage> {$/;"	c
 DummyMessageProvider	./Comlib/src/main/java/comlib/provider/DummyMessageProvider.java	/^	public DummyMessageProvider(int id) {$/;"	m	class:DummyMessageProvider
+DummyMessageProvider	./Comlib/src/main/java/comlib/provider/DummyMessageProvider.java	/^	public DummyMessageProvider(int id)$/;"	m	class:DummyMessageProvider
+DummyMessageProvider	./Comlib/src/main/java/comlib/provider/DummyMessageProvider.java	/^public class DummyMessageProvider extends MessageProvider<DummyMessage, DummyMessageEvent>$/;"	c
 DummyMessageProvider	./Comlib/src/main/java/comlib/provider/DummyMessageProvider.java	/^public class DummyMessageProvider extends MessageProvider<DummyMessage, DummyMessageEvent>{$/;"	c
 DummyMessageProvider	./Comlib/src/main/java/comlib/provider/information/CivilianMessageProvider.java	/^	public DummyMessageProvider(int id)$/;"	m	class:DummyMessageProvider
 DummyMessageProvider	./Comlib/src/main/java/comlib/provider/information/CivilianMessageProvider.java	/^public class DummyMessageProvider extends MessageProvider<DummyMessage, DummyMessageEvent>$/;"	c
@@ -1742,13 +1744,17 @@ MessageID	./Comlib/src/main/java/comlib/message/MessageID.java	/^public class Me
 MessageID	./Comlib/src/main/java/comlib/message/MessageID.java	/^public interface MessageID$/;"	i
 MessageListener	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/components/AbstractComponent.java	/^    private class MessageListener implements ConnectionListener {$/;"	c	class:AbstractComponent
 MessageManager	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	public MessageManager(Config config) {$/;"	m	class:MessageManager
+MessageManager	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	public MessageManager(Config config)$/;"	m	class:MessageManager
 MessageManager	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^public class MessageManager {$/;"	c
+MessageManager	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^public class MessageManager$/;"	c
 MessageManager	./Comlib/src_old/manager/MessageManager.java	/^    public MessageManager(Config config) {$/;"	m	class:MessageManager
 MessageManager	./Comlib/src_old/manager/MessageManager.java	/^public class MessageManager$/;"	c
 MessageProcessor	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/components/AbstractComponent.java	/^        MessageProcessor() {$/;"	m	class:AbstractComponent.MessageProcessor
 MessageProcessor	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/components/AbstractComponent.java	/^    private class MessageProcessor extends WorkerThread {$/;"	c	class:AbstractComponent
 MessageProvider	./Comlib/src/main/java/comlib/provider/MessageProvider.java	/^	public MessageProvider(int id) {$/;"	m	class:MessageProvider
+MessageProvider	./Comlib/src/main/java/comlib/provider/MessageProvider.java	/^	public MessageProvider(int id)$/;"	m	class:MessageProvider
 MessageProvider	./Comlib/src/main/java/comlib/provider/MessageProvider.java	/^public abstract class MessageProvider<M extends CommunicationMessage, E extends MessageEvent> {$/;"	c
+MessageProvider	./Comlib/src/main/java/comlib/provider/MessageProvider.java	/^public abstract class MessageProvider<M extends CommunicationMessage, E extends MessageEvent>$/;"	c
 MessageQueueConnectionListener	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/connection/MessageQueueConnectionListener.java	/^    public MessageQueueConnectionListener() {$/;"	m	class:MessageQueueConnectionListener
 MessageQueueConnectionListener	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/connection/MessageQueueConnectionListener.java	/^public class MessageQueueConnectionListener implements ConnectionListener {$/;"	c
 MiscParameters	../roborescue-roborescue/modules/misc/src/misc/MiscParameters.java	/^    public MiscParameters(Config config) {$/;"	m	class:MiscParameters
@@ -2902,6 +2908,7 @@ addMessageComponent	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2
 addMessageForAgent	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/kernel/comms/AbstractChannel.java	/^    protected void addMessageForAgent(Entity a, AKSpeak msg) {$/;"	m	class:AbstractChannel
 addMessageForSubscribers	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/kernel/comms/AbstractChannel.java	/^    protected void addMessageForSubscribers(AKSpeak msg) {$/;"	m	class:AbstractChannel
 addNearFieldSendMessage	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	public void addNearFieldSendMessage(CommunicationMessage msg) {$/;"	m	class:MessageManager
+addNearFieldSendMessage	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	public void addNearFieldSendMessage(CommunicationMessage msg)$/;"	m	class:MessageManager
 addNode	../roborescue-roborescue/modules/maps/src/maps/gml/GMLMap.java	/^    public void addNode(GMLNode n) {$/;"	m	class:GMLMap
 addObject	../roborescue-roborescue/modules/maps/src/maps/convert/osm2gml/TemporaryMap.java	/^    private void addObject(TemporaryObject object) {$/;"	m	class:TemporaryMap	file:
 addObject	../roborescue-roborescue/modules/maps/src/maps/gml/GMLMap.java	/^    private void addObject(GMLObject object) {$/;"	m	class:GMLMap	file:
@@ -2918,6 +2925,7 @@ addRoadProperties	../roborescue-roborescue/modules/standard/src/rescuecore2/stan
 addRoadSegment	../roborescue-roborescue/modules/maps/src/maps/convert/osm2gml/OSMIntersectionInfo.java	/^    public void addRoadSegment(OSMRoadInfo road) {$/;"	m	class:OSMIntersectionInfo
 addSelfProperties	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/kernel/LineOfSightPerception.java	/^    private void addSelfProperties(Human human, ChangeSet result) {$/;"	m	class:LineOfSightPerception	file:
 addSelfProperties	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/kernel/StandardPerception.java	/^    private void addSelfProperties(Human human, ChangeSet result) {$/;"	m	class:StandardPerception	file:
+addSendMessage	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	public <M extends CommunicationMessage> void addSendMessage(M msg)$/;"	m	class:MessageManager
 addSendMessage	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	public void addSendMessage(CommunicationMessage msg) {$/;"	m	class:MessageManager
 addShape	../roborescue-roborescue/modules/maps/src/maps/gml/GMLMap.java	/^    private void addShape(GMLShape shape) {$/;"	m	class:GMLMap	file:
 addSim	../roborescue-roborescue/modules/kernel/src/kernel/ui/KernelControlPanel.java	/^    private void addSim() {$/;"	m	class:KernelControlPanel	file:
@@ -3163,6 +3171,7 @@ canRegister	./Comlib/src/main/java/comlib/util/IntegerDataHelper.java	/^    priv
 canRegisterData	./Comlib/src/main/java/comlib/util/IntegerDataHelper.java	/^    public boolean canRegisterData(int start, int size) {$/;"	m	class:IntegerDataHelper
 canSee	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/kernel/LineOfSightPerception.java	/^    private boolean canSee(StandardEntity agent, Point2D location, Human h, Collection<LineInfo> lines) {$/;"	m	class:LineOfSightPerception	file:
 canUseRadio	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	public boolean canUseRadio() {$/;"	m	class:MessageManager
+canUseRadio	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	public boolean canUseRadio()$/;"	m	class:MessageManager
 canUseRadio	./Comlib/src_old/manager/MessageManager.java	/^	public boolean canUseRadio()$/;"	m	class:MessageManager
 centre	../roborescue-roborescue/modules/maps/src/maps/convert/legacy2gml/NodeInfo.java	/^        private Point2D centre;$/;"	f	class:NodeInfo.CounterClockwiseSort	file:
 centre	../roborescue-roborescue/modules/maps/src/maps/convert/legacy2gml/NodeInfo.java	/^    private Point2D centre;$/;"	f	class:NodeInfo	file:
@@ -3620,6 +3629,7 @@ cover	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/geometry
 cover	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/geometry/spatialindex/BBTree.java	/^    private RectangleRegion cover(Region... regions) {$/;"	m	class:BBTree	file:
 create	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/worldmodel/DefaultWorldModel.java	/^    public static DefaultWorldModel<Entity> create() {$/;"	m	class:DefaultWorldModel
 create	./Comlib/src/main/java/comlib/provider/MessageProvider.java	/^	public CommunicationMessage create(MessageManager manager, BitStreamReader bsr) {$/;"	m	class:MessageProvider
+create	./Comlib/src/main/java/comlib/provider/MessageProvider.java	/^	public CommunicationMessage create(MessageManager manager, String[] data)$/;"	m	class:MessageProvider
 create	./Comlib/src/main/java/comlib/provider/MessageProvider.java	/^	public CommunicationMessage create(MessageManager manager, String[] datas) {$/;"	m	class:MessageProvider
 create	./Comlib/src_old/creator/MessageCreator.java	/^	public CommunicationMessage create(RadioConfig config, BitStreamReader bsr)$/;"	m	class:MessageCreator
 create	./Comlib/src_old/creator/MessageCreator.java	/^	public CommunicationMessage create(VoiceConfig config, String[] datas)$/;"	m	class:MessageCreator
@@ -3663,6 +3673,7 @@ createLine	../roborescue-roborescue/modules/traffic3/src/traffic3/objects/Traffi
 createLines	../roborescue-roborescue/modules/rescuecore2/test/rescuecore2/misc/geometry/spatialindex/BBTreeTest.java	/^    private void createLines() {$/;"	m	class:BBTreeTest	file:
 createMessage	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/registry/Registry.java	/^	public Message createMessage(String urn, InputStream data)$/;"	m	class:Registry
 createMessage	./Comlib/src/main/java/comlib/provider/DummyMessageProvider.java	/^	protected DummyMessage createMessage(RadioConfig config, int time, BitStreamReader bsr)$/;"	m	class:DummyMessageProvider
+createMessage	./Comlib/src/main/java/comlib/provider/DummyMessageProvider.java	/^	protected DummyMessage createMessage(VoiceConfig config, int time, int ttl, String[] data, int next)$/;"	m	class:DummyMessageProvider
 createMessage	./Comlib/src/main/java/comlib/provider/DummyMessageProvider.java	/^	protected DummyMessage createMessage(VoiceConfig config, int time, int ttl, String[] datas, int next)$/;"	m	class:DummyMessageProvider
 createMessage	./Comlib/src/main/java/comlib/provider/MessageProvider.java	/^	protected abstract M createMessage(RadioConfig config, int time, BitStreamReader bsr);$/;"	m	class:MessageProvider
 createMessage	./Comlib/src/main/java/comlib/provider/MessageProvider.java	/^	protected abstract M createMessage(VoiceConfig config, int time, int ttl, String[] datas, int next);$/;"	m	class:MessageProvider
@@ -3690,6 +3701,7 @@ createRoad	../roborescue-roborescue/modules/maps/src/maps/gml/GMLMap.java	/^    
 createRoadBlockades	../roborescue-roborescue/modules/collapse/src/collapse/CollapseSimulator.java	/^	private Map<Road, Collection<java.awt.geom.Area>> createRoadBlockades($/;"	m	class:CollapseSimulator	file:
 createRoadFromNodes	../roborescue-roborescue/modules/maps/src/maps/gml/GMLMap.java	/^    public GMLRoad createRoadFromNodes(List<GMLNode> apexes) {$/;"	m	class:GMLMap
 createSendMessage	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	public Message createSendMessage() {$/;"	m	class:MessageManager
+createSendMessage	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	public Message createSendMessage()$/;"	m	class:MessageManager
 createSendMessage	./Comlib/src_old/manager/MessageManager.java	/^	public List<Message> createSendMessage()$/;"	m	class:MessageManager
 createSeries	../roborescue-roborescue/modules/kernel/src/kernel/ui/ScoreGraph.java	/^    private void createSeries(ScoreFunction root, XYSeriesCollection data) {$/;"	m	class:ScoreGraph	file:
 createSpace	../roborescue-roborescue/modules/maps/src/maps/gml/GMLMap.java	/^    public GMLSpace createSpace(List<GMLDirectedEdge> sEdges) {$/;"	m	class:GMLMap
@@ -4801,6 +4813,7 @@ getMessageFactory	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/r
 getMessageID	./Comlib/src/main/java/comlib/message/CommunicationMessage.java	/^	public int getMessageID() { return messageID; }$/;"	m	class:CommunicationMessage
 getMessageID	./Comlib/src/main/java/comlib/message/CommunicationMessage.java	/^	public int getMessageID() {$/;"	m	class:CommunicationMessage
 getMessageID	./Comlib/src/main/java/comlib/provider/MessageProvider.java	/^	public int getMessageID() {$/;"	m	class:MessageProvider
+getMessageID	./Comlib/src/main/java/comlib/provider/MessageProvider.java	/^	public int getMessageID()$/;"	m	class:MessageProvider
 getMessageID	./Comlib/src_old/creator/MessageCreator.java	/^	public int getMessageID()$/;"	m	class:MessageCreator
 getMessageID	./Comlib/src_old/message/CommunicationMessage.java	/^	public int getMessageID()$/;"	m	class:CommunicationMessage
 getMessageMax	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/kernel/comms/StandardCommunicationModel.java	/^    private int getMessageMax(StandardEntity e) {$/;"	m	class:StandardCommunicationModel	file:
@@ -5034,6 +5047,7 @@ getReason	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/messages/
 getReason	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/messages/control/KSConnectError.java	/^    public String getReason() {$/;"	m	class:KSConnectError
 getReason	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/messages/control/KVConnectError.java	/^    public String getReason() {$/;"	m	class:KVConnectError
 getReceivedMessage	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	public List<CommunicationMessage> getReceivedMessage() {$/;"	m	class:MessageManager
+getReceivedMessage	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	public List<CommunicationMessage> getReceivedMessage()$/;"	m	class:MessageManager
 getReceivedMessage	./Comlib/src_old/manager/MessageManager.java	/^	public List<CommunicationMessage> getReceivedMessage()$/;"	m	class:MessageManager
 getRecordType	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/log/CommandsRecord.java	/^    public RecordType getRecordType() {$/;"	m	class:CommandsRecord
 getRecordType	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/log/ConfigRecord.java	/^    public RecordType getRecordType() {$/;"	m	class:ConfigRecord
@@ -5234,6 +5248,7 @@ getTime	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/messages/co
 getTime	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/messages/control/KVTimestep.java	/^    public int getTime() {$/;"	m	class:KVTimestep
 getTime	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/messages/control/SKUpdate.java	/^    public int getTime() {$/;"	m	class:SKUpdate
 getTime	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	public int getTime() {$/;"	m	class:MessageManager
+getTime	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	public int getTime()$/;"	m	class:MessageManager
 getTime	./Comlib/src/main/java/comlib/message/CommunicationMessage.java	/^	public int getTime() { return this.kernelTime; }$/;"	m	class:CommunicationMessage
 getTime	./Comlib/src/main/java/comlib/message/CommunicationMessage.java	/^	public int getTime() {$/;"	m	class:CommunicationMessage
 getTime	./Comlib/src_old/message/CommunicationMessage.java	/^	public int getTime()$/;"	m	class:CommunicationMessage
@@ -5336,6 +5351,7 @@ getVisibleEntities	../roborescue-roborescue/modules/standard/src/rescuecore2/sta
 getVisibleEntities	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/kernel/StandardPerception.java	/^    public ChangeSet getVisibleEntities(AgentProxy agent) {$/;"	m	class:StandardPerception
 getVisibleLength	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/kernel/LineOfSightPerception.java	/^        public double getVisibleLength() {$/;"	m	class:LineOfSightPerception.Ray
 getVoiceConfig	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	public VoiceConfig getVoiceConfig() {$/;"	m	class:MessageManager
+getVoiceConfig	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	public VoiceConfig getVoiceConfig()$/;"	m	class:MessageManager
 getVoiceSeparator	./Comlib/src_old/manager/VoiceConfig.java	/^	public String getVoiceSeparator()$/;"	m	class:VoiceConfig
 getWall	../roborescue-roborescue/modules/traffic3/src/traffic3/objects/TrafficAgent.java	/^		public Line2D getWall() {$/;"	m	class:TrafficAgent.WallInfo
 getWallDistanceCutoff	../roborescue-roborescue/modules/traffic3/src/traffic3/simulator/TrafficConstants.java	/^    public static double getWallDistanceCutoff() {$/;"	m	class:TrafficConstants
@@ -5707,6 +5723,7 @@ init	./Comlib-ADK/gradlew.bat	/^:init$/;"	l
 init	./Comlib-ADK/src/main/java/comlib/adk/launcher/AgentConnector.java	/^    private void init(String[] args) {$/;"	m	class:AgentConnector	file:
 init	./Comlib/gradlew.bat	/^:init$/;"	l
 init	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	private void init(Config config) {$/;"	m	class:MessageManager	file:
+init	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	private void init(Config config)$/;"	m	class:MessageManager	file:
 init	./Comlib/src_old/manager/MessageManager.java	/^    private void init(Config config)$/;"	m	class:MessageManager	file:
 init	./SampleAgent/gradlew.bat	/^:init$/;"	l
 init	./gradlew.bat	/^:init$/;"	l
@@ -5717,6 +5734,7 @@ initAgentValue	./Comlib-ADK/src/main/java/comlib/adk/agent/TacticsAgent.java	/^ 
 initBuildingData	../roborescue-roborescue/modules/misc/src/misc/MiscParameters.java	/^    private void initBuildingData() {$/;"	m	class:MiscParameters	file:
 initInjuryData	../roborescue-roborescue/modules/misc/src/misc/MiscParameters.java	/^    private void initInjuryData() {$/;"	m	class:MiscParameters	file:
 initLoadProvider	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	private void initLoadProvider() {$/;"	m	class:MessageManager	file:
+initLoadProvider	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	private void initLoadProvider()$/;"	m	class:MessageManager	file:
 initOption	./Comlib-ADK/src/main/java/comlib/adk/launcher/ConfigInitializer.java	/^    private static Map<String, Option> initOption() {$/;"	m	class:ConfigInitializer	file:
 initTabs	./Comlib/build/reports/tests/js/report.js	/^function initTabs() {$/;"	f
 initialBuriedness	../roborescue-roborescue/modules/misc/src/misc/MiscParameters.java	/^        private int initialBuriedness;$/;"	f	class:MiscParameters.BuildingClass	file:
@@ -6672,6 +6690,7 @@ objectsRollover	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/vie
 objectsToIDs	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/Handy.java	/^    public static Set<EntityID> objectsToIDs(Collection<? extends Entity> entities) {$/;"	m	class:Handy
 oldBrokenBuildingsBuriedness	../roborescue-roborescue/modules/misc/src/misc/MiscSimulator.java	/^	private Map<EntityID, Integer> oldBrokenBuildingsBuriedness = new HashMap<>();$/;"	f	class:MiscSimulator	file:
 oldPosition	../roborescue-roborescue/modules/maps/src/maps/gml/editor/MoveNodeTool.java	/^        private GMLCoordinates oldPosition;$/;"	f	class:MoveNodeTool.MoveNodeEdit	file:
+old_addSendMessage	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	public void old_addSendMessage(CommunicationMessage msg)$/;"	m	class:MessageManager
 omega	./Comlib-ADK/gradlew.bat	/^:omega$/;"	l
 omega	./Comlib/gradlew.bat	/^:omega$/;"	l
 omega	./SampleAgent/gradlew.bat	/^:omega$/;"	l
@@ -7168,6 +7187,7 @@ reason	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/messages/con
 reason	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/messages/control/KSConnectError.java	/^    private StringComponent reason;$/;"	f	class:KSConnectError	file:
 reason	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/messages/control/KVConnectError.java	/^    private StringComponent reason;$/;"	f	class:KVConnectError	file:
 receiveMessage	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	public void receiveMessage(int time, Collection<Command> heard) {$/;"	m	class:MessageManager
+receiveMessage	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	public void receiveMessage(int time, Collection<Command> heard)$/;"	m	class:MessageManager
 receiveMessage	./Comlib/src_old/agent/MessageEvent.java	/^	public void receiveMessage(AmbulanceMessage msg);$/;"	m	interface:MessageEvent
 receiveMessage	./Comlib/src_old/agent/MessageEvent.java	/^	public void receiveMessage(BlockadeMessage msg);$/;"	m	interface:MessageEvent
 receiveMessage	./Comlib/src_old/agent/MessageEvent.java	/^	public void receiveMessage(BuildingMessage msg);$/;"	m	interface:MessageEvent
@@ -7176,6 +7196,7 @@ receiveMessage	./Comlib/src_old/agent/MessageEvent.java	/^	public void receiveMe
 receiveMessage	./Comlib/src_old/agent/MessageEvent.java	/^	public void receiveMessage(VictimMessage msg);$/;"	m	interface:MessageEvent
 receiveMessage	./Comlib/src_old/manager/MessageManager.java	/^	public void receiveMessage(int count, Collection<Command> heard)$/;"	m	class:MessageManager
 receiveRadioMessage	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	private void receiveRadioMessage(byte[] data, List<CommunicationMessage> list) {$/;"	m	class:MessageManager	file:
+receiveRadioMessage	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	private void receiveRadioMessage(byte[] data, List<CommunicationMessage> list)$/;"	m	class:MessageManager	file:
 receiveRadioMessage	./Comlib/src_old/manager/MessageManager.java	/^	public List<CommunicationMessage> receiveRadioMessage(byte[] data)$/;"	m	class:MessageManager
 receiveVoiceMessage	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	private void receiveVoiceMessage(String[] data, List<CommunicationMessage> list)$/;"	m	class:MessageManager	file:
 receiveVoiceMessage	./Comlib/src_old/manager/MessageManager.java	/^	public List<CommunicationMessage> receiveVoiceMessage(String[] datas)$/;"	m	class:MessageManager
@@ -7264,9 +7285,17 @@ registerEntityFactory	../roborescue-roborescue/modules/rescuecore2/src/rescuecor
 registerEntityFactory	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/registry/Registry.java	/^	public void registerEntityFactory(String urn, EntityFactory factory) {$/;"	m	class:Registry
 registerEvent	./Comlib-ADK/adk_old/launcher/tactics/Tactics.java	/^    public void registerEvent(MessageManager manager) {$/;"	m	class:Tactics
 registerEvent	./Comlib-ADK/src/main/java/comlib/adk/agent/TacticsAgent.java	/^    public void registerEvent(MessageManager manager) {$/;"	m	class:TacticsAgent
+registerEvent	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyAmbulance.java	/^    public void registerEvent(MessageManager manager) {$/;"	m	class:DummyAmbulance
+registerEvent	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyFire.java	/^    public void registerEvent(MessageManager manager) {$/;"	m	class:DummyFire
+registerEvent	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyPolice.java	/^    public void registerEvent(MessageManager manager) {$/;"	m	class:DummyPolice
+registerEvent	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/Tactics.java	/^    public abstract void registerEvent(MessageManager manager);$/;"	m	class:Tactics
 registerEvent	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/Tactics.java	/^    public void registerEvent(MessageManager manager) {$/;"	m	class:Tactics
 registerEvent	./Comlib/src/main/java/comlib/agent/CommunicationAgent.java	/^    public abstract void registerEvent(MessageManager manager);$/;"	m	class:CommunicationAgent
 registerEvent	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	public boolean registerEvent(MessageEvent event) {$/;"	m	class:MessageManager
+registerEvent	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	public boolean registerEvent(MessageEvent event)$/;"	m	class:MessageManager
+registerEvent	./basefile/sample/SampleAmbulance.java	/^    public void registerEvent(MessageManager manager) {$/;"	m	class:SampleAmbulance
+registerEvent	./basefile/sample/SampleFire.java	/^    public void registerEvent(MessageManager manager) {$/;"	m	class:SampleFire
+registerEvent	./basefile/sample/SamplePolice.java	/^    public void registerEvent(MessageManager manager) {$/;"	m	class:SamplePolice
 registerFlag	./Comlib/src/main/java/comlib/util/IntegerDataHelper.java	/^    public boolean registerFlag(String name, int start) {$/;"	m	class:IntegerDataHelper
 registerInitialAgents	../roborescue-roborescue/modules/kernel/src/kernel/StartKernel.java	/^	private static void registerInitialAgents(Config config,$/;"	m	class:StartKernel	file:
 registerMessageFactory	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/registry/Registry.java	/^	public void registerMessageFactory(MessageFactory factory) {$/;"	m	class:Registry
@@ -7279,8 +7308,10 @@ registerPropertyFactory	../roborescue-roborescue/modules/rescuecore2/src/rescuec
 registerProvider	./Comlib-ADK/src/main/java/comlib/adk/agent/TacticsAgent.java	/^    public void registerProvider(MessageManager manager) {$/;"	m	class:TacticsAgent
 registerProvider	./Comlib/src/main/java/comlib/agent/CommunicationAgent.java	/^    public abstract void registerProvider(MessageManager manager);$/;"	m	class:CommunicationAgent
 registerProvider	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	public boolean registerProvider(MessageProvider provider) {$/;"	m	class:MessageManager
+registerProvider	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	public boolean registerProvider(MessageProvider provider)$/;"	m	class:MessageManager
 registerReceiveEvent	./Comlib/src_old/agent/CommunicationAgent.java	/^    public void registerReceiveEvent() {$/;"	m	class:CommunicationAgent
 registerStandardProvider	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	private void registerStandardProvider(MessageProvider provider) {$/;"	m	class:MessageManager	file:
+registerStandardProvider	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	private void registerStandardProvider(MessageProvider provider)$/;"	m	class:MessageManager	file:
 registerViewers	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/log/LogExtractor.java	/^    private void registerViewers(Config config) {$/;"	m	class:LogExtractor	file:
 registerViewers	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/log/LogViewer.java	/^    private void registerViewers(Config config) {$/;"	m	class:LogViewer	file:
 registry	../roborescue-roborescue/modules/kernel/src/kernel/StartKernel.java	/^		private Registry registry;$/;"	f	class:StartKernel.ComponentStarter	file:
@@ -7879,8 +7910,11 @@ search	../roborescue-roborescue/modules/human/src/human/ControlledFireBrigade.ja
 search	../roborescue-roborescue/modules/human/src/human/ControlledPoliceForce.java	/^    private SampleSearch search;$/;"	f	class:ControlledPoliceForce	file:
 search	../roborescue-roborescue/modules/sample/src/sample/AbstractSampleAgent.java	/^    protected SampleSearch search;$/;"	f	class:AbstractSampleAgent
 searchEvent	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	private void searchEvent(MessageProvider provider) {$/;"	m	class:MessageManager	file:
+searchEvent	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	private void searchEvent(MessageProvider provider)$/;"	m	class:MessageManager	file:
 searchProvider	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	private void searchProvider(MessageEvent event) {$/;"	m	class:MessageManager	file:
+searchProvider	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	private void searchProvider(MessageEvent event)$/;"	m	class:MessageManager	file:
 searchRadio	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	private boolean searchRadio(Config config) {$/;"	m	class:MessageManager	file:
+searchRadio	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	private boolean searchRadio(Config config)$/;"	m	class:MessageManager	file:
 searchRadio	./Comlib/src_old/manager/MessageManager.java	/^	private boolean searchRadio(Config config)$/;"	m	class:MessageManager	file:
 second	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/Pair.java	/^    private T second;$/;"	f	class:Pair	file:
 second	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/Pair.java	/^    public T second() {$/;"	m	class:Pair
@@ -8879,6 +8913,7 @@ travelDistance	../roborescue-roborescue/modules/standard/src/rescuecore2/standar
 tree	../roborescue-roborescue/modules/rescuecore2/test/rescuecore2/misc/geometry/spatialindex/BBTreeTest.java	/^    private BBTree tree;$/;"	f	class:BBTreeTest	file:
 trim	../roborescue-roborescue/modules/maps/src/maps/convert/legacy2gml/BuildingInfo.java	/^    private Pair<Line2D, GMLDirectedEdge> trim(Line2D line, Collection<GMLDirectedEdge> walls, boolean trimStart) {$/;"	m	class:BuildingInfo	file:
 trySetEvent	./Comlib/src/main/java/comlib/provider/MessageProvider.java	/^	public void trySetEvent(MessageEvent ev) {$/;"	m	class:MessageProvider
+trySetEvent	./Comlib/src/main/java/comlib/provider/MessageProvider.java	/^	public void trySetEvent(MessageEvent ev)$/;"	m	class:MessageProvider
 tryToMerge	../roborescue-roborescue/modules/maps/src/maps/convert/osm2gml/MergeShapesStep.java	/^    private boolean tryToMerge(TemporaryBuilding b) {$/;"	m	class:MergeShapesStep	file:
 tryToMerge	../roborescue-roborescue/modules/maps/src/maps/convert/osm2gml/MergeShapesStep.java	/^    private boolean tryToMerge(TemporaryRoad r) {$/;"	m	class:MergeShapesStep	file:
 ttl	./Comlib/src/main/java/comlib/manager/VoiceConfig.java	/^    private int ttl;$/;"	f	class:VoiceConfig	file:

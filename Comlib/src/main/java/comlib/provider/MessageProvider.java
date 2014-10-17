@@ -9,33 +9,28 @@ import comlib.message.CommunicationMessage;
 import comlib.util.BitOutputStream;
 import comlib.util.BitStreamReader;
 
-public abstract class MessageProvider<M extends CommunicationMessage, E extends MessageEvent> {
 
+public abstract class MessageProvider<M extends CommunicationMessage, E extends MessageEvent>
+{
 	protected int messageID;
 
 	protected E event;
 
-	public MessageProvider(int id) {
-		// this.event = this.getDefaultEvent(manager);
+	public MessageProvider(int id)
+	{
         this.messageID = id;
 	}
 
-	/*public void setMessageID(int id) {
-		if(id >= 0 && this.messageID == -1)
-			this.messageID = id;
-	}*/
-
-	public int getMessageID() {
+	public int getMessageID()
+	{
 		return this.messageID;
 	}
 
-	// public abstract E getDefaultEvent(MessageManager manager);
 
 	protected abstract void writeMessage(RadioConfig config, BitOutputStream bos, M msg);
 
 	protected abstract void writeMessage(VoiceConfig config, StringBuilder sb, M msg);
 
-//<<<<<<< HEAD
 	protected abstract M createMessage(RadioConfig config, int time, BitStreamReader bsr);
 
 	protected abstract M createMessage(VoiceConfig config, int time, int ttl, String[] datas, int next);
@@ -106,22 +101,26 @@ public abstract class MessageProvider<M extends CommunicationMessage, E extends 
 		return msg;
 	}
 
-	public CommunicationMessage create(MessageManager manager, String[] datas) {
-		VoiceConfig config = manager.getVoiceConfig();
-		int time = Integer.parseInt(datas[0]);
-		int ttl  = Integer.parseInt(datas[1]);
-// <<<<<<< HEAD
-		M msg = this.createMessage(config, time, ttl, datas, 2);
+	public CommunicationMessage create(MessageManager manager, String[] data)
+	{
+		int next = 0;
+		M msg = null;
+		try
+		{
+			msg = this.createMessage(
+					manager.getVoiceConfig(),
+					Integer.parseInt(data[next++]),
+					Integer.parseInt(data[next++]),
+					data, next);
+		} catch (Exception e)
+		{ return null; }
 		this.event.receivedVoice(msg);
-// =======
-// 		M msg = this.createMessage(config, time, ttl, datas, 2);
-//         //CommunicationMessage msg = this.createMessage(config, time, ttl, datas, 2);
-// 		this.event.receivedVoice((M)msg);
-// >>>>>>> 8ddf4120c27cedcf9376284bdd193507f021b4e3
 		return msg;
 	}
 
-	public void trySetEvent(MessageEvent ev) {
+	public void trySetEvent(MessageEvent ev)
+	{
+		// TODO: check!!
 		//if (ev instanceof E) //こうかけないからクソ
 		if (ev != null)
 		{ this.event = (E) ev; }

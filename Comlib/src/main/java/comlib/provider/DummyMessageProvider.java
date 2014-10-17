@@ -8,15 +8,14 @@ import comlib.message.DummyMessage;
 import comlib.util.BitOutputStream;
 import comlib.util.BitStreamReader;
 
-public class DummyMessageProvider extends MessageProvider<DummyMessage, DummyMessageEvent>{
 
-	public DummyMessageProvider(int id) {
+public class DummyMessageProvider extends MessageProvider<DummyMessage, DummyMessageEvent>
+{
+
+	public DummyMessageProvider(int id)
+	{
 		super(id);
 	}
-
-	// public DummyEvent getDefaultEvent(MessageManager manager)
-	// {
-	// }
 
 	protected void writeMessage(RadioConfig config, BitOutputStream bos, DummyMessage msg)
 	{
@@ -28,22 +27,15 @@ public class DummyMessageProvider extends MessageProvider<DummyMessage, DummyMes
 
 	protected DummyMessage createMessage(RadioConfig config, int time, BitStreamReader bsr)
 	{
-		/*DummyMessage a;
-			a = new DummyMessage(time, -1, -1);
-			return a;*/
-		// return DummyMessage.getInstance(-1);
 		return new DummyMessage(time, -1, -1);
 	}
 
-	protected DummyMessage createMessage(VoiceConfig config, int time, int ttl, String[] datas, int next)
+	protected DummyMessage createMessage(VoiceConfig config, int time, int ttl, String[] data, int next)
 	{
-		try {
-			// return null;//new DummyMessage(time, ttl, -1);
-			return new DummyMessage(time, ttl, -1);
-		}
-		catch (Exception e) {
-			return null;
-		}
+			return new DummyMessage(
+					time, ttl,
+					Integer.parseInt(data[next])
+					);
 	}
 
 	// public CommunicationMessage create(RadioConfig config, BitStreamReader bsr) {
@@ -54,12 +46,4 @@ public class DummyMessageProvider extends MessageProvider<DummyMessage, DummyMes
 	//     return msg;
 	// }
 	//
-	// public CommunicationMessage create(VoiceConfig config, String[] datas) {
-	//     int time = Integer.parseInt(datas[0]);
-	//     int ttl  = Integer.parseInt(datas[1]);
-	//     DummyMessage msg = this.createMessage(config, time, ttl, datas, 2);
-	//     //CommunicationMessage msg = this.createMessage(config, time, ttl, datas, 2);
-	//     this.event.receivedVoice(msg);
-	//     return msg;
-	// }
 }
