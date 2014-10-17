@@ -3,7 +3,7 @@ package comlib.message;
 import rescuecore2.standard.entities.Human;
 import rescuecore2.worldmodel.EntityID;
 
-abstract public class HumanMessage extends CommunicationMessage {
+abstract public class HumanMessage extends InformationMessage {
 
 	protected EntityID humanID;
 	protected int humanHP;
@@ -15,8 +15,8 @@ abstract public class HumanMessage extends CommunicationMessage {
 		super(messageID);
 		humanID = human.getID();
 		humanHP = human.getHP();
-		humanBuriedness = humanBuriedness();
-		humanDamage = humanDamage();
+		humanBuriedness = human.getBuriedness();
+		humanDamage = human.getDamage();
 		humanPosition = human.getPosition();
 	}
 
@@ -29,9 +29,15 @@ abstract public class HumanMessage extends CommunicationMessage {
 		humanPosition = position;
 	}
 
-	public int getValue() {
-		return this.dummyTest;
-	}
+	public EntityID getHumanID() { return this.humanID; }
+
+	public int getHP() { return this.humanHP; }
+
+	public int getBuriedness() { return this.humanBuriedness; }
+
+	public int getDamage() { return this.humanDamage; }
+
+	public EntityID getPosition() { return this.humanPosition; }
 
 }
 
