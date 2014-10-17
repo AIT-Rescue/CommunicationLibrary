@@ -37,11 +37,13 @@ task buildWorkspace(type: Zip,  dependsOn: [':Comlib:makeArchive', ':Comlib-ADK:
             //src
             into('src') {
                 into('java') {
-                    from 'basefile/.gitkeep'
+                    into('sample') {
+                        from 'basefile/sample'
+                    }
                 }
-                into('resources') {
+                /*into('resources') {
                     from 'basefile/.gitkeep'
-                }
+                }*/
             }
             //tactics
             into('tactics') {

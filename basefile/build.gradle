@@ -18,6 +18,7 @@ repositories {
 }
 
 dependencies {
+    compile fileTree(dir: 'library', include: '*.jar')
     compile fileTree(dir: 'library/util', include: '*.jar')
     compile fileTree(dir: 'library/rescue/core', include: '*.jar')
     compile fileTree(dir: 'library/rescue/util', include: '*.jar')
@@ -25,7 +26,7 @@ dependencies {
 
 sourceSets {
     main.java.srcDirs = ['src/java']
-    main.resources.srcDirs = ['src/resources']
+    //main.resources.srcDirs = ['src/resources']
 }
 
 jar {
