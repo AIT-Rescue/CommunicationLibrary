@@ -16,6 +16,11 @@ public class SamplePolice extends PoliceForceTactics {
     }
 
     @Override
+    public void registerEvent(MessageManager manager) {
+
+    }
+
+    @Override
     public Message think(int time, ChangeSet changed, MessageManager manager) {
         manager.addSendMessage(new DummyMessage(time, 10, 0));
         return PoliceAction.rest(this, time);

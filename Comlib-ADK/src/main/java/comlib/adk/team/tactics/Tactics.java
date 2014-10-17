@@ -31,8 +31,7 @@ public abstract class Tactics<E extends StandardEntity> {
 
     public abstract void postConnect();
 
-    public void registerEvent(MessageManager manager) {
-    }
+    public abstract void registerEvent(MessageManager manager);
 
     public abstract Message think(int time, ChangeSet changed, MessageManager manager);
 

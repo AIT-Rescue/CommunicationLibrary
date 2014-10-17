@@ -16,13 +16,13 @@ public class DummyPolice extends PoliceForceTactics {
     }
 
     @Override
-    public Message think(int time, ChangeSet changed, MessageManager manager) {
-        manager.addSendMessage(new DummyMessage(time, 10, 0));
-        return PoliceAction.rest(this, time);
+    public void registerEvent(MessageManager manager) {
+
     }
 
     @Override
-    public String toString() {
-        return "dummy";
+    public Message think(int time, ChangeSet changed, MessageManager manager) {
+        manager.addSendMessage(new DummyMessage(time, 10, 0));
+        return PoliceAction.rest(this, time);
     }
 }
