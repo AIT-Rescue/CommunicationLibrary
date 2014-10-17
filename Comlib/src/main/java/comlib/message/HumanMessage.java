@@ -11,14 +11,22 @@ abstract public class HumanMessage extends CommunicationMessage {
 	protected int humanDamage;
 	protected EntityID humanPosition;
 
-	public DummyMessage(int messageID, int test) {
+	public DummyMessage(int messageID, Human human) {
 		super(messageID);
-		dummyTest = test;
+		humanID = human.getID();
+		humanHP = human.getHP();
+		humanBuriedness = humanBuriedness();
+		humanDamage = humanDamage();
+		humanPosition = human.getPosition();
 	}
 
-	public DummyMessage(int messageID, int time, int ttl, int test) {
+	public DummyMessage(int messageID, int time, int ttl, EntityID id, int hp, int buriedness, int damage, EntityID position) {
 		super(messageID, time, ttl);
-		dummyTest = test;
+		humanID = id;
+		humanHP = hp;
+		humanBuriedness = buriedness;
+		humanDamage = damage;
+		humanPosition = position;
 	}
 
 	public int getValue() {
