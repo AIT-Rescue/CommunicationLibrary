@@ -255,6 +255,7 @@ AmbulanceTeamMessage	./Comlib/src/main/java/comlib/message/information/Ambulance
 AmbulanceTeamMessage	./Comlib/src_old/message/information/AmbulanceTeamMessage.java	/^	public AmbulanceTeamMessage(int t, AmbulanceTeam ambulance)$/;"	m	class:AmbulanceTeamMessage
 AmbulanceTeamMessage	./Comlib/src_old/message/information/AmbulanceTeamMessage.java	/^	public AmbulanceTeamMessage(int t, int l, AmbulanceTeam ambulance)$/;"	m	class:AmbulanceTeamMessage
 AmbulanceTeamMessage	./Comlib/src_old/message/information/AmbulanceTeamMessage.java	/^public class AmbulanceTeamMessage extends HumanMessage$/;"	c
+AmbulanceTeamMessageEvent	./Comlib/src/main/java/comlib/event/information/AmbulanceteamMessageEvent.java	/^public abstract class AmbulanceTeamMessageEvent extends MessageEvent<CivilianMessage> {$/;"	c
 AmbulanceTeamTactics	./Comlib-ADK/adk_old/launcher/tactics/AmbulanceTeamTactics.java	/^    public AmbulanceTeamTactics() {$/;"	m	class:AmbulanceTeamTactics
 AmbulanceTeamTactics	./Comlib-ADK/adk_old/launcher/tactics/AmbulanceTeamTactics.java	/^public abstract class AmbulanceTeamTactics extends Tactics {$/;"	c
 AmbulanceTeamTactics	./Comlib-ADK/adk_old/tactics/AmbulanceTeamTactics.java	/^    public AmbulanceTeamTactics(Preparation p, Thinking t) {$/;"	m	class:AmbulanceTeamTactics
@@ -483,6 +484,7 @@ CivilianMessage	./Comlib/src/main/java/comlib/message/information/CivilianMessag
 CivilianMessage	./Comlib/src/main/java/comlib/message/information/VictimMessage.java	/^	public CivilianMessage(Civilian civilian)$/;"	m	class:CivilianMessage
 CivilianMessage	./Comlib/src/main/java/comlib/message/information/VictimMessage.java	/^	public CivilianMessage(int time, int ttl, EntityID id, int hp, int buriedness, int damage, EntityID position)$/;"	m	class:CivilianMessage
 CivilianMessage	./Comlib/src/main/java/comlib/message/information/VictimMessage.java	/^abstract public class CivilianMessage extends HumanMessage$/;"	c
+CivilianMessageEvent	./Comlib/src/main/java/comlib/event/information/CivilianMessageEvent.java	/^public abstract class CivilianMessageEvent extends MessageEvent<CivilianMessage> {$/;"	c
 CiviliansAliveScoreFunction	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/score/CiviliansAliveScoreFunction.java	/^    public CiviliansAliveScoreFunction() {$/;"	m	class:CiviliansAliveScoreFunction
 CiviliansAliveScoreFunction	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/score/CiviliansAliveScoreFunction.java	/^public class CiviliansAliveScoreFunction extends AbstractScoreFunction {$/;"	c
 CiviliansDeadOrRescuedTerminationCondition	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/kernel/CiviliansDeadOrRescuedTerminationCondition.java	/^public class CiviliansDeadOrRescuedTerminationCondition implements TerminationCondition {$/;"	c
@@ -866,6 +868,8 @@ DummyMessage	./Comlib/src/main/java/comlib/message/InformationMessage.java	/^	pu
 DummyMessageEvent	./Comlib/src/main/java/comlib/event/DummyMessageEvent.java	/^public abstract class DummyMessageEvent extends MessageEvent<DummyMessage> {$/;"	c
 DummyMessageProvider	./Comlib/src/main/java/comlib/provider/DummyMessageProvider.java	/^	public DummyMessageProvider(int id) {$/;"	m	class:DummyMessageProvider
 DummyMessageProvider	./Comlib/src/main/java/comlib/provider/DummyMessageProvider.java	/^public class DummyMessageProvider extends MessageProvider<DummyMessage, DummyMessageEvent>{$/;"	c
+DummyMessageProvider	./Comlib/src/main/java/comlib/provider/information/CivilianMessageProvider.java	/^	public DummyMessageProvider(int id)$/;"	m	class:DummyMessageProvider
+DummyMessageProvider	./Comlib/src/main/java/comlib/provider/information/CivilianMessageProvider.java	/^public class DummyMessageProvider extends MessageProvider<DummyMessage, DummyMessageEvent>$/;"	c
 DummyPolice	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyPolice.java	/^public class DummyPolice extends PoliceForceTactics {$/;"	c
 DummyTeam	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyTeam.java	/^public class DummyTeam implements Team {$/;"	c
 EDGES	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/StandardPropertyURN.java	/^    EDGES(PROPERTY_URN_PREFIX + "edges"),$/;"	e	enum:StandardPropertyURN	file:
@@ -1066,6 +1070,7 @@ FireBrigadeMessage	./Comlib/src/main/java/comlib/message/information/FireBrigade
 FireBrigadeMessage	./Comlib/src_old/message/information/FireBrigadeMessage.java	/^	public FireBrigadeMessage(int t, FireBrigade fire)$/;"	m	class:FireBrigadeMessage
 FireBrigadeMessage	./Comlib/src_old/message/information/FireBrigadeMessage.java	/^	public FireBrigadeMessage(int t, l, FireBrigade fire)$/;"	m	class:FireBrigadeMessage
 FireBrigadeMessage	./Comlib/src_old/message/information/FireBrigadeMessage.java	/^public class FireBrigadeMessage$/;"	c
+FireBrigadeMessageEvent	./Comlib/src/main/java/comlib/event/information/FireBrigadeMessageEvent.java	/^public abstract class FireBrigadeMessageEvent extends MessageEvent<FireBrigadeMessage> {$/;"	c
 FireBrigadeTactics	./Comlib-ADK/adk_old/launcher/tactics/FireBrigadeTactics.java	/^    public FireBrigadeTactics() {$/;"	m	class:FireBrigadeTactics
 FireBrigadeTactics	./Comlib-ADK/adk_old/launcher/tactics/FireBrigadeTactics.java	/^public abstract class FireBrigadeTactics extends Tactics {$/;"	c
 FireBrigadeTactics	./Comlib-ADK/adk_old/tactics/FireBrigadeTactics.java	/^    public FireBrigadeTactics(Preparation p, Thinking t) {$/;"	m	class:FireBrigadeTactics
@@ -2008,6 +2013,7 @@ PoliceForceMessage	./Comlib/src/main/java/comlib/message/information/PoliceForce
 PoliceForceMessage	./Comlib/src_old/message/information/PoliceForceMessage.java	/^	public PoliceForceMessage(int t, PiliceForce police)$/;"	m	class:PoliceForceMessage
 PoliceForceMessage	./Comlib/src_old/message/information/PoliceForceMessage.java	/^	public PoliceForceMessage(int t, int l, PoliceForce police)$/;"	m	class:PoliceForceMessage
 PoliceForceMessage	./Comlib/src_old/message/information/PoliceForceMessage.java	/^public class PoliceForceMessage extends HumanMessage$/;"	c
+PoliceForceMessageEvent	./Comlib/src/main/java/comlib/event/information/PoliceForceMessageEvent.java	/^public abstract class PoliceForceMessageEvent extends MessageEvent<PoliceForceMessage> {$/;"	c
 PoliceForceTactics	./Comlib-ADK/adk_old/tactics/PoliceForceTactics.java	/^    public PoliceForceTactics(Preparation p, Thinking t) {$/;"	m	class:PoliceForceTactics
 PoliceForceTactics	./Comlib-ADK/adk_old/tactics/PoliceForceTactics.java	/^public class PoliceForceTactics extends Tactics {$/;"	c
 PoliceForceTactics	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/PoliceForceTactics.java	/^public abstract class PoliceForceTactics extends Tactics<PoliceForce>{$/;"	c
@@ -3390,6 +3396,10 @@ comlib.creator	./Comlib/src_old/creator/MessageCreator.java	/^package comlib.cre
 comlib.creator.information	./Comlib/src_old/creator/information/VictimMessageCreator.java	/^package comlib.creator.information;$/;"	p
 comlib.event	./Comlib/src/main/java/comlib/event/DummyMessageEvent.java	/^package comlib.event;$/;"	p
 comlib.event	./Comlib/src/main/java/comlib/event/MessageEvent.java	/^package comlib.event;$/;"	p
+comlib.event	./Comlib/src/main/java/comlib/event/information/AmbulanceteamMessageEvent.java	/^package comlib.event;$/;"	p
+comlib.event	./Comlib/src/main/java/comlib/event/information/CivilianMessageEvent.java	/^package comlib.event;$/;"	p
+comlib.event	./Comlib/src/main/java/comlib/event/information/FireBrigadeMessageEvent.java	/^package comlib.event;$/;"	p
+comlib.event	./Comlib/src/main/java/comlib/event/information/PoliceForceMessageEvent.java	/^package comlib.event;$/;"	p
 comlib.manager	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^package comlib.manager;$/;"	p
 comlib.manager	./Comlib/src/main/java/comlib/manager/RadioConfig.java	/^package comlib.manager;$/;"	p
 comlib.manager	./Comlib/src/main/java/comlib/manager/VoiceConfig.java	/^package comlib.manager;$/;"	p
@@ -3417,6 +3427,7 @@ comlib.message.information	./Comlib/src_old/message/information/PoliceForceMessa
 comlib.message.information	./Comlib/src_old/message/information/VictimMessage.java	/^package comlib.message.information;$/;"	p
 comlib.provider	./Comlib/src/main/java/comlib/provider/DummyMessageProvider.java	/^package comlib.provider;$/;"	p
 comlib.provider	./Comlib/src/main/java/comlib/provider/MessageProvider.java	/^package comlib.provider;$/;"	p
+comlib.provider	./Comlib/src/main/java/comlib/provider/information/CivilianMessageProvider.java	/^package comlib.provider;$/;"	p
 comlib.util	./Comlib/src/main/java/comlib/util/BitOutputStream.java	/^package comlib.util;$/;"	p
 comlib.util	./Comlib/src/main/java/comlib/util/BitStreamReader.java	/^package comlib.util;$/;"	p
 comlib.util	./Comlib/src/main/java/comlib/util/IntegerDataHelper.java	/^package comlib.util;$/;"	p
@@ -3655,6 +3666,8 @@ createMessage	./Comlib/src/main/java/comlib/provider/DummyMessageProvider.java	/
 createMessage	./Comlib/src/main/java/comlib/provider/DummyMessageProvider.java	/^	protected DummyMessage createMessage(VoiceConfig config, int time, int ttl, String[] datas, int next)$/;"	m	class:DummyMessageProvider
 createMessage	./Comlib/src/main/java/comlib/provider/MessageProvider.java	/^	protected abstract M createMessage(RadioConfig config, int time, BitStreamReader bsr);$/;"	m	class:MessageProvider
 createMessage	./Comlib/src/main/java/comlib/provider/MessageProvider.java	/^	protected abstract M createMessage(VoiceConfig config, int time, int ttl, String[] datas, int next);$/;"	m	class:MessageProvider
+createMessage	./Comlib/src/main/java/comlib/provider/information/CivilianMessageProvider.java	/^	protected DummyMessage createMessage(RadioConfig config, int time, BitStreamReader bsr)$/;"	m	class:DummyMessageProvider
+createMessage	./Comlib/src/main/java/comlib/provider/information/CivilianMessageProvider.java	/^	protected DummyMessage createMessage(VoiceConfig config, int time, int ttl, String[] datas, int next)$/;"	m	class:DummyMessageProvider
 createMessage	./Comlib/src_old/creator/MessageCreator.java	/^	public abstract CommunicationMessage createMessage(RadioConfig config, int time, BitStreamReader bsr);$/;"	m	class:MessageCreator
 createMessage	./Comlib/src_old/creator/MessageCreator.java	/^	public abstract CommunicationMessage createMessage(VoiceConfig config, int time, int ttl, String[] datas);$/;"	m	class:MessageCreator
 createMessage	./Comlib/src_old/creator/information/VictimMessageCreator.java	/^	public CommunicationMessage createMessage(RadioConfig config, int time, BitStreamReader bsr)$/;"	m	class:VictimMessageCreator
@@ -7170,8 +7183,16 @@ receivedMessages	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	pr
 receivedMessages	./Comlib/src_old/manager/MessageManager.java	/^	private List<CommunicationMessage> receivedMessages;$/;"	f	class:MessageManager	file:
 receivedRadio	./Comlib/src/main/java/comlib/event/DummyMessageEvent.java	/^	public void receivedRadio(DummyMessage msg)$/;"	m	class:DummyMessageEvent
 receivedRadio	./Comlib/src/main/java/comlib/event/MessageEvent.java	/^	public abstract void receivedRadio(M msg);	$/;"	m	class:MessageEvent
+receivedRadio	./Comlib/src/main/java/comlib/event/information/AmbulanceteamMessageEvent.java	/^	public void receivedRadio(AmbulanceTeamMessage msg)$/;"	m	class:AmbulanceTeamMessageEvent
+receivedRadio	./Comlib/src/main/java/comlib/event/information/CivilianMessageEvent.java	/^	public void receivedRadio(CivilianMessage msg)$/;"	m	class:CivilianMessageEvent
+receivedRadio	./Comlib/src/main/java/comlib/event/information/FireBrigadeMessageEvent.java	/^	public void receivedRadio(FireBrigadeMessage msg)$/;"	m	class:FireBrigadeMessageEvent
+receivedRadio	./Comlib/src/main/java/comlib/event/information/PoliceForceMessageEvent.java	/^	public void receivedRadio(PoliceForceMessage msg)$/;"	m	class:PoliceForceMessageEvent
 receivedVoice	./Comlib/src/main/java/comlib/event/DummyMessageEvent.java	/^	public void receivedVoice(DummyMessage msg)$/;"	m	class:DummyMessageEvent
 receivedVoice	./Comlib/src/main/java/comlib/event/MessageEvent.java	/^	public abstract void receivedVoice(M msg);	$/;"	m	class:MessageEvent
+receivedVoice	./Comlib/src/main/java/comlib/event/information/AmbulanceteamMessageEvent.java	/^	public void receivedVoice(AmbulanceTeamMessage msg)$/;"	m	class:AmbulanceTeamMessageEvent
+receivedVoice	./Comlib/src/main/java/comlib/event/information/CivilianMessageEvent.java	/^	public void receivedVoice(CivilianMessage msg)$/;"	m	class:CivilianMessageEvent
+receivedVoice	./Comlib/src/main/java/comlib/event/information/FireBrigadeMessageEvent.java	/^	public void receivedVoice(FireBrigadeMessage msg)$/;"	m	class:FireBrigadeMessageEvent
+receivedVoice	./Comlib/src/main/java/comlib/event/information/PoliceForceMessageEvent.java	/^	public void receivedVoice(PoliceForceMessage msg)$/;"	m	class:PoliceForceMessageEvent
 recomputeBounds	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/geometry/spatialindex/BBTree.java	/^        abstract void recomputeBounds();$/;"	m	class:BBTree.Node
 recomputeBounds	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/geometry/spatialindex/BBTree.java	/^        void recomputeBounds() {$/;"	m	class:BBTree.Branch
 recomputeBounds	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/geometry/spatialindex/BBTree.java	/^        void recomputeBounds() {$/;"	m	class:BBTree.Leaf
@@ -9279,6 +9300,8 @@ writeMessage	./Comlib/src/main/java/comlib/provider/DummyMessageProvider.java	/^
 writeMessage	./Comlib/src/main/java/comlib/provider/DummyMessageProvider.java	/^	protected void writeMessage(VoiceConfig config, StringBuilder sb, DummyMessage msg)$/;"	m	class:DummyMessageProvider
 writeMessage	./Comlib/src/main/java/comlib/provider/MessageProvider.java	/^	protected abstract void writeMessage(RadioConfig config, BitOutputStream bos, M msg);$/;"	m	class:MessageProvider
 writeMessage	./Comlib/src/main/java/comlib/provider/MessageProvider.java	/^	protected abstract void writeMessage(VoiceConfig config, StringBuilder sb, M msg);$/;"	m	class:MessageProvider
+writeMessage	./Comlib/src/main/java/comlib/provider/information/CivilianMessageProvider.java	/^	protected void writeMessage(RadioConfig config, BitOutputStream bos, DummyMessage msg)$/;"	m	class:DummyMessageProvider
+writeMessage	./Comlib/src/main/java/comlib/provider/information/CivilianMessageProvider.java	/^	protected void writeMessage(VoiceConfig config, StringBuilder sb, DummyMessage msg)$/;"	m	class:DummyMessageProvider
 writeNodes	../roborescue-roborescue/modules/maps/src/maps/gml/formats/MeijoFormat.java	/^    private void writeNodes(GMLMap map, Element parent) {$/;"	m	class:MeijoFormat	file:
 writeNodes	../roborescue-roborescue/modules/maps/src/maps/gml/formats/RobocupFormat.java	/^    private void writeNodes(GMLMap map, Element parent) {$/;"	m	class:RobocupFormat	file:
 writeProperty	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/EncodingTools.java	/^	public static void writeProperty(Property p, DataOutput out)$/;"	m	class:EncodingTools
