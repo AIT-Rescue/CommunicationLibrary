@@ -135,7 +135,7 @@ public class MessageManager {
 		// TODO: return data
 		if (this.useRadio)
 		{
-			BitOutputStream bos = null;
+			BitOutputStream bos = new BitOutputStream();
 			for (CommunicationMessage msg : this.sendMessages)
 			{ this.providerList[msg.getMessageID()].write(this, bos, msg); }
 			return null;
@@ -154,7 +154,14 @@ public class MessageManager {
 		return this.receivedMessages;
 	}
 
-	public void addSendMessage(CommunicationMessage msg) {
+
+    public <M extends CommunicationMessage> void addSendMessage(M msg) {
+        this.sendMessages.add(msg);
+        BitOutputStream bos = new BitOutputStream();
+        this.providerList[msg.getMessageID()].write(this, bos, msg);
+    }
+
+	public void old_addSendMessage(CommunicationMessage msg) {
 		this.sendMessages.add(msg);
 	}
 
