@@ -1,6 +1,9 @@
 package comlib.message;
 
 
-public class MessageID {
-	public static final int dummyMessage = 0;
+public interface MessageID
+{
+	int dummyMessage = 10;
+
+	int victimMessage = 0;
 }
