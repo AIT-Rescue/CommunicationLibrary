@@ -41,9 +41,6 @@ task buildWorkspace(type: Zip,  dependsOn: [':Comlib:makeArchive', ':Comlib-ADK:
                         from 'basefile/sample'
                     }
                 }
-                /*into('resources') {
-                    from 'basefile/.gitkeep'
-                }*/
             }
             //tactics
             into('tactics') {

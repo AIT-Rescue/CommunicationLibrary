@@ -12,6 +12,8 @@ build/
 
 # idea module
 *.iml
+*.ipr
+*.iws
 .idea/
 
 # Mobile Tools for Java (J2ME)
