@@ -538,8 +538,10 @@ CommandsRecord	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/log/
 CommandsRecord	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/log/CommandsRecord.java	/^public class CommandsRecord implements LogRecord {$/;"	c
 Common	../roborescue-roborescue/modules/maps/src/maps/gml/formats/Common.java	/^    private Common() {$/;"	m	class:Common	file:
 Common	../roborescue-roborescue/modules/maps/src/maps/gml/formats/Common.java	/^public final class Common {$/;"	c
+CommunicationAgent	./Comlib/src/main/java/comlib/agent/CommunicationAgent.java	/^	public CommunicationAgent()$/;"	m	class:CommunicationAgent
 CommunicationAgent	./Comlib/src/main/java/comlib/agent/CommunicationAgent.java	/^    public CommunicationAgent() {$/;"	m	class:CommunicationAgent
 CommunicationAgent	./Comlib/src/main/java/comlib/agent/CommunicationAgent.java	/^public abstract class CommunicationAgent<E extends StandardEntity> extends StandardAgent<E> {$/;"	c
+CommunicationAgent	./Comlib/src/main/java/comlib/agent/CommunicationAgent.java	/^public abstract class CommunicationAgent<E extends StandardEntity> extends StandardAgent<E>$/;"	c
 CommunicationAgent	./Comlib/src_old/agent/CommunicationAgent.java	/^    public CommunicationAgent(){$/;"	m	class:CommunicationAgent
 CommunicationAgent	./Comlib/src_old/agent/CommunicationAgent.java	/^public abstract class CommunicationAgent<E extends StandardEntity> extends StandardAgent<E>$/;"	c
 CommunicationMessage	./Comlib/src/main/java/comlib/message/CommunicationMessage.java	/^	public CommunicationMessage(int id) {$/;"	m	class:CommunicationMessage
@@ -3712,6 +3714,7 @@ createRandomFiller	../roborescue-roborescue/modules/maps/src/maps/convert/osm2gm
 createRoad	../roborescue-roborescue/modules/maps/src/maps/gml/GMLMap.java	/^    public GMLRoad createRoad(List<GMLDirectedEdge> rEdges) {$/;"	m	class:GMLMap
 createRoadBlockades	../roborescue-roborescue/modules/collapse/src/collapse/CollapseSimulator.java	/^	private Map<Road, Collection<java.awt.geom.Area>> createRoadBlockades($/;"	m	class:CollapseSimulator	file:
 createRoadFromNodes	../roborescue-roborescue/modules/maps/src/maps/gml/GMLMap.java	/^    public GMLRoad createRoadFromNodes(List<GMLNode> apexes) {$/;"	m	class:GMLMap
+createSendMessage	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	public List<Message> createSendMessage()$/;"	m	class:MessageManager
 createSendMessage	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	public Message createSendMessage() {$/;"	m	class:MessageManager
 createSendMessage	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	public Message createSendMessage()$/;"	m	class:MessageManager
 createSendMessage	./Comlib/src_old/manager/MessageManager.java	/^	public List<Message> createSendMessage()$/;"	m	class:MessageManager
@@ -6166,6 +6169,7 @@ manager	../roborescue-roborescue/modules/rescuecore2/test/rescuecore2/connection
 manager	../roborescue-roborescue/modules/traffic3/src/traffic3/objects/TrafficAgent.java	/^	private TrafficManager manager;$/;"	f	class:TrafficAgent	file:
 manager	../roborescue-roborescue/modules/traffic3/src/traffic3/simulator/TrafficSimulator.java	/^	private TrafficManager manager;$/;"	f	class:TrafficSimulator	file:
 manager	../roborescue-roborescue/modules/traffic3/src/traffic3/simulator/TrafficSimulatorGUI.java	/^	private TrafficManager manager;$/;"	f	class:TrafficSimulatorGUI	file:
+manager	./Comlib/src/main/java/comlib/agent/CommunicationAgent.java	/^	public MessageManager manager;$/;"	f	class:CommunicationAgent
 manager	./Comlib/src/main/java/comlib/agent/CommunicationAgent.java	/^    public MessageManager manager;$/;"	f	class:CommunicationAgent
 manager	./Comlib/src/test/java/ComlibTest.java	/^	MessageManager manager;$/;"	f	class:ComlibTest
 manager	./Comlib/src_old/agent/CommunicationAgent.java	/^    public MessageManager manager;$/;"	f	class:CommunicationAgent
@@ -6901,6 +6905,7 @@ postConnect	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyFire.java	/^    pub
 postConnect	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyPolice.java	/^    public void postConnect() {$/;"	m	class:DummyPolice
 postConnect	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/Tactics.java	/^    public abstract void postConnect();$/;"	m	class:Tactics
 postConnect	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/Tactics.java	/^    public void postConnect() {$/;"	m	class:Tactics
+postConnect	./Comlib/src/main/java/comlib/agent/CommunicationAgent.java	/^	public void postConnect()$/;"	m	class:CommunicationAgent
 postConnect	./Comlib/src/main/java/comlib/agent/CommunicationAgent.java	/^    public void postConnect() {$/;"	m	class:CommunicationAgent
 postConnect	./Comlib/src_old/agent/CommunicationAgent.java	/^    public void postConnect()$/;"	m	class:CommunicationAgent
 postConnect	./basefile/sample/SampleAmbulance.java	/^    public void postConnect() {$/;"	m	class:SampleAmbulance
@@ -7309,6 +7314,7 @@ registerEvent	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyFire.java	/^    p
 registerEvent	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyPolice.java	/^    public void registerEvent(MessageManager manager) {$/;"	m	class:DummyPolice
 registerEvent	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/Tactics.java	/^    public abstract void registerEvent(MessageManager manager);$/;"	m	class:Tactics
 registerEvent	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/Tactics.java	/^    public void registerEvent(MessageManager manager) {$/;"	m	class:Tactics
+registerEvent	./Comlib/src/main/java/comlib/agent/CommunicationAgent.java	/^	public abstract void registerEvent(MessageManager manager);$/;"	m	class:CommunicationAgent
 registerEvent	./Comlib/src/main/java/comlib/agent/CommunicationAgent.java	/^    public abstract void registerEvent(MessageManager manager);$/;"	m	class:CommunicationAgent
 registerEvent	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	public boolean registerEvent(MessageEvent event) {$/;"	m	class:MessageManager
 registerEvent	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	public boolean registerEvent(MessageEvent event)$/;"	m	class:MessageManager
@@ -7325,6 +7331,7 @@ registerProperties	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/
 registerPropertyFactory	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/registry/Registry.java	/^	public void registerPropertyFactory(PropertyFactory factory) {$/;"	m	class:Registry
 registerPropertyFactory	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/registry/Registry.java	/^	public void registerPropertyFactory(String urn, PropertyFactory factory) {$/;"	m	class:Registry
 registerProvider	./Comlib-ADK/src/main/java/comlib/adk/agent/TacticsAgent.java	/^    public void registerProvider(MessageManager manager) {$/;"	m	class:TacticsAgent
+registerProvider	./Comlib/src/main/java/comlib/agent/CommunicationAgent.java	/^	public abstract void registerProvider(MessageManager manager);$/;"	m	class:CommunicationAgent
 registerProvider	./Comlib/src/main/java/comlib/agent/CommunicationAgent.java	/^    public abstract void registerProvider(MessageManager manager);$/;"	m	class:CommunicationAgent
 registerProvider	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	public boolean registerProvider(MessageProvider provider) {$/;"	m	class:MessageManager
 registerProvider	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	public boolean registerProvider(MessageProvider provider)$/;"	m	class:MessageManager
@@ -7952,6 +7959,8 @@ send	../roborescue-roborescue/modules/kernel/src/kernel/AbstractKernelComponent.
 send	../roborescue-roborescue/modules/kernel/src/kernel/AbstractKernelComponent.java	/^    public void send(Collection<? extends Message> messages) {$/;"	m	class:AbstractKernelComponent
 send	../roborescue-roborescue/modules/kernel/src/kernel/KernelComponent.java	/^    void send(Collection<? extends Message> m);$/;"	m	interface:KernelComponent
 send	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/components/AbstractComponent.java	/^    protected final void send(Message msg) {$/;"	m	class:AbstractComponent
+send	./Comlib/src/main/java/comlib/agent/CommunicationAgent.java	/^	public void send(List<Message> msgs)$/;"	m	class:CommunicationAgent
+send	./Comlib/src/main/java/comlib/agent/CommunicationAgent.java	/^	public void send(Message[] msgs)$/;"	m	class:CommunicationAgent
 send	./Comlib/src/main/java/comlib/agent/CommunicationAgent.java	/^    public void send(List<Message> msgs) {$/;"	m	class:CommunicationAgent
 send	./Comlib/src/main/java/comlib/agent/CommunicationAgent.java	/^    public void send(Message[] msgs) {$/;"	m	class:CommunicationAgent
 send	./Comlib/src_old/agent/CommunicationAgent.java	/^    public void send(List<Message> msgs) {$/;"	m	class:CommunicationAgent
@@ -7978,10 +7987,12 @@ sendPerceptionUpdate	../roborescue-roborescue/modules/kernel/src/kernel/AgentPro
 sendRescue	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/components/StandardAgent.java	/^    protected void sendRescue(int time, EntityID target) {$/;"	m	class:StandardAgent
 sendRest	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/components/StandardAgent.java	/^    protected void sendRest(int time) {$/;"	m	class:StandardAgent
 sendSay	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/components/StandardAgent.java	/^    protected void sendSay(int time, byte[] data) {$/;"	m	class:StandardAgent
+sendSay	./Comlib/src/main/java/comlib/agent/CommunicationAgent.java	/^	public void sendSay(CommunicationMessage msg)$/;"	m	class:CommunicationAgent
 sendSay	./Comlib/src/main/java/comlib/agent/CommunicationAgent.java	/^    protected final void sendSay(int time, byte[] data) {$/;"	m	class:CommunicationAgent
 sendSay	./Comlib/src/main/java/comlib/agent/CommunicationAgent.java	/^    public void sendSay(CommunicationMessage msg) {$/;"	m	class:CommunicationAgent
 sendSay	./Comlib/src_old/agent/CommunicationAgent.java	/^    protected void sendSay(int time, byte[] data) {$/;"	m	class:CommunicationAgent
 sendSpeak	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/components/StandardAgent.java	/^    protected void sendSpeak(int time, int channel, byte[] data) {$/;"	m	class:StandardAgent
+sendSpeak	./Comlib/src/main/java/comlib/agent/CommunicationAgent.java	/^	public void sendSpeak(CommunicationMessage msg)$/;"	m	class:CommunicationAgent
 sendSpeak	./Comlib/src/main/java/comlib/agent/CommunicationAgent.java	/^    protected final void sendSpeak(int time, int channel, byte[] data) {$/;"	m	class:CommunicationAgent
 sendSpeak	./Comlib/src/main/java/comlib/agent/CommunicationAgent.java	/^    public void sendSpeak(CommunicationMessage msg) {$/;"	m	class:CommunicationAgent
 sendSpeak	./Comlib/src_old/agent/CommunicationAgent.java	/^    protected void sendSpeak(int time, int channel, byte[] data) {$/;"	m	class:CommunicationAgent
@@ -8723,6 +8734,8 @@ think	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyFire.java	/^    public Me
 think	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyPolice.java	/^    public Message think(int time, ChangeSet changed, MessageManager manager) {$/;"	m	class:DummyPolice
 think	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/Tactics.java	/^    public Message think(int time, ChangeSet changed) {$/;"	m	class:Tactics
 think	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/Tactics.java	/^    public abstract Message think(int time, ChangeSet changed, MessageManager manager);$/;"	m	class:Tactics
+think	./Comlib/src/main/java/comlib/agent/CommunicationAgent.java	/^	protected final void think(int time, ChangeSet changed, Collection<Command> heard)$/;"	m	class:CommunicationAgent
+think	./Comlib/src/main/java/comlib/agent/CommunicationAgent.java	/^	public abstract void think(int time, ChangeSet changed);$/;"	m	class:CommunicationAgent
 think	./Comlib/src/main/java/comlib/agent/CommunicationAgent.java	/^    protected final void think(int time, ChangeSet changed, Collection<Command> heard) {$/;"	m	class:CommunicationAgent
 think	./Comlib/src/main/java/comlib/agent/CommunicationAgent.java	/^    public abstract void think(int time, ChangeSet changed);$/;"	m	class:CommunicationAgent
 think	./Comlib/src_old/agent/CommunicationAgent.java	/^    protected final void think(int time, ChangeSet changed, Collection<Command> heard)$/;"	m	class:CommunicationAgent

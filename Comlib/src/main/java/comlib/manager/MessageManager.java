@@ -1,11 +1,10 @@
 package comlib.manager;
 
-
+import comlib.provider.DummyMessageProvider;
+import comlib.provider.MessageProvider;
 import comlib.event.MessageEvent;
 import comlib.message.CommunicationMessage;
 import comlib.message.MessageID;
-import comlib.provider.DummyMessageProvider;
-import comlib.provider.MessageProvider;
 import comlib.util.BitOutputStream;
 import comlib.util.BitStreamReader;
 
@@ -142,23 +141,23 @@ public class MessageManager
 		}
 	}
 
-	public Message createSendMessage()
+	public List<Message> createSendMessage()
 	{
 		// TODO: return data
+		List<Message> messages = new ArrayList<Message>();
+
 		if (this.useRadio)
 		{
 			BitOutputStream bos = new BitOutputStream();
 			for (CommunicationMessage msg : this.sendMessages)
 			{ this.providerList[msg.getMessageID()].write(this, bos, msg); }
-			return null;
 		}
-		else
-		{
-			StringBuilder sb = new StringBuilder();
-			for (CommunicationMessage msg : this.sendMessages)
-			{ this.providerList[msg.getMessageID()].write(this, sb, msg); }
-			return null;
-		}
+
+		StringBuilder sb = new StringBuilder();
+		for (CommunicationMessage msg : this.sendMessages)
+		{ this.providerList[msg.getMessageID()].write(this, sb, msg); }
+
+		return messages;
 	}
 
 	public List<CommunicationMessage> getReceivedMessage()
