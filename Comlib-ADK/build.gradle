@@ -4,7 +4,7 @@ apply plugin: 'eclipse'
 
 
 jar.baseName = 'comlib-adk'
-version = '0.3.0'
+//version = '0.3.0'
 
 repositories {
     jcenter()
@@ -24,15 +24,11 @@ dependencies {
 }
 javadoc.options.encoding = 'UTF-8'
 
-task autoClean(dependsOn: clean) {
-}
+build.mustRunAfter 'clean'
 
-task cleanBuild(dependsOn: [autoClean,  build]) {
-}
-
-task makeArchive(type: Zip, dependsOn: cleanBuild) {
+task makeArchive(type: Zip, dependsOn: [clean, build]) {
     destinationDir = new File(buildDir, 'libs')
-    archiveName = jar.baseName + '-' + version + '-src.zip'
+    archiveName = jar.baseName + '-src.zip'
     into('comlib') {
         from 'src/main/java/comlib'
     }
@@ -45,10 +41,8 @@ task start (type: JavaExec) {
     if (project.hasProperty('args')) {
         args project.args.split('\\s+')
     }
-    //maxHeapSize = '4096m'
     jvmArgs '-Xms512m', '-Xmx4g'
 }
-
 
 task wrapper(type: Wrapper) {
     gradleVersion = '2.1'

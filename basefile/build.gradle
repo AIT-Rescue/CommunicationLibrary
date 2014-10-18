@@ -26,7 +26,6 @@ dependencies {
 
 sourceSets {
     main.java.srcDirs = ['src/java']
-    //main.resources.srcDirs = ['src/resources']
 }
 
 jar {
@@ -44,14 +43,54 @@ javadoc.options.encoding = 'UTF-8'
 task start (type: JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
     main = "comlib.adk.launcher.Main"
-    //-Pargs="-s:localhost:7000 -t:sample:-1:-1:-1"
     if (project.hasProperty('args')) {
         args project.args.split('\\s+')
     }
-    //maxHeapSize = '4096m'
     jvmArgs '-Xms512m', '-Xmx4g'
 }
 
 task wrapper(type: Wrapper) {
     gradleVersion = '2.1'
+}
+
+def rescueSrcPath = 'jar://$MODULE_DIR$/library/rescue/core/rescue-src.zip!/'
+def comlibJarPath = 'jar://$MODULE_DIR$/library/rescue/util/comlib.jar!/'
+def comlibSrcPath = 'jar://$MODULE_DIR$/library/rescue/util/comlib-src.zip!/'
+def adkJarPath = 'jar://$MODULE_DIR$/library/rescue/util/comlib-adk.jar!/'
+def adkSrcPath = 'jar://$MODULE_DIR$/library/rescue/util/comlib-adk-src.zip!/'
+
+idea.module.iml {
+    withXml {
+        it.asNode().component.orderEntry.library.each{
+            def children = it.children()
+            boolean adkLink = false
+            boolean comlibLink = false
+            for(int i = 0; i < children.size(); i++){
+                String nodeName = children.get(i).name()
+                if('CLASSES'.equals(nodeName)){
+                    String name = children.get(i).children().get(0).attribute('url')
+                    if(comlibJarPath.equals(name)){
+                        comlibLink = true
+                    }
+                    else if(adkJarPath.equals(name)){
+                        adkLink = true
+                    }
+                }
+            }
+            if(comlibLink) {
+                for(int i = 0; i < children.size(); i++){
+                    if ('SOURCES'.equals(children.get(i).name())){
+                        children.get(i).appendNode('root', [url: comlibSrcPath])
+                    }
+                }
+            }
+            else if(adkLink) {
+                for(int i = 0; i < children.size(); i++){
+                    if ('SOURCES'.equals(children.get(i).name())){
+                        children.get(i).appendNode('root', [url: adkSrcPath])
+                    }
+                }
+            }
+        }
+    }
 }

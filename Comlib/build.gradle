@@ -3,7 +3,7 @@ apply plugin: 'idea'
 apply plugin: 'eclipse'
 
 jar.baseName = 'comlib'
-version = '0.2.0'
+//version = '0.2.0'
 
 repositories {
     jcenter()
@@ -22,15 +22,11 @@ dependencies {
 }
 javadoc.options.encoding = 'UTF-8'
 
-task autoClean(dependsOn: clean) {
-}
+build.mustRunAfter 'clean'
 
-task cleanBuild(dependsOn: [autoClean,  build]) {
-}
-
-task makeArchive(type: Zip, dependsOn: cleanBuild) {
+task makeArchive(type: Zip, dependsOn: [clean, build]) {
     destinationDir = new File(buildDir, 'libs')
-    archiveName = jar.baseName + '-' + version + '-src.zip'
+    archiveName = jar.baseName + '-src.zip'
     into('comlib') {
         from 'src/main/java/comlib'
     }
