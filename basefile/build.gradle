@@ -53,7 +53,7 @@ task wrapper(type: Wrapper) {
     gradleVersion = '2.1'
 }
 
-def rescueSrcPath = 'jar://$MODULE_DIR$/library/rescue/core/rescue-src.zip!/'
+//def rescueSrcPath = 'jar://$MODULE_DIR$/library/rescue/core/rescue-src.zip!/'
 def comlibJarPath = 'jar://$MODULE_DIR$/library/rescue/util/comlib.jar!/'
 def comlibSrcPath = 'jar://$MODULE_DIR$/library/rescue/util/comlib-src.zip!/'
 def adkJarPath = 'jar://$MODULE_DIR$/library/rescue/util/comlib-adk.jar!/'
