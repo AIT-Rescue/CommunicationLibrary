@@ -71,7 +71,7 @@ public class MessageManager
 		return this.useRadio;
 	}
 
-	public RadioConfig getRadioConfig()s
+	public RadioConfig getRadioConfig()
 	{
 		return this.radioConfig;
 	}

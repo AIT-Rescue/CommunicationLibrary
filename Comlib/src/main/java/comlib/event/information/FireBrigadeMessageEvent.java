@@ -2,8 +2,9 @@ package comlib.event;
 
 import comlib.message.FireBrigadeMessage;
 
-public abstract class FireBrigadeMessageEvent extends MessageEvent<FireBrigadeMessage> {
 
+public abstract class FireBrigadeMessageEvent extends MessageEvent<FireBrigadeMessage>
+{
 	public void receivedRadio(FireBrigadeMessage msg)
 	{
 		// You cannot write here.

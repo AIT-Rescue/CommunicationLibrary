@@ -37,71 +37,48 @@ public abstract class MessageProvider<M extends CommunicationMessage, E extends 
 	
 	public void write(MessageManager manager, BitOutputStream bos, M msg)
 	{
-		//TODO: Think about argument order
 		RadioConfig config = manager.getRadioConfig();
 		bos.writeBits(this.messageID, config.getSizeOfMessageID());
 		bos.writeBits(manager.getTime(), config.getSizeOfTime());
-		this.writeMessage(config, bos, (M)msg);
-// =======
-// 	//public abstract <C extends CommunicationMessage> C createMessage(RadioConfig config, int time, BitStreamReader bsr);
-//     public abstract M createMessage(RadioConfig config, int time, BitStreamReader bsr);
-//     //public abstract CommunicationMessage createMessage(RadioConfig config, int time, BitStreamReader bsr);
-//
-// 	public abstract M createMessage(VoiceConfig config, int time, int ttl, String[] datas, int next);
-//     //public abstract CommunicationMessage createMessage(VoiceConfig config, int time, int ttl, String[] datas, int next);
-//
-//     //TODO: 送信処理
-// 	public void write(RadioConfig config, BitOutputStream bos)
-// 	{
-// 		/*bos.writeBits(this.messageID, config.getSizeOfMessageID());
-// 		bos.writeBits(this.time, config.getSizeOfTime());
-// 		this.writeMessage(config, bos);
-// 		*/
-// >>>>>>> 8ddf4120c27cedcf9376284bdd193507f021b4e3
+		this.writeMessage(config, bos, msg);
 	}
 	
 	public void write(MessageManager manager, StringBuilder sb, M msg)
 	{
-// <<<<<<< HEAD
 		if(msg.getTTL() == 0)
 		{ return; }
-// =======
-// 		/*if(this.ttl == 0)
-// 			return;
-// >>>>>>> 8ddf4120c27cedcf9376284bdd193507f021b4e3
 	
 		VoiceConfig config = manager.getVoiceConfig();
 		config.appendMessageID(sb, this.messageID);
 		config.appendData(sb, String.valueOf(manager.getTime()));
+
 		if(msg.getTTL() < 0)
 		{ config.appendLimit(sb); }
 		else
-// <<<<<<< HEAD
-		{ config.appendData(sb, String.valueOf(msg.getTTL() - 1)); }
-		this.writeMessage(config, sb, (M)msg);
-// =======
-// 			config.appendData(sb, String.valueOf(this.ttl - 1));
-// 		this.writeMessage(config, sb);
-// >>>>>>> 8ddf4120c27cedcf9376284bdd193507f021b4e3
+		{ config.appendData(sb, String.valueOf(msg.getTTL() -1)); }
+
+		this.writeMessage(config, sb, msg);
 		config.appendMessageSeparator(sb);
-		// */
 	}
 
-	public CommunicationMessage create(MessageManager manager, BitStreamReader bsr) {
+	public M create(MessageManager manager, BitStreamReader bsr)
+	{
 		RadioConfig config = manager.getRadioConfig();
-		int time = bsr.getBits(config.getSizeOfTime());
-// <<<<<<< HEAD
-		M msg = this.createMessage(config, time, bsr);
+		M msg = null;
+
+		try
+		{
+			msg = this.createMessage(config,
+					bsr.getBits(config.getSizeOfTime()),
+					bsr);
+		} catch (Exception e)
+		{ return null; }
+
 		this.event.receivedRadio(msg);
-// =======
-// 		M msg = this.createMessage(config, time, bsr);
-//         //CommunicationMessage msg = this.createMessage(config, time, bsr);
-// 		this.event.receivedRadio((M)msg);
-// >>>>>>> 8ddf4120c27cedcf9376284bdd193507f021b4e3
 		return msg;
 	}
 
-	public CommunicationMessage create(MessageManager manager, String[] data)
+	public M create(MessageManager manager, String[] data)
 	{
 		int next = 0;
 		M msg = null;

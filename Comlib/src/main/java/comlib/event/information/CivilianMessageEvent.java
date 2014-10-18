@@ -2,8 +2,9 @@ package comlib.event;
 
 import comlib.message.CivilianMessage;
 
-public abstract class CivilianMessageEvent extends MessageEvent<CivilianMessage> {
 
+public abstract class CivilianMessageEvent extends MessageEvent<CivilianMessage>
+{
 	public void receivedRadio(CivilianMessage msg)
 	{
 		// You cannot write here.
