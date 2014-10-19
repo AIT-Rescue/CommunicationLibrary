@@ -8,7 +8,7 @@ import rescuecore2.standard.entities.Human;
 import rescuecore2.worldmodel.EntityID;
 
 
-abstract public class CivilianMessage extends HumanMessage
+public class CivilianMessage extends HumanMessage
 {
 	public CivilianMessage(Civilian civilian)
 	{
