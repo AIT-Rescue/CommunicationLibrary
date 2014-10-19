@@ -67,7 +67,7 @@ public class MessageManager
 		this.sendMessages = new ArrayList<>();
 
 		for (int ch = 1; ch <= numRadio; ch++)
-		{ maxBandWidthList[ch] = config.getIntValue("comms.channels." + ch + ".bandwidth"); }
+		{ maxBandWidthList[ch -1] = config.getIntValue("comms.channels." + ch + ".bandwidth"); }
 
 		this.initLoadProvider();
 	}
@@ -83,6 +83,9 @@ public class MessageManager
 
 	public int getTime()
 	{ return this.kernelTime; }
+
+	public int getMaxBandWidth(int ch)
+	{ return this.maxBandWidthList[ch -1]; }
 
 	public void receiveMessage(int time, Collection<Command> heard)
 	{
@@ -157,7 +160,7 @@ public class MessageManager
 				BitOutputStream bos = bitOutputStreamList[bosNum];
 				if (bos.size() <= 0)
 				{ continue; }
-				if ((sentMessageSize + bos.size()) > maxBandWidthList[ch])
+				if ((sentMessageSize + bos.size()) > getMaxBandWidth(ch))
 				{ continue; }
 				sentMessageSize += bos.size();
 				messages.add(new AKSpeak(agentID, this.getTime(), ch, bos.toByteArray()));

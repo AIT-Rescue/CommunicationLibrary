@@ -4711,6 +4711,7 @@ getLongitude	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/
 getLongitudeProperty	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/World.java	/^    public IntProperty getLongitudeProperty() {$/;"	m	class:World
 getMap	../roborescue-roborescue/modules/gis2/src/gis2/scenario/ScenarioEditor.java	/^    public GMLMap getMap() {$/;"	m	class:ScenarioEditor
 getMap	../roborescue-roborescue/modules/maps/src/maps/gml/editor/GMLEditor.java	/^    public GMLMap getMap() {$/;"	m	class:GMLEditor
+getMaxBandWidth	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	public int getMaxBandWidth(int ch)$/;"	m	class:MessageManager
 getMaxLatitude	../roborescue-roborescue/modules/maps/src/maps/osm/OSMMap.java	/^    public double getMaxLatitude() {$/;"	m	class:OSMMap
 getMaxLongitude	../roborescue-roborescue/modules/maps/src/maps/osm/OSMMap.java	/^    public double getMaxLongitude() {$/;"	m	class:OSMMap
 getMaxTimestep	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/log/FileLogReader.java	/^    public int getMaxTimestep() throws LogException {$/;"	m	class:FileLogReader
@@ -8096,6 +8097,7 @@ setToRight	../roborescue-roborescue/modules/maps/src/maps/convert/osm2gml/OSMRoa
 setTop	../roborescue-roborescue/modules/maps/src/maps/gml/view/RectangleOverlay.java	/^    public void setTop(double y) {$/;"	m	class:RectangleOverlay
 setTotalArea	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/Building.java	/^    public void setTotalArea(int total) {$/;"	m	class:Building
 setTravelDistance	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/Human.java	/^    public void setTravelDistance(int d) {$/;"	m	class:Human
+setUp	./Comlib/src/test/java/ComlibTest.java	/^	protected void setUp()$/;"	m	class:ComlibTest
 setUseBit	./Comlib/src/main/java/comlib/util/IntegerDataHelper.java	/^    private void setUseBit(int filter) {$/;"	m	class:IntegerDataHelper	file:
 setUseWorldCoordinates	../roborescue-roborescue/modules/maps/src/maps/gml/view/LineOverlay.java	/^    public void setUseWorldCoordinates(boolean b) {$/;"	m	class:LineOverlay
 setUseWorldCoordinates	../roborescue-roborescue/modules/maps/src/maps/gml/view/RectangleOverlay.java	/^    public void setUseWorldCoordinates(boolean b) {$/;"	m	class:RectangleOverlay
