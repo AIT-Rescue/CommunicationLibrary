@@ -3,9 +3,6 @@ package comlib.adk.dummy.util;
 import comlib.manager.MessageManager;
 import comlib.message.information.CivilianMessage;
 import rescuecore2.standard.entities.Civilian;
-import rescuecore2.standard.entities.StandardEntity;
-import rescuecore2.standard.entities.StandardWorldModel;
-import rescuecore2.worldmodel.ChangeSet;
 import rescuecore2.worldmodel.EntityID;
 
 import java.util.HashMap;
@@ -45,16 +42,10 @@ public class CivilianManager {
         return this.civilianMap.containsKey(id);
     }
 
-    public void update(StandardWorldModel model, ChangeSet changed, MessageManager manager) {
-        for (EntityID next : changed.getChangedEntities()) {
-            StandardEntity entity = model.getEntity(next);
-            if(entity instanceof Civilian) {
-                Civilian c = (Civilian)entity;
-                if (!this.containsKey(next) && c.getBuriedness() > 0) {
-                    this.add(c);
-                    manager.addSendMessage(new CivilianMessage(c));
-                }
-            }
+    public void update(Civilian civilian, MessageManager manager) {
+        if (!this.containsKey(civilian.getID()) && civilian.getBuriedness() > 0) {
+            this.add(civilian);
+            manager.addSendMessage(new CivilianMessage(civilian));
         }
     }
 }

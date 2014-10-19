@@ -7,10 +7,7 @@ import comlib.adk.util.action.AmbulanceAction;
 import comlib.manager.MessageManager;
 import comlib.message.DummyMessage;
 import rescuecore2.messages.Message;
-import rescuecore2.standard.entities.Human;
-import rescuecore2.standard.entities.Refuge;
-import rescuecore2.standard.entities.StandardEntity;
-import rescuecore2.standard.entities.StandardEntityURN;
+import rescuecore2.standard.entities.*;
 import rescuecore2.worldmodel.ChangeSet;
 import rescuecore2.worldmodel.EntityID;
 
@@ -47,7 +44,8 @@ public class DummyAmbulance extends AmbulanceTeamTactics {
         ・対象付近→救助活動
         情報の送信
          */
-        this.civilianManager.update(this.model, changed, manager);
+        this.updateInfo(changed, manager);
+
         if(this.someoneOnBoard()) {
             if (this.location instanceof Refuge) {
                 this.rescueTarget = null;
@@ -60,10 +58,31 @@ public class DummyAmbulance extends AmbulanceTeamTactics {
                 return this.moveRefuge(time);
             }
         }
+
+
         manager.addSendMessage(new DummyMessage(time, 10, 0));
         return AmbulanceAction.rest(this, time);
     }
-    public boolean someoneOnBoard() {
+
+    private void updateInfo(ChangeSet changed, MessageManager manager) {
+        for (EntityID next : changed.getChangedEntities()) {
+            StandardEntity entity = model.getEntity(next);
+            if(entity instanceof Civilian) {
+                this.civilianManager.update((Civilian)entity, manager);
+            }
+            else if(entity instanceof Blockade) {
+                //manager.addSendMessage(new BlockadeMessage((Blockade)entity));
+            }
+            else if(entity instanceof Building) {
+                Building b = (Building)entity;
+                if(b.getFieryness() > 0) {
+                    //manager.addSendMessage(new BuildingMessage(b));
+                }
+            }
+        }
+    }
+
+    private boolean someoneOnBoard() {
         for (StandardEntity next : this.model.getEntitiesOfType(StandardEntityURN.CIVILIAN)) {
             if (((Human)next).getPosition().equals(this.agentID)) {
                 return true;
@@ -72,7 +91,7 @@ public class DummyAmbulance extends AmbulanceTeamTactics {
         return false;
     }
 
-    public Message moveRefuge(int time)
+    private Message moveRefuge(int time)
     {
         return AmbulanceAction.rest(this, time);
     }
