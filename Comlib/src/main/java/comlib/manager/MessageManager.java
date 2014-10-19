@@ -63,7 +63,7 @@ public class MessageManager
 		boolean speakComm = config.getValue(Constants.COMMUNICATION_MODEL_KEY).equals(ChannelCommunicationModel.class.getName());
 		int numChannels = config.getIntValue("comms.channels.count");
 
-		this.useRadio = speakComm && (numChannels > 1);
+		this.useRadio = ( speakComm && (numChannels > 1) );
 	}
 
 	public boolean canUseRadio()
