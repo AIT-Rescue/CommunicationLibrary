@@ -1,6 +1,7 @@
-package comlib.event;
+package comlib.event.information;
 
-import comlib.message.FireBrigadeMessage;
+import comlib.event.MessageEvent;
+import comlib.message.information.FireBrigadeMessage;
 
 
 public abstract class FireBrigadeMessageEvent extends MessageEvent<FireBrigadeMessage>

@@ -1,6 +1,7 @@
-package comlib.event;
+package comlib.event.information;
 
-import comlib.message.AmbulanceTeamMessage;
+import comlib.event.MessageEvent;
+import comlib.message.information.AmbulanceTeamMessage;
 
 
 public abstract class AmbulanceTeamMessageEvent extends MessageEvent<AmbulanceTeamMessage>

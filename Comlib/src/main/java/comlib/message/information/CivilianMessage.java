@@ -1,7 +1,8 @@
-package comlib.message;
+package comlib.message.information;
 
 import comlib.message.HumanMessage;
 
+import comlib.message.MessageID;
 import rescuecore2.standard.entities.Civilian;
 import rescuecore2.standard.entities.Human;
 import rescuecore2.worldmodel.EntityID;

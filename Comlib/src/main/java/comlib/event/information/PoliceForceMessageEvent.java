@@ -1,6 +1,7 @@
-package comlib.event;
+package comlib.event.information;
 
-import comlib.message.PoliceForceMessage;
+import comlib.event.MessageEvent;
+import comlib.message.information.PoliceForceMessage;
 
 
 public abstract class PoliceForceMessageEvent extends MessageEvent<PoliceForceMessage>

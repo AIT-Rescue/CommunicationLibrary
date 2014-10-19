@@ -1,7 +1,7 @@
 package comlib.provider;
 
 import comlib.event.CivilianMessageEvent;
-import comlib.message.CivilianMessage;
+import comlib.message.information.CivilianMessage;
 import comlib.manager.RadioConfig;
 import comlib.manager.VoiceConfig;
 import comlib.util.BitOutputStream;

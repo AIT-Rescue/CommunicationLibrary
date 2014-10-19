@@ -1,6 +1,7 @@
-package comlib.event;
+package comlib.event.information;
 
-import comlib.message.CivilianMessage;
+import comlib.event.MessageEvent;
+import comlib.message.information.CivilianMessage;
 
 
 public abstract class CivilianMessageEvent extends MessageEvent<CivilianMessage>
