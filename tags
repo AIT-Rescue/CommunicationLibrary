@@ -504,6 +504,8 @@ CollapseStats	../roborescue-roborescue/modules/collapse/src/collapse/CollapseSim
 CollapseWorldModel	../roborescue-roborescue/modules/collapse/src/collapse/CollapseWorldModel.java	/^	public CollapseWorldModel() {$/;"	m	class:CollapseWorldModel
 CollapseWorldModel	../roborescue-roborescue/modules/collapse/src/collapse/CollapseWorldModel.java	/^public class CollapseWorldModel extends StandardWorldModel {$/;"	c
 ComlibTest	./Comlib/src/test/java/ComlibTest.java	/^	public ComlibTest(String name) {$/;"	m	class:ComlibTest
+ComlibTest	./Comlib/src/test/java/ComlibTest.java	/^	public ComlibTest(String name)$/;"	m	class:ComlibTest
+ComlibTest	./Comlib/src/test/java/ComlibTest.java	/^public class ComlibTest extends TestCase$/;"	c
 ComlibTest	./Comlib/src/test/java/ComlibTest.java	/^public class ComlibTest extends TestCase{$/;"	c
 Command	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/messages/Command.java	/^public interface Command extends Message {$/;"	i
 CommandCollector	../roborescue-roborescue/modules/kernel/src/kernel/CommandCollector.java	/^public interface CommandCollector {$/;"	i
@@ -3430,6 +3432,7 @@ config	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/kernel
 config	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/kernel/StandardPerception.java	/^    private Config config;$/;"	f	class:StandardPerception	file:
 config	./Comlib-ADK/src/main/java/comlib/adk/launcher/AgentConnector.java	/^    private Config config;$/;"	f	class:AgentConnector	file:
 config	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/Tactics.java	/^    public Config config;$/;"	f	class:Tactics
+config	./Comlib/src/test/java/ComlibTest.java	/^	Config config;$/;"	f	class:ComlibTest
 connect	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/LaunchComponents.java	/^    private static void connect(ComponentLauncher launcher, String argLine, boolean gui) throws InterruptedException, ConnectionException {$/;"	m	class:LaunchComponents	file:
 connect	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/components/AbstractAgent.java	/^    public void connect(Connection connection, RequestIDGenerator generator, Config config) throws ConnectionException, ComponentConnectionException, InterruptedException {$/;"	m	class:AbstractAgent
 connect	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/components/AbstractSimulator.java	/^    public void connect(Connection connection, RequestIDGenerator generator, Config config) throws ConnectionException, ComponentConnectionException, InterruptedException {$/;"	m	class:AbstractSimulator
@@ -8388,7 +8391,9 @@ testDollarNotationCache	../roborescue-roborescue/modules/rescuecore2/test/rescue
 testDollarNotationSetValue	../roborescue-roborescue/modules/rescuecore2/test/rescuecore2/config/ConfigTest.java	/^    public void testDollarNotationSetValue() throws IOException, ConfigException {$/;"	m	class:ConfigTest
 testDollarNotationTypes	../roborescue-roborescue/modules/rescuecore2/test/rescuecore2/config/ConfigTest.java	/^    public void testDollarNotationTypes() throws IOException, ConfigException {$/;"	m	class:ConfigTest
 testDoubles	../roborescue-roborescue/modules/rescuecore2/test/rescuecore2/config/ConfigTest.java	/^    public void testDoubles() throws IOException, ConfigException {$/;"	m	class:ConfigTest
+testDummyMessage	./Comlib/build/reports/tests/classes/ComlibTest.html	/^<a name="testDummyMessage"><\/a>$/;"	a
 testDummyMessage	./Comlib/src/test/java/ComlibTest.java	/^	public void testDummyMessage() {$/;"	m	class:ComlibTest
+testDummyMessage	./Comlib/src/test/java/ComlibTest.java	/^	public void testDummyMessage()$/;"	m	class:ComlibTest
 testEmptyInclude	../roborescue-roborescue/modules/rescuecore2/test/rescuecore2/config/ConfigTest.java	/^    public void testEmptyInclude() throws IOException, ConfigException {$/;"	m	class:ConfigTest
 testExceptionOnInputClose	../roborescue-roborescue/modules/rescuecore2/test/rescuecore2/connection/StreamConnectionTest.java	/^    public void testExceptionOnInputClose() throws IOException {$/;"	m	class:StreamConnectionTest
 testExceptionOnOutputClose	../roborescue-roborescue/modules/rescuecore2/test/rescuecore2/connection/StreamConnectionTest.java	/^    public void testExceptionOnOutputClose() throws IOException {$/;"	m	class:StreamConnectionTest
