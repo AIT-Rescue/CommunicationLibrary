@@ -17,7 +17,8 @@ public abstract class Team {
 
     public abstract PoliceForceTactics getPoliceForceTactics();
 
-    /*public FireStationTactics getFireStationTactics() {
+    /*
+    public FireStationTactics getFireStationTactics() {
         return null;
     }
     public AmbulanceCentreTactics getAmbulanceCentreTactics() {
@@ -25,5 +26,6 @@ public abstract class Team {
     }
    public PoliceOfficeTactics getPoliceOfficeTactics() {
        return null;
-   }*/
+   }
+   */
 }

@@ -1,5 +1,7 @@
 package comlib.adk.dummy;
 
+import comlib.adk.dummy.event.AmbulanceCivilianEvent;
+import comlib.adk.dummy.util.CivilianManager;
 import comlib.adk.team.tactics.AmbulanceTeamTactics;
 import comlib.adk.util.action.AmbulanceAction;
 import comlib.manager.MessageManager;
@@ -8,14 +10,20 @@ import rescuecore2.messages.Message;
 import rescuecore2.worldmodel.ChangeSet;
 
 public class DummyAmbulance extends AmbulanceTeamTactics {
+
+    public CivilianManager civilianManager;
+
+    public DummyAmbulance() {
+        this.civilianManager = new CivilianManager();
+    }
+
     @Override
     public void postConnect() {
-
     }
 
     @Override
     public void registerEvent(MessageManager manager) {
-
+        manager.registerEvent(new AmbulanceCivilianEvent(this.model, this.civilianManager));
     }
 
     @Override
@@ -31,6 +39,8 @@ public class DummyAmbulance extends AmbulanceTeamTactics {
         ・対象付近→救助活動
         情報の送信
          */
+        this.civilianManager.update(this.model, changed, manager);
+
         manager.addSendMessage(new DummyMessage(time, 10, 0));
         return AmbulanceAction.rest(this, time);
     }

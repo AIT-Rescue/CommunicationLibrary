@@ -8,6 +8,7 @@ import rescuecore2.messages.Message;
 import rescuecore2.worldmodel.ChangeSet;
 
 public class DummyFire extends FireBrigadeTactics {
+
     @Override
     public void postConnect() {
 

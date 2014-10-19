@@ -4,7 +4,7 @@ import rescuecore2.standard.entities.Human;
 import rescuecore2.worldmodel.EntityID;
 
 
-abstract public class HumanMessage extends InformationMessage
+public abstract class HumanMessage extends InformationMessage
 {
 
 	protected EntityID humanID;

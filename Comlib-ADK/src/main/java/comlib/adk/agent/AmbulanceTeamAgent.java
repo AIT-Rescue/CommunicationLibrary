@@ -27,5 +27,6 @@ public class AmbulanceTeamAgent extends TacticsAgent<AmbulanceTeamTactics, Ambul
 
     @Override
     public void initAgentValue(AmbulanceTeamTactics ambulanceTeamTactics) {
+        ambulanceTeamTactics.refugeList = this.getRefuges();
     }
 }

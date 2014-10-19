@@ -37,5 +37,6 @@ public class FireBrigadeAgent extends TacticsAgent<FireBrigadeTactics, FireBriga
         fireBrigadeTactics.maxWater = this.config.getIntValue(MAX_WATER_KEY);
         fireBrigadeTactics.maxDistance = this.config.getIntValue(MAX_DISTANCE_KEY);
         fireBrigadeTactics.maxPower = this.config.getIntValue(MAX_POWER_KEY);
+        fireBrigadeTactics.refugeList = this.getRefuges();
     }
 }
