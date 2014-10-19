@@ -2,10 +2,10 @@ package comlib.provider;
 
 
 import comlib.event.MessageEvent;
+import comlib.message.CommunicationMessage;
 import comlib.manager.MessageManager;
 import comlib.manager.RadioConfig;
 import comlib.manager.VoiceConfig;
-import comlib.message.CommunicationMessage;
 import comlib.util.BitOutputStream;
 import comlib.util.BitStreamReader;
 

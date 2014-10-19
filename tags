@@ -470,6 +470,7 @@ CivilianMessage	./Comlib/src/main/java/comlib/message/information/CivilianMessag
 CivilianMessage	./Comlib/src/main/java/comlib/message/information/CivilianMessage.java	/^abstract public class CivilianMessage extends HumanMessage$/;"	c
 CivilianMessageEvent	./Comlib/src/main/java/comlib/event/information/CivilianMessageEvent.java	/^public abstract class CivilianMessageEvent extends MessageEvent<CivilianMessage>$/;"	c
 CivilianMessageProvider	./Comlib/src/main/java/comlib/provider/information/CivilianMessageProvider.java	/^	public CivilianMessageProvider(int id)$/;"	m	class:CivilianMessageProvider
+CivilianMessageProvider	./Comlib/src/main/java/comlib/provider/information/CivilianMessageProvider.java	/^public class CivilianMessageProvider extends HumanMessageProvider<CivilianMessage, CivilianMessageEvent>$/;"	c
 CivilianMessageProvider	./Comlib/src/main/java/comlib/provider/information/CivilianMessageProvider.java	/^public class CivilianMessageProvider extends MessageProvider<CivilianMessage, CivilianMessageEvent>$/;"	c
 CiviliansAliveScoreFunction	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/score/CiviliansAliveScoreFunction.java	/^    public CiviliansAliveScoreFunction() {$/;"	m	class:CiviliansAliveScoreFunction
 CiviliansAliveScoreFunction	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/score/CiviliansAliveScoreFunction.java	/^public class CiviliansAliveScoreFunction extends AbstractScoreFunction {$/;"	c
@@ -1249,6 +1250,8 @@ HumanMessage	./Comlib/src_old/message/HumanMessage.java	/^	public HumanMessage(i
 HumanMessage	./Comlib/src_old/message/HumanMessage.java	/^public abstract class HumanMessage extends InformationMessage$/;"	c
 HumanMessageCreator	./Comlib/src_old/creator/HumanMessageCreator.java	/^	public HumanMessageCreator()$/;"	m	class:HumanMessageCreator
 HumanMessageCreator	./Comlib/src_old/creator/HumanMessageCreator.java	/^public abstract class HumanMessageCreator<M extends HumanMessage> extends MessageCreator<M>$/;"	c
+HumanMessageProvider	./Comlib/src/main/java/comlib/provider/HumanMessageProvider.java	/^	public HumanMessageProvider(int id)$/;"	m	class:HumanMessageProvider
+HumanMessageProvider	./Comlib/src/main/java/comlib/provider/HumanMessageProvider.java	/^public abstract class HumanMessageProvider<M extends CommunicationMessage, E extends MessageEvent> extends MessageProvider<M, E>$/;"	c
 HumanSorter	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/view/HumanLayer.java	/^		public HumanSorter(StandardWorldModel world) {$/;"	m	class:HumanLayer.HumanSorter
 HumanSorter	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/view/HumanLayer.java	/^    private static final class HumanSorter implements Comparator<Human>, java.io.Serializable {$/;"	c	class:HumanLayer
 Hydrant	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/Hydrant.java	/^	public Hydrant(EntityID id) {$/;"	m	class:Hydrant
@@ -1307,6 +1310,8 @@ InformationMessage	./Comlib/src/main/java/comlib/message/InformationMessage.java
 InformationMessage	./Comlib/src_old/message/InformationMessage.java	/^	public InformationMessage(int id, int t)$/;"	m	class:InformationMessage
 InformationMessage	./Comlib/src_old/message/InformationMessage.java	/^	public InformationMessage(int id, int t, int l)$/;"	m	class:InformationMessage
 InformationMessage	./Comlib/src_old/message/InformationMessage.java	/^public class InformationMessage extends CommunicationMessage$/;"	c
+InformationMessageProvider	./Comlib/src/main/java/comlib/provider/InformationMessageProvider.java	/^	public InformationMessageProvider(int id)$/;"	m	class:InformationMessageProvider
+InformationMessageProvider	./Comlib/src/main/java/comlib/provider/InformationMessageProvider.java	/^public abstract class InformationMessageProvider<M extends CommunicationMessage, E extends MessageEvent> extends MessageProvider<M, E>$/;"	c
 InitialConditionsRecord	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/log/InitialConditionsRecord.java	/^    public InitialConditionsRecord(InputStream in) throws IOException, LogException {$/;"	m	class:InitialConditionsRecord
 InitialConditionsRecord	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/log/InitialConditionsRecord.java	/^    public InitialConditionsRecord(WorldModel<? extends Entity> model) {$/;"	m	class:InitialConditionsRecord
 InitialConditionsRecord	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/log/InitialConditionsRecord.java	/^public class InitialConditionsRecord implements LogRecord {$/;"	c
@@ -3341,8 +3346,11 @@ comlib.message.information	./Comlib/src_old/message/information/FireBrigadeMessa
 comlib.message.information	./Comlib/src_old/message/information/PoliceForceMessage.java	/^package comlib.message.information;$/;"	p
 comlib.message.information	./Comlib/src_old/message/information/VictimMessage.java	/^package comlib.message.information;$/;"	p
 comlib.provider	./Comlib/src/main/java/comlib/provider/DummyMessageProvider.java	/^package comlib.provider;$/;"	p
+comlib.provider	./Comlib/src/main/java/comlib/provider/HumanMessageProvider.java	/^package comlib.provider;$/;"	p
+comlib.provider	./Comlib/src/main/java/comlib/provider/InformationMessageProvider.java	/^package comlib.provider;$/;"	p
 comlib.provider	./Comlib/src/main/java/comlib/provider/MessageProvider.java	/^package comlib.provider;$/;"	p
 comlib.provider	./Comlib/src/main/java/comlib/provider/information/CivilianMessageProvider.java	/^package comlib.provider;$/;"	p
+comlib.provider.information	./Comlib/src/main/java/comlib/provider/information/CivilianMessageProvider.java	/^package comlib.provider.information;$/;"	p
 comlib.util	./Comlib/src/main/java/comlib/util/BitOutputStream.java	/^package comlib.util;$/;"	p
 comlib.util	./Comlib/src/main/java/comlib/util/BitStreamReader.java	/^package comlib.util;$/;"	p
 comlib.util	./Comlib/src/main/java/comlib/util/IntegerDataHelper.java	/^package comlib.util;$/;"	p
@@ -3567,6 +3575,10 @@ createLines	../roborescue-roborescue/modules/rescuecore2/test/rescuecore2/misc/g
 createMessage	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/registry/Registry.java	/^	public Message createMessage(String urn, InputStream data)$/;"	m	class:Registry
 createMessage	./Comlib/src/main/java/comlib/provider/DummyMessageProvider.java	/^	protected DummyMessage createMessage(RadioConfig config, int time, BitStreamReader bsr)$/;"	m	class:DummyMessageProvider
 createMessage	./Comlib/src/main/java/comlib/provider/DummyMessageProvider.java	/^	protected DummyMessage createMessage(VoiceConfig config, int time, int ttl, String[] data, int next)$/;"	m	class:DummyMessageProvider
+createMessage	./Comlib/src/main/java/comlib/provider/HumanMessageProvider.java	/^	protected M createMessage(RadioConfig config, int time, BitStreamReader bsr)$/;"	m	class:HumanMessageProvider
+createMessage	./Comlib/src/main/java/comlib/provider/HumanMessageProvider.java	/^	protected M createMessage(VoiceConfig config, int time, int ttl, String[] data, int next)$/;"	m	class:HumanMessageProvider
+createMessage	./Comlib/src/main/java/comlib/provider/InformationMessageProvider.java	/^	protected M createMessage(RadioConfig config, int time, BitStreamReader bsr)$/;"	m	class:InformationMessageProvider
+createMessage	./Comlib/src/main/java/comlib/provider/InformationMessageProvider.java	/^	protected M createMessage(VoiceConfig config, int time, int ttl, String[] data, int next)$/;"	m	class:InformationMessageProvider
 createMessage	./Comlib/src/main/java/comlib/provider/MessageProvider.java	/^	protected abstract M createMessage(RadioConfig config, int time, BitStreamReader bsr);$/;"	m	class:MessageProvider
 createMessage	./Comlib/src/main/java/comlib/provider/MessageProvider.java	/^	protected abstract M createMessage(VoiceConfig config, int time, int ttl, String[] datas, int next);$/;"	m	class:MessageProvider
 createMessage	./Comlib/src/main/java/comlib/provider/information/CivilianMessageProvider.java	/^	protected CivilianMessage createMessage(RadioConfig config, int time, BitStreamReader bsr)$/;"	m	class:CivilianMessageProvider
@@ -9133,6 +9145,10 @@ writeMessage	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/E
 writeMessage	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/EncodingTools.java	/^	public static void writeMessage(Message m, OutputStream out)$/;"	m	class:EncodingTools
 writeMessage	./Comlib/src/main/java/comlib/provider/DummyMessageProvider.java	/^	protected void writeMessage(RadioConfig config, BitOutputStream bos, DummyMessage msg)$/;"	m	class:DummyMessageProvider
 writeMessage	./Comlib/src/main/java/comlib/provider/DummyMessageProvider.java	/^	protected void writeMessage(VoiceConfig config, StringBuilder sb, DummyMessage msg)$/;"	m	class:DummyMessageProvider
+writeMessage	./Comlib/src/main/java/comlib/provider/HumanMessageProvider.java	/^	protected void writeMessage(RadioConfig config, BitOutputStream bos, M msg)$/;"	m	class:HumanMessageProvider
+writeMessage	./Comlib/src/main/java/comlib/provider/HumanMessageProvider.java	/^	protected void writeMessage(VoiceConfig config, StringBuilder sb, M msg)$/;"	m	class:HumanMessageProvider
+writeMessage	./Comlib/src/main/java/comlib/provider/InformationMessageProvider.java	/^	protected void writeMessage(RadioConfig config, BitOutputStream bos, M msg)$/;"	m	class:InformationMessageProvider
+writeMessage	./Comlib/src/main/java/comlib/provider/InformationMessageProvider.java	/^	protected void writeMessage(VoiceConfig config, StringBuilder sb, M msg)$/;"	m	class:InformationMessageProvider
 writeMessage	./Comlib/src/main/java/comlib/provider/MessageProvider.java	/^	protected abstract void writeMessage(RadioConfig config, BitOutputStream bos, M msg);$/;"	m	class:MessageProvider
 writeMessage	./Comlib/src/main/java/comlib/provider/MessageProvider.java	/^	protected abstract void writeMessage(VoiceConfig config, StringBuilder sb, M msg);$/;"	m	class:MessageProvider
 writeMessage	./Comlib/src/main/java/comlib/provider/information/CivilianMessageProvider.java	/^	protected void writeMessage(RadioConfig config, BitOutputStream bos, CivilianMessage msg)$/;"	m	class:CivilianMessageProvider

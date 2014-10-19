@@ -1,4 +1,6 @@
-package comlib.provider;
+package comlib.provider.information;
+
+import comlib.provider.HumanMessageProvider;
 
 import comlib.event.information.CivilianMessageEvent;
 import comlib.message.information.CivilianMessage;
@@ -8,7 +10,7 @@ import comlib.util.BitOutputStream;
 import comlib.util.BitStreamReader;
 
 
-public class CivilianMessageProvider extends MessageProvider<CivilianMessage, CivilianMessageEvent>
+public class CivilianMessageProvider extends HumanMessageProvider<CivilianMessage, CivilianMessageEvent>
 {
 	public CivilianMessageProvider(int id)
 	{
