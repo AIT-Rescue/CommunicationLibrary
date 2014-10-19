@@ -7,14 +7,22 @@ import comlib.adk.util.action.AmbulanceAction;
 import comlib.manager.MessageManager;
 import comlib.message.DummyMessage;
 import rescuecore2.messages.Message;
+import rescuecore2.standard.entities.Human;
+import rescuecore2.standard.entities.Refuge;
+import rescuecore2.standard.entities.StandardEntity;
+import rescuecore2.standard.entities.StandardEntityURN;
 import rescuecore2.worldmodel.ChangeSet;
+import rescuecore2.worldmodel.EntityID;
 
 public class DummyAmbulance extends AmbulanceTeamTactics {
 
     public CivilianManager civilianManager;
 
+    public EntityID rescueTarget;
+
     public DummyAmbulance() {
         this.civilianManager = new CivilianManager();
+        this.rescueTarget = null;
     }
 
     @Override
@@ -40,8 +48,32 @@ public class DummyAmbulance extends AmbulanceTeamTactics {
         情報の送信
          */
         this.civilianManager.update(this.model, changed, manager);
-
+        if(this.someoneOnBoard()) {
+            if (this.location instanceof Refuge) {
+                this.rescueTarget = null;
+                return AmbulanceAction.unload(this, time);
+                /*if(this.rescueTarget != null){
+                    //this.bus.getOutput().addMessage(this.bus.getAgent().messageFactory.createInformationMessage(this.bus.getMemory().getTime(), (Human)this.bus.getAgent().getModel().getEntity(this.bus.getMemory(AmbulanceMemory.class).getRescueTarget())));
+                }*/
+            }
+            else {
+                return this.moveRefuge(time);
+            }
+        }
         manager.addSendMessage(new DummyMessage(time, 10, 0));
+        return AmbulanceAction.rest(this, time);
+    }
+    public boolean someoneOnBoard() {
+        for (StandardEntity next : this.model.getEntitiesOfType(StandardEntityURN.CIVILIAN)) {
+            if (((Human)next).getPosition().equals(this.agentID)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public Message moveRefuge(int time)
+    {
         return AmbulanceAction.rest(this, time);
     }
 }
