@@ -14,6 +14,7 @@ import rescuecore2.messages.Command;
 import rescuecore2.messages.Message;
 import rescuecore2.standard.kernel.comms.ChannelCommunicationModel;
 import rescuecore2.standard.messages.AKSpeak;
+import rescuecore2.worldmodel.EntityID;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -143,17 +144,31 @@ public class MessageManager
 		}
 	}
 
-	public List<Message> createSendMessage()
+	public List<Message> createSendMessage(EntityID agentID)
 	{
 		// TODO: return data
 		List<Message> messages = new ArrayList<Message>();
 
-		if (this.useRadio)
+		for (int ch = 1; ch <= numRadio; ch++)
 		{
-			BitOutputStream bos = new BitOutputStream();
-			for (CommunicationMessage msg : this.sendMessages)
-			{ this.providerList[msg.getMessageID()].write(this, bos, msg); }
+			for (BitOutputStream bos : bitOutputStreamList)
+			{
+				if (bos.size() <= 0)
+				{ continue; }
+
+				messages.add(new AKSpeak(agentID, this.getTime(), ch, bos.toByteArray()));
+
+				if (ch == numRadio)
+				{
+				}
+			}
 		}
+		// if (this.useRadio)
+		// {
+		// 	BitOutputStream bos = new BitOutputStream();
+		// 	for (CommunicationMessage msg : this.sendMessages)
+		// 	{ this.providerList[msg.getMessageID()].write(this, bos, msg); }
+		// }
 
 		StringBuilder sb = new StringBuilder();
 		for (CommunicationMessage msg : this.sendMessages)
@@ -169,7 +184,7 @@ public class MessageManager
 
 	public <M extends CommunicationMessage> void addSendMessage(M msg)
 	{
-		this.sendMessages.add(msg); // TODO: no needing
+		this.sendMessages.add(msg);
 		int msgID = msg.getMessageID();
 		// TODO: need cutting data
 		this.providerList[msgID].write(this, bitOutputStreamList[msgID], msg);

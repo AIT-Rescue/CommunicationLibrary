@@ -54,7 +54,7 @@ public abstract class CommunicationAgent<E extends StandardEntity> extends Stand
 	{
 		this.manager.receiveMessage(time, heard);
 		this.think(time, changed);
-		this.send(this.manager.createSendMessage());
+		this.send(this.manager.createSendMessage(super.getID()));
 	}
 
 	public void send(Message[] msgs)
