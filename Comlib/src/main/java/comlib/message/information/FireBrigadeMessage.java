@@ -7,7 +7,7 @@ import rescuecore2.standard.entities.Human;
 import rescuecore2.worldmodel.EntityID;
 
 
-abstract public class FireBrigadeMessage extends HumanMessage
+public class FireBrigadeMessage extends HumanMessage
 {
 	private int fireBrigadeWater;
 

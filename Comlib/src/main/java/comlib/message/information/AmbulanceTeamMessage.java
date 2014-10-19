@@ -7,7 +7,7 @@ import rescuecore2.standard.entities.Human;
 import rescuecore2.worldmodel.EntityID;
 
 
-abstract public class AmbulanceTeamMessage extends HumanMessage
+public class AmbulanceTeamMessage extends HumanMessage
 {
 	public AmbulanceTeamMessage(AmbulanceTeam ambulanceTeam)
 	{

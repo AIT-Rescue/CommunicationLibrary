@@ -7,7 +7,7 @@ import rescuecore2.standard.entities.PoliceForce;
 import rescuecore2.worldmodel.EntityID;
 
 
-abstract public class PoliceForceMessage extends HumanMessage
+public class PoliceForceMessage extends HumanMessage
 {
 	public PoliceForceMessage(PoliceForce policeForce)
 	{
