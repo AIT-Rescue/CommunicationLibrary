@@ -58,7 +58,7 @@ public class MessageManager
 		this.initLoadProvider();
 	}
 
-	private boolean initCommunicationMode(Config config)
+	private void initCommunicationMode(Config config)
 	{
 		boolean speakComm = config.getValue(Constants.COMMUNICATION_MODEL_KEY).equals(ChannelCommunicationModel.class.getName());
 		int numChannels = config.getIntValue("comms.channels.count");

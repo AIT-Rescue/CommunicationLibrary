@@ -5585,6 +5585,7 @@ initAgentValue	./Comlib-ADK/src/main/java/comlib/adk/agent/TacticsAgent.java	/^ 
 initAgentValue	./Comlib-ADK/src/main/java/comlib/adk/agent/TacticsAgent.java	/^    public abstract void initAgentValue(T t);$/;"	m	class:TacticsAgent
 initBuildingData	../roborescue-roborescue/modules/misc/src/misc/MiscParameters.java	/^    private void initBuildingData() {$/;"	m	class:MiscParameters	file:
 initCommunicationMode	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	private boolean initCommunicationMode(Config config)$/;"	m	class:MessageManager	file:
+initCommunicationMode	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	private void initCommunicationMode(Config config)$/;"	m	class:MessageManager	file:
 initInjuryData	../roborescue-roborescue/modules/misc/src/misc/MiscParameters.java	/^    private void initInjuryData() {$/;"	m	class:MiscParameters	file:
 initLoadProvider	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	private void initLoadProvider()$/;"	m	class:MessageManager	file:
 initOption	./Comlib-ADK/src/main/java/comlib/adk/launcher/ConfigInitializer.java	/^    private static Map<String, Option> initOption() {$/;"	m	class:ConfigInitializer	file:
