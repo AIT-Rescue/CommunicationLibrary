@@ -35,7 +35,7 @@ public class MessageManager
 	private MessageProvider[] providerList;
 	private List<MessageEvent> eventList;
 
-	private List<CommunicationMessage> receivedMessages; // For compatible
+	private List<CommunicationMessage> receivedMessages; // FOR-COMPATIBLE
 	private List<CommunicationMessage> sendMessages;
 
 	public MessageManager(Config config)
@@ -48,42 +48,35 @@ public class MessageManager
 		this.developerMode = config.getBooleanValue("comlib.develop.developerMode", false);
 		this.radioConfig = new RadioConfig(config);
 		this.voiceConfig = new VoiceConfig(config);
-		this.useRadio = this.searchRadio(config);
 		this.kernelTime = -1;
 		this.providerList = new MessageProvider[config.getIntValue("comlib.default.messageID", 16)];
 		this.eventList = new ArrayList<>();
 		this.receivedMessages = new ArrayList<>();
 		this.sendMessages = new ArrayList<>();
 
+		this.initCommunicationMode(config);
 		this.initLoadProvider();
 	}
 
-	private boolean searchRadio(Config config)
+	private boolean initCommunicationMode(Config config)
 	{
 		boolean speakComm = config.getValue(Constants.COMMUNICATION_MODEL_KEY).equals(ChannelCommunicationModel.class.getName());
 		int numChannels = config.getIntValue("comms.channels.count");
-		return speakComm && (numChannels > 1);
+
+		this.useRadio = speakComm && (numChannels > 1);
 	}
 
 	public boolean canUseRadio()
-	{
-		return this.useRadio;
-	}
+	{ return this.useRadio; }
 
 	public RadioConfig getRadioConfig()
-	{
-		return this.radioConfig;
-	}
+	{ return this.radioConfig; }
 
 	public VoiceConfig getVoiceConfig()
-	{
-		return this.voiceConfig;
-	}
+	{ return this.voiceConfig; }
 
 	public int getTime()
-	{
-		return this.kernelTime;
-	}
+	{ return this.kernelTime; }
 
 	public void receiveMessage(int time, Collection<Command> heard)
 	{
@@ -110,7 +103,7 @@ public class MessageManager
 
 	private void receiveRadioMessage(byte[] data, List<CommunicationMessage> list)
 	{
-		// TODO:ノイズ対策をするべき?
+		// TODO: ノイズ対策をするべき?
 		if (data == null || list == null)
 		{ return; }
 		BitStreamReader bsr = new BitStreamReader(data);
@@ -160,14 +153,14 @@ public class MessageManager
 		return messages;
 	}
 
-	public List<CommunicationMessage> getReceivedMessage()
+	public List<CommunicationMessage> getReceivedMessage() // FOR-COMPATIBLE
 	{
-		// MEMO:For compatible
 		return this.receivedMessages;
 	}
 
 	public <M extends CommunicationMessage> void addSendMessage(M msg)
 	{
+		// TODO: Need edit
 		this.sendMessages.add(msg);
 		BitOutputStream bos = new BitOutputStream();
 		this.providerList[msg.getMessageID()].write(this, bos, msg);
@@ -186,6 +179,7 @@ public class MessageManager
 
 	private void initLoadProvider()
 	{
+		// TODO: Load provider
 		this.registerStandardProvider(new DummyMessageProvider(MessageID.dummyMessage));
 		//this.register(CommunicationMessage.buildingMessageID, new BuildingMessageProvider(this.event));
 		//this.register(CommunicationMessage.blockadeMessageID, new BlockadeMessageProvider(this.event));
