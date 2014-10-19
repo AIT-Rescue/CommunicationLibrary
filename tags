@@ -2856,6 +2856,7 @@ addValue	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/worldmodel
 addViewListener	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/view/ViewComponent.java	/^    public void addViewListener(ViewListener l) {$/;"	m	class:ViewComponent
 addViewer	../roborescue-roborescue/modules/kernel/src/kernel/Kernel.java	/^    public void addViewer(ViewerProxy viewer) {$/;"	m	class:Kernel
 addViewer	../roborescue-roborescue/modules/kernel/src/kernel/ui/KernelControlPanel.java	/^    private void addViewer() {$/;"	m	class:KernelControlPanel	file:
+addVoiceSendMessage	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	public void addVoiceSendMessage(CommunicationMessage msg)$/;"	m	class:MessageManager
 addWorldModelListener	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/worldmodel/AbstractWorldModel.java	/^    public final void addWorldModelListener(WorldModelListener<? super T> l) {$/;"	m	class:AbstractWorldModel
 addWorldModelListener	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/worldmodel/WorldModel.java	/^    void addWorldModelListener(WorldModelListener<? super T> l);$/;"	m	interface:WorldModel
 adjustColour	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/view/HumanLayer.java	/^    private Color adjustColour(Color c, int hp) {$/;"	m	class:HumanLayer	file:
@@ -2987,6 +2988,7 @@ baseVector	../roborescue-roborescue/modules/traffic3/src/traffic3/objects/Traffi
 before	../roborescue-roborescue/modules/traffic3/resources/data/resources/videoInformation.js	/^var before = "p";$/;"	v
 before	../roborescue-roborescue/modules/traffic3/resources/data/resources/videoPlayer.js	/^var before = "p";$/;"	v
 beginTimestep	../roborescue-roborescue/modules/traffic3/src/traffic3/objects/TrafficAgent.java	/^	public void beginTimestep() {$/;"	m	class:TrafficAgent
+bitOutputStreamList	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	private BitOutputStream[] bitOutputStreamList;$/;"	f	class:MessageManager	file:
 block	../roborescue-roborescue/modules/collapse/src/collapse/CollapseSimulator.java	/^	private boolean block;$/;"	f	class:CollapseSimulator	file:
 block	../roborescue-roborescue/modules/collapse/src/collapse/CollapseSimulatorGUI.java	/^    private int block;$/;"	f	class:CollapseSimulatorGUI	file:
 blockade	../roborescue-roborescue/modules/traffic3/src/traffic3/objects/TrafficBlockade.java	/^    private Blockade blockade;$/;"	f	class:TrafficBlockade	file:
@@ -6516,6 +6518,8 @@ notExplosedGasStations	../roborescue-roborescue/modules/misc/src/misc/MiscSimula
 notIgnaitedGasStations	../roborescue-roborescue/modules/ignition/src/ignition/IgnitionSimulator.java	/^    private List<GasStation> notIgnaitedGasStations;$/;"	f	class:IgnitionSimulator	file:
 now_size	./Comlib/src/main/java/comlib/util/BitOutputStream.java	/^	private int now_size = 0;$/;"	f	class:BitOutputStream	file:
 nudge	../roborescue-roborescue/modules/traffic3/src/traffic3/simulator/TrafficConstants.java	/^    private static NumberGenerator<Double> nudge;$/;"	f	class:TrafficConstants	file:
+numRadio	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	private int numRadio;$/;"	f	class:MessageManager	file:
+numVoice	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	private int numVoice;$/;"	f	class:MessageManager	file:
 numberOfVertex	../roborescue-roborescue/modules/traffic3/src/traffic3/simulator/Dijkstra.java	/^	private int numberOfVertex, marker = 1;$/;"	f	class:Dijkstra	file:
 object	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/gui/ShapeDebugFrame.java	/^        private Object object;$/;"	f	class:ShapeDebugFrame.ShapeInfo	file:
 object	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/view/RenderedObject.java	/^    private Object object;$/;"	f	class:RenderedObject	file:

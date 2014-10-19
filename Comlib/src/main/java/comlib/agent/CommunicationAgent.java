@@ -37,7 +37,7 @@ public abstract class CommunicationAgent<E extends StandardEntity> extends Stand
 
 	public void sendSay(CommunicationMessage msg)
 	{
-		this.manager.addNearFieldSendMessage(msg);
+		this.manager.addVoiceSendMessage(msg);
 	}
 
 	@Override

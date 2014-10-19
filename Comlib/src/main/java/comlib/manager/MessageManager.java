@@ -29,6 +29,8 @@ public class MessageManager
 	private VoiceConfig voiceConfig;
 
 	private boolean useRadio;
+	private int numRadio;
+	private int numVoice;
 
 	private int kernelTime;
 
@@ -37,6 +39,7 @@ public class MessageManager
 
 	private List<CommunicationMessage> receivedMessages; // FOR-COMPATIBLE
 	private List<CommunicationMessage> sendMessages;
+	private BitOutputStream[] bitOutputStreamList;
 
 	public MessageManager(Config config)
 	{
@@ -50,6 +53,7 @@ public class MessageManager
 		this.voiceConfig = new VoiceConfig(config);
 		this.kernelTime = -1;
 		this.providerList = new MessageProvider[config.getIntValue("comlib.default.messageID", 16)];
+		this.bitOutputStreamList = new BitOutputStream[config.getIntValue("comlib.default.messageID", 16)];
 		this.eventList = new ArrayList<>();
 		this.receivedMessages = new ArrayList<>();
 		this.sendMessages = new ArrayList<>();
@@ -60,10 +64,12 @@ public class MessageManager
 
 	private void initCommunicationMode(Config config)
 	{
-		boolean speakComm = config.getValue(Constants.COMMUNICATION_MODEL_KEY).equals(ChannelCommunicationModel.class.getName());
-		int numChannels = config.getIntValue("comms.channels.count");
+		//boolean speakComm = config.getValue(Constants.COMMUNICATION_MODEL_KEY).equals(ChannelCommunicationModel.class.getName());
+		//int numChannels = config.getIntValue("comms.channels.count");
 
-		this.useRadio = ( speakComm && (numChannels > 1) );
+		this.numRadio = config.getIntValue("comms.channels.max.platoon");
+		this.numVoice = ((config.getValue("comms.channels.0.type").equals("voice")) ? 1 : 0);
+		this.useRadio = ( this.numRadio >= 1 );
 	}
 
 	public boolean canUseRadio()
@@ -82,6 +88,9 @@ public class MessageManager
 	{
 		this.kernelTime = time;
 		this.receivedMessages.clear();
+
+		for (BitOutputStream bos : bitOutputStreamList)
+		{ bos.reset(); }
 
 		for (Command command : heard)
 		{
@@ -162,16 +171,16 @@ public class MessageManager
 	{
 		// TODO: Need edit
 		this.sendMessages.add(msg);
-		BitOutputStream bos = new BitOutputStream();
-		this.providerList[msg.getMessageID()].write(this, bos, msg);
+		int msgID = msg.getMessageID();
+		this.providerList[msgID].write(this, bitOutputStreamList[msgID], msg);
 	}
 
-	public void old_addSendMessage(CommunicationMessage msg)
-	{
-		this.sendMessages.add(msg);
-	}
+	// public void old_addSendMessage(CommunicationMessage msg)
+	// {
+	// 	this.sendMessages.add(msg);
+	// }
 
-	public void addNearFieldSendMessage(CommunicationMessage msg)
+	public void addVoiceSendMessage(CommunicationMessage msg)
 	{
 		// TODO: NFCのリストを用意して．．．いろいろ
 		this.sendMessages.add(msg);
@@ -189,7 +198,6 @@ public class MessageManager
 
 	private void registerStandardProvider(MessageProvider provider)
 	{
-		//provider.setMessageID(messageID);
 		this.providerList[provider.getMessageID()] = provider;
 	}
 
@@ -200,7 +208,10 @@ public class MessageManager
 		{ return false; }
 
 		if (messageID >= this.providerList.length)
-		{ this.providerList = Arrays.copyOf(this.providerList, messageID +1); }
+		{
+			this.providerList = Arrays.copyOf(this.providerList, messageID +1);
+			this.bitOutputStreamList = Arrays.copyOf(this.bitOutputStreamList, messageID +1);
+		}
 		else if (this.providerList[messageID] != null)
 		{ return false; }
 
