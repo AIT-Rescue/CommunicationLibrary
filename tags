@@ -6192,6 +6192,7 @@ max	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/config/FloatVal
 max	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/config/IntegerValueConstraint.java	/^    private int max;$/;"	f	class:IntegerValueConstraint	file:
 maxACs	../roborescue-roborescue/modules/gis2/src/gis2/RandomScenarioGenerator.java	/^    private int maxACs;$/;"	f	class:RandomScenarioGenerator	file:
 maxATs	../roborescue-roborescue/modules/gis2/src/gis2/RandomScenarioGenerator.java	/^    private int maxATs;$/;"	f	class:RandomScenarioGenerator	file:
+maxBandWidthList	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	private int[] maxBandWidthList;$/;"	f	class:MessageManager	file:
 maxChildren	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/geometry/spatialindex/BBTree.java	/^    private int maxChildren;$/;"	f	class:BBTree	file:
 maxCivs	../roborescue-roborescue/modules/gis2/src/gis2/RandomScenarioGenerator.java	/^    private int maxCivs;$/;"	f	class:RandomScenarioGenerator	file:
 maxDistance	../roborescue-roborescue/modules/sample/src/sample/SampleFireBrigade.java	/^    private int maxDistance;$/;"	f	class:SampleFireBrigade	file:

@@ -41,6 +41,7 @@ public class MessageManager
 	private List<CommunicationMessage> receivedMessages; // FOR-COMPATIBLE
 	private List<CommunicationMessage> sendMessages;
 	private BitOutputStream[] bitOutputStreamList;
+	private int[] maxBandWidthList;
 
 	public MessageManager(Config config)
 	{
@@ -60,9 +61,13 @@ public class MessageManager
 
 		this.providerList = new MessageProvider[config.getIntValue("comlib.default.messageID", 16)];
 		this.bitOutputStreamList = new BitOutputStream[config.getIntValue("comlib.default.messageID", 16)];
+		this.maxBandWidthList = new int[numRadio];
 		this.eventList = new ArrayList<>();
 		this.receivedMessages = new ArrayList<>();
 		this.sendMessages = new ArrayList<>();
+
+		for (int ch = 1; ch <= numRadio; ch++)
+		{ maxBandwidthList[ch] = config.getIntValue("comms.channels." + ch + ".bandwidth"); }
 
 		this.initLoadProvider();
 	}
@@ -139,34 +144,36 @@ public class MessageManager
 
 	public List<Message> createSendMessage(EntityID agentID)
 	{
-		// TODO: return data
 		List<Message> messages = new ArrayList<Message>();
 
 		int bosNum = 0;
+		boolean isFirstLoop = true;
 		for (int ch = 1; ch <= numRadio; ch++)
 		{
+			int sentMessageSize = 0;
+
 			for (; bosNum < bitOutputStreamList.length; bosNum++)
 			{
+				BitOutputStream bos = bitOutputStreamList[bosNum];
 				if (bos.size() <= 0)
 				{ continue; }
-
-				messages.add(new AKSpeak(agentID, this.getTime(), ch, bitOutputStreamList[bosNum].toByteArray()));
+				if ((sentMessageSize + bos.size()) > maxBandWidthList[ch])
+				{ continue; }
+				sentMessageSize += bos.size();
+				messages.add(new AKSpeak(agentID, this.getTime(), ch, bos.toByteArray()));
 			}
 
-			if (ch == numRadio)
+			if (ch == numRadio && isFirstLoop)
 			{
+				isFirstLoop = false;
+				ch = 1;
+				bosNum = 0;
 			}
 		}
-		// if (this.useRadio)
-		// {
-		// 	BitOutputStream bos = new BitOutputStream();
-		// 	for (CommunicationMessage msg : this.sendMessages)
-		// 	{ this.providerList[msg.getMessageID()].write(this, bos, msg); }
-		// }
 
-		StringBuilder sb = new StringBuilder();
-		for (CommunicationMessage msg : this.sendMessages)
-		{ this.providerList[msg.getMessageID()].write(this, sb, msg); }
+		// StringBuilder sb = new StringBuilder();
+		// for (CommunicationMessage msg : this.sendMessages)
+		// { this.providerList[msg.getMessageID()].write(this, sb, msg); }
 
 		return messages;
 	}
