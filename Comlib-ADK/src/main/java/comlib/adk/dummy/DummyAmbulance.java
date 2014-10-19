@@ -11,6 +11,9 @@ import rescuecore2.standard.entities.*;
 import rescuecore2.worldmodel.ChangeSet;
 import rescuecore2.worldmodel.EntityID;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class DummyAmbulance extends AmbulanceTeamTactics {
 
     public CivilianManager civilianManager;
@@ -93,6 +96,8 @@ public class DummyAmbulance extends AmbulanceTeamTactics {
 
     private Message moveRefuge(int time)
     {
-        return AmbulanceAction.rest(this, time);
+        List list = new ArrayList<EntityID>();
+        list.add(this.refugeList.get(0).getID());
+        return AmbulanceAction.move(this, time, list);
     }
 }
