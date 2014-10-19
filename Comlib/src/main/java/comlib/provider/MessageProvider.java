@@ -38,8 +38,8 @@ public abstract class MessageProvider<M extends CommunicationMessage, E extends 
 	public void write(MessageManager manager, BitOutputStream bos, M msg)
 	{
 		RadioConfig config = manager.getRadioConfig();
-		bos.writeBits(this.messageID, config.getSizeOfMessageID());
-		bos.writeBits(manager.getTime(), config.getSizeOfTime());
+		if (bos.size() <= 0)
+		{ bos.writeBits(this.messageID, config.getSizeOfMessageID()); }
 		this.writeMessage(config, bos, msg);
 	}
 	
@@ -68,9 +68,7 @@ public abstract class MessageProvider<M extends CommunicationMessage, E extends 
 
 		try
 		{
-			msg = this.createMessage(config,
-					bsr.getBits(config.getSizeOfTime()),
-					bsr);
+			msg = this.createMessage(config, manager.getTime() -1, bsr);
 		} catch (Exception e)
 		{ return null; }
 

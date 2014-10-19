@@ -53,24 +53,18 @@ public class MessageManager
 		this.radioConfig = new RadioConfig(config);
 		this.voiceConfig = new VoiceConfig(config);
 		this.kernelTime = -1;
+
+		this.numRadio = config.getIntValue("comms.channels.max.platoon");
+		this.numVoice = ((config.getValue("comms.channels.0.type").equals("voice")) ? 1 : 0);
+		this.useRadio = ( this.numRadio >= 1 );
+
 		this.providerList = new MessageProvider[config.getIntValue("comlib.default.messageID", 16)];
 		this.bitOutputStreamList = new BitOutputStream[config.getIntValue("comlib.default.messageID", 16)];
 		this.eventList = new ArrayList<>();
 		this.receivedMessages = new ArrayList<>();
 		this.sendMessages = new ArrayList<>();
 
-		this.initCommunicationMode(config);
 		this.initLoadProvider();
-	}
-
-	private void initCommunicationMode(Config config)
-	{
-		//boolean speakComm = config.getValue(Constants.COMMUNICATION_MODEL_KEY).equals(ChannelCommunicationModel.class.getName());
-		//int numChannels = config.getIntValue("comms.channels.count");
-
-		this.numRadio = config.getIntValue("comms.channels.max.platoon");
-		this.numVoice = ((config.getValue("comms.channels.0.type").equals("voice")) ? 1 : 0);
-		this.useRadio = ( this.numRadio >= 1 );
 	}
 
 	public boolean canUseRadio()
@@ -113,16 +107,15 @@ public class MessageManager
 
 	private void receiveRadioMessage(byte[] data, List<CommunicationMessage> list)
 	{
-		// TODO: ノイズ対策をするべき?
 		if (data == null || list == null)
 		{ return; }
 		BitStreamReader bsr = new BitStreamReader(data);
-		int border = this.radioConfig.getSizeOfMessageID() + this.radioConfig.getSizeOfTime();
-		while(bsr.getRemainBuffer() >= border)
+		MessageProvider provider = this.providerList[bsr.getBits(this.radioConfig.getSizeOfMessageID())];
+		while(bsr.getRemainBuffer() > 0)
 		{
 			try
 			{
-				CommunicationMessage msg = this.providerList[bsr.getBits(this.radioConfig.getSizeOfMessageID())].create(this, bsr);
+				CommunicationMessage msg = provider.create(this, bsr);
 				list.add(msg);
 			} catch(Exception e) {
 				//System.err.println("Received message is corrupt or format is different.");
@@ -149,18 +142,19 @@ public class MessageManager
 		// TODO: return data
 		List<Message> messages = new ArrayList<Message>();
 
+		int bosNum = 0;
 		for (int ch = 1; ch <= numRadio; ch++)
 		{
-			for (BitOutputStream bos : bitOutputStreamList)
+			for (; bosNum < bitOutputStreamList.length; bosNum++)
 			{
 				if (bos.size() <= 0)
 				{ continue; }
 
-				messages.add(new AKSpeak(agentID, this.getTime(), ch, bos.toByteArray()));
+				messages.add(new AKSpeak(agentID, this.getTime(), ch, bitOutputStreamList[bosNum].toByteArray()));
+			}
 
-				if (ch == numRadio)
-				{
-				}
+			if (ch == numRadio)
+			{
 			}
 		}
 		// if (this.useRadio)
