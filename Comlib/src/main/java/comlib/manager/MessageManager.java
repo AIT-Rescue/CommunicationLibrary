@@ -169,9 +169,9 @@ public class MessageManager
 
 	public <M extends CommunicationMessage> void addSendMessage(M msg)
 	{
-		// TODO: Need edit
-		this.sendMessages.add(msg);
+		this.sendMessages.add(msg); // TODO: no needing
 		int msgID = msg.getMessageID();
+		// TODO: need cutting data
 		this.providerList[msgID].write(this, bitOutputStreamList[msgID], msg);
 	}
 
