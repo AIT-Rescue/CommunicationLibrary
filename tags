@@ -9051,6 +9051,7 @@ warn	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/log/Logger.jav
 warn	./Comlib-ADK/gradlew	/^warn ( ) {$/;"	f
 warn	./Comlib/gradlew	/^warn ( ) {$/;"	f
 warn	./gradlew	/^warn ( ) {$/;"	f
+warning	./Comlib/build/reports/tests/classes/junit.framework.TestSuite$1.html	/^<a name="warning"><\/a>$/;"	a
 water	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/FireBrigade.java	/^    private IntProperty water;$/;"	f	class:FireBrigade	file:
 water	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/messages/AKExtinguish.java	/^    private IntComponent water;$/;"	f	class:AKExtinguish	file:
 water	./Comlib/src_old/message/information/FireBrigadeMessage.java	/^	protected int water;$/;"	f	class:FireBrigadeMessage

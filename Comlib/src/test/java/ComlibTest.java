@@ -13,8 +13,8 @@ public class ComlibTest extends TestCase
 		super(name);
 	}
 //
-// 	public void testDummyMessage()
-// 	{
+	public void testDummyMessage()
+	{
 // 		config = new Config();
 // 		try
 // 		{
@@ -23,6 +23,6 @@ public class ComlibTest extends TestCase
 // 			e.printStackTrace();
 // 		}
 // 		manager = new MessageManager(config);
-// 		assertEquals(1, 1);
-// 	}
+		assertEquals(1, 1);
+	}
 }
