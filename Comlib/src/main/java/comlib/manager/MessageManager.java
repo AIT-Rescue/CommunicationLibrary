@@ -67,7 +67,7 @@ public class MessageManager
 		this.sendMessages = new ArrayList<>();
 
 		for (int ch = 1; ch <= numRadio; ch++)
-		{ maxBandwidthList[ch] = config.getIntValue("comms.channels." + ch + ".bandwidth"); }
+		{ maxBandWidthList[ch] = config.getIntValue("comms.channels." + ch + ".bandwidth"); }
 
 		this.initLoadProvider();
 	}

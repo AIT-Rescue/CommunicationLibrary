@@ -3308,6 +3308,10 @@ comlib.event	./Comlib/src/main/java/comlib/event/information/AmbulanceTeamMessag
 comlib.event	./Comlib/src/main/java/comlib/event/information/CivilianMessageEvent.java	/^package comlib.event;$/;"	p
 comlib.event	./Comlib/src/main/java/comlib/event/information/FireBrigadeMessageEvent.java	/^package comlib.event;$/;"	p
 comlib.event	./Comlib/src/main/java/comlib/event/information/PoliceForceMessageEvent.java	/^package comlib.event;$/;"	p
+comlib.event.information	./Comlib/src/main/java/comlib/event/information/AmbulanceTeamMessageEvent.java	/^package comlib.event.information;$/;"	p
+comlib.event.information	./Comlib/src/main/java/comlib/event/information/CivilianMessageEvent.java	/^package comlib.event.information;$/;"	p
+comlib.event.information	./Comlib/src/main/java/comlib/event/information/FireBrigadeMessageEvent.java	/^package comlib.event.information;$/;"	p
+comlib.event.information	./Comlib/src/main/java/comlib/event/information/PoliceForceMessageEvent.java	/^package comlib.event.information;$/;"	p
 comlib.manager	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^package comlib.manager;$/;"	p
 comlib.manager	./Comlib/src/main/java/comlib/manager/RadioConfig.java	/^package comlib.manager;$/;"	p
 comlib.manager	./Comlib/src/main/java/comlib/manager/VoiceConfig.java	/^package comlib.manager;$/;"	p
@@ -3327,6 +3331,10 @@ comlib.message	./Comlib/src_old/message/CommunicationMessage.java	/^package coml
 comlib.message	./Comlib/src_old/message/HumanMessage.java	/^package comlib.message;$/;"	p
 comlib.message	./Comlib/src_old/message/InformationMessage.java	/^package comlib.message;$/;"	p
 comlib.message	./Comlib/src_old/message/MapMessage.java	/^package comlib.message;$/;"	p
+comlib.message.information	./Comlib/src/main/java/comlib/message/information/AmbulanceTeamMessage.java	/^package comlib.message.information;$/;"	p
+comlib.message.information	./Comlib/src/main/java/comlib/message/information/CivilianMessage.java	/^package comlib.message.information;$/;"	p
+comlib.message.information	./Comlib/src/main/java/comlib/message/information/FireBrigadeMessage.java	/^package comlib.message.information;$/;"	p
+comlib.message.information	./Comlib/src/main/java/comlib/message/information/PoliceForceMessage.java	/^package comlib.message.information;$/;"	p
 comlib.message.information	./Comlib/src_old/message/information/AmbulanceTeamMessage.java	/^package comlib.message.information;$/;"	p
 comlib.message.information	./Comlib/src_old/message/information/BuildingMessage.java	/^package comlib.message.information;$/;"	p
 comlib.message.information	./Comlib/src_old/message/information/FireBrigadeMessage.java	/^package comlib.message.information;$/;"	p
