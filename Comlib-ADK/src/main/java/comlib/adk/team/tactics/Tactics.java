@@ -1,6 +1,5 @@
 package comlib.adk.team.tactics;
 
-import comlib.adk.util.action.Action;
 import comlib.manager.MessageManager;
 import rescuecore2.config.Config;
 import rescuecore2.messages.Message;
@@ -17,17 +16,10 @@ public abstract class Tactics<E extends StandardEntity> {
     public EntityID agentID;
     public StandardEntity location;
     public E me;
-    //public MessageManager manager;
+
+    public EntityID targetID;
 
     public Random random;
-
-    public Tactics() {
-    }
-
-    @Override
-    public String toString() {
-        return "Test";
-    }
 
     public abstract void postConnect();
 

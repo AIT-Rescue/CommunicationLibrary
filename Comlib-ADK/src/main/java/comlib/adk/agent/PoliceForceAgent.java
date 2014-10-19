@@ -9,16 +9,16 @@ import java.util.EnumSet;
 public class PoliceForceAgent extends TacticsAgent<PoliceForceTactics, PoliceForce> {
     public static final String DISTANCE_KEY = "clear.repair.distance";
 
-    public PoliceForceTactics tactics;
+    //public PoliceForceTactics tactics;
 
     public PoliceForceAgent(PoliceForceTactics policeForceTactics) {
         super(policeForceTactics);
-        this.tactics = policeForceTactics;
+        //this.tactics = policeForceTactics;
     }
 
     @Override
     public String toString() {
-        return "Police Force : "; /*+ this.tactics.toString();*/
+        return "Comlib Police Force";
     }
 
     @Override
@@ -27,9 +27,9 @@ public class PoliceForceAgent extends TacticsAgent<PoliceForceTactics, PoliceFor
     }
 
     @Override
-    public void initAgentValue() {
+    public void initAgentValue(PoliceForceTactics policeForceTactics) {
         //this.model.indexClass(StandardEntityURN.ROAD);
-        this.tactics.distance = this.config.getIntValue(DISTANCE_KEY);
-
+        //this.tactics.distance = this.config.getIntValue(DISTANCE_KEY);
+        policeForceTactics.distance = this.config.getIntValue(DISTANCE_KEY);
     }
 }

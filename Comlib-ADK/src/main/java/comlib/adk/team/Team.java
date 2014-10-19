@@ -5,10 +5,15 @@ import comlib.adk.team.tactics.FireBrigadeTactics;
 import comlib.adk.team.tactics.PoliceForceTactics;
 import rescuecore2.config.Config;
 
-public interface Team {
-    public String getTeamName();
-    public void readConfig(Config config);
-    public AmbulanceTeamTactics getAmbulanceTeamTactics();
-    public FireBrigadeTactics getFireBrigadeTactics();
-    public PoliceForceTactics getPoliceForceTactics();
+public abstract class Team {
+
+    public abstract String getTeamName();
+
+    public abstract void readConfig(Config config);
+
+    public abstract AmbulanceTeamTactics getAmbulanceTeamTactics();
+
+    public abstract FireBrigadeTactics getFireBrigadeTactics();
+
+    public abstract PoliceForceTactics getPoliceForceTactics();
 }

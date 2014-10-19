@@ -10,26 +10,29 @@ public abstract class TacticsAgent<T extends Tactics, E extends StandardEntity> 
     
     public T tactics;
     
-    public TacticsAgent(Tactics t) {
+    public TacticsAgent(T t) {
         super();
-        this.tactics = (T)t;
+        this.tactics = t;
     }
     
     @Override
     public void postConnect() {
         super.postConnect();
+        this.initValue();
+        this.tactics.postConnect();
+    }
+
+    public void initValue() {
         this.tactics.random = this.random;
         this.tactics.model = this.model; //this.tactics.setWorld(this.model);
         this.tactics.config = this.config; //this.tactics.setConfig(this.config);
         //this.tactics.agentID = this.getID(); //AgentのEntityIDはかわるのか？？
         //this.tactics.me = this.me();
         //List<Refuge> refuges = this.getRefuges();
-        //this.tactics.manager = this.manager;
-        this.initAgentValue();
-        this.tactics.postConnect();
+        this.initAgentValue(this.tactics);
     }
     
-    public abstract void initAgentValue();
+    public abstract void initAgentValue(T t);
 
     @Override
     public void registerProvider(MessageManager manager) {

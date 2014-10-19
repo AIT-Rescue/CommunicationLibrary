@@ -8,16 +8,16 @@ import java.util.EnumSet;
 
 public class AmbulanceTeamAgent extends TacticsAgent<AmbulanceTeamTactics, AmbulanceTeam> {
 
-    public AmbulanceTeamTactics tactics;
+    //public AmbulanceTeamTactics tactics;
 
     public AmbulanceTeamAgent(AmbulanceTeamTactics ambulanceTactics) {
         super(ambulanceTactics);
-        this.tactics = ambulanceTactics;
+        //this.tactics = ambulanceTactics;
     }
 
     @Override
     public String toString() {
-        return "Ambulance Team : "; /*+ this.tactics.toString();*/
+        return "Comlib Ambulance Team";
     }
 
     @Override
@@ -26,6 +26,6 @@ public class AmbulanceTeamAgent extends TacticsAgent<AmbulanceTeamTactics, Ambul
     }
 
     @Override
-    public void initAgentValue() {
+    public void initAgentValue(AmbulanceTeamTactics ambulanceTeamTactics) {
     }
 }
