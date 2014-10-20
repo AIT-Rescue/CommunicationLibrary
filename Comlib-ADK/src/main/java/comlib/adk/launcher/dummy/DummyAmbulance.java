@@ -1,9 +1,9 @@
 package comlib.adk.launcher.dummy;
 
-import comlib.adk.launcher.dummy.event.AmbulanceCivilianEvent;
-import comlib.adk.launcher.dummy.util.CivilianManager;
 import comlib.adk.team.tactics.AmbulanceTeamTactics;
 import comlib.adk.util.action.AmbulanceAction;
+import comlib.adk.util.route.RouteSearch;
+import comlib.adk.util.route.sample.SampleRouteSearch;
 import comlib.manager.MessageManager;
 import comlib.message.DummyMessage;
 import rescuecore2.messages.Message;
@@ -11,29 +11,29 @@ import rescuecore2.standard.entities.*;
 import rescuecore2.worldmodel.ChangeSet;
 import rescuecore2.worldmodel.EntityID;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class DummyAmbulance extends AmbulanceTeamTactics {
 
     //移動経路の選択
     //救助対象の管理・選択
-    public CivilianManager civilianManager;
+    //public CivilianManager civilianManager;
+
+    public RouteSearch route;
 
     public EntityID rescueTarget;
 
     public DummyAmbulance() {
-        this.civilianManager = new CivilianManager();
+        //this.civilianManager = new CivilianManager();
         this.rescueTarget = null;
     }
 
     @Override
     public void postConnect() {
+        this.route = new SampleRouteSearch(this);
     }
 
     @Override
     public void registerEvent(MessageManager manager) {
-        manager.registerEvent(new AmbulanceCivilianEvent(this.model, this.civilianManager));
+        //manager.registerEvent(new AmbulanceCivilianEvent(this.model, this.civilianManager));
     }
 
     @Override
@@ -73,7 +73,7 @@ public class DummyAmbulance extends AmbulanceTeamTactics {
         for (EntityID next : changed.getChangedEntities()) {
             StandardEntity entity = model.getEntity(next);
             if(entity instanceof Civilian) {
-                this.civilianManager.update((Civilian)entity, manager);
+                //this.civilianManager.update((Civilian)entity, manager);
             }
             else if(entity instanceof Blockade) {
                 //manager.addSendMessage(new BlockadeMessage((Blockade)entity));
@@ -96,10 +96,7 @@ public class DummyAmbulance extends AmbulanceTeamTactics {
         return false;
     }
 
-    private Message moveRefuge(int time)
-    {
-        List list = new ArrayList<EntityID>();
-        list.add(this.refugeList.get(0).getID());
-        return AmbulanceAction.move(this, time, list);
+    private Message moveRefuge(int time) {
+        return AmbulanceAction.move(this, time, this.route.getPath(time, this.me, this.refugeList.get(0).getID()));
     }
 }

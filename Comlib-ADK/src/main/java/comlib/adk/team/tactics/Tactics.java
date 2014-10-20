@@ -17,7 +17,8 @@ public abstract class Tactics<E extends StandardEntity> {
     public StandardEntity location;
     public E me;
 
-    public EntityID targetID;
+    //public EntityID targetID;
+    //public List<Refuge> refuges;
 
     public Random random;
 

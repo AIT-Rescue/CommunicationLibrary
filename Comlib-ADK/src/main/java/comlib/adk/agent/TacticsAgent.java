@@ -28,7 +28,7 @@ public abstract class TacticsAgent<T extends Tactics, E extends StandardEntity> 
         this.tactics.config = this.config; //this.tactics.setConfig(this.config);
         //this.tactics.agentID = this.getID(); //AgentのEntityIDはかわるのか？？
         //this.tactics.me = this.me();
-        //List<Refuge> refuges = this.getRefuges();
+        //this.tactics.refuges = this.getRefuges();
         this.initAgentValue(this.tactics);
     }
     
