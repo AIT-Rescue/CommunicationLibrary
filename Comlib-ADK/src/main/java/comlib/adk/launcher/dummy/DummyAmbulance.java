@@ -1,7 +1,9 @@
 package comlib.adk.launcher.dummy;
 
+import comlib.adk.launcher.dummy.event.AmbulanceCivilianEvent;
 import comlib.adk.team.tactics.AmbulanceTeamTactics;
 import comlib.adk.util.action.AmbulanceAction;
+import comlib.adk.util.ambulance.CivilianManager;
 import comlib.adk.util.route.RouteSearch;
 import comlib.adk.util.route.sample.SampleRouteSearch;
 import comlib.manager.MessageManager;
@@ -15,25 +17,25 @@ public class DummyAmbulance extends AmbulanceTeamTactics {
 
     //移動経路の選択
     //救助対象の管理・選択
-    //public CivilianManager civilianManager;
+    public CivilianManager civilianManager;
 
-    public RouteSearch route;
+    public RouteSearch routeSearch;
 
     public EntityID rescueTarget;
 
     public DummyAmbulance() {
-        //this.civilianManager = new CivilianManager();
-        this.rescueTarget = null;
     }
 
     @Override
     public void postConnect() {
-        this.route = new SampleRouteSearch(this);
+        this.rescueTarget = null;
+        this.routeSearch = new SampleRouteSearch(this);
+        this.civilianManager = new CivilianManager(this, this.routeSearch);
     }
 
     @Override
     public void registerEvent(MessageManager manager) {
-        //manager.registerEvent(new AmbulanceCivilianEvent(this.model, this.civilianManager));
+        manager.registerEvent(new AmbulanceCivilianEvent(this.model, this.civilianManager));
     }
 
     @Override
@@ -87,16 +89,23 @@ public class DummyAmbulance extends AmbulanceTeamTactics {
         }
     }
 
-    private boolean someoneOnBoard() {
+    /*private boolean someoneOnBoard() {
         for (StandardEntity next : this.model.getEntitiesOfType(StandardEntityURN.CIVILIAN)) {
             if (((Human)next).getPosition().equals(this.agentID)) {
                 return true;
             }
         }
         return false;
+    }*/
+
+    private boolean someoneOnBoard() {
+        if(this.rescueTarget == null) {
+            return false;
+        }
+        return ((Human)this.model.getEntity(this.rescueTarget)).getPosition().equals(this.agentID);
     }
 
     private Message moveRefuge(int time) {
-        return AmbulanceAction.move(this, time, this.route.getPath(time, this.me, this.refugeList.get(0).getID()));
+        return AmbulanceAction.move(this, time, this.routeSearch.getPath(time, this.me, this.refugeList.get(0).getID()));
     }
 }

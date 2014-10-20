@@ -1,5 +1,6 @@
 package comlib.adk.launcher.dummy.event;
 
+import comlib.adk.util.ambulance.CivilianManager;
 import comlib.event.information.CivilianMessageEvent;
 import comlib.message.information.CivilianMessage;
 import rescuecore2.standard.entities.Civilian;
@@ -8,11 +9,11 @@ import rescuecore2.standard.entities.StandardWorldModel;
 public class AmbulanceCivilianEvent extends CivilianMessageEvent {
 
     private StandardWorldModel model;
-    //private CivilianManager civilianManager;
+    private CivilianManager civilianManager;
 
-    public AmbulanceCivilianEvent(StandardWorldModel swm/*, CivilianManager sm*/) {
+    public AmbulanceCivilianEvent(StandardWorldModel swm, CivilianManager sm) {
         this.model = swm;
-        //this.civilianManager = sm;
+        this.civilianManager = sm;
     }
 
     @Override
@@ -32,7 +33,7 @@ public class AmbulanceCivilianEvent extends CivilianMessageEvent {
             civilian.setDamage(msg.getDamage());
             civilian.setPosition(msg.getPosition());
 
-            //this.civilianManager.add(civilian);
+            this.civilianManager.add(civilian);
         }
     }
 }
