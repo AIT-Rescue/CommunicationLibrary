@@ -263,4 +263,3 @@ public class MessageManager
 		for (MessageEvent event : this.eventList)
 		{ provider.trySetEvent(event); }
 	}
-}
