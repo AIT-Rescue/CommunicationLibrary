@@ -1,4 +1,4 @@
-package comlib.adk.dummy;
+package comlib.adk.launcher.dummy;
 
 import comlib.adk.team.Team;
 import comlib.adk.team.tactics.AmbulanceTeamTactics;

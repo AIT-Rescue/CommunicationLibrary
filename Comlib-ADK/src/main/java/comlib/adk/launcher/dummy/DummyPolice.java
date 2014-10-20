@@ -1,13 +1,13 @@
-package comlib.adk.dummy;
+package comlib.adk.launcher.dummy;
 
-import comlib.adk.team.tactics.FireBrigadeTactics;
-import comlib.adk.util.action.FireAction;
+import comlib.adk.team.tactics.PoliceForceTactics;
+import comlib.adk.util.action.PoliceAction;
 import comlib.manager.MessageManager;
 import comlib.message.DummyMessage;
 import rescuecore2.messages.Message;
 import rescuecore2.worldmodel.ChangeSet;
 
-public class DummyFire extends FireBrigadeTactics {
+public class DummyPolice extends PoliceForceTactics {
 
     @Override
     public void postConnect() {
@@ -33,6 +33,6 @@ public class DummyFire extends FireBrigadeTactics {
         情報の送信
          */
         manager.addSendMessage(new DummyMessage(time, 10, 0));
-        return FireAction.rest(this, time);
+        return PoliceAction.rest(this, time);
     }
 }

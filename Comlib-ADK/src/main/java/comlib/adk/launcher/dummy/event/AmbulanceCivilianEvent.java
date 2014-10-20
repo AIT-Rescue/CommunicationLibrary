@@ -1,6 +1,6 @@
-package comlib.adk.dummy.event;
+package comlib.adk.launcher.dummy.event;
 
-import comlib.adk.dummy.util.CivilianManager;
+import comlib.adk.launcher.dummy.util.CivilianManager;
 import comlib.event.information.CivilianMessageEvent;
 import comlib.message.information.CivilianMessage;
 import rescuecore2.standard.entities.Civilian;

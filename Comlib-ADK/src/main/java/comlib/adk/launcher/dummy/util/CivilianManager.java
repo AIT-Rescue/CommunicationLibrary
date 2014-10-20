@@ -1,4 +1,4 @@
-package comlib.adk.dummy.util;
+package comlib.adk.launcher.dummy.util;
 
 import comlib.manager.MessageManager;
 import comlib.message.information.CivilianMessage;

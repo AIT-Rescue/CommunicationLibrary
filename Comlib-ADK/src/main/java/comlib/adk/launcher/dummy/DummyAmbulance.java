@@ -1,7 +1,7 @@
-package comlib.adk.dummy;
+package comlib.adk.launcher.dummy;
 
-import comlib.adk.dummy.event.AmbulanceCivilianEvent;
-import comlib.adk.dummy.util.CivilianManager;
+import comlib.adk.launcher.dummy.event.AmbulanceCivilianEvent;
+import comlib.adk.launcher.dummy.util.CivilianManager;
 import comlib.adk.team.tactics.AmbulanceTeamTactics;
 import comlib.adk.util.action.AmbulanceAction;
 import comlib.manager.MessageManager;
