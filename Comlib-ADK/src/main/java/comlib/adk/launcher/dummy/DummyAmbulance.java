@@ -16,6 +16,8 @@ import java.util.List;
 
 public class DummyAmbulance extends AmbulanceTeamTactics {
 
+    //移動経路の選択
+    //救助対象の管理・選択
     public CivilianManager civilianManager;
 
     public EntityID rescueTarget;

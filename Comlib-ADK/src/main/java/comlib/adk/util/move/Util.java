@@ -2,15 +2,15 @@
 // All rights reserved.
 package comlib.adk.util.move;
 
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.Random;
-import java.util.StringTokenizer;
-
 import rescuecore2.misc.Pair;
 import rescuecore2.standard.entities.Edge;
 import rescuecore2.standard.entities.StandardEntity;
 import rescuecore2.standard.entities.StandardWorldModel;
+
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.Random;
+import java.util.StringTokenizer;
 
 public class Util {
 	public static final int distance(int x, int y, int x2, int y2) {
