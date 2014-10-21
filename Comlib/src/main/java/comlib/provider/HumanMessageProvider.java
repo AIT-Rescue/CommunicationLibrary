@@ -17,11 +17,16 @@ public abstract class HumanMessageProvider<M extends CommunicationMessage, E ext
 
 	protected void writeMessage(RadioConfig config, BitOutputStream bos, M msg)
 	{
-		//bos.writeBits(msg.getValue(), config.getSizeOfCivilianValue());
+		super(config, bos, msg);
+		bos.writeBits(msg.getHP(), config.getSizeOfHumanHP());
+		bos.writeBits(msg.getBuriedness(), config.getSizeOfHumanBuriedness());
+		bos.writeBits(msg.getDamage(), config.getSizeOfHumanDamage());
+		bos.writeBits(msg.getPosition(), config.getSizeOfHumanPosition());
 	}
 
 	protected void writeMessage(VoiceConfig config, StringBuilder sb, M msg)
 	{
+		super(config, sb, msg);
 		//config.appendData(sb, String.valueOf(msg.getValue()));
 	}
 

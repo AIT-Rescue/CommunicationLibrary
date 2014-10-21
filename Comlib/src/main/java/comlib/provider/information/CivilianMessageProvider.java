@@ -19,7 +19,8 @@ public class CivilianMessageProvider extends HumanMessageProvider<CivilianMessag
 
 	protected void writeMessage(RadioConfig config, BitOutputStream bos, CivilianMessage msg)
 	{
-		//bos.writeBits(msg.getValue(), config.getSizeOfCivilianValue());
+		super(config, bos, msg);
+		bos.writeBits(msg.getHP(), config.getSizeOfCivilianID());
 	}
 
 	protected void writeMessage(VoiceConfig config, StringBuilder sb, CivilianMessage msg)
@@ -29,10 +30,13 @@ public class CivilianMessageProvider extends HumanMessageProvider<CivilianMessag
 
 	protected CivilianMessage createMessage(RadioConfig config, int time, BitStreamReader bsr)
 	{
-		return null;
-		// return new CivilianMessage(time, -1,
-		// 		bsr.getBits(config.getSizeOfCivilianValue())
-		// 		);
+		return new CivilianMessage(time, -1,
+				bsr.getBits(config.getSizeOfHumanHP()),
+				bsr.getBits(config.getSizeOfHumanBuriedness()),
+				bsr.getBits(config.getSizeOfHumanDamage()),
+				bsr.getBits(config.getSizeOfHumanPosition()),
+				bsr.getBits(config.getSizeOfCivilianID())
+				);
 	}
 
 	protected CivilianMessage createMessage(VoiceConfig config, int time, int ttl, String[] data, int next)

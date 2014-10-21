@@ -240,6 +240,8 @@ AmbulanceCentre	../roborescue-roborescue/modules/standard/src/rescuecore2/standa
 AmbulanceCentre	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/AmbulanceCentre.java	/^public class AmbulanceCentre extends Building {$/;"	c
 AmbulanceCivilianEvent	./Comlib-ADK/src/main/java/comlib/adk/dummy/event/AmbulanceCivilianEvent.java	/^    public AmbulanceCivilianEvent(StandardWorldModel swm, CivilianManager sm) {$/;"	m	class:AmbulanceCivilianEvent
 AmbulanceCivilianEvent	./Comlib-ADK/src/main/java/comlib/adk/dummy/event/AmbulanceCivilianEvent.java	/^public class AmbulanceCivilianEvent extends CivilianMessageEvent {$/;"	c
+AmbulanceCivilianEvent	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/event/AmbulanceCivilianEvent.java	/^    public AmbulanceCivilianEvent(StandardWorldModel swm, CivilianManager sm) {$/;"	m	class:AmbulanceCivilianEvent
+AmbulanceCivilianEvent	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/event/AmbulanceCivilianEvent.java	/^public class AmbulanceCivilianEvent extends CivilianMessageEvent {$/;"	c
 AmbulanceTeam	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/AmbulanceTeam.java	/^    public AmbulanceTeam(AmbulanceTeam other) {$/;"	m	class:AmbulanceTeam
 AmbulanceTeam	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/AmbulanceTeam.java	/^    public AmbulanceTeam(EntityID id) {$/;"	m	class:AmbulanceTeam
 AmbulanceTeam	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/AmbulanceTeam.java	/^public class AmbulanceTeam extends Human {$/;"	c
@@ -263,6 +265,10 @@ ApexesListener	../roborescue-roborescue/modules/standard/src/rescuecore2/standar
 Area	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/Area.java	/^    protected Area(Area other) {$/;"	m	class:Area
 Area	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/Area.java	/^    protected Area(EntityID id) {$/;"	m	class:Area
 Area	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/Area.java	/^public abstract class Area extends StandardEntity {$/;"	c
+AreaConnectCondition	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Route.java	/^    public enum AreaConnectCondition {$/;"	g	class:Route
+AreaConnectCondition	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Router.java	/^	public enum AreaConnectCondition {$/;"	g	class:Router
+AreaConnectCondition	./Comlib-ADK/src_old/move/Route.java	/^    public enum AreaConnectCondition {$/;"	g	class:Route
+AreaConnectCondition	./Comlib-ADK/src_old/move/Router.java	/^	public enum AreaConnectCondition {$/;"	g	class:Router
 AreaIconLayer	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/view/AreaIconLayer.java	/^    public AreaIconLayer() {$/;"	m	class:AreaIconLayer
 AreaIconLayer	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/view/AreaIconLayer.java	/^public class AreaIconLayer extends StandardEntityViewLayer<Area> {$/;"	c
 AreaLayer	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/view/AreaLayer.java	/^    protected AreaLayer(Class<E> clazz) {$/;"	m	class:AreaLayer
@@ -470,6 +476,10 @@ Civilian	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/enti
 Civilian	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/Civilian.java	/^public class Civilian extends Human {$/;"	c
 CivilianManager	./Comlib-ADK/src/main/java/comlib/adk/dummy/util/CivilianManager.java	/^    public CivilianManager() {$/;"	m	class:CivilianManager
 CivilianManager	./Comlib-ADK/src/main/java/comlib/adk/dummy/util/CivilianManager.java	/^public class CivilianManager {$/;"	c
+CivilianManager	./Comlib-ADK/src/main/java/comlib/adk/util/ambulance/CivilianManager.java	/^    public CivilianManager(Tactics user, RouteSearch rs) {$/;"	m	class:CivilianManager
+CivilianManager	./Comlib-ADK/src/main/java/comlib/adk/util/ambulance/CivilianManager.java	/^public class CivilianManager {$/;"	c
+CivilianManager	./Comlib-ADK/src_old/util/CivilianManager.java	/^    public CivilianManager() {$/;"	m	class:CivilianManager
+CivilianManager	./Comlib-ADK/src_old/util/CivilianManager.java	/^public class CivilianManager {$/;"	c
 CivilianMessage	./Comlib/src/main/java/comlib/message/information/CivilianMessage.java	/^	public CivilianMessage(Civilian civilian)$/;"	m	class:CivilianMessage
 CivilianMessage	./Comlib/src/main/java/comlib/message/information/CivilianMessage.java	/^	public CivilianMessage(int time, int ttl, EntityID id, int hp, int buriedness, int damage, EntityID position)$/;"	m	class:CivilianMessage
 CivilianMessage	./Comlib/src/main/java/comlib/message/information/CivilianMessage.java	/^abstract public class CivilianMessage extends HumanMessage$/;"	c
@@ -843,7 +853,10 @@ DropoutNoise	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/
 DummyAgent	../roborescue-roborescue/modules/sample/src/sample/DummyAgent.java	/^public class DummyAgent extends StandardAgent<StandardEntity> {$/;"	c
 DummyAmbulance	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyAmbulance.java	/^    public DummyAmbulance() {$/;"	m	class:DummyAmbulance
 DummyAmbulance	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyAmbulance.java	/^public class DummyAmbulance extends AmbulanceTeamTactics {$/;"	c
+DummyAmbulance	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyAmbulance.java	/^    public DummyAmbulance() {$/;"	m	class:DummyAmbulance
+DummyAmbulance	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyAmbulance.java	/^public class DummyAmbulance extends AmbulanceTeamTactics {$/;"	c
 DummyFire	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyFire.java	/^public class DummyFire extends FireBrigadeTactics {$/;"	c
+DummyFire	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyFire.java	/^public class DummyFire extends FireBrigadeTactics {$/;"	c
 DummyMessage	./Comlib/src/main/java/comlib/message/DummyMessage.java	/^	public DummyMessage(int test)$/;"	m	class:DummyMessage
 DummyMessage	./Comlib/src/main/java/comlib/message/DummyMessage.java	/^	public DummyMessage(int time, int ttl, int test)$/;"	m	class:DummyMessage
 DummyMessage	./Comlib/src/main/java/comlib/message/DummyMessage.java	/^public class DummyMessage extends CommunicationMessage$/;"	c
@@ -851,8 +864,10 @@ DummyMessageEvent	./Comlib/src/main/java/comlib/event/DummyMessageEvent.java	/^p
 DummyMessageProvider	./Comlib/src/main/java/comlib/provider/DummyMessageProvider.java	/^	public DummyMessageProvider(int id)$/;"	m	class:DummyMessageProvider
 DummyMessageProvider	./Comlib/src/main/java/comlib/provider/DummyMessageProvider.java	/^public class DummyMessageProvider extends MessageProvider<DummyMessage, DummyMessageEvent>$/;"	c
 DummyPolice	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyPolice.java	/^public class DummyPolice extends PoliceForceTactics {$/;"	c
+DummyPolice	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyPolice.java	/^public class DummyPolice extends PoliceForceTactics {$/;"	c
 DummyTeam	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyTeam.java	/^public class DummyTeam extends Team {$/;"	c
 DummyTeam	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyTeam.java	/^public class DummyTeam implements Team {$/;"	c
+DummyTeam	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyTeam.java	/^public class DummyTeam extends Team {$/;"	c
 EDGES	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/StandardPropertyURN.java	/^    EDGES(PROPERTY_URN_PREFIX + "edges"),$/;"	e	enum:StandardPropertyURN	file:
 EDGE_COLOUR	../roborescue-roborescue/modules/maps/src/maps/gml/editor/SplitEdgeTool.java	/^    private static final Color EDGE_COLOUR = Color.BLUE;$/;"	f	class:SplitEdgeTool	file:
 EDGE_COLOUR	../roborescue-roborescue/modules/maps/src/maps/gml/view/GMLMapViewer.java	/^    private static final Color EDGE_COLOUR = Color.BLACK;$/;"	f	class:GMLMapViewer	file:
@@ -1724,6 +1739,8 @@ MoveNodeEdit	../roborescue-roborescue/modules/maps/src/maps/gml/editor/MoveNodeT
 MoveNodeEdit	../roborescue-roborescue/modules/maps/src/maps/gml/editor/MoveNodeTool.java	/^    private class MoveNodeEdit extends AbstractUndoableEdit {$/;"	c	class:MoveNodeTool
 MoveNodeTool	../roborescue-roborescue/modules/maps/src/maps/gml/editor/MoveNodeTool.java	/^    public MoveNodeTool(GMLEditor editor) {$/;"	m	class:MoveNodeTool
 MoveNodeTool	../roborescue-roborescue/modules/maps/src/maps/gml/editor/MoveNodeTool.java	/^public class MoveNodeTool extends AbstractTool {$/;"	c
+MoveTool	./Comlib-ADK/src_old/move/MoveTool.java	/^    public MoveTool(Tactics t) {$/;"	m	class:MoveTool
+MoveTool	./Comlib-ADK/src_old/move/MoveTool.java	/^public class MoveTool {$/;"	c
 MultiplicativeScoreFunction	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/score/MultiplicativeScoreFunction.java	/^    public MultiplicativeScoreFunction(String name) {$/;"	m	class:MultiplicativeScoreFunction
 MultiplicativeScoreFunction	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/score/MultiplicativeScoreFunction.java	/^    public MultiplicativeScoreFunction(String name, Collection<ScoreFunction> children) {$/;"	m	class:MultiplicativeScoreFunction
 MultiplicativeScoreFunction	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/score/MultiplicativeScoreFunction.java	/^    public MultiplicativeScoreFunction(String name, ScoreFunction... children) {$/;"	m	class:MultiplicativeScoreFunction
@@ -1858,6 +1875,10 @@ OrdnanceSurveyFormat	../roborescue-roborescue/modules/maps/src/maps/gml/formats/
 OrdnanceSurveyFormat	../roborescue-roborescue/modules/maps/src/maps/gml/formats/OrdnanceSurveyFormat.java	/^public final class OrdnanceSurveyFormat extends GMLMapFormat {$/;"	c
 Overlay	../roborescue-roborescue/modules/maps/src/maps/gml/view/Overlay.java	/^public interface Overlay {$/;"	i
 PARTIAL	../roborescue-roborescue/modules/misc/src/misc/MiscParameters.java	/^            PARTIAL(1, 25),$/;"	e	enum:MiscParameters.BrokennessDegree	file:
+PASSABLE	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Route.java	/^        UNKNOWN, PASSABLE, UNPASSABLE;$/;"	e	enum:Route.AreaConnectCondition	file:
+PASSABLE	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Router.java	/^		UNKNOWN, PASSABLE, UNPASSABLE;$/;"	e	enum:Router.AreaConnectCondition	file:
+PASSABLE	./Comlib-ADK/src_old/move/Route.java	/^        UNKNOWN, PASSABLE, UNPASSABLE;$/;"	e	enum:Route.AreaConnectCondition	file:
+PASSABLE	./Comlib-ADK/src_old/move/Router.java	/^		UNKNOWN, PASSABLE, UNPASSABLE;$/;"	e	enum:Router.AreaConnectCondition	file:
 PASSABLE_EDGE_STROKE	../roborescue-roborescue/modules/traffic3/src/traffic3/simulator/TrafficSimulatorGUI.java	/^	private static final Stroke PASSABLE_EDGE_STROKE = new BasicStroke(1, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL);$/;"	f	class:TrafficSimulatorGUI	file:
 PASSABLE_STROKE	../roborescue-roborescue/modules/maps/src/maps/gml/view/LineEdgeDecorator.java	/^    private static final Stroke PASSABLE_STROKE = new BasicStroke(1, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL);$/;"	f	class:LineEdgeDecorator	file:
 PATH_COLOUR	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/view/PositionHistoryLayer.java	/^    private static final Color PATH_COLOUR = Color.RED;$/;"	f	class:PositionHistoryLayer	file:
@@ -1999,6 +2020,8 @@ RANDOM_FLOOR_RATE	../roborescue-roborescue/modules/gis2/src/gis2/GMLWorldModelCr
 RANDOM_REGION_TEST_COUNT	../roborescue-roborescue/modules/rescuecore2/test/rescuecore2/misc/geometry/spatialindex/BBTreeTest.java	/^    private static final int RANDOM_REGION_TEST_COUNT = 10;$/;"	f	class:BBTreeTest	file:
 RANDOM_SEED_KEY	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/Constants.java	/^    public static final String RANDOM_SEED_KEY = "random.seed";$/;"	f	class:Constants
 RANDOM_WALK_LENGTH	../roborescue-roborescue/modules/sample/src/sample/AbstractSampleAgent.java	/^    private static final int RANDOM_WALK_LENGTH = 50;$/;"	f	class:AbstractSampleAgent	file:
+RANDOM_WALK_LENGTH	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/SampleRouteSearch.java	/^    private static final int RANDOM_WALK_LENGTH = 50;$/;"	f	class:SampleRouteSearch	file:
+RANDOM_WALK_LENGTH	./Comlib-ADK/src_old/move/MoveTool.java	/^    private static final int RANDOM_WALK_LENGTH = 50;$/;"	f	class:MoveTool	file:
 RANGE	../roborescue-roborescue/modules/maps/src/maps/gml/editor/AddNoiseFunction.java	/^    private static final int RANGE = 5;$/;"	f	class:AddNoiseFunction	file:
 RANGE_SUFFIX	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/kernel/comms/VoiceChannel.java	/^    private static final String RANGE_SUFFIX = ".range";$/;"	f	class:VoiceChannel	file:
 RAY_COUNT_KEY	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/kernel/LineOfSightPerception.java	/^    private static final String RAY_COUNT_KEY = "perception.los.ray-count";$/;"	f	class:LineOfSightPerception	file:
@@ -2180,6 +2203,21 @@ RobocupFormat	../roborescue-roborescue/modules/maps/src/maps/gml/formats/Robocup
 RobocupFormat	../roborescue-roborescue/modules/maps/src/maps/gml/formats/RobocupFormat.java	/^public final class RobocupFormat extends GMLMapFormat {$/;"	c
 RoundingNumberGenerator	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/RoundingNumberGenerator.java	/^    public RoundingNumberGenerator(NumberGenerator<? extends Number> downstream) {$/;"	m	class:RoundingNumberGenerator
 RoundingNumberGenerator	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/RoundingNumberGenerator.java	/^public class RoundingNumberGenerator implements NumberGenerator<Integer> {$/;"	c
+Route	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Route.java	/^    public Route(Area a, List<EntityID> areaList) {$/;"	m	class:Route
+Route	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Route.java	/^public class Route {$/;"	c
+Route	./Comlib-ADK/src_old/move/Route.java	/^    public Route(Area a, List<EntityID> areaList) {$/;"	m	class:Route
+Route	./Comlib-ADK/src_old/move/Route.java	/^public class Route {$/;"	c
+RouteFactory	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/RouteFactory.java	/^	public RouteFactory(StandardWorldModel model) {$/;"	m	class:RouteFactory
+RouteFactory	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/RouteFactory.java	/^public class RouteFactory {$/;"	c
+RouteFactory	./Comlib-ADK/src_old/move/RouteFactory.java	/^	public RouteFactory(StandardWorldModel model) {$/;"	m	class:RouteFactory
+RouteFactory	./Comlib-ADK/src_old/move/RouteFactory.java	/^public class RouteFactory {$/;"	c
+RouteSearch	./Comlib-ADK/src/main/java/comlib/adk/util/route/RouteSearch.java	/^    public RouteSearch(Tactics user) {$/;"	m	class:RouteSearch
+RouteSearch	./Comlib-ADK/src/main/java/comlib/adk/util/route/RouteSearch.java	/^public abstract class RouteSearch {$/;"	c
+RouteUtil	./Comlib-ADK/src/main/java/comlib/adk/util/route/RouteUtil.java	/^public class RouteUtil {$/;"	c
+Router	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Router.java	/^	public Router(StandardWorldModel model) {$/;"	m	class:Router
+Router	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Router.java	/^public class Router {$/;"	c
+Router	./Comlib-ADK/src_old/move/Router.java	/^	public Router(StandardWorldModel model) {$/;"	m	class:Router
+Router	./Comlib-ADK/src_old/move/Router.java	/^public class Router {$/;"	c
 RowFiller	../roborescue-roborescue/modules/maps/src/maps/convert/osm2gml/buildings/row/RowFiller.java	/^public interface RowFiller {$/;"	i
 RowHeaderRenderer	../roborescue-roborescue/modules/kernel/src/kernel/ui/ScoreTable.java	/^        RowHeaderRenderer(JTable table) {$/;"	m	class:ScoreTable.RowHeaderRenderer
 RowHeaderRenderer	../roborescue-roborescue/modules/kernel/src/kernel/ui/ScoreTable.java	/^    private static class RowHeaderRenderer extends JLabel implements ListCellRenderer {$/;"	c	class:ScoreTable
@@ -2285,10 +2323,13 @@ SampleFire	./basefile/sample/SampleFire.java	/^public class SampleFire extends F
 SampleFireBrigade	../roborescue-roborescue/modules/sample/src/sample/SampleFireBrigade.java	/^public class SampleFireBrigade extends AbstractSampleAgent<FireBrigade> {$/;"	c
 SamplePolice	./basefile/sample/SamplePolice.java	/^public class SamplePolice extends PoliceForceTactics {$/;"	c
 SamplePoliceForce	../roborescue-roborescue/modules/sample/src/sample/SamplePoliceForce.java	/^public class SamplePoliceForce extends AbstractSampleAgent<PoliceForce> {$/;"	c
+SampleRouteSearch	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/SampleRouteSearch.java	/^    public SampleRouteSearch(Tactics user) {$/;"	m	class:SampleRouteSearch
+SampleRouteSearch	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/SampleRouteSearch.java	/^public class SampleRouteSearch extends RouteSearch {$/;"	c
 SampleSearch	../roborescue-roborescue/modules/sample/src/sample/SampleSearch.java	/^	public SampleSearch(Map<EntityID, Set<EntityID>> graph) {$/;"	m	class:SampleSearch
 SampleSearch	../roborescue-roborescue/modules/sample/src/sample/SampleSearch.java	/^	public SampleSearch(StandardWorldModel world) {$/;"	m	class:SampleSearch
 SampleSearch	../roborescue-roborescue/modules/sample/src/sample/SampleSearch.java	/^public final class SampleSearch {$/;"	c
 SampleSimulator	../roborescue-roborescue/modules/sample/src/sample/SampleSimulator.java	/^public class SampleSimulator extends AbstractSimulator<DefaultWorldModel<Entity>> {$/;"	c
+SampleTeam	./basefile/sample/SampleTeam.java	/^public class SampleTeam extends Team {$/;"	c
 SampleTeam	./basefile/sample/SampleTeam.java	/^public class SampleTeam implements Team {$/;"	c
 SampleViewer	../roborescue-roborescue/modules/sample/src/sample/SampleViewer.java	/^public class SampleViewer extends StandardViewer {$/;"	c
 ScaleConversion	../roborescue-roborescue/modules/maps/src/maps/ScaleConversion.java	/^    public ScaleConversion(double xOrigin, double yOrigin, double xScale, double yScale) {$/;"	m	class:ScaleConversion
@@ -2571,7 +2612,15 @@ TrafficSimulatorGUI	../roborescue-roborescue/modules/traffic3/src/traffic3/simul
 TunePanel	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/kernel/StandardPerception.java	/^        public TunePanel() {$/;"	m	class:StandardPerception.TunePanel
 TunePanel	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/kernel/StandardPerception.java	/^    private class TunePanel extends JPanel {$/;"	c	class:StandardPerception
 UNBURNT	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/StandardEntityConstants.java	/^        UNBURNT,$/;"	e	enum:StandardEntityConstants.Fieryness	file:
+UNKNOWN	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Route.java	/^        UNKNOWN, PASSABLE, UNPASSABLE;$/;"	e	enum:Route.AreaConnectCondition	file:
+UNKNOWN	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Router.java	/^		UNKNOWN, PASSABLE, UNPASSABLE;$/;"	e	enum:Router.AreaConnectCondition	file:
+UNKNOWN	./Comlib-ADK/src_old/move/Route.java	/^        UNKNOWN, PASSABLE, UNPASSABLE;$/;"	e	enum:Route.AreaConnectCondition	file:
+UNKNOWN	./Comlib-ADK/src_old/move/Router.java	/^		UNKNOWN, PASSABLE, UNPASSABLE;$/;"	e	enum:Router.AreaConnectCondition	file:
 UNLOAD_COLOUR	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/view/CommandLayer.java	/^    private static final Color UNLOAD_COLOUR = new Color(255, 255, 255, 128);$/;"	f	class:CommandLayer	file:
+UNPASSABLE	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Route.java	/^        UNKNOWN, PASSABLE, UNPASSABLE;$/;"	e	enum:Route.AreaConnectCondition	file:
+UNPASSABLE	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Router.java	/^		UNKNOWN, PASSABLE, UNPASSABLE;$/;"	e	enum:Router.AreaConnectCondition	file:
+UNPASSABLE	./Comlib-ADK/src_old/move/Route.java	/^        UNKNOWN, PASSABLE, UNPASSABLE;$/;"	e	enum:Route.AreaConnectCondition	file:
+UNPASSABLE	./Comlib-ADK/src_old/move/Router.java	/^		UNKNOWN, PASSABLE, UNPASSABLE;$/;"	e	enum:Router.AreaConnectCondition	file:
 UPDATES	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/log/RecordType.java	/^    UPDATES(0x04),$/;"	e	enum:RecordType	file:
 URIS	../roborescue-roborescue/modules/maps/src/maps/gml/formats/GeospatialInformationAuthorityFormat.java	/^    private static final Map<String, String> URIS = new HashMap<String, String>();$/;"	f	class:GeospatialInformationAuthorityFormat	file:
 URIS	../roborescue-roborescue/modules/maps/src/maps/gml/formats/MeijoFormat.java	/^    private static final Map<String, String> URIS = new HashMap<String, String>();$/;"	f	class:MeijoFormat	file:
@@ -2588,6 +2637,7 @@ UpdatesRecord	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/log/U
 UpdatesRecord	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/log/UpdatesRecord.java	/^public class UpdatesRecord implements LogRecord {$/;"	c
 UseIconsAction	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/view/HumanLayer.java	/^        public UseIconsAction() {$/;"	m	class:HumanLayer.UseIconsAction
 UseIconsAction	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/view/HumanLayer.java	/^    private final class UseIconsAction extends AbstractAction {$/;"	c	class:HumanLayer
+Util	./Comlib-ADK/src_old/move/Util.java	/^public class Util {$/;"	c
 VERSION_QNAME	../roborescue-roborescue/modules/maps/src/maps/gml/formats/MeijoFormat.java	/^    private static final QName VERSION_QNAME = DocumentHelper.createQName("Version", RCRS_NAMESPACE);$/;"	f	class:MeijoFormat	file:
 VIEWER	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/java/LoadableType.java	/^    public static final LoadableType VIEWER = new LoadableType("Viewer", "(.+Viewer).class", Viewer.class);$/;"	f	class:LoadableType
 VIEWERS_KEY	../roborescue-roborescue/modules/kernel/src/kernel/KernelConstants.java	/^    public static final String VIEWERS_KEY = "kernel.viewers";$/;"	f	class:KernelConstants
@@ -2758,6 +2808,8 @@ add	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/gui/ListMo
 add	../roborescue-roborescue/modules/traffic3/src/traffic3/objects/Force.java	/^    public void add(Force... forces) {$/;"	m	class:Force
 add	../roborescue-roborescue/modules/traffic3/src/traffic3/objects/Force.java	/^    public void add(double x, double y) {$/;"	m	class:Force
 add	./Comlib-ADK/src/main/java/comlib/adk/dummy/util/CivilianManager.java	/^    public void add(Civilian civilian) {$/;"	m	class:CivilianManager
+add	./Comlib-ADK/src/main/java/comlib/adk/util/ambulance/CivilianManager.java	/^    public void add(Civilian civilian) {$/;"	m	class:CivilianManager
+add	./Comlib-ADK/src_old/util/CivilianManager.java	/^    public void add(Civilian civilian) {$/;"	m	class:CivilianManager
 add	./Comlib/src_old/creator/MessageCreator.java	/^	public void add(RadioConfig config, BitOutputStream bos, CommunicationMessage msg)$/;"	m	class:MessageCreator
 add	./Comlib/src_old/creator/MessageCreator.java	/^	public void add(VoiceConfig config, StringBuilder builder, CommunicationMessage msg)$/;"	m	class:MessageCreator
 addAgent	../roborescue-roborescue/modules/kernel/src/kernel/Kernel.java	/^    public void addAgent(AgentProxy agent) {$/;"	m	class:Kernel
@@ -2838,6 +2890,10 @@ addHydrant	../roborescue-roborescue/modules/gis2/src/gis2/GisScenario.java	/^	pu
 addIntersection	../roborescue-roborescue/modules/maps/src/maps/convert/osm2gml/TemporaryMap.java	/^    public void addIntersection(TemporaryIntersection intersection) {$/;"	m	class:TemporaryMap
 addKernelListener	../roborescue-roborescue/modules/kernel/src/kernel/Kernel.java	/^    public void addKernelListener(KernelListener l) {$/;"	m	class:Kernel
 addLayer	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/view/LayerViewComponent.java	/^    public void addLayer(ViewLayer layer) {$/;"	m	class:LayerViewComponent
+addLink	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Route.java	/^	public void addLink(Route r) {$/;"	m	class:Route
+addLink	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Route.java	/^	public void addLink(Route r, Edge e) {$/;"	m	class:Route
+addLink	./Comlib-ADK/src_old/move/Route.java	/^	public void addLink(Route r) {$/;"	m	class:Route
+addLink	./Comlib-ADK/src_old/move/Route.java	/^	public void addLink(Route r, Edge e) {$/;"	m	class:Route
 addMessage	./Comlib/src_old/manager/MessageManager.java	/^    public void addMessage(CommunicationMessage msg)$/;"	m	class:MessageManager
 addMessageComponent	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/messages/AbstractMessage.java	/^    protected void addMessageComponent(MessageComponent component) {$/;"	m	class:AbstractMessage
 addMessageForAgent	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/kernel/comms/AbstractChannel.java	/^    protected void addMessageForAgent(Entity a, AKSpeak msg) {$/;"	m	class:AbstractChannel
@@ -3012,6 +3068,8 @@ block	../roborescue-roborescue/modules/collapse/src/collapse/CollapseSimulatorGU
 blockade	../roborescue-roborescue/modules/traffic3/src/traffic3/objects/TrafficBlockade.java	/^    private Blockade blockade;$/;"	f	class:TrafficBlockade	file:
 blockadeByID	../roborescue-roborescue/modules/traffic3/src/traffic3/manager/TrafficManager.java	/^    private Map<Integer, TrafficBlockade> blockadeByID;$/;"	f	class:TrafficManager	file:
 blockadeLines	../roborescue-roborescue/modules/traffic3/src/traffic3/objects/TrafficArea.java	/^	private List<Line2D> blockadeLines;$/;"	f	class:TrafficArea	file:
+blockadeMap	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Route.java	/^    private Map<EntityID, Route> blockadeMap;$/;"	f	class:Route	file:
+blockadeMap	./Comlib-ADK/src_old/move/Route.java	/^    private Map<EntityID, Route> blockadeMap;$/;"	f	class:Route	file:
 blockadeMessageID	./Comlib/src_old/message/CommunicationMessage.java	/^	public static final int blockadeMessageID = 1;$/;"	f	class:CommunicationMessage
 blockadeProgress	../roborescue-roborescue/modules/collapse/src/collapse/CollapseSimulatorGUI.java	/^    private JProgressBar blockadeProgress;$/;"	f	class:CollapseSimulatorGUI	file:
 blockadeToArea	../roborescue-roborescue/modules/collapse/src/collapse/CollapseSimulator.java	/^	private java.awt.geom.Area blockadeToArea(Blockade b) {$/;"	m	class:CollapseSimulator	file:
@@ -3084,10 +3142,22 @@ buryDamage	../roborescue-roborescue/modules/misc/src/misc/MiscParameters.java	/^
 buryInjuryProbability	../roborescue-roborescue/modules/misc/src/misc/MiscParameters.java	/^        private Map<Injury, Double> buryInjuryProbability;$/;"	f	class:MiscParameters.BuildingClass	file:
 bytesReceived	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/connection/AbstractConnection.java	/^    protected void bytesReceived(byte[] b) {$/;"	m	class:AbstractConnection
 cacheInformation	../roborescue-roborescue/modules/traffic3/src/traffic3/manager/TrafficManager.java	/^    public void cacheInformation(StandardWorldModel world) {$/;"	m	class:TrafficManager
+calcMoveCost	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Router.java	/^	private void calcMoveCost(Route r, int time) {$/;"	m	class:Router	file:
+calcMoveCost	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Router.java	/^	public void calcMoveCost(Area a, int time) {$/;"	m	class:Router
+calcMoveCost	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Router.java	/^	public void calcMoveCost(EntityID id, int time) {$/;"	m	class:Router
+calcMoveCost	./Comlib-ADK/src_old/move/Router.java	/^	private void calcMoveCost(Route r, int time) {$/;"	m	class:Router	file:
+calcMoveCost	./Comlib-ADK/src_old/move/Router.java	/^	public void calcMoveCost(Area a, int time) {$/;"	m	class:Router
+calcMoveCost	./Comlib-ADK/src_old/move/Router.java	/^	public void calcMoveCost(EntityID id, int time) {$/;"	m	class:Router
 calculateBounds	../roborescue-roborescue/modules/maps/src/maps/gml/GMLMap.java	/^    private void calculateBounds() {$/;"	m	class:GMLMap	file:
 calculateBounds	../roborescue-roborescue/modules/maps/src/maps/osm/OSMMap.java	/^    private void calculateBounds() {$/;"	m	class:OSMMap	file:
 calculateBuriedness	../roborescue-roborescue/modules/misc-new/src/misc/MiscSimulator.java	/^    private int calculateBuriedness(Human h, Building b) {$/;"	m	class:MiscSimulator	file:
 calculateDirection	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/geometry/Line2D.java	/^	private void calculateDirection() {$/;"	m	class:Line2D	file:
+calculateMoveCost	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Router.java	/^	public void calculateMoveCost(Area a, int time) {$/;"	m	class:Router
+calculateMoveCost	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Router.java	/^	public void calculateMoveCost(EntityID id, int time) {$/;"	m	class:Router
+calculateMoveCost	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Router.java	/^	public void calculateMoveCost(Route r, int time) {$/;"	m	class:Router
+calculateMoveCost	./Comlib-ADK/src_old/move/Router.java	/^	public void calculateMoveCost(Area a, int time) {$/;"	m	class:Router
+calculateMoveCost	./Comlib-ADK/src_old/move/Router.java	/^	public void calculateMoveCost(EntityID id, int time) {$/;"	m	class:Router
+calculateMoveCost	./Comlib-ADK/src_old/move/Router.java	/^	public void calculateMoveCost(Route r, int time) {$/;"	m	class:Router
 call	../roborescue-roborescue/modules/kernel/src/kernel/CompositeCommandCollector.java	/^        public Collection<Command> call() throws Exception {$/;"	m	class:CompositeCommandCollector.ChildCommandsFetcher
 call	../roborescue-roborescue/modules/kernel/src/kernel/StartKernel.java	/^		public Void call() throws InterruptedException {$/;"	m	class:StartKernel.ComponentStarter
 callback	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/connection/ConnectionManager.java	/^        private ConnectionManagerListener callback;$/;"	f	class:ConnectionManager.Reader	file:
@@ -3168,10 +3238,16 @@ civ4	../roborescue-roborescue/modules/standard/test/rescuecore2/standard/kernel/
 civ4Expected	../roborescue-roborescue/modules/standard/test/rescuecore2/standard/kernel/comms/ChannelCommunicationModelTest.java	/^    private Collection<AKSpeak> civ4Expected;$/;"	f	class:ChannelCommunicationModelTest	file:
 civLocations	../roborescue-roborescue/modules/gis2/src/gis2/GisScenario.java	/^	private Collection<Integer> civLocations;$/;"	f	class:GisScenario	file:
 civilianList	./Comlib-ADK/src/main/java/comlib/adk/dummy/util/CivilianManager.java	/^    private Set<Civilian> civilianList;$/;"	f	class:CivilianManager	file:
+civilianList	./Comlib-ADK/src/main/java/comlib/adk/util/ambulance/CivilianManager.java	/^    public List<EntityID> civilianList;$/;"	f	class:CivilianManager
+civilianList	./Comlib-ADK/src_old/util/CivilianManager.java	/^    private Set<Civilian> civilianList;$/;"	f	class:CivilianManager	file:
 civilianManager	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyAmbulance.java	/^    public CivilianManager civilianManager;$/;"	f	class:DummyAmbulance
 civilianManager	./Comlib-ADK/src/main/java/comlib/adk/dummy/event/AmbulanceCivilianEvent.java	/^    private CivilianManager civilianManager;$/;"	f	class:AmbulanceCivilianEvent	file:
+civilianManager	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyAmbulance.java	/^    public CivilianManager civilianManager;$/;"	f	class:DummyAmbulance
+civilianManager	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/event/AmbulanceCivilianEvent.java	/^    private CivilianManager civilianManager;$/;"	f	class:AmbulanceCivilianEvent	file:
 civilianMap	./Comlib-ADK/src/main/java/comlib/adk/dummy/util/CivilianManager.java	/^    private Map<EntityID, Civilian> civilianMap;$/;"	f	class:CivilianManager	file:
+civilianMap	./Comlib-ADK/src_old/util/CivilianManager.java	/^    private Map<EntityID, Civilian> civilianMap;$/;"	f	class:CivilianManager	file:
 civilianMessage	./Comlib/src/main/java/comlib/message/MessageID.java	/^	int civilianMessage = 0;$/;"	f	interface:MessageID
+classBaseName	./Comlib-ADK/src_old/move/Util.java	/^	public static String classBaseName(Object obj) {$/;"	m	class:Util
 classFound	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/java/LoadableTypeCallback.java	/^    void classFound(LoadableType type, String className);$/;"	m	interface:LoadableTypeCallback
 classFound	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/java/LoadableTypeProcessor.java	/^        public void classFound(LoadableType otherType, String className) {$/;"	m	class:LoadableTypeProcessor.ConfigCallback
 classFound	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/java/LoadableTypeProcessor.java	/^        public void classFound(LoadableType type, String className) {$/;"	m	class:LoadableTypeProcessor.EntityFactoryRegisterCallback
@@ -3223,6 +3299,8 @@ clearBuildingDecorator	../roborescue-roborescue/modules/maps/src/maps/gml/view/G
 clearCache	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/config/Config.java	/^    private void clearCache() {$/;"	m	class:Config	file:
 clearCache	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/config/Config.java	/^    private void clearCache(String key) {$/;"	m	class:Config	file:
 clearCache	../roborescue-roborescue/modules/traffic3/src/traffic3/simulator/TrafficSimulator.java	/^	private void clearCache(KSUpdate u) {$/;"	m	class:TrafficSimulator	file:
+clearCost	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Router.java	/^	private void clearCost(int time) {$/;"	m	class:Router	file:
+clearCost	./Comlib-ADK/src_old/move/Router.java	/^	private void clearCost(int time) {$/;"	m	class:Router	file:
 clearDamage	../roborescue-roborescue/modules/misc/src/misc/HumanAttributes.java	/^    public void clearDamage() {$/;"	m	class:HumanAttributes
 clearData	../roborescue-roborescue/modules/maps/src/maps/gml/editor/CreateShapeTool.java	/^    private void clearData() {$/;"	m	class:CreateShapeTool	file:
 clearEdgeDecorator	../roborescue-roborescue/modules/maps/src/maps/gml/view/DecoratorOverlay.java	/^    public void clearEdgeDecorator(Collection<? extends GMLEdge> edges) {$/;"	m	class:DecoratorOverlay
@@ -3302,6 +3380,12 @@ comlib.adk.launcher	./Comlib-ADK/src/main/java/comlib/adk/launcher/ConfigInitial
 comlib.adk.launcher	./Comlib-ADK/src/main/java/comlib/adk/launcher/ConfigKey.java	/^package comlib.adk.launcher;$/;"	p
 comlib.adk.launcher	./Comlib-ADK/src/main/java/comlib/adk/launcher/Main.java	/^package comlib.adk.launcher;$/;"	p
 comlib.adk.launcher	./Comlib-ADK/src/main/java/comlib/adk/launcher/TeamLoader.java	/^package comlib.adk.launcher;$/;"	p
+comlib.adk.launcher.dummy	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyAmbulance.java	/^package comlib.adk.launcher.dummy;$/;"	p
+comlib.adk.launcher.dummy	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyFire.java	/^package comlib.adk.launcher.dummy;$/;"	p
+comlib.adk.launcher.dummy	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyPolice.java	/^package comlib.adk.launcher.dummy;$/;"	p
+comlib.adk.launcher.dummy	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyTeam.java	/^package comlib.adk.launcher.dummy;$/;"	p
+comlib.adk.launcher.dummy.event	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/event/AmbulanceCivilianEvent.java	/^package comlib.adk.launcher.dummy.event;$/;"	p
+comlib.adk.launcher.dummy.util	./Comlib-ADK/src_old/util/CivilianManager.java	/^package comlib.adk.launcher.dummy.util;$/;"	p
 comlib.adk.launcher.option	./Comlib-ADK/src/main/java/comlib/adk/launcher/option/Option.java	/^package comlib.adk.launcher.option;$/;"	p
 comlib.adk.launcher.option	./Comlib-ADK/src/main/java/comlib/adk/launcher/option/OptionAmbulance.java	/^package comlib.adk.launcher.option;$/;"	p
 comlib.adk.launcher.option	./Comlib-ADK/src/main/java/comlib/adk/launcher/option/OptionDirectory.java	/^package comlib.adk.launcher.option;$/;"	p
@@ -3320,6 +3404,18 @@ comlib.adk.util.action	./Comlib-ADK/src/main/java/comlib/adk/util/action/Action.
 comlib.adk.util.action	./Comlib-ADK/src/main/java/comlib/adk/util/action/AmbulanceAction.java	/^package comlib.adk.util.action;$/;"	p
 comlib.adk.util.action	./Comlib-ADK/src/main/java/comlib/adk/util/action/FireAction.java	/^package comlib.adk.util.action;$/;"	p
 comlib.adk.util.action	./Comlib-ADK/src/main/java/comlib/adk/util/action/PoliceAction.java	/^package comlib.adk.util.action;$/;"	p
+comlib.adk.util.ambulance	./Comlib-ADK/src/main/java/comlib/adk/util/ambulance/CivilianManager.java	/^package comlib.adk.util.ambulance;$/;"	p
+comlib.adk.util.move	./Comlib-ADK/src_old/move/MoveTool.java	/^package comlib.adk.util.move;$/;"	p
+comlib.adk.util.move	./Comlib-ADK/src_old/move/Route.java	/^package comlib.adk.util.move;$/;"	p
+comlib.adk.util.move	./Comlib-ADK/src_old/move/RouteFactory.java	/^package comlib.adk.util.move;$/;"	p
+comlib.adk.util.move	./Comlib-ADK/src_old/move/Router.java	/^package comlib.adk.util.move;$/;"	p
+comlib.adk.util.move	./Comlib-ADK/src_old/move/Util.java	/^package comlib.adk.util.move;$/;"	p
+comlib.adk.util.route	./Comlib-ADK/src/main/java/comlib/adk/util/route/RouteSearch.java	/^package comlib.adk.util.route;$/;"	p
+comlib.adk.util.route	./Comlib-ADK/src/main/java/comlib/adk/util/route/RouteUtil.java	/^package comlib.adk.util.route;$/;"	p
+comlib.adk.util.route.sample	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Route.java	/^package comlib.adk.util.route.sample;$/;"	p
+comlib.adk.util.route.sample	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/RouteFactory.java	/^package comlib.adk.util.route.sample;$/;"	p
+comlib.adk.util.route.sample	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Router.java	/^package comlib.adk.util.route.sample;$/;"	p
+comlib.adk.util.route.sample	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/SampleRouteSearch.java	/^package comlib.adk.util.route.sample;$/;"	p
 comlib.agent	./Comlib/src/main/java/comlib/agent/CommunicationAgent.java	/^package comlib.agent;$/;"	p
 comlib.agent	./Comlib/src_old/agent/CommunicationAgent.java	/^package comlib.agent;$/;"	p
 comlib.agent	./Comlib/src_old/agent/MessageEvent.java	/^package comlib.agent;$/;"	p
@@ -3423,6 +3519,8 @@ computeNeighbours	../roborescue-roborescue/modules/traffic3/src/traffic3/manager
 computePath	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/misc/AgentPath.java	/^    public static AgentPath computePath(Human human, StandardWorldModel world) {$/;"	m	class:AgentPath
 computeSize	../roborescue-roborescue/modules/gis2/src/gis2/scenario/ModifiedFlowLayout.java	/^	private Dimension computeSize(Container target) {$/;"	m	class:ModifiedFlowLayout	file:
 computeWallsForce	../roborescue-roborescue/modules/traffic3/src/traffic3/objects/TrafficAgent.java	/^	private void computeWallsForce(double[] result, double dt) {$/;"	m	class:TrafficAgent	file:
+conditionMap	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Route.java	/^    private Map<Route, AreaConnectCondition> conditionMap;$/;"	f	class:Route	file:
+conditionMap	./Comlib-ADK/src_old/move/Route.java	/^    private Map<Route, AreaConnectCondition> conditionMap;$/;"	f	class:Route	file:
 config	../roborescue-roborescue/modules/kernel/src/kernel/ComponentManager.java	/^		Config config;$/;"	f	class:ComponentManager.ControlledEntityInfo
 config	../roborescue-roborescue/modules/kernel/src/kernel/ComponentManager.java	/^	private Config config;$/;"	f	class:ComponentManager	file:
 config	../roborescue-roborescue/modules/kernel/src/kernel/Kernel.java	/^    private Config config;$/;"	f	class:Kernel	file:
@@ -3469,6 +3567,8 @@ connection	../roborescue-roborescue/modules/kernel/src/kernel/ComponentManager.j
 connection	../roborescue-roborescue/modules/kernel/src/kernel/ComponentManager.java	/^		Connection connection;$/;"	f	class:ComponentManager.SimulatorAck
 connection	../roborescue-roborescue/modules/kernel/src/kernel/ComponentManager.java	/^		Connection connection;$/;"	f	class:ComponentManager.ViewerAck
 connection	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/components/AbstractComponent.java	/^    protected Connection connection;$/;"	f	class:AbstractComponent
+connectionMap	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Route.java	/^    private Map<EntityID, Edge> connectionMap;$/;"	f	class:Route	file:
+connectionMap	./Comlib-ADK/src_old/move/Route.java	/^    private Map<EntityID, Edge> connectionMap;$/;"	f	class:Route	file:
 consciousThreshold	../roborescue-roborescue/modules/sample/src/sample/SampleCivilian.java	/^    private int consciousThreshold;$/;"	f	class:SampleCivilian	file:
 constant	../roborescue-roborescue/modules/maps/src/maps/ConstantConversion.java	/^    private double constant;$/;"	f	class:ConstantConversion	file:
 constraints	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/config/Config.java	/^    private Set<ConfigConstraint> constraints;$/;"	f	class:Config	file:
@@ -3487,6 +3587,7 @@ containsAll	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/gu
 containsKey	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/collections/DelegatingMap.java	/^    public boolean containsKey(Object key) {$/;"	m	class:DelegatingMap
 containsKey	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/collections/LazyMap.java	/^    public boolean containsKey(Object key) {$/;"	m	class:LazyMap
 containsKey	./Comlib-ADK/src/main/java/comlib/adk/dummy/util/CivilianManager.java	/^    public boolean containsKey(EntityID id) {$/;"	m	class:CivilianManager
+containsKey	./Comlib-ADK/src_old/util/CivilianManager.java	/^    public boolean containsKey(EntityID id) {$/;"	m	class:CivilianManager
 containsValue	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/collections/DelegatingMap.java	/^    public boolean containsValue(Object value) {$/;"	m	class:DelegatingMap
 containsValue	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/collections/LazyMap.java	/^    public boolean containsValue(Object value) {$/;"	m	class:LazyMap
 control	../roborescue-roborescue/modules/kernel/src/kernel/ui/KernelGUI.java	/^    private KernelControlPanel control;$/;"	f	class:KernelGUI	file:
@@ -3543,6 +3644,12 @@ copyImpl	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/enti
 copyImpl	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/Road.java	/^    protected Entity copyImpl() {$/;"	m	class:Road
 copyImpl	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/World.java	/^    protected Entity copyImpl() {$/;"	m	class:World
 copyProperties	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/EntityTools.java	/^    public static void copyProperties(Entity from, Entity to) {$/;"	m	class:EntityTools
+cost	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Route.java	/^    private int cost;$/;"	f	class:Route	file:
+cost	./Comlib-ADK/src_old/move/Route.java	/^    private int cost;$/;"	f	class:Route	file:
+costCalculatedTime	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Router.java	/^	private int costCalculatedTime;$/;"	f	class:Router	file:
+costCalculatedTime	./Comlib-ADK/src_old/move/Router.java	/^	private int costCalculatedTime;$/;"	f	class:Router	file:
+costUpdatedTime	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Route.java	/^    private int costUpdatedTime;$/;"	f	class:Route	file:
+costUpdatedTime	./Comlib-ADK/src_old/move/Route.java	/^    private int costUpdatedTime;$/;"	f	class:Route	file:
 count	../roborescue-roborescue/modules/kernel/src/kernel/StartKernel.java	/^		private int count;$/;"	f	class:StartKernel.ComponentStarter	file:
 count	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/messages/control/EntityIDRequest.java	/^    private IntComponent count;$/;"	f	class:EntityIDRequest	file:
 count	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/CountingInputStream.java	/^    private int count;$/;"	f	class:CountingInputStream	file:
@@ -3758,6 +3865,10 @@ die	./gradlew	/^die ( ) {$/;"	f
 dir	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/java/LoadableTypeProcessor.java	/^    private String dir;$/;"	f	class:LoadableTypeProcessor	file:
 direction	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/geometry/Line2D.java	/^    private Vector2D direction;$/;"	f	class:Line2D	file:
 direction	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/Human.java	/^    private IntProperty direction;$/;"	f	class:Human	file:
+direction	./Comlib-ADK/src/main/java/comlib/adk/util/route/RouteUtil.java	/^    public static int direction(Pair<Integer, Integer> from, Pair<Integer, Integer> to) {$/;"	m	class:RouteUtil
+direction	./Comlib-ADK/src/main/java/comlib/adk/util/route/RouteUtil.java	/^    public static int direction(StandardWorldModel model, StandardEntity from, StandardEntity to) {$/;"	m	class:RouteUtil
+direction	./Comlib-ADK/src_old/move/Util.java	/^	public static final int direction(Pair<Integer, Integer> from,$/;"	m	class:Util
+direction	./Comlib-ADK/src_old/move/Util.java	/^	public static final int direction(StandardWorldModel model,$/;"	m	class:Util
 disableAllButtons	../roborescue-roborescue/modules/kernel/src/kernel/ui/KernelControlPanel.java	/^    private void disableAllButtons() throws InterruptedException {$/;"	m	class:KernelControlPanel	file:
 disablePanZoom	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/view/ViewComponent.java	/^    public void disablePanZoom() {$/;"	m	class:ViewComponent
 distance	../roborescue-roborescue/modules/sample/src/sample/SamplePoliceForce.java	/^    private int distance;$/;"	f	class:SamplePoliceForce	file:
@@ -3765,6 +3876,19 @@ distance	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/enti
 distance	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/StandardWorldModel.java	/^    private int distance(int x1, int y1, int x2, int y2) {$/;"	m	class:StandardWorldModel	file:
 distance	../roborescue-roborescue/modules/traffic3/src/traffic3/objects/TrafficAgent.java	/^		private double distance;$/;"	f	class:TrafficAgent.WallInfo	file:
 distance	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/PoliceForceTactics.java	/^    public int distance;$/;"	f	class:PoliceForceTactics
+distance	./Comlib-ADK/src/main/java/comlib/adk/util/route/RouteUtil.java	/^    public static int distance(Edge e1, Edge e2) {$/;"	m	class:RouteUtil
+distance	./Comlib-ADK/src/main/java/comlib/adk/util/route/RouteUtil.java	/^    public static int distance(StandardWorldModel model, StandardEntity from, StandardEntity to) {$/;"	m	class:RouteUtil
+distance	./Comlib-ADK/src/main/java/comlib/adk/util/route/RouteUtil.java	/^    public static int distance(StandardWorldModel model, StandardEntity from, int toX, int toY) {$/;"	m	class:RouteUtil
+distance	./Comlib-ADK/src/main/java/comlib/adk/util/route/RouteUtil.java	/^    public static int distance(int x, int y, Edge e) {$/;"	m	class:RouteUtil
+distance	./Comlib-ADK/src/main/java/comlib/adk/util/route/RouteUtil.java	/^    public static int distance(int x, int y, int x2, int y2) {$/;"	m	class:RouteUtil
+distance	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Route.java	/^	private int distance(Edge e) {$/;"	m	class:Route	file:
+distance	./Comlib-ADK/src_old/move/Route.java	/^	private int distance(Edge e) {$/;"	m	class:Route	file:
+distance	./Comlib-ADK/src_old/move/Util.java	/^	public static final int distance(Edge e1, Edge e2) {$/;"	m	class:Util
+distance	./Comlib-ADK/src_old/move/Util.java	/^	public static final int distance(StandardWorldModel model,$/;"	m	class:Util
+distance	./Comlib-ADK/src_old/move/Util.java	/^	public static final int distance(int x, int y, Edge e) {$/;"	m	class:Util
+distance	./Comlib-ADK/src_old/move/Util.java	/^	public static final int distance(int x, int y, int x2, int y2) {$/;"	m	class:Util
+distanceMap	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Route.java	/^    private Map<Route, Integer> distanceMap;$/;"	f	class:Route	file:
+distanceMap	./Comlib-ADK/src_old/move/Route.java	/^    private Map<Route, Integer> distanceMap;$/;"	f	class:Route	file:
 divide	../roborescue-roborescue/modules/maps/src/maps/gml/generator/ManhattanGenerator.java	/^    private Collection<GMLBuilding> divide(GMLBuilding b) {$/;"	m	class:ManhattanGenerator	file:
 doBlock	../roborescue-roborescue/modules/collapse/src/collapse/CollapseSimulator.java	/^	private Map<Road, Collection<java.awt.geom.Area>> doBlock($/;"	m	class:CollapseSimulator	file:
 doCollapse	../roborescue-roborescue/modules/collapse/src/collapse/CollapseSimulator.java	/^	private Collection<Building> doCollapse(ChangeSet changes, int time) {$/;"	m	class:CollapseSimulator	file:
@@ -3910,6 +4034,8 @@ equals	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/geometr
 equals	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/worldmodel/AbstractEntity.java	/^    public boolean equals(Object o) {$/;"	m	class:AbstractEntity
 equals	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/worldmodel/EntityID.java	/^    public boolean equals(Object o) {$/;"	m	class:EntityID
 equals	../roborescue-roborescue/modules/rescuecore2/test/rescuecore2/connection/TestMessage.java	/^    public boolean equals(Object other) {$/;"	m	class:TestMessage
+equals	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Route.java	/^	public boolean equals(Object obj) {$/;"	m	class:Route
+equals	./Comlib-ADK/src_old/move/Route.java	/^	public boolean equals(Object obj) {$/;"	m	class:Route
 error	../roborescue-roborescue/modules/maps/src/maps/validate/ValidationException.java	/^    private ValidationError error;$/;"	f	class:ValidationException	file:
 error	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/log/Logger.java	/^    public static void error(String msg) {$/;"	m	class:Logger
 error	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/log/Logger.java	/^    public static void error(String msg, Throwable t) {$/;"	m	class:Logger
@@ -4165,7 +4291,10 @@ get	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/collection
 get	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/gui/ListModelList.java	/^    public T get(int index) {$/;"	m	class:ListModelList
 get	./Comlib-ADK/src/main/java/comlib/adk/dummy/util/CivilianManager.java	/^    public Civilian get(EntityID id) {$/;"	m	class:CivilianManager
 get	./Comlib-ADK/src/main/java/comlib/adk/launcher/TeamLoader.java	/^    public Team get(String name) {$/;"	m	class:TeamLoader
+get	./Comlib-ADK/src_old/util/CivilianManager.java	/^    public Civilian get(EntityID id) {$/;"	m	class:CivilianManager
 get	./Comlib/src/main/java/comlib/util/IntegerDataHelper.java	/^    public static int get(int data, int start, int size) {$/;"	m	class:IntegerDataHelper
+getAddedAreaList	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Router.java	/^	public List<Route> getAddedAreaList() {$/;"	m	class:Router
+getAddedAreaList	./Comlib-ADK/src_old/move/Router.java	/^	public List<Route> getAddedAreaList() {$/;"	m	class:Router
 getAftershocks	../roborescue-roborescue/modules/gis2/src/gis2/GisScenario.java	/^	public HashMap<Integer, Float> getAftershocks() {$/;"	m	class:GisScenario
 getAftershocks	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/messages/control/KSAfterShocksInfo.java	/^	public HashMap<Integer, Float> getAftershocks() {$/;"	m	class:KSAfterShocksInfo
 getAftershocks	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/scenario/compatibilities/CollapseSimCompatibaleScenarioV1_1.java	/^	public HashMap<Integer, Float> getAftershocks();$/;"	m	interface:CollapseSimCompatibaleScenarioV1_1
@@ -4211,6 +4340,7 @@ getAllSimulators	../roborescue-roborescue/modules/kernel/src/kernel/Kernel.java	
 getAllViewers	../roborescue-roborescue/modules/kernel/src/kernel/Kernel.java	/^    public Collection<ViewerProxy> getAllViewers() {$/;"	m	class:Kernel
 getAmbulanceCentres	../roborescue-roborescue/modules/gis2/src/gis2/GisScenario.java	/^	public Collection<Integer> getAmbulanceCentres() {$/;"	m	class:GisScenario
 getAmbulanceTeamTactics	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyTeam.java	/^    public AmbulanceTeamTactics getAmbulanceTeamTactics() {$/;"	m	class:DummyTeam
+getAmbulanceTeamTactics	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyTeam.java	/^    public AmbulanceTeamTactics getAmbulanceTeamTactics() {$/;"	m	class:DummyTeam
 getAmbulanceTeamTactics	./Comlib-ADK/src/main/java/comlib/adk/team/Team.java	/^    public AmbulanceTeamTactics getAmbulanceTeamTactics();$/;"	m	interface:Team
 getAmbulanceTeamTactics	./Comlib-ADK/src/main/java/comlib/adk/team/Team.java	/^    public abstract AmbulanceTeamTactics getAmbulanceTeamTactics();$/;"	m	class:Team
 getAmbulanceTeamTactics	./basefile/sample/SampleTeam.java	/^    public AmbulanceTeamTactics getAmbulanceTeamTactics() {$/;"	m	class:SampleTeam
@@ -4232,6 +4362,10 @@ getArea	../roborescue-roborescue/modules/traffic3/src/traffic3/objects/TrafficAg
 getArea	../roborescue-roborescue/modules/traffic3/src/traffic3/objects/TrafficAgent.java	/^	public TrafficArea getArea() {$/;"	m	class:TrafficAgent
 getArea	../roborescue-roborescue/modules/traffic3/src/traffic3/objects/TrafficArea.java	/^	public Area getArea() {$/;"	m	class:TrafficArea
 getArea	../roborescue-roborescue/modules/traffic3/src/traffic3/objects/TrafficBlockade.java	/^    public TrafficArea getArea() {$/;"	m	class:TrafficBlockade
+getArea	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Route.java	/^	public Area getArea() {$/;"	m	class:Route
+getArea	./Comlib-ADK/src_old/move/Route.java	/^	public Area getArea() {$/;"	m	class:Route
+getAreaConnectCondition	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Route.java	/^	public AreaConnectCondition getAreaConnectCondition(Route r) {$/;"	m	class:Route
+getAreaConnectCondition	./Comlib-ADK/src_old/move/Route.java	/^	public AreaConnectCondition getAreaConnectCondition(Route r) {$/;"	m	class:Route
 getAreaID	../roborescue-roborescue/modules/traffic3/src/traffic3/simulator/PathElement.java	/^    public EntityID getAreaID() {$/;"	m	class:PathElement
 getAreaLines	../roborescue-roborescue/modules/traffic3/src/traffic3/objects/TrafficArea.java	/^	public List<Line2D> getAreaLines() {$/;"	m	class:TrafficArea
 getAreas	../roborescue-roborescue/modules/clear/src/clear/Geometry.java	/^	public static List<int[]> getAreas(Area area) {$/;"	m	class:Geometry
@@ -4259,6 +4393,8 @@ getBitSizeOld	./Comlib/src/main/java/comlib/util/IntegerDataHelper.java	/^    pu
 getBits	./Comlib/src/main/java/comlib/util/BitStreamReader.java	/^	public synchronized int getBits(int len) throws ArrayIndexOutOfBoundsException {$/;"	m	class:BitStreamReader
 getBlockade	../roborescue-roborescue/modules/traffic3/src/traffic3/objects/TrafficBlockade.java	/^    public Blockade getBlockade() {$/;"	m	class:TrafficBlockade
 getBlockadeLines	../roborescue-roborescue/modules/traffic3/src/traffic3/objects/TrafficArea.java	/^	public List<Line2D> getBlockadeLines() {$/;"	m	class:TrafficArea
+getBlockadeMap	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Route.java	/^	public Map<EntityID, Route> getBlockadeMap() {$/;"	m	class:Route
+getBlockadeMap	./Comlib-ADK/src_old/move/Route.java	/^	public Map<EntityID, Route> getBlockadeMap() {$/;"	m	class:Route
 getBlockades	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/Area.java	/^    public List<EntityID> getBlockades() {$/;"	m	class:Area
 getBlockades	../roborescue-roborescue/modules/traffic3/src/traffic3/manager/TrafficManager.java	/^    public Collection<TrafficBlockade> getBlockades() {$/;"	m	class:TrafficManager
 getBlockades	../roborescue-roborescue/modules/traffic3/src/traffic3/objects/TrafficArea.java	/^	public Collection<TrafficBlockade> getBlockades() {$/;"	m	class:TrafficArea
@@ -4325,6 +4461,7 @@ getByteCount	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/C
 getCSBuiding	../roborescue-roborescue/modules/collapse/src/collapse/CollapseWorldModel.java	/^	public CSBuilding getCSBuiding(Building building) {$/;"	m	class:CollapseWorldModel
 getCSBuiding	../roborescue-roborescue/modules/collapse/src/collapse/CollapseWorldModel.java	/^	public CSBuilding getCSBuiding(EntityID id) {$/;"	m	class:CollapseWorldModel
 getCellEditorValue	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/gui/ConfigTree.java	/^        public Object getCellEditorValue() {$/;"	m	class:ConfigTree.ConfigEntryCellEditor
+getCenterCordinateOfEdge	./Comlib-ADK/src_old/move/Util.java	/^	public static Pair<Integer, Integer> getCenterCordinateOfEdge(Edge e) {$/;"	m	class:Util
 getCentre	../roborescue-roborescue/modules/maps/src/maps/convert/osm2gml/OSMIntersectionInfo.java	/^    public OSMNode getCentre() {$/;"	m	class:OSMIntersectionInfo
 getCentreLatitude	../roborescue-roborescue/modules/maps/src/maps/osm/OSMMap.java	/^    public double getCentreLatitude() {$/;"	m	class:OSMMap
 getCentreLongitude	../roborescue-roborescue/modules/maps/src/maps/osm/OSMMap.java	/^    public double getCentreLongitude() {$/;"	m	class:OSMMap
@@ -4349,6 +4486,7 @@ getChannels	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/m
 getChildFunction	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/score/DelegatingScoreFunction.java	/^    public ScoreFunction getChildFunction() {$/;"	m	class:DelegatingScoreFunction
 getChildFunctions	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/score/CompositeScoreFunction.java	/^    public Set<ScoreFunction> getChildFunctions() {$/;"	m	class:CompositeScoreFunction
 getCivilianList	./Comlib-ADK/src/main/java/comlib/adk/dummy/util/CivilianManager.java	/^    public Set<Civilian> getCivilianList() {$/;"	m	class:CivilianManager
+getCivilianList	./Comlib-ADK/src_old/util/CivilianManager.java	/^    public Set<Civilian> getCivilianList() {$/;"	m	class:CivilianManager
 getCivilians	../roborescue-roborescue/modules/gis2/src/gis2/GisScenario.java	/^	public Collection<Integer> getCivilians() {$/;"	m	class:GisScenario
 getClearArea	../roborescue-roborescue/modules/clear/src/clear/Geometry.java	/^	public static Area getClearArea(Human agent, int targetX, int targetY,$/;"	m	class:Geometry
 getClearArea	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/view/CommandLayer.java	/^	public static Area getClearArea(Human agent, int targetX, int targetY,$/;"	m	class:CommandLayer
@@ -4386,6 +4524,8 @@ getCommands	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/message
 getCommands	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/messages/control/KVTimestep.java	/^    public List<Command> getCommands() {$/;"	m	class:KVTimestep
 getCommunicationModel	../roborescue-roborescue/modules/kernel/src/kernel/KernelStartupOptions.java	/^    public CommunicationModel getCommunicationModel() {$/;"	m	class:KernelStartupOptions
 getComponents	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/messages/AbstractMessage.java	/^    public final List<MessageComponent> getComponents() {$/;"	m	class:AbstractMessage
+getConditionMap	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Route.java	/^	public Map<Route, AreaConnectCondition> getConditionMap() {$/;"	m	class:Route
+getConditionMap	./Comlib-ADK/src_old/move/Route.java	/^	public Map<Route, AreaConnectCondition> getConditionMap() {$/;"	m	class:Route
 getConfig	../roborescue-roborescue/modules/kernel/src/kernel/Kernel.java	/^    public Config getConfig() {$/;"	m	class:Kernel
 getConfig	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/log/ConfigRecord.java	/^    public Config getConfig() {$/;"	m	class:ConfigRecord
 getConfig	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/log/FileLogReader.java	/^    public Config getConfig() {$/;"	m	class:FileLogReader
@@ -4398,6 +4538,8 @@ getConfig	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/messages/
 getConfig	./Comlib-ADK/src/main/java/comlib/adk/launcher/ConfigInitializer.java	/^    public static Config getConfig(String[] args) {$/;"	m	class:ConfigInitializer
 getConnection	../roborescue-roborescue/modules/kernel/src/kernel/AbstractKernelComponent.java	/^    public Connection getConnection() {$/;"	m	class:AbstractKernelComponent
 getConnection	../roborescue-roborescue/modules/kernel/src/kernel/KernelComponent.java	/^    Connection getConnection();$/;"	m	interface:KernelComponent
+getConnectionMap	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Route.java	/^	public Map<EntityID, Edge> getConnectionMap() {$/;"	m	class:Route
+getConnectionMap	./Comlib-ADK/src_old/move/Route.java	/^	public Map<EntityID, Edge> getConnectionMap() {$/;"	m	class:Route
 getContent	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/messages/AKSay.java	/^    public byte[] getContent() {$/;"	m	class:AKSay
 getContent	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/messages/AKSpeak.java	/^    public byte[] getContent() {$/;"	m	class:AKSpeak
 getContent	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/messages/AKTell.java	/^    public byte[] getContent() {$/;"	m	class:AKTell
@@ -4409,6 +4551,12 @@ getCoordinates	../roborescue-roborescue/modules/maps/src/maps/gml/GMLShape.java	
 getCoordinatesAtPoint	../roborescue-roborescue/modules/maps/src/maps/gml/view/GMLMapViewer.java	/^    public GMLCoordinates getCoordinatesAtPoint(int x, int y) {$/;"	m	class:GMLMapViewer
 getCoordinatesList	../roborescue-roborescue/modules/maps/src/maps/gml/GMLTools.java	/^    public static List<GMLCoordinates> getCoordinatesList(String coords) {$/;"	m	class:GMLTools
 getCoordinatesString	../roborescue-roborescue/modules/maps/src/maps/gml/GMLTools.java	/^    public static String getCoordinatesString(List<GMLCoordinates> coords) {$/;"	m	class:GMLTools
+getCost	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Route.java	/^	public int getCost() {$/;"	m	class:Route
+getCost	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Router.java	/^	public int getCost(EntityID id) {$/;"	m	class:Router
+getCost	./Comlib-ADK/src_old/move/Route.java	/^	public int getCost() {$/;"	m	class:Route
+getCost	./Comlib-ADK/src_old/move/Router.java	/^	public int getCost(EntityID id) {$/;"	m	class:Router
+getCostUpdatedTime	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Route.java	/^	public int getCostUpdatedTime() {$/;"	m	class:Route
+getCostUpdatedTime	./Comlib-ADK/src_old/move/Route.java	/^	public int getCostUpdatedTime() {$/;"	m	class:Route
 getCount	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/messages/control/EntityIDRequest.java	/^    public int getCount() {$/;"	m	class:EntityIDRequest
 getCount	../roborescue-roborescue/modules/rescuecore2/test/rescuecore2/connection/ConnectionManagerTest.java	/^        public synchronized int getCount() {$/;"	m	class:ConnectionManagerTest.TestConnectionManagerListener
 getCurrentDestination	../roborescue-roborescue/modules/traffic3/src/traffic3/objects/TrafficAgent.java	/^	public Point2D getCurrentDestination() {$/;"	m	class:TrafficAgent
@@ -4469,6 +4617,13 @@ getDistance	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/e
 getDistance	../roborescue-roborescue/modules/traffic3/src/traffic3/objects/TrafficAgent.java	/^		public double getDistance() {$/;"	m	class:TrafficAgent.WallInfo
 getDistance	../roborescue-roborescue/modules/traffic3/src/traffic3/objects/TrafficArea.java	/^	private double getDistance(Line2D e1, Line2D e2) {$/;"	m	class:TrafficArea	file:
 getDistance	../roborescue-roborescue/modules/traffic3/src/traffic3/objects/TrafficArea.java	/^	private double getDistance(Line2D e1, Point2D p) {$/;"	m	class:TrafficArea	file:
+getDistance	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Route.java	/^	public int getDistance(Edge e) {$/;"	m	class:Route
+getDistance	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Route.java	/^	public int getDistance(Route r) {$/;"	m	class:Route
+getDistance	./Comlib-ADK/src_old/move/MoveTool.java	/^    public int getDistance(List<EntityID> path) {$/;"	m	class:MoveTool
+getDistance	./Comlib-ADK/src_old/move/Route.java	/^	public int getDistance(Edge e) {$/;"	m	class:Route
+getDistance	./Comlib-ADK/src_old/move/Route.java	/^	public int getDistance(Route r) {$/;"	m	class:Route
+getDistanceMap	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Route.java	/^	public Map<Route, Integer> getDistanceMap() {$/;"	m	class:Route
+getDistanceMap	./Comlib-ADK/src_old/move/Route.java	/^	public Map<Route, Integer> getDistanceMap() {$/;"	m	class:Route
 getEdge	../roborescue-roborescue/modules/maps/src/maps/convert/osm2gml/DirectedEdge.java	/^    public Edge getEdge() {$/;"	m	class:DirectedEdge
 getEdge	../roborescue-roborescue/modules/maps/src/maps/convert/osm2gml/TemporaryMap.java	/^    public Edge getEdge(Node from, Node to) {$/;"	m	class:TemporaryMap
 getEdge	../roborescue-roborescue/modules/maps/src/maps/gml/GMLDirectedEdge.java	/^    public GMLEdge getEdge() {$/;"	m	class:GMLDirectedEdge
@@ -4546,6 +4701,7 @@ getFierynessProperty	../roborescue-roborescue/modules/standard/src/rescuecore2/s
 getFilter	./Comlib/src/main/java/comlib/util/IntegerDataHelper.java	/^    public static int getFilter(int start, int size) {$/;"	m	class:IntegerDataHelper
 getFinalDestination	../roborescue-roborescue/modules/traffic3/src/traffic3/objects/TrafficAgent.java	/^	public Point2D getFinalDestination() {$/;"	m	class:TrafficAgent
 getFireBrigadeTactics	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyTeam.java	/^    public FireBrigadeTactics getFireBrigadeTactics() {$/;"	m	class:DummyTeam
+getFireBrigadeTactics	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyTeam.java	/^    public FireBrigadeTactics getFireBrigadeTactics() {$/;"	m	class:DummyTeam
 getFireBrigadeTactics	./Comlib-ADK/src/main/java/comlib/adk/team/Team.java	/^    public FireBrigadeTactics getFireBrigadeTactics();$/;"	m	interface:Team
 getFireBrigadeTactics	./Comlib-ADK/src/main/java/comlib/adk/team/Team.java	/^    public abstract FireBrigadeTactics getFireBrigadeTactics();$/;"	m	class:Team
 getFireBrigadeTactics	./basefile/sample/SampleTeam.java	/^    public FireBrigadeTactics getFireBrigadeTactics() {$/;"	m	class:SampleTeam
@@ -4597,6 +4753,8 @@ getHP	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entitie
 getHP	./Comlib/src/main/java/comlib/message/HumanMessage.java	/^	public int getHP() { return this.humanHP; }$/;"	m	class:HumanMessage
 getHP	./Comlib/src_old/message/HumanMessage.java	/^	public int getHP()$/;"	m	class:HumanMessage
 getHPProperty	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/Human.java	/^    public IntProperty getHPProperty() {$/;"	m	class:Human
+getHaveToPassEdge	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Route.java	/^	public Edge getHaveToPassEdge(Route r) {$/;"	m	class:Route
+getHaveToPassEdge	./Comlib-ADK/src_old/move/Route.java	/^	public Edge getHaveToPassEdge(Route r) {$/;"	m	class:Route
 getHead	../roborescue-roborescue/modules/maps/src/maps/legacy/LegacyRoad.java	/^    public int getHead() {$/;"	m	class:LegacyRoad
 getHearing	../roborescue-roborescue/modules/kernel/src/kernel/AbstractCommunicationModel.java	/^    public Collection<Command> getHearing(Entity agent) {$/;"	m	class:AbstractCommunicationModel
 getHearing	../roborescue-roborescue/modules/kernel/src/kernel/CommunicationModel.java	/^    Collection<Command> getHearing(Entity agent);$/;"	m	interface:CommunicationModel
@@ -4619,6 +4777,8 @@ getID	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/log/RecordTyp
 getID	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/worldmodel/AbstractEntity.java	/^    public EntityID getID() {$/;"	m	class:AbstractEntity
 getID	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/worldmodel/Entity.java	/^    EntityID getID();$/;"	m	interface:Entity
 getID	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/Tactics.java	/^    public EntityID getID() {$/;"	m	class:Tactics
+getID	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Route.java	/^	public EntityID getID() {$/;"	m	class:Route
+getID	./Comlib-ADK/src_old/move/Route.java	/^	public EntityID getID() {$/;"	m	class:Route
 getID	./Comlib/src_old/message/HumanMessage.java	/^	public EntityID getID()$/;"	m	class:HumanMessage
 getID	./Comlib/src_old/message/information/BlockadeInformationMessage.java	/^	public EntityID getID() {$/;"	m	class:BlockadeInformationMessage
 getID	./Comlib/src_old/message/information/BuildingMessage.java	/^	public EntityID getID()$/;"	m	class:BuildingMessage
@@ -4843,6 +5003,8 @@ getNearestBlockade	../roborescue-roborescue/modules/human/src/human/ControlledPo
 getNearestLineIndex	../roborescue-roborescue/modules/traffic3/src/traffic3/objects/TrafficArea.java	/^	public int getNearestLineIndex(Point2D point){$/;"	m	class:TrafficArea
 getNearestNode	../roborescue-roborescue/modules/maps/src/maps/osm/OSMMap.java	/^    public OSMNode getNearestNode(double lat, double lon) {$/;"	m	class:OSMMap
 getNeigbours	../roborescue-roborescue/modules/maps/src/maps/validate/GMLConnectivityValidator.java	/^    private Collection<GMLShape> getNeigbours(GMLShape shape) {$/;"	m	class:GMLConnectivityValidator	file:
+getNeighbors	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Route.java	/^	public Set<Route> getNeighbors() {$/;"	m	class:Route
+getNeighbors	./Comlib-ADK/src_old/move/Route.java	/^	public Set<Route> getNeighbors() {$/;"	m	class:Route
 getNeighbour	../roborescue-roborescue/modules/maps/src/maps/convert/osm2gml/TemporaryObject.java	/^    public TemporaryObject getNeighbour(DirectedEdge edge) {$/;"	m	class:TemporaryObject
 getNeighbour	../roborescue-roborescue/modules/maps/src/maps/gml/GMLShape.java	/^    public Integer getNeighbour(GMLDirectedEdge edge) {$/;"	m	class:GMLShape
 getNeighbour	../roborescue-roborescue/modules/maps/src/maps/gml/GMLShape.java	/^    public Integer getNeighbour(GMLEdge edge) {$/;"	m	class:GMLShape
@@ -4889,8 +5051,23 @@ getOpenLines	../roborescue-roborescue/modules/traffic3/src/traffic3/objects/Traf
 getOrigin	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/geometry/Line2D.java	/^    public Point2D getOrigin() {$/;"	m	class:Line2D
 getOverlapArea	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/geometry/spatialindex/RectangleRegion.java	/^    public double getOverlapArea(RectangleRegion other) {$/;"	m	class:RectangleRegion
 getPanZoomListener	../roborescue-roborescue/modules/maps/src/maps/gml/view/GMLMapViewer.java	/^    public PanZoomListener getPanZoomListener() {$/;"	m	class:GMLMapViewer
+getPassableEdge	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Route.java	/^	public List<Edge> getPassableEdge() {$/;"	m	class:Route
+getPassableEdge	./Comlib-ADK/src_old/move/Route.java	/^	public List<Edge> getPassableEdge() {$/;"	m	class:Route
 getPath	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/messages/AKMove.java	/^    public List<EntityID> getPath() {$/;"	m	class:AKMove
 getPath	../roborescue-roborescue/modules/traffic3/src/traffic3/objects/TrafficAgent.java	/^	public List<PathElement> getPath() {$/;"	m	class:TrafficAgent
+getPath	./Comlib-ADK/src/main/java/comlib/adk/util/route/RouteSearch.java	/^    public List<EntityID> getPath(int time, Human from, Area to) {$/;"	m	class:RouteSearch
+getPath	./Comlib-ADK/src/main/java/comlib/adk/util/route/RouteSearch.java	/^    public List<EntityID> getPath(int time, Human from, Blockade blockade) {$/;"	m	class:RouteSearch
+getPath	./Comlib-ADK/src/main/java/comlib/adk/util/route/RouteSearch.java	/^    public List<EntityID> getPath(int time, Human from, EntityID to) {$/;"	m	class:RouteSearch
+getPath	./Comlib-ADK/src/main/java/comlib/adk/util/route/RouteSearch.java	/^    public abstract List<EntityID> getPath(int time, EntityID from, EntityID to);$/;"	m	class:RouteSearch
+getPath	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Router.java	/^	private void getPath(Route from, Route to, List<EntityID> path) {$/;"	m	class:Router	file:
+getPath	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Router.java	/^	public List<EntityID> getPath(EntityID from, EntityID to, int time) {$/;"	m	class:Router
+getPath	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/SampleRouteSearch.java	/^    public List<EntityID> getPath(int time, EntityID from, EntityID to) {$/;"	m	class:SampleRouteSearch
+getPath	./Comlib-ADK/src_old/move/MoveTool.java	/^    public List<EntityID> getPath(int time, EntityID from, EntityID to) {$/;"	m	class:MoveTool
+getPath	./Comlib-ADK/src_old/move/MoveTool.java	/^    public List<EntityID> getPath(int time, EntityID from, List<EntityID> to) {$/;"	m	class:MoveTool
+getPath	./Comlib-ADK/src_old/move/MoveTool.java	/^    public List<EntityID> getPath(int time, Human from, Area to) {$/;"	m	class:MoveTool
+getPath	./Comlib-ADK/src_old/move/MoveTool.java	/^    public List<EntityID> getPath(int time, Human from, Blockade blockade) {$/;"	m	class:MoveTool
+getPath	./Comlib-ADK/src_old/move/Router.java	/^	private void getPath(Route from, Route to, List<EntityID> path) {$/;"	m	class:Router	file:
+getPath	./Comlib-ADK/src_old/move/Router.java	/^	public List<EntityID> getPath(EntityID from, EntityID to, int time) {$/;"	m	class:Router
 getPathElements	../roborescue-roborescue/modules/traffic3/src/traffic3/simulator/TrafficSimulator.java	/^	private Collection<? extends PathElement> getPathElements(Human human, Area lastArea, Edge lastEdge, Area nextArea, Edge nextEdge) {$/;"	m	class:TrafficSimulator	file:
 getPathElements2	../roborescue-roborescue/modules/traffic3/src/traffic3/simulator/TrafficSimulator.java	/^	private Collection<? extends PathElement> getPathElements2(Human human, Area lastArea, Edge lastEdge, Area nextArea, Edge nextEdge) {$/;"	m	class:TrafficSimulator	file:
 getPattern	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/config/Config.java	/^        public Pattern getPattern() {$/;"	m	class:Config.LineType
@@ -4906,6 +5083,7 @@ getPointOnPath	../roborescue-roborescue/modules/standard/src/rescuecore2/standar
 getPoints	../roborescue-roborescue/modules/maps/src/maps/gml/GMLDirectedEdge.java	/^    public List<GMLCoordinates> getPoints() {$/;"	m	class:GMLDirectedEdge
 getPoints	../roborescue-roborescue/modules/maps/src/maps/gml/GMLEdge.java	/^    public List<GMLCoordinates> getPoints() {$/;"	m	class:GMLEdge
 getPoliceForceTactics	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyTeam.java	/^    public PoliceForceTactics getPoliceForceTactics() {$/;"	m	class:DummyTeam
+getPoliceForceTactics	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyTeam.java	/^    public PoliceForceTactics getPoliceForceTactics() {$/;"	m	class:DummyTeam
 getPoliceForceTactics	./Comlib-ADK/src/main/java/comlib/adk/team/Team.java	/^    public PoliceForceTactics getPoliceForceTactics();$/;"	m	interface:Team
 getPoliceForceTactics	./Comlib-ADK/src/main/java/comlib/adk/team/Team.java	/^    public abstract PoliceForceTactics getPoliceForceTactics();$/;"	m	class:Team
 getPoliceForceTactics	./basefile/sample/SampleTeam.java	/^    public PoliceForceTactics getPoliceForceTactics() {$/;"	m	class:SampleTeam
@@ -5028,6 +5206,18 @@ getRoads	../roborescue-roborescue/modules/maps/src/maps/convert/osm2gml/Temporar
 getRoads	../roborescue-roborescue/modules/maps/src/maps/gml/GMLMap.java	/^    public Set<GMLRoad> getRoads() {$/;"	m	class:GMLMap
 getRoads	../roborescue-roborescue/modules/maps/src/maps/legacy/LegacyMap.java	/^    public Collection<LegacyRoad> getRoads() {$/;"	m	class:LegacyMap
 getRoads	../roborescue-roborescue/modules/maps/src/maps/osm/OSMMap.java	/^    public Collection<OSMRoad> getRoads() {$/;"	m	class:OSMMap
+getRoute	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/RouteFactory.java	/^	public Route getRoute(Area a) {$/;"	m	class:RouteFactory
+getRoute	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/RouteFactory.java	/^	public Route getRoute(EntityID id) {$/;"	m	class:RouteFactory
+getRoute	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/RouteFactory.java	/^	public Route getRoute(int i) {$/;"	m	class:RouteFactory
+getRoute	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Router.java	/^	public Route getRoute(Area a) {$/;"	m	class:Router
+getRoute	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Router.java	/^	public Route getRoute(EntityID id) {$/;"	m	class:Router
+getRoute	./Comlib-ADK/src_old/move/RouteFactory.java	/^	public Route getRoute(Area a) {$/;"	m	class:RouteFactory
+getRoute	./Comlib-ADK/src_old/move/RouteFactory.java	/^	public Route getRoute(EntityID id) {$/;"	m	class:RouteFactory
+getRoute	./Comlib-ADK/src_old/move/RouteFactory.java	/^	public Route getRoute(int i) {$/;"	m	class:RouteFactory
+getRoute	./Comlib-ADK/src_old/move/Router.java	/^	public Route getRoute(Area a) {$/;"	m	class:Router
+getRoute	./Comlib-ADK/src_old/move/Router.java	/^	public Route getRoute(EntityID id) {$/;"	m	class:Router
+getRouteFactory	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Router.java	/^	public RouteFactory getRouteFactory() {$/;"	m	class:Router
+getRouteFactory	./Comlib-ADK/src_old/move/Router.java	/^	public RouteFactory getRouteFactory() {$/;"	m	class:Router
 getRowCount	../roborescue-roborescue/modules/kernel/src/kernel/ui/ScoreTable.java	/^            public int getRowCount() {$/;"	m	class:ScoreTable.ScoreModel.ScoreTableModel
 getRowCount	../roborescue-roborescue/modules/maps/src/maps/gml/view/GMLObjectInspector.java	/^        public int getRowCount() {$/;"	m	class:GMLObjectInspector.EdgeTableModel
 getRowCount	../roborescue-roborescue/modules/maps/src/maps/gml/view/GMLObjectInspector.java	/^        public int getRowCount() {$/;"	m	class:GMLObjectInspector.NodeTableModel
@@ -5066,6 +5256,7 @@ getSize	../roborescue-roborescue/modules/human/src/human/ControlledAgentGUI.java
 getSize	../roborescue-roborescue/modules/kernel/src/kernel/ui/ScoreTable.java	/^            public int getSize() {$/;"	m	class:ScoreTable.ScoreModel.ScoreListModel
 getSize	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/gui/ChangeSetComponent.java	/^        public int getSize() {$/;"	m	class:ChangeSetComponent.EntityListModel
 getSize	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/gui/ListModelList.java	/^    public int getSize() {$/;"	m	class:ListModelList
+getSizeOfCivilianID	./Comlib/src/main/java/comlib/manager/RadioConfig.java	/^    public int getSizeOfCivilianID() { return 32; }$/;"	m	class:RadioConfig
 getSizeOfDummyValue	./Comlib/src/main/java/comlib/manager/RadioConfig.java	/^    public int getSizeOfDummyValue() { return 32; }$/;"	m	class:RadioConfig
 getSizeOfEntityID	./Comlib/src_old/manager/RadioConfig.java	/^	public int getSizeOfEntityID(Class<? extends Building> c)$/;"	m	class:RadioConfig
 getSizeOfEntityID	./Comlib/src_old/manager/RadioConfig.java	/^	public int getSizeOfEntityID(Class<? extends Civilian> c)$/;"	m	class:RadioConfig
@@ -5075,9 +5266,13 @@ getSizeOfEntityID	./Comlib/src_old/manager/RadioConfig.java	/^	public int getSiz
 getSizeOfEntityID	./Comlib/src_old/manager/RadioConfig.java	/^	public int getSizeOfEntityID(Class<? extends PoliceForce> c)$/;"	m	class:RadioConfig
 getSizeOfEntityID	./Comlib/src_old/manager/RadioConfig.java	/^	public int getSizeOfEntityID(Class<? extends Refuge> c)$/;"	m	class:RadioConfig
 getSizeOfEntityID	./Comlib/src_old/manager/RadioConfig.java	/^	public int getSizeOfEntityID(Class<? extends Road> c)$/;"	m	class:RadioConfig
+getSizeOfHumanBuriedness	./Comlib/src/main/java/comlib/manager/RadioConfig.java	/^    public int getSizeOfHumanBuriedness() { return 32; }$/;"	m	class:RadioConfig
 getSizeOfHumanBuriedness	./Comlib/src_old/manager/RadioConfig.java	/^    public int getSizeOfHumanBuriedness() {$/;"	m	class:RadioConfig
+getSizeOfHumanDamage	./Comlib/src/main/java/comlib/manager/RadioConfig.java	/^    public int getSizeOfHumanDamage() { return 32; }$/;"	m	class:RadioConfig
 getSizeOfHumanDamage	./Comlib/src_old/manager/RadioConfig.java	/^    public int getSizeOfHumanDamage() {$/;"	m	class:RadioConfig
+getSizeOfHumanHP	./Comlib/src/main/java/comlib/manager/RadioConfig.java	/^    public int getSizeOfHumanHP() { return 32; }$/;"	m	class:RadioConfig
 getSizeOfHumanHP	./Comlib/src_old/manager/RadioConfig.java	/^    public int getSizeOfHumanHP() {$/;"	m	class:RadioConfig
+getSizeOfHumanPosition	./Comlib/src/main/java/comlib/manager/RadioConfig.java	/^    public int getSizeOfHumanPosition() { return 32; }$/;"	m	class:RadioConfig
 getSizeOfMessageID	./Comlib/src/main/java/comlib/manager/RadioConfig.java	/^    public int getSizeOfMessageID() { return this.sizeOfMessageID; }$/;"	m	class:RadioConfig
 getSizeOfMessageID	./Comlib/src_old/manager/RadioConfig.java	/^	public int getSizeOfMessageID() {$/;"	m	class:RadioConfig
 getSizeOfPosition	./Comlib/src_old/manager/RadioConfig.java	/^    public int getSizeOfPosition() {$/;"	m	class:RadioConfig
@@ -5129,6 +5324,7 @@ getTarget	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/mes
 getTarget	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/messages/AKExtinguish.java	/^    public EntityID getTarget() {$/;"	m	class:AKExtinguish
 getTarget	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/messages/AKLoad.java	/^    public EntityID getTarget() {$/;"	m	class:AKLoad
 getTarget	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/messages/AKRescue.java	/^    public EntityID getTarget() {$/;"	m	class:AKRescue
+getTarget	./Comlib-ADK/src/main/java/comlib/adk/util/ambulance/CivilianManager.java	/^    public EntityID getTarget(int time) {$/;"	m	class:CivilianManager
 getTargetBlockade	../roborescue-roborescue/modules/sample/src/sample/SamplePoliceForce.java	/^    private Blockade getTargetBlockade() {$/;"	m	class:SamplePoliceForce	file:
 getTargetBlockade	../roborescue-roborescue/modules/sample/src/sample/SamplePoliceForce.java	/^    private Blockade getTargetBlockade(Area area, int maxDistance) {$/;"	m	class:SamplePoliceForce	file:
 getTargetID	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/messages/control/KSCommands.java	/^    public int getTargetID() {$/;"	m	class:KSCommands
@@ -5137,6 +5333,7 @@ getTargetID	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/message
 getTargets	../roborescue-roborescue/modules/sample/src/sample/SampleAmbulanceTeam.java	/^    private List<Human> getTargets() {$/;"	m	class:SampleAmbulanceTeam	file:
 getTeam	./Comlib-ADK/src/main/java/comlib/adk/launcher/TeamLoader.java	/^    public Team getTeam(String name) {$/;"	m	class:TeamLoader
 getTeamName	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyTeam.java	/^    public String getTeamName() {$/;"	m	class:DummyTeam
+getTeamName	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyTeam.java	/^    public String getTeamName() {$/;"	m	class:DummyTeam
 getTeamName	./Comlib-ADK/src/main/java/comlib/adk/team/Team.java	/^    public String getTeamName();$/;"	m	interface:Team
 getTeamName	./Comlib-ADK/src/main/java/comlib/adk/team/Team.java	/^    public abstract String getTeamName();$/;"	m	class:Team
 getTeamName	./basefile/sample/SampleTeam.java	/^    public String getTeamName() {$/;"	m	class:SampleTeam
@@ -5294,6 +5491,8 @@ getX	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities
 getX	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/Human.java	/^    public int getX() {$/;"	m	class:Human
 getX	../roborescue-roborescue/modules/traffic3/src/traffic3/objects/Force.java	/^    public double getX() {$/;"	m	class:Force
 getX	../roborescue-roborescue/modules/traffic3/src/traffic3/objects/TrafficAgent.java	/^	public double getX() {$/;"	m	class:TrafficAgent
+getX	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Route.java	/^	public int getX() {$/;"	m	class:Route
+getX	./Comlib-ADK/src_old/move/Route.java	/^	public int getX() {$/;"	m	class:Route
 getX1	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/geometry/spatialindex/LineRegion.java	/^    public double getX1() {$/;"	m	class:LineRegion
 getX2	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/geometry/spatialindex/LineRegion.java	/^    public double getX2() {$/;"	m	class:LineRegion
 getXMax	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/geometry/spatialindex/LineRegion.java	/^    public double getXMax() {$/;"	m	class:LineRegion
@@ -5321,6 +5520,8 @@ getY	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities
 getY	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/Human.java	/^    public int getY() {$/;"	m	class:Human
 getY	../roborescue-roborescue/modules/traffic3/src/traffic3/objects/Force.java	/^    public double getY() {$/;"	m	class:Force
 getY	../roborescue-roborescue/modules/traffic3/src/traffic3/objects/TrafficAgent.java	/^	public double getY() {$/;"	m	class:TrafficAgent
+getY	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Route.java	/^	public int getY() {$/;"	m	class:Route
+getY	./Comlib-ADK/src_old/move/Route.java	/^	public int getY() {$/;"	m	class:Route
 getY1	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/geometry/spatialindex/LineRegion.java	/^    public double getY1() {$/;"	m	class:LineRegion
 getY2	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/geometry/spatialindex/LineRegion.java	/^    public double getY2() {$/;"	m	class:LineRegion
 getYMax	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/geometry/spatialindex/LineRegion.java	/^    public double getYMax() {$/;"	m	class:LineRegion
@@ -5464,6 +5665,8 @@ hashCode	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/geome
 hashCode	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/worldmodel/AbstractEntity.java	/^    public int hashCode() {$/;"	m	class:AbstractEntity
 hashCode	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/worldmodel/EntityID.java	/^    public int hashCode() {$/;"	m	class:EntityID
 hashCode	../roborescue-roborescue/modules/rescuecore2/test/rescuecore2/connection/TestMessage.java	/^    public int hashCode() {$/;"	m	class:TestMessage
+hashCode	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Route.java	/^	public int hashCode() {$/;"	m	class:Route
+hashCode	./Comlib-ADK/src_old/move/Route.java	/^	public int hashCode() {$/;"	m	class:Route
 haveImpassibleEdge	../roborescue-roborescue/modules/traffic3/src/traffic3/simulator/TrafficSimulator.java	/^	private boolean haveImpassibleEdge(Area dest){$/;"	m	class:TrafficSimulator	file:
 haveThisAreaInPath	../roborescue-roborescue/modules/traffic3/src/traffic3/objects/TrafficAgent.java	/^	private boolean haveThisAreaInPath(TrafficArea newArea) {$/;"	m	class:TrafficAgent	file:
 head	../roborescue-roborescue/modules/maps/src/maps/legacy/LegacyRoad.java	/^    private int head;$/;"	f	class:LegacyRoad	file:
@@ -5636,6 +5839,8 @@ initCommunicationMode	./Comlib/src/main/java/comlib/manager/MessageManager.java	
 initInjuryData	../roborescue-roborescue/modules/misc/src/misc/MiscParameters.java	/^    private void initInjuryData() {$/;"	m	class:MiscParameters	file:
 initLoadProvider	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	private void initLoadProvider()$/;"	m	class:MessageManager	file:
 initOption	./Comlib-ADK/src/main/java/comlib/adk/launcher/ConfigInitializer.java	/^    private static Map<String, Option> initOption() {$/;"	m	class:ConfigInitializer	file:
+initRandomWalk	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/SampleRouteSearch.java	/^    private void initRandomWalk()$/;"	m	class:SampleRouteSearch	file:
+initRandomWalk	./Comlib-ADK/src_old/move/MoveTool.java	/^    private void initRandomWalk()$/;"	m	class:MoveTool	file:
 initTabs	./Comlib/build/reports/tests/js/report.js	/^function initTabs() {$/;"	f
 initValue	./Comlib-ADK/src/main/java/comlib/adk/agent/TacticsAgent.java	/^    public void initValue() {$/;"	m	class:TacticsAgent
 initialBuriedness	../roborescue-roborescue/modules/misc/src/misc/MiscParameters.java	/^        private int initialBuriedness;$/;"	f	class:MiscParameters.BuildingClass	file:
@@ -5763,6 +5968,8 @@ isOpaque	../roborescue-roborescue/modules/maps/src/maps/gml/view/GMLMapViewer.ja
 isOriginalPathOk	../roborescue-roborescue/modules/traffic3/src/traffic3/simulator/TrafficSimulator.java	/^	private boolean isOriginalPathOk(Collection<? extends PathElement> originalPaths) {$/;"	m	class:TrafficSimulator	file:
 isPassable	../roborescue-roborescue/modules/maps/src/maps/gml/GMLEdge.java	/^    public boolean isPassable() {$/;"	m	class:GMLEdge
 isPassable	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/Edge.java	/^    public boolean isPassable() {$/;"	m	class:Edge
+isPassable	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Route.java	/^	public boolean isPassable(Route r) {$/;"	m	class:Route
+isPassable	./Comlib-ADK/src_old/move/Route.java	/^	public boolean isPassable(Route r) {$/;"	m	class:Route
 isPlatoonAgent	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/score/DiscoveryScoreFunction.java	/^    private boolean isPlatoonAgent(Entity e) {$/;"	m	class:DiscoveryScoreFunction	file:
 isPositionDefined	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/Blockade.java	/^    public boolean isPositionDefined() {$/;"	m	class:Blockade
 isPositionDefined	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/Human.java	/^    public boolean isPositionDefined() {$/;"	m	class:Human
@@ -6234,6 +6441,8 @@ max	../roborescue-roborescue/modules/collapse/src/collapse/CollapseSimulator.jav
 max	../roborescue-roborescue/modules/misc/src/misc/MiscParameters.java	/^        private int max;$/;"	f	class:MiscParameters.BrokennessDegree	file:
 max	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/config/FloatValueConstraint.java	/^    private double max;$/;"	f	class:FloatValueConstraint	file:
 max	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/config/IntegerValueConstraint.java	/^    private int max;$/;"	f	class:IntegerValueConstraint	file:
+max	./Comlib-ADK/src/main/java/comlib/adk/util/route/RouteUtil.java	/^    public static int max(int x, int y) {$/;"	m	class:RouteUtil
+max	./Comlib-ADK/src_old/move/Util.java	/^	public static int max(int x, int y) {$/;"	m	class:Util
 maxACs	../roborescue-roborescue/modules/gis2/src/gis2/RandomScenarioGenerator.java	/^    private int maxACs;$/;"	f	class:RandomScenarioGenerator	file:
 maxATs	../roborescue-roborescue/modules/gis2/src/gis2/RandomScenarioGenerator.java	/^    private int maxATs;$/;"	f	class:RandomScenarioGenerator	file:
 maxBandWidthList	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	private int[] maxBandWidthList;$/;"	f	class:MessageManager	file:
@@ -6315,6 +6524,8 @@ microstep	../roborescue-roborescue/modules/traffic3/src/traffic3/simulator/Traff
 min	../roborescue-roborescue/modules/misc/src/misc/MiscParameters.java	/^        private int min;$/;"	f	class:MiscParameters.BrokennessDegree	file:
 min	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/config/FloatValueConstraint.java	/^    private double min;$/;"	f	class:FloatValueConstraint	file:
 min	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/config/IntegerValueConstraint.java	/^    private int min;$/;"	f	class:IntegerValueConstraint	file:
+min	./Comlib-ADK/src/main/java/comlib/adk/util/route/RouteUtil.java	/^    public static int min(int x, int y) {$/;"	m	class:RouteUtil
+min	./Comlib-ADK/src_old/move/Util.java	/^	public static int min(int x, int y) {$/;"	m	class:Util
 minACs	../roborescue-roborescue/modules/gis2/src/gis2/RandomScenarioGenerator.java	/^    private int minACs;$/;"	f	class:RandomScenarioGenerator	file:
 minATs	../roborescue-roborescue/modules/gis2/src/gis2/RandomScenarioGenerator.java	/^    private int minATs;$/;"	f	class:RandomScenarioGenerator	file:
 minCivs	../roborescue-roborescue/modules/gis2/src/gis2/RandomScenarioGenerator.java	/^    private int minCivs;$/;"	f	class:RandomScenarioGenerator	file:
@@ -6358,7 +6569,10 @@ model	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/log/InitialCo
 model	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/view/EntityInspector.java	/^    private EntityTableModel model;$/;"	f	class:EntityInspector	file:
 model	../roborescue-roborescue/modules/standard/test/rescuecore2/standard/kernel/comms/ChannelCommunicationModelTest.java	/^    private ChannelCommunicationModel model;$/;"	f	class:ChannelCommunicationModelTest	file:
 model	./Comlib-ADK/src/main/java/comlib/adk/dummy/event/AmbulanceCivilianEvent.java	/^    private StandardWorldModel model;$/;"	f	class:AmbulanceCivilianEvent	file:
+model	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/event/AmbulanceCivilianEvent.java	/^    private StandardWorldModel model;$/;"	f	class:AmbulanceCivilianEvent	file:
 model	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/Tactics.java	/^    public StandardWorldModel model;$/;"	f	class:Tactics
+model	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Router.java	/^	private StandardWorldModel model;$/;"	f	class:Router	file:
+model	./Comlib-ADK/src_old/move/Router.java	/^	private StandardWorldModel model;$/;"	f	class:Router	file:
 moderate	../roborescue-roborescue/modules/collapse/src/collapse/CollapseSimulator.java	/^	private NumberGenerator<Double> moderate;$/;"	f	class:CollapseSimulator	file:
 moderate	../roborescue-roborescue/modules/misc-new/src/misc/MiscSimulator.java	/^        private int moderate;$/;"	f	class:MiscSimulator.BuriednessStats	file:
 mouseClicked	../roborescue-roborescue/modules/gis2/src/gis2/scenario/ShapeTool.java	/^        public void mouseClicked(MouseEvent e) {$/;"	m	class:ShapeTool.Listener
@@ -6486,11 +6700,18 @@ mouseReleased	../roborescue-roborescue/modules/maps/src/maps/osm/OSMMapExtractor
 mouseReleased	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/gui/PanZoomListener.java	/^    public void mouseReleased(MouseEvent e) {$/;"	m	class:PanZoomListener
 mouseReleased	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/view/ViewComponent.java	/^        public void mouseReleased(MouseEvent e) {}$/;"	m	class:ViewComponent.ViewerMouseListener
 mouseWheelMoved	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/gui/PanZoomListener.java	/^    public void mouseWheelMoved(MouseWheelEvent e) {$/;"	m	class:PanZoomListener
+move	./Comlib-ADK/src/main/java/comlib/adk/util/action/Action.java	/^    private static Message move(EntityID id, int time, List<EntityID> path) {$/;"	m	class:Action	file:
+move	./Comlib-ADK/src/main/java/comlib/adk/util/action/Action.java	/^    private static Message move(EntityID id, int time, List<EntityID> path, int destX, int destY) {$/;"	m	class:Action	file:
 move	./Comlib-ADK/src/main/java/comlib/adk/util/action/Action.java	/^    public static Message move(EntityID id, int time, List<EntityID> path) {$/;"	m	class:Action
 move	./Comlib-ADK/src/main/java/comlib/adk/util/action/Action.java	/^    public static Message move(EntityID id, int time, List<EntityID> path, int destX, int destY) {$/;"	m	class:Action
 move	./Comlib-ADK/src/main/java/comlib/adk/util/action/Action.java	/^    public static Message move(Tactics tactics, int time, List<EntityID> path) {$/;"	m	class:Action
 move	./Comlib-ADK/src/main/java/comlib/adk/util/action/Action.java	/^    public static Message move(Tactics tactics, int time, List<EntityID> path, int destX, int destY) {$/;"	m	class:Action
 moveRefuge	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyAmbulance.java	/^    private Message moveRefuge(int time)$/;"	m	class:DummyAmbulance	file:
+moveRefuge	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyAmbulance.java	/^    private Message moveRefuge(int time) {$/;"	m	class:DummyAmbulance	file:
+mySelf	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Route.java	/^    private Area mySelf;$/;"	f	class:Route	file:
+mySelf	./Comlib-ADK/src_old/move/Route.java	/^    private Area mySelf;$/;"	f	class:Route	file:
+mySelfID	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Route.java	/^    private EntityID mySelfID;$/;"	f	class:Route	file:
+mySelfID	./Comlib-ADK/src_old/move/Route.java	/^    private EntityID mySelfID;$/;"	f	class:Route	file:
 name	../roborescue-roborescue/modules/kernel/src/kernel/AbstractKernelComponent.java	/^    private String name;$/;"	f	class:AbstractKernelComponent	file:
 name	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/config/Config.java	/^        private String name;$/;"	f	class:Config.ReaderContext	file:
 name	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/config/Config.java	/^        private String name;$/;"	f	class:Config.ResourceContext	file:
@@ -6510,6 +6731,8 @@ neighbours	../roborescue-roborescue/modules/maps/src/maps/convert/osm2gml/Tempor
 neighbours	../roborescue-roborescue/modules/maps/src/maps/gml/GMLShape.java	/^    private Map<GMLDirectedEdge, Integer> neighbours;$/;"	f	class:GMLShape	file:
 neighbours	../roborescue-roborescue/modules/sample/src/sample/AbstractSampleAgent.java	/^    private Map<EntityID, Set<EntityID>> neighbours;$/;"	f	class:AbstractSampleAgent	file:
 neighbours	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/Area.java	/^    private List<EntityID> neighbours;$/;"	f	class:Area	file:
+neighbours	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/SampleRouteSearch.java	/^    private Map<EntityID, Set<EntityID>> neighbours;$/;"	f	class:SampleRouteSearch	file:
+neighbours	./Comlib-ADK/src_old/move/MoveTool.java	/^    private Map<EntityID, Set<EntityID>> neighbours;$/;"	f	class:MoveTool	file:
 newConnection	../roborescue-roborescue/modules/kernel/src/kernel/ComponentManager.java	/^	public void newConnection(Connection c) {$/;"	m	class:ComponentManager
 newConnection	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/connection/ConnectionManagerListener.java	/^    void newConnection(Connection c);$/;"	m	interface:ConnectionManagerListener
 newConnection	../roborescue-roborescue/modules/rescuecore2/test/rescuecore2/connection/ConnectionManagerTest.java	/^        public synchronized void newConnection(Connection c) {$/;"	m	class:ConnectionManagerTest.TestConnectionManagerListener
@@ -6659,6 +6882,8 @@ parent	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/registry/Reg
 parent	../roborescue-roborescue/modules/traffic3/src/traffic3/simulator/Dijkstra.java	/^	private int parent[];$/;"	f	class:Dijkstra	file:
 parts	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/misc/AgentPath.java	/^        private List<AgentPath> parts;$/;"	f	class:AgentPath.CompositePath	file:
 passable	../roborescue-roborescue/modules/maps/src/maps/gml/GMLEdge.java	/^    private boolean passable;$/;"	f	class:GMLEdge	file:
+passableEdge	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Route.java	/^    private List<Edge> passableEdge;$/;"	f	class:Route	file:
+passableEdge	./Comlib-ADK/src_old/move/Route.java	/^    private List<Edge> passableEdge;$/;"	f	class:Route	file:
 path	../roborescue-roborescue/modules/maps/src/maps/convert/osm2gml/TemporaryObject.java	/^    private Path2D path;$/;"	f	class:TemporaryObject	file:
 path	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/messages/AKMove.java	/^    private EntityIDListComponent path;$/;"	f	class:AKMove	file:
 path	../roborescue-roborescue/modules/traffic3/src/traffic3/objects/TrafficAgent.java	/^	private Queue<PathElement> path;$/;"	f	class:TrafficAgent	file:
@@ -6756,6 +6981,9 @@ postConnect	./Comlib-ADK/src/main/java/comlib/adk/agent/TacticsAgent.java	/^    
 postConnect	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyAmbulance.java	/^    public void postConnect() {$/;"	m	class:DummyAmbulance
 postConnect	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyFire.java	/^    public void postConnect() {$/;"	m	class:DummyFire
 postConnect	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyPolice.java	/^    public void postConnect() {$/;"	m	class:DummyPolice
+postConnect	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyAmbulance.java	/^    public void postConnect() {$/;"	m	class:DummyAmbulance
+postConnect	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyFire.java	/^    public void postConnect() {$/;"	m	class:DummyFire
+postConnect	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyPolice.java	/^    public void postConnect() {$/;"	m	class:DummyPolice
 postConnect	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/Tactics.java	/^    public abstract void postConnect();$/;"	m	class:Tactics
 postConnect	./Comlib/src/main/java/comlib/agent/CommunicationAgent.java	/^	public void postConnect()$/;"	m	class:CommunicationAgent
 postConnect	./Comlib/src_old/agent/CommunicationAgent.java	/^    public void postConnect()$/;"	m	class:CommunicationAgent
@@ -6912,8 +7140,16 @@ random	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/kernel
 random	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/kernel/comms/StaticNoise.java	/^    private Random random;$/;"	f	class:StaticNoise	file:
 random	./Comlib-ADK/src/main/java/comlib/adk/launcher/TeamLoader.java	/^    private Random random;$/;"	f	class:TeamLoader	file:
 random	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/Tactics.java	/^    public Random random;$/;"	f	class:Tactics
+randomChoice	./Comlib-ADK/src_old/move/Util.java	/^	public static Object randomChoice(Collection col, Random random) {$/;"	m	class:Util
 randomWalk	../roborescue-roborescue/modules/sample/src/sample/AbstractSampleAgent.java	/^    protected List<EntityID> randomWalk() {$/;"	m	class:AbstractSampleAgent
+randomWalk	./Comlib-ADK/src/main/java/comlib/adk/util/route/RouteSearch.java	/^    public abstract List<EntityID> randomWalk();$/;"	m	class:RouteSearch
+randomWalk	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/SampleRouteSearch.java	/^    public List<EntityID> randomWalk() {$/;"	m	class:SampleRouteSearch
+randomWalk	./Comlib-ADK/src_old/move/MoveTool.java	/^    public List<EntityID> randomWalk() {$/;"	m	class:MoveTool
+randomWalkWithoutBuilding	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/SampleRouteSearch.java	/^    public List<EntityID> randomWalkWithoutBuilding() {$/;"	m	class:SampleRouteSearch
+randomWalkWithoutBuilding	./Comlib-ADK/src_old/move/MoveTool.java	/^    public List<EntityID> randomWalkWithoutBuilding() {$/;"	m	class:MoveTool
 range	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/kernel/comms/VoiceChannel.java	/^    private int range;$/;"	f	class:VoiceChannel	file:
+rangeMap	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Route.java	/^    private Map<Edge, Integer> rangeMap;$/;"	f	class:Route	file:
+rangeMap	./Comlib-ADK/src_old/move/Route.java	/^    private Map<Edge, Integer> rangeMap;$/;"	f	class:Route	file:
 ray	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/kernel/LineOfSightPerception.java	/^        private Line2D ray;$/;"	f	class:LineOfSightPerception.Ray	file:
 rayCount	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/kernel/LineOfSightPerception.java	/^    private int rayCount;$/;"	f	class:LineOfSightPerception	file:
 rays	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/kernel/LineOfSightPerception.java	/^        private transient Collection<Ray> rays;$/;"	f	class:LineOfSightPerception.LOSView	file:
@@ -6989,6 +7225,7 @@ readBytes	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/Enco
 readCommands	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/log/StreamLogReader.java	/^    private void readCommands(InputStream in) throws IOException, LogException {$/;"	m	class:StreamLogReader	file:
 readConfig	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/log/StreamLogReader.java	/^    private void readConfig(InputStream in) throws IOException, LogException {$/;"	m	class:StreamLogReader	file:
 readConfig	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyTeam.java	/^    public void readConfig(Config config) {$/;"	m	class:DummyTeam
+readConfig	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyTeam.java	/^    public void readConfig(Config config) {$/;"	m	class:DummyTeam
 readConfig	./Comlib-ADK/src/main/java/comlib/adk/team/Team.java	/^    public abstract void readConfig(Config config);$/;"	m	class:Team
 readConfig	./Comlib-ADK/src/main/java/comlib/adk/team/Team.java	/^    public void readConfig(Config config);$/;"	m	interface:Team
 readConfig	./basefile/sample/SampleTeam.java	/^    public void readConfig(Config config) {$/;"	m	class:SampleTeam
@@ -7074,6 +7311,7 @@ receivedMessages	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	pr
 receivedMessages	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	private List<CommunicationMessage> receivedMessages; \/\/ For compatible$/;"	f	class:MessageManager	file:
 receivedMessages	./Comlib/src_old/manager/MessageManager.java	/^	private List<CommunicationMessage> receivedMessages;$/;"	f	class:MessageManager	file:
 receivedRadio	./Comlib-ADK/src/main/java/comlib/adk/dummy/event/AmbulanceCivilianEvent.java	/^    public void receivedRadio(CivilianMessage msg) {$/;"	m	class:AmbulanceCivilianEvent
+receivedRadio	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/event/AmbulanceCivilianEvent.java	/^    public void receivedRadio(CivilianMessage msg) {$/;"	m	class:AmbulanceCivilianEvent
 receivedRadio	./Comlib/src/main/java/comlib/event/DummyMessageEvent.java	/^	public void receivedRadio(DummyMessage msg)$/;"	m	class:DummyMessageEvent
 receivedRadio	./Comlib/src/main/java/comlib/event/MessageEvent.java	/^	public abstract void receivedRadio(M msg);	$/;"	m	class:MessageEvent
 receivedRadio	./Comlib/src/main/java/comlib/event/information/AmbulanceTeamMessageEvent.java	/^	public void receivedRadio(AmbulanceTeamMessage msg)$/;"	m	class:AmbulanceTeamMessageEvent
@@ -7161,6 +7399,9 @@ registerEvent	./Comlib-ADK/src/main/java/comlib/adk/agent/TacticsAgent.java	/^  
 registerEvent	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyAmbulance.java	/^    public void registerEvent(MessageManager manager) {$/;"	m	class:DummyAmbulance
 registerEvent	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyFire.java	/^    public void registerEvent(MessageManager manager) {$/;"	m	class:DummyFire
 registerEvent	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyPolice.java	/^    public void registerEvent(MessageManager manager) {$/;"	m	class:DummyPolice
+registerEvent	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyAmbulance.java	/^    public void registerEvent(MessageManager manager) {$/;"	m	class:DummyAmbulance
+registerEvent	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyFire.java	/^    public void registerEvent(MessageManager manager) {$/;"	m	class:DummyFire
+registerEvent	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyPolice.java	/^    public void registerEvent(MessageManager manager) {$/;"	m	class:DummyPolice
 registerEvent	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/Tactics.java	/^    public abstract void registerEvent(MessageManager manager);$/;"	m	class:Tactics
 registerEvent	./Comlib/src/main/java/comlib/agent/CommunicationAgent.java	/^	public abstract void registerEvent(MessageManager manager);$/;"	m	class:CommunicationAgent
 registerEvent	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	public boolean registerEvent(MessageEvent event)$/;"	m	class:MessageManager
@@ -7208,6 +7449,9 @@ remove	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/gui/Lis
 remove	../roborescue-roborescue/modules/traffic3/src/traffic3/manager/TrafficManager.java	/^    public void remove(Blockade block) {$/;"	m	class:TrafficManager
 remove	../roborescue-roborescue/modules/traffic3/src/traffic3/manager/TrafficManager.java	/^    public void remove(TrafficBlockade block) {$/;"	m	class:TrafficManager
 remove	./Comlib-ADK/src/main/java/comlib/adk/dummy/util/CivilianManager.java	/^    public void remove(Civilian civilian) {$/;"	m	class:CivilianManager
+remove	./Comlib-ADK/src/main/java/comlib/adk/util/ambulance/CivilianManager.java	/^    public void remove(Civilian civilian) {$/;"	m	class:CivilianManager
+remove	./Comlib-ADK/src/main/java/comlib/adk/util/ambulance/CivilianManager.java	/^    public void remove(EntityID id) {$/;"	m	class:CivilianManager
+remove	./Comlib-ADK/src_old/util/CivilianManager.java	/^    public void remove(Civilian civilian) {$/;"	m	class:CivilianManager
 remove	./Comlib/src/main/java/comlib/util/IntegerDataHelper.java	/^    public static int remove(int data, int start, int size) {$/;"	m	class:IntegerDataHelper
 removeAgent	../roborescue-roborescue/modules/kernel/src/kernel/Kernel.java	/^    public void removeAgent(AgentProxy agent) {$/;"	m	class:Kernel
 removeAgent	../roborescue-roborescue/modules/kernel/src/kernel/ui/KernelControlPanel.java	/^    private void removeAgent() {$/;"	m	class:KernelControlPanel	file:
@@ -7374,6 +7618,7 @@ rescue	./Comlib-ADK/src/main/java/comlib/adk/util/action/AmbulanceAction.java	/^
 rescue	./Comlib-ADK/src/main/java/comlib/adk/util/action/AmbulanceAction.java	/^    public static Message rescue(EntityID id, int time, EntityID target) {$/;"	m	class:AmbulanceAction
 rescue	./Comlib-ADK/src/main/java/comlib/adk/util/action/AmbulanceAction.java	/^    public static Message rescue(Tactics tactics, int time, EntityID target) {$/;"	m	class:AmbulanceAction
 rescueTarget	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyAmbulance.java	/^    public EntityID rescueTarget;$/;"	f	class:DummyAmbulance
+rescueTarget	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyAmbulance.java	/^    public EntityID rescueTarget;$/;"	f	class:DummyAmbulance
 rescuecore2	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/Constants.java	/^package rescuecore2;$/;"	p
 rescuecore2	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/GUIComponent.java	/^package rescuecore2;$/;"	p
 rescuecore2	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/LaunchComponents.java	/^package rescuecore2;$/;"	p
@@ -7670,10 +7915,13 @@ reset	./Comlib/src/main/java/comlib/util/BitOutputStream.java	/^	public void res
 resetZoom	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/gui/ScreenTransform.java	/^    public void resetZoom() {$/;"	m	class:ScreenTransform
 resolution	../roborescue-roborescue/modules/maps/src/maps/gml/editor/Snap.java	/^    private double resolution;$/;"	f	class:Snap	file:
 resolveReferences	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/config/Config.java	/^    private String resolveReferences(String s, String defaultValue) {$/;"	m	class:Config	file:
+rest	./Comlib-ADK/src/main/java/comlib/adk/util/action/Action.java	/^    private static Message rest(EntityID id, int time) {$/;"	m	class:Action	file:
 rest	./Comlib-ADK/src/main/java/comlib/adk/util/action/Action.java	/^    public static Message rest(EntityID id, int time) {$/;"	m	class:Action
 rest	./Comlib-ADK/src/main/java/comlib/adk/util/action/Action.java	/^    public static Message rest(Tactics tactics, int time) {$/;"	m	class:Action
 retainAll	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/gui/ListModelList.java	/^    public boolean retainAll(Collection<?> c) {$/;"	m	class:ListModelList
 reverse	../roborescue-roborescue/modules/maps/src/maps/gml/GMLDirectedEdge.java	/^    public void reverse() {$/;"	m	class:GMLDirectedEdge
+rf	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Router.java	/^	private RouteFactory rf;$/;"	f	class:Router	file:
+rf	./Comlib-ADK/src_old/move/Router.java	/^	private RouteFactory rf;$/;"	f	class:Router	file:
 right	../roborescue-roborescue/modules/maps/src/maps/gml/view/RectangleOverlay.java	/^    private double right;$/;"	f	class:RectangleOverlay	file:
 rng	../roborescue-roborescue/modules/misc/src/misc/MiscParameters.java	/^    private Random rng;$/;"	f	class:MiscParameters	file:
 road	../roborescue-roborescue/modules/maps/src/maps/convert/legacy2gml/NodeInfo.java	/^    private GMLRoad road;$/;"	f	class:NodeInfo	file:
@@ -7701,6 +7949,14 @@ roundDownToGrid	../roborescue-roborescue/modules/maps/src/maps/gml/view/GMLMapVi
 roundProperty	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/kernel/LineOfSightPerception.java	/^    private void roundProperty(IntProperty p, int precision) {$/;"	m	class:LineOfSightPerception	file:
 roundProperty	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/kernel/StandardPerception.java	/^    private void roundProperty(IntProperty p, int precision) {$/;"	m	class:StandardPerception	file:
 roundUpToGrid	../roborescue-roborescue/modules/maps/src/maps/gml/view/GMLMapViewer.java	/^    private double roundUpToGrid(double d) {$/;"	m	class:GMLMapViewer	file:
+routeMap	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/RouteFactory.java	/^	private Map<EntityID, Route> routeMap;$/;"	f	class:RouteFactory	file:
+routeMap	./Comlib-ADK/src_old/move/RouteFactory.java	/^	private Map<EntityID, Route> routeMap;$/;"	f	class:RouteFactory	file:
+routeSearch	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyAmbulance.java	/^    public RouteSearch routeSearch;$/;"	f	class:DummyAmbulance
+routeSearch	./Comlib-ADK/src/main/java/comlib/adk/util/ambulance/CivilianManager.java	/^    protected RouteSearch routeSearch;$/;"	f	class:CivilianManager
+router	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/SampleRouteSearch.java	/^    private Router router;$/;"	f	class:SampleRouteSearch	file:
+router	./Comlib-ADK/src_old/move/MoveTool.java	/^    private Router router;$/;"	f	class:MoveTool	file:
+routes	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Router.java	/^	private List<Route> routes;$/;"	f	class:Router	file:
+routes	./Comlib-ADK/src_old/move/Router.java	/^	private List<Route> routes;$/;"	f	class:Router	file:
 run	../roborescue-roborescue/modules/gis2/src/gis2/GISServer.java	/^        public void run() {$/;"	m	class:GISServer.ServerThread
 run	../roborescue-roborescue/modules/gis2/src/gis2/GISServer.java	/^    public void run() {$/;"	m	class:GISServer
 run	../roborescue-roborescue/modules/human/src/human/ControlledAgentGUI.java	/^        public void run() {$/;"	m	class:ControlledAgentGUI.AgentConnector
@@ -7857,6 +8113,8 @@ setAmbulanceCentres	../roborescue-roborescue/modules/gis2/src/gis2/RandomScenari
 setAmbulanceTeams	../roborescue-roborescue/modules/gis2/src/gis2/GisScenario.java	/^	public void setAmbulanceTeams(Collection<Integer> newLocations) {$/;"	m	class:GisScenario
 setAmbulanceTeams	../roborescue-roborescue/modules/gis2/src/gis2/RandomScenarioGenerator.java	/^    public void setAmbulanceTeams(int min, int max) {$/;"	m	class:RandomScenarioGenerator
 setApexes	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/Blockade.java	/^    public void setApexes(int[] apexes) {$/;"	m	class:Blockade
+setAreaCondition	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Router.java	/^	public void setAreaCondition(EntityID id1, EntityID id2,$/;"	m	class:Router
+setAreaCondition	./Comlib-ADK/src_old/move/Router.java	/^	public void setAreaCondition(EntityID id1, EntityID id2,$/;"	m	class:Router
 setAutozoomEnabled	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/gui/ShapeDebugFrame.java	/^    public void setAutozoomEnabled(boolean b) {$/;"	m	class:ShapeDebugFrame
 setBackground	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/gui/ShapeDebugFrame.java	/^    public void setBackground(Collection<? extends ShapeInfo> back) {$/;"	m	class:ShapeDebugFrame
 setBackgroundEnabled	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/gui/ShapeDebugFrame.java	/^    public void setBackgroundEnabled(boolean b) {$/;"	m	class:ShapeDebugFrame
@@ -7888,10 +8146,14 @@ setColour	../roborescue-roborescue/modules/maps/src/maps/gml/view/RectangleOverl
 setCommands	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/Timestep.java	/^    public void setCommands(Collection<Command> c) {$/;"	m	class:Timestep
 setCommands	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/messages/components/CommandListComponent.java	/^    public void setCommands(Collection<? extends Command> commands) {$/;"	m	class:CommandListComponent
 setCommunicationModel	../roborescue-roborescue/modules/kernel/src/kernel/KernelStartupOptions.java	/^    public void setCommunicationModel(CommunicationModel c) {$/;"	m	class:KernelStartupOptions
+setCondition	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Route.java	/^	public void setCondition(Route r, AreaConnectCondition con) {$/;"	m	class:Route
+setCondition	./Comlib-ADK/src_old/move/Route.java	/^	public void setCondition(Route r, AreaConnectCondition con) {$/;"	m	class:Route
 setConfig	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/messages/components/ConfigComponent.java	/^    public void setConfig(Config config) {$/;"	m	class:ConfigComponent
 setControlButtonsEnabled	../roborescue-roborescue/modules/kernel/src/kernel/ui/KernelControlPanel.java	/^    private void setControlButtonsEnabled(boolean b) {$/;"	m	class:KernelControlPanel	file:
 setCoordinates	../roborescue-roborescue/modules/maps/src/maps/gml/GMLNode.java	/^    public void setCoordinates(GMLCoordinates c) {$/;"	m	class:GMLNode
 setCoordinates	../roborescue-roborescue/modules/maps/src/maps/gml/GMLShape.java	/^    public void setCoordinates(List<GMLCoordinates> newPoints) {$/;"	m	class:GMLShape
+setCost	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Route.java	/^	public void setCost(int cost, int time) {$/;"	m	class:Route
+setCost	./Comlib-ADK/src_old/move/Route.java	/^	public void setCost(int cost, int time) {$/;"	m	class:Route
 setCurrentRegistry	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/registry/Registry.java	/^	public static void setCurrentRegistry(Registry r) {$/;"	m	class:Registry
 setDamage	../roborescue-roborescue/modules/misc/src/misc/DamageType.java	/^    public void setDamage(double d) {$/;"	m	class:DamageType
 setDamage	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/Human.java	/^    public void setDamage(int damage) {$/;"	m	class:Human
@@ -7993,6 +8255,7 @@ setMap	../roborescue-roborescue/modules/maps/src/maps/gml/view/GMLMapViewer.java
 setMap	../roborescue-roborescue/modules/maps/src/maps/gml/view/GMLObjectInspector.java	/^    public void setMap(GMLMap newMap) {$/;"	m	class:GMLObjectInspector
 setMap	../roborescue-roborescue/modules/maps/src/maps/osm/OSMMapViewer.java	/^    public void setMap(OSMMap map) {$/;"	m	class:OSMMapViewer
 setMaxVelocity	../roborescue-roborescue/modules/traffic3/src/traffic3/objects/TrafficAgent.java	/^	public void setMaxVelocity(double vLimit) {$/;"	m	class:TrafficAgent
+setMe	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/Tactics.java	/^    public void setMe(StandardEntity entity) {$/;"	m	class:Tactics
 setMerge	../roborescue-roborescue/modules/maps/src/maps/gml/editor/MergeNodesTool.java	/^    private void setMerge(GMLNode node) {$/;"	m	class:MergeNodesTool	file:
 setMessageID	./Comlib/src_old/creator/MessageCreator.java	/^	public void setMessageID(int id)$/;"	m	class:MessageCreator
 setMobile	../roborescue-roborescue/modules/traffic3/src/traffic3/objects/TrafficAgent.java	/^	public void setMobile(boolean m) {$/;"	m	class:TrafficAgent
@@ -8063,6 +8326,8 @@ setRoadDecorator	../roborescue-roborescue/modules/maps/src/maps/gml/view/GMLMapV
 setRoadDecorator	../roborescue-roborescue/modules/maps/src/maps/gml/view/GMLMapViewer.java	/^    public void setRoadDecorator(RoadDecorator decorator, GMLRoad... roads) {$/;"	m	class:GMLMapViewer
 setRoadLeft	../roborescue-roborescue/modules/maps/src/maps/convert/legacy2gml/BuildingInfo.java	/^    public void setRoadLeft(Point2D newRoadLeft) {$/;"	m	class:BuildingInfo
 setRoadRight	../roborescue-roborescue/modules/maps/src/maps/convert/legacy2gml/BuildingInfo.java	/^    public void setRoadRight(Point2D newRoadRight) {$/;"	m	class:BuildingInfo
+setRoute	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Router.java	/^	private void setRoute(Route r, StandardWorldModel model) {$/;"	m	class:Router	file:
+setRoute	./Comlib-ADK/src_old/move/Router.java	/^	private void setRoute(Route r, StandardWorldModel model) {$/;"	m	class:Router	file:
 setScenario	../roborescue-roborescue/modules/gis2/src/gis2/scenario/ScenarioEditor.java	/^    public void setScenario(GMLMap newMap, GisScenario newScenario) throws CancelledByUserException {$/;"	m	class:ScenarioEditor
 setScore	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/Timestep.java	/^    public void setScore(double s) {$/;"	m	class:Timestep
 setScreenTransform	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/gui/PanZoomListener.java	/^    public void setScreenTransform(ScreenTransform t) {$/;"	m	class:PanZoomListener
@@ -8212,6 +8477,8 @@ show	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/gui/Scree
 show	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/gui/ShapeDebugFrame.java	/^    public void show(String description, Collection<? extends ShapeInfo>... shapes) {$/;"	m	class:ShapeDebugFrame
 show	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/gui/ShapeDebugFrame.java	/^    public void show(String description, ShapeInfo... shapes) {$/;"	m	class:ShapeDebugFrame
 show	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/gui/ShapeDebugFrame.java	/^    public void show(final String description, final Collection<ShapeInfo> shapes) {$/;"	m	class:ShapeDebugFrame
+showMap	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/RouteFactory.java	/^	public void showMap() {$/;"	m	class:RouteFactory
+showMap	./Comlib-ADK/src_old/move/RouteFactory.java	/^	public void showMap() {$/;"	m	class:RouteFactory
 showPopupMenu	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/view/LayerViewComponent.java	/^    private void showPopupMenu(int x, int y) {$/;"	m	class:LayerViewComponent	file:
 showTimestep	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/log/LogExtractor.java	/^    public void showTimestep(int time) {$/;"	m	class:LogExtractor
 showTimestep	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/log/LogViewer.java	/^    public void showTimestep(int time) {$/;"	m	class:LogViewer
@@ -8265,6 +8532,8 @@ size	../roborescue-roborescue/modules/maps/src/maps/gml/view/SquareNodeDecorator
 size	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/collections/DelegatingMap.java	/^    public int size() {$/;"	m	class:DelegatingMap
 size	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/collections/LazyMap.java	/^    public int size() {$/;"	m	class:LazyMap
 size	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/gui/ListModelList.java	/^    public int size() {$/;"	m	class:ListModelList
+size	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/RouteFactory.java	/^	public int size() {$/;"	m	class:RouteFactory
+size	./Comlib-ADK/src_old/move/RouteFactory.java	/^	public int size() {$/;"	m	class:RouteFactory
 size	./Comlib/src/main/java/comlib/util/BitOutputStream.java	/^	public synchronized int size() {$/;"	m	class:BitOutputStream
 sizeOf1Metre	../roborescue-roborescue/modules/maps/src/maps/MapTools.java	/^    public static double sizeOf1Metre(double lat, double lon) {$/;"	m	class:MapTools
 sizeOf1Metre	../roborescue-roborescue/modules/maps/src/maps/convert/osm2gml/ConvertTools.java	/^    public static double sizeOf1Metre(OSMMap map) {$/;"	m	class:ConvertTools
@@ -8285,6 +8554,7 @@ socket	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/connection/C
 socket	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/connection/TCPConnection.java	/^    private Socket socket;$/;"	f	class:TCPConnection	file:
 someoneOnBoard	../roborescue-roborescue/modules/sample/src/sample/SampleAmbulanceTeam.java	/^    private boolean someoneOnBoard() {$/;"	m	class:SampleAmbulanceTeam	file:
 someoneOnBoard	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyAmbulance.java	/^    private boolean someoneOnBoard() {$/;"	m	class:DummyAmbulance	file:
+someoneOnBoard	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyAmbulance.java	/^    private boolean someoneOnBoard() {$/;"	m	class:DummyAmbulance	file:
 sortedList	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/EntityTools.java	/^    public static <T extends Entity> List<T> sortedList(Collection<T> input) {$/;"	m	class:EntityTools
 sources	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/kernel/LineOfSightPerception.java	/^        private transient Map<StandardEntity, Collection<Ray>> sources;$/;"	f	class:LineOfSightPerception.LOSView	file:
 space	../roborescue-roborescue/modules/maps/src/maps/gml/editor/CreateSpaceTool.java	/^        private GMLSpace space;$/;"	f	class:CreateSpaceTool.CreateSpaceEdit	file:
@@ -8377,6 +8647,9 @@ tactics	./Comlib-ADK/src/main/java/comlib/adk/agent/AmbulanceTeamAgent.java	/^  
 tactics	./Comlib-ADK/src/main/java/comlib/adk/agent/FireBrigadeAgent.java	/^    public FireBrigadeTactics tactics;$/;"	f	class:FireBrigadeAgent
 tactics	./Comlib-ADK/src/main/java/comlib/adk/agent/PoliceForceAgent.java	/^    public PoliceForceTactics tactics;$/;"	f	class:PoliceForceAgent
 tactics	./Comlib-ADK/src/main/java/comlib/adk/agent/TacticsAgent.java	/^    public T tactics;$/;"	f	class:TacticsAgent
+tactics	./Comlib-ADK/src/main/java/comlib/adk/util/ambulance/CivilianManager.java	/^    protected Tactics tactics;$/;"	f	class:CivilianManager
+tactics	./Comlib-ADK/src/main/java/comlib/adk/util/route/RouteSearch.java	/^    protected Tactics tactics;$/;"	f	class:RouteSearch
+tactics	./Comlib-ADK/src_old/move/MoveTool.java	/^    private Tactics tactics;$/;"	f	class:MoveTool	file:
 tagSignifiesBuilding	../roborescue-roborescue/modules/maps/src/maps/osm/OSMMap.java	/^    private boolean tagSignifiesBuilding(Element tag) {$/;"	m	class:OSMMap	file:
 tagSignifiesRoad	../roborescue-roborescue/modules/maps/src/maps/osm/OSMMap.java	/^    private boolean tagSignifiesRoad(Element tag) {$/;"	m	class:OSMMap	file:
 tail	../roborescue-roborescue/modules/maps/src/maps/legacy/LegacyRoad.java	/^    private int tail;$/;"	f	class:LegacyRoad	file:
@@ -8560,6 +8833,9 @@ think	./Comlib-ADK/src/main/java/comlib/adk/agent/TacticsAgent.java	/^    public
 think	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyAmbulance.java	/^    public Message think(int time, ChangeSet changed, MessageManager manager) {$/;"	m	class:DummyAmbulance
 think	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyFire.java	/^    public Message think(int time, ChangeSet changed, MessageManager manager) {$/;"	m	class:DummyFire
 think	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyPolice.java	/^    public Message think(int time, ChangeSet changed, MessageManager manager) {$/;"	m	class:DummyPolice
+think	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyAmbulance.java	/^    public Message think(int time, ChangeSet changed, MessageManager manager) {$/;"	m	class:DummyAmbulance
+think	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyFire.java	/^    public Message think(int time, ChangeSet changed, MessageManager manager) {$/;"	m	class:DummyFire
+think	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyPolice.java	/^    public Message think(int time, ChangeSet changed, MessageManager manager) {$/;"	m	class:DummyPolice
 think	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/Tactics.java	/^    public abstract Message think(int time, ChangeSet changed, MessageManager manager);$/;"	m	class:Tactics
 think	./Comlib/src/main/java/comlib/agent/CommunicationAgent.java	/^	protected final void think(int time, ChangeSet changed, Collection<Command> heard)$/;"	m	class:CommunicationAgent
 think	./Comlib/src/main/java/comlib/agent/CommunicationAgent.java	/^	public abstract void think(int time, ChangeSet changed);$/;"	m	class:CommunicationAgent
@@ -8733,6 +9009,8 @@ toString	./Comlib-ADK/src/main/java/comlib/adk/agent/AmbulanceTeamAgent.java	/^ 
 toString	./Comlib-ADK/src/main/java/comlib/adk/agent/FireBrigadeAgent.java	/^    public String toString() {$/;"	m	class:FireBrigadeAgent
 toString	./Comlib-ADK/src/main/java/comlib/adk/agent/PoliceForceAgent.java	/^    public String toString() {$/;"	m	class:PoliceForceAgent
 toString	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/Tactics.java	/^    public String toString() {$/;"	m	class:Tactics
+toString	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Route.java	/^	public String toString() {$/;"	m	class:Route
+toString	./Comlib-ADK/src_old/move/Route.java	/^	public String toString() {$/;"	m	class:Route
 toString	./Comlib/src_old/message/information/BlockadeInformationMessage.java	/^	public String toString() {$/;"	m	class:BlockadeInformationMessage
 toWrite	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/connection/StreamConnection.java	/^    private List<byte[]> toWrite;$/;"	f	class:StreamConnection	file:
 toXML	../roborescue-roborescue/modules/maps/src/maps/osm/OSMMap.java	/^    public Document toXML() {$/;"	m	class:OSMMap
@@ -8878,6 +9156,7 @@ update	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/view/C
 update	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/view/CommandLayer.java	/^        void update() {$/;"	m	class:CommandLayer.RenderUnloadAction
 update	../roborescue-roborescue/modules/traffic3/resources/data/resources/videoPlayer.js	/^function update() {$/;"	f
 update	./Comlib-ADK/src/main/java/comlib/adk/dummy/util/CivilianManager.java	/^    public void update(Civilian civilian, MessageManager manager) {$/;"	m	class:CivilianManager
+update	./Comlib-ADK/src_old/util/CivilianManager.java	/^    public void update(Civilian civilian, MessageManager manager) {$/;"	m	class:CivilianManager
 updateAftershocks	../roborescue-roborescue/modules/collapse/src/collapse/CollapseWorldModel.java	/^	public void updateAftershocks(KSAfterShocksInfo msg) {$/;"	m	class:CollapseWorldModel
 updateAgentAck	../roborescue-roborescue/modules/kernel/src/kernel/ui/ComponentManagerGUI.java	/^    public void updateAgentAck(final List<String> data) {$/;"	m	class:ComponentManagerGUI
 updateAgentOverlay	../roborescue-roborescue/modules/gis2/src/gis2/scenario/ScenarioEditor.java	/^    private void updateAgentOverlay() {$/;"	m	class:ScenarioEditor	file:
@@ -8896,6 +9175,7 @@ updateGoals	../roborescue-roborescue/modules/traffic3/src/traffic3/objects/Traff
 updateHPPrecision	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/kernel/StandardPerception.java	/^    private void updateHPPrecision(int value) {$/;"	m	class:StandardPerception	file:
 updateHealth	../roborescue-roborescue/modules/misc-new/src/misc/MiscSimulator.java	/^    private void updateHealth() {$/;"	m	class:MiscSimulator	file:
 updateInfo	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyAmbulance.java	/^    private void updateInfo(ChangeSet changed, MessageManager manager) {$/;"	m	class:DummyAmbulance	file:
+updateInfo	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyAmbulance.java	/^    private void updateInfo(ChangeSet changed, MessageManager manager) {$/;"	m	class:DummyAmbulance	file:
 updateMessageIDSize	./Comlib/src/main/java/comlib/manager/RadioConfig.java	/^    public void updateMessageIDSize(int id) {$/;"	m	class:RadioConfig
 updateOverlays	../roborescue-roborescue/modules/gis2/src/gis2/scenario/ScenarioEditor.java	/^    public void updateOverlays() {$/;"	m	class:ScenarioEditor
 updatePosition	../roborescue-roborescue/modules/traffic3/src/traffic3/objects/TrafficAgent.java	/^	private void updatePosition(double dt) {$/;"	m	class:TrafficAgent	file:
@@ -9093,6 +9373,8 @@ world	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/kernel/
 world	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/kernel/comms/VoiceChannel.java	/^    private StandardWorldModel world;$/;"	f	class:VoiceChannel	file:
 world	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/view/HumanLayer.java	/^        private final StandardWorldModel world;$/;"	f	class:HumanLayer.HumanSorter	file:
 world	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/view/StandardViewLayer.java	/^    protected StandardWorldModel world;$/;"	f	class:StandardViewLayer
+worldAreaList	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/RouteFactory.java	/^	private List<EntityID> worldAreaList;$/;"	f	class:RouteFactory	file:
+worldAreaList	./Comlib-ADK/src_old/move/RouteFactory.java	/^	private List<EntityID> worldAreaList;$/;"	f	class:RouteFactory	file:
 worldModel	../roborescue-roborescue/modules/kernel/src/kernel/Kernel.java	/^    private WorldModel<? extends Entity> worldModel;$/;"	f	class:Kernel	file:
 worldModels	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/log/StreamLogReader.java	/^    private Map<Integer, WorldModel<? extends Entity>> worldModels;$/;"	f	class:StreamLogReader	file:
 worldOptions	../roborescue-roborescue/modules/kernel/src/kernel/KernelStartupOptions.java	/^    private List<WorldModelCreator> worldOptions;$/;"	f	class:KernelStartupOptions	file:

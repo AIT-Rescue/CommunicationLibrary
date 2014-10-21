@@ -31,6 +31,13 @@ public class RadioConfig {
 
     public int getSizeOfDummyValue() { return 32; }
 
+    public int getSizeOfHumanHP() { return 32; }
+    public int getSizeOfHumanBuriedness() { return 32; }
+    public int getSizeOfHumanDamage() { return 32; }
+    public int getSizeOfHumanPosition() { return 32; }
+
+    public int getSizeOfCivilianID() { return 32; }
+
     /*
 		public int getSizeOfEntityID(Class<? extends Building> c) {
 
