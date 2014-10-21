@@ -48,7 +48,10 @@ public abstract class TacticsAgent<T extends Tactics, E extends StandardEntity> 
         this.tactics.model = this.model; //this.tactics.setWorld(this.model);
         this.tactics.config = this.config; //this.tactics.setConfig(this.config);
         this.tactics.agentID = this.getID();
+
+        //this.tactics.setMe(this.me());
         this.tactics.me = this.me();
+
         this.tactics.location = this.location();
         this.send(this.tactics.think(time, changed, this.manager));
     }
