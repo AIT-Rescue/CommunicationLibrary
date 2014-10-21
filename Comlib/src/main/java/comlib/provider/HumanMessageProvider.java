@@ -1,14 +1,14 @@
 package comlib.provider;
 
 import comlib.event.MessageEvent;
-import comlib.message.CommunicationMessage;
+import comlib.message.HumanMessage;
 import comlib.manager.RadioConfig;
 import comlib.manager.VoiceConfig;
 import comlib.util.BitOutputStream;
 import comlib.util.BitStreamReader;
 
 
-public abstract class HumanMessageProvider<M extends CommunicationMessage, E extends MessageEvent> extends MessageProvider<M, E>
+public abstract class HumanMessageProvider<M extends HumanMessage, E extends MessageEvent> extends InformationMessageProvider<M, E>
 {
 	public HumanMessageProvider(int id)
 	{
@@ -17,16 +17,16 @@ public abstract class HumanMessageProvider<M extends CommunicationMessage, E ext
 
 	protected void writeMessage(RadioConfig config, BitOutputStream bos, M msg)
 	{
-		super(config, bos, msg);
+		super.writeMessage(config, bos, msg);
 		bos.writeBits(msg.getHP(), config.getSizeOfHumanHP());
 		bos.writeBits(msg.getBuriedness(), config.getSizeOfHumanBuriedness());
 		bos.writeBits(msg.getDamage(), config.getSizeOfHumanDamage());
-		bos.writeBits(msg.getPosition(), config.getSizeOfHumanPosition());
+		bos.writeBits(msg.getPosition().getValue(), config.getSizeOfHumanPosition());
 	}
 
 	protected void writeMessage(VoiceConfig config, StringBuilder sb, M msg)
 	{
-		super(config, sb, msg);
+		super.writeMessage(config, sb, msg);
 		//config.appendData(sb, String.valueOf(msg.getValue()));
 	}
 

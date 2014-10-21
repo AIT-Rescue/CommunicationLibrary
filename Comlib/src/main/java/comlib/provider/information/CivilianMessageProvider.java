@@ -8,6 +8,7 @@ import comlib.manager.RadioConfig;
 import comlib.manager.VoiceConfig;
 import comlib.util.BitOutputStream;
 import comlib.util.BitStreamReader;
+import rescuecore2.worldmodel.EntityID;
 
 
 public class CivilianMessageProvider extends HumanMessageProvider<CivilianMessage, CivilianMessageEvent>
@@ -19,7 +20,7 @@ public class CivilianMessageProvider extends HumanMessageProvider<CivilianMessag
 
 	protected void writeMessage(RadioConfig config, BitOutputStream bos, CivilianMessage msg)
 	{
-		super(config, bos, msg);
+		super.writeMessage(config, bos, msg);
 		bos.writeBits(msg.getHP(), config.getSizeOfCivilianID());
 	}
 
@@ -34,8 +35,8 @@ public class CivilianMessageProvider extends HumanMessageProvider<CivilianMessag
 				bsr.getBits(config.getSizeOfHumanHP()),
 				bsr.getBits(config.getSizeOfHumanBuriedness()),
 				bsr.getBits(config.getSizeOfHumanDamage()),
-				bsr.getBits(config.getSizeOfHumanPosition()),
-				bsr.getBits(config.getSizeOfCivilianID())
+				new EntityID(bsr.getBits(config.getSizeOfHumanPosition())),
+				new EntityID(bsr.getBits(config.getSizeOfCivilianID()))
 				);
 	}
 

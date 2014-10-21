@@ -16,7 +16,7 @@ public class AmbulanceTeamMessage extends HumanMessage
 
 	public AmbulanceTeamMessage(int time, int ttl, EntityID id, int hp, int buriedness, int damage, EntityID position)
 	{
-		super(MessageID.ambulanceTeamMessage, time, ttl, id, hp, buriedness, damage, position);
+		super(MessageID.ambulanceTeamMessage, time, ttl, hp, buriedness, damage, position, id);
 	}
 }
 

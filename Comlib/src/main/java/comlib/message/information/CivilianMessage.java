@@ -15,9 +15,9 @@ public class CivilianMessage extends HumanMessage
 		super(MessageID.civilianMessage, (Human)civilian);
 	}
 
-	public CivilianMessage(int time, int ttl, EntityID id, int hp, int buriedness, int damage, EntityID position)
+	public CivilianMessage(int time, int ttl, int hp, int buriedness, int damage, EntityID position, EntityID id)
 	{
-		super(MessageID.civilianMessage, time, ttl, id, hp, buriedness, damage, position);
+		super(MessageID.civilianMessage, time, ttl, hp, buriedness, damage, position, id);
 	}
 }
 

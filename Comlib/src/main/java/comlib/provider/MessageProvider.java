@@ -93,7 +93,7 @@ public abstract class MessageProvider<M extends CommunicationMessage, E extends 
 		return msg;
 	}
 
-	public void trySetEvent(MessageEvent ev)
+	public void trySetEvent(E ev)
 	{
 		// TODO: check!!
 		//if (ev instanceof E) //こうかけないからクソ

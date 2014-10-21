@@ -19,7 +19,7 @@ public class FireBrigadeMessage extends HumanMessage
 
 	public FireBrigadeMessage(int time, int ttl, EntityID id, int hp, int buriedness, int damage, EntityID position, int water)
 	{
-		super(MessageID.fireBrigadeMessage, time, ttl, id, hp, buriedness, damage, position);
+		super(MessageID.fireBrigadeMessage, time, ttl, hp, buriedness, damage, position, id);
 		this.fireBrigadeWater = water;
 	}
 

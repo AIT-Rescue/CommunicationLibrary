@@ -16,7 +16,7 @@ public class PoliceForceMessage extends HumanMessage
 
 	public PoliceForceMessage(int time, int ttl, EntityID id, int hp, int buriedness, int damage, EntityID position)
 	{
-		super(MessageID.policeForceMessage, time, ttl, id, hp, buriedness, damage, position);
+		super(MessageID.policeForceMessage, time, ttl, hp, buriedness, damage, position, id);
 	}
 }
 
