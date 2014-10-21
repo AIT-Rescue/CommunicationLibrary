@@ -3,7 +3,8 @@ apply plugin: 'idea'
 apply plugin: 'eclipse'
 
 
-jar.baseName = 'comlib-adk'
+archivesBaseName = 'comlib-adk'
+//jar.baseName = 'comlib-adk'
 //version = '0.3.0'
 
 repositories {
@@ -24,7 +25,7 @@ dependencies {
 }
 javadoc.options.encoding = 'UTF-8'
 
-build.mustRunAfter 'clean'
+/*build.mustRunAfter 'clean'
 
 task makeArchive(type: Zip, dependsOn: [clean, build]) {
     destinationDir = new File(buildDir, 'libs')
@@ -32,6 +33,26 @@ task makeArchive(type: Zip, dependsOn: [clean, build]) {
     into('comlib') {
         from 'src/main/java/comlib'
     }
+}*/
+
+/*task javadocJar(type: Jar, dependsOn:javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}*/
+
+task sourcesJar(type: Jar, dependsOn: classes) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+
+artifacts {
+    archives sourcesJar
+    //archives javadocJar
+}
+
+build.mustRunAfter 'clean'
+
+task makeArchive(dependsOn: [clean, build]) << {
 }
 
 task start (type: JavaExec) {

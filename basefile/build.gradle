@@ -55,9 +55,9 @@ task wrapper(type: Wrapper) {
 
 //def rescueSrcPath = 'jar://$MODULE_DIR$/library/rescue/core/rescue-src.zip!/'
 def comlibJarPath = 'jar://$MODULE_DIR$/library/rescue/util/comlib.jar!/'
-def comlibSrcPath = 'jar://$MODULE_DIR$/library/rescue/util/comlib-src.zip!/'
+def comlibSrcPath = 'jar://$MODULE_DIR$/library/rescue/util/comlib-sources.jar!/'
 def adkJarPath = 'jar://$MODULE_DIR$/library/rescue/util/comlib-adk.jar!/'
-def adkSrcPath = 'jar://$MODULE_DIR$/library/rescue/util/comlib-adk-src.zip!/'
+def adkSrcPath = 'jar://$MODULE_DIR$/library/rescue/util/comlib-adk-sources.jar!/'
 
 idea.module.iml {
     withXml {

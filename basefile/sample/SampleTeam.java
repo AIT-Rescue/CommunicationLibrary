@@ -1,15 +1,12 @@
 package sample;
 
-import comlib.adk.dummy.DummyAmbulance;
-import comlib.adk.dummy.DummyFire;
-import comlib.adk.dummy.DummyPolice;
 import comlib.adk.team.Team;
 import comlib.adk.team.tactics.AmbulanceTeamTactics;
 import comlib.adk.team.tactics.FireBrigadeTactics;
 import comlib.adk.team.tactics.PoliceForceTactics;
 import rescuecore2.config.Config;
 
-public class SampleTeam implements Team {
+public class SampleTeam extends Team {
 
     @Override
     public String getTeamName() {
