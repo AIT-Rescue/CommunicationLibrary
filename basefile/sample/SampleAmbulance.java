@@ -13,6 +13,8 @@ import rescuecore2.standard.entities.*;
 import rescuecore2.worldmodel.ChangeSet;
 import rescuecore2.worldmodel.EntityID;
 
+import java.util.List;
+
 public class SampleAmbulance extends AmbulanceTeamTactics {
 
     //救助対象の管理・選択
