@@ -11,18 +11,18 @@ import rescuecore2.standard.entities.StandardWorldModel;
 public class AmbulanceCivilianEvent extends CivilianMessageEvent {
 
     private StandardWorldModel model;
-    private VictimManager civilianManager;
+    private VictimManager victimManager;
 
     public AmbulanceCivilianEvent(StandardWorldModel swm, VictimManager sm) {
         this.model = swm;
-        this.civilianManager = sm;
+        this.victimManager = sm;
     }
 
     @Override
     public void receivedRadio(CivilianMessage msg) {
         if(msg.getBuriedness() > 0) {
             Civilian civilian = reflectedMessage(this.model, msg);
-            this.civilianManager.add(civilian);
+            this.victimManager.add(civilian);
         }
     }
 

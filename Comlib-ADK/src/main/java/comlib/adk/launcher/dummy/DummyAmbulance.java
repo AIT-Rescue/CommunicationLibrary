@@ -8,19 +8,20 @@ import comlib.adk.util.route.sample.SampleRouteSearcher;
 import comlib.adk.util.target.VictimManager;
 import comlib.adk.util.target.sample.SampleVictimManager;
 import comlib.manager.MessageManager;
-import comlib.message.DummyMessage;
 import rescuecore2.messages.Message;
 import rescuecore2.standard.entities.*;
 import rescuecore2.worldmodel.ChangeSet;
 import rescuecore2.worldmodel.EntityID;
 
+import java.util.List;
+
 public class DummyAmbulance extends AmbulanceTeamTactics {
 
     //移動経路の選択
     //救助対象の管理・選択
-    public VictimManager civilianManager;
+    public VictimManager victimManager;
 
-    public RouteSearcher routeSearch;
+    public RouteSearcher routeSearcher;
 
     public EntityID rescueTarget;
 
@@ -30,53 +31,64 @@ public class DummyAmbulance extends AmbulanceTeamTactics {
     @Override
     public void preparation() {
         this.rescueTarget = null;
-        this.routeSearch = new SampleRouteSearcher(this);
-        this.civilianManager = new SampleVictimManager(this);
+        this.routeSearcher = new SampleRouteSearcher(this);
+        this.victimManager = new SampleVictimManager(this);
     }
 
     @Override
     public void registerEvent(MessageManager manager) {
-        manager.registerEvent(new AmbulanceCivilianEvent(this.model, this.civilianManager));
+        manager.registerEvent(new AmbulanceCivilianEvent(this.model, this.victimManager));
     }
 
     @Override
     public Message think(int time, ChangeSet changed, MessageManager manager) {
-        /*
-        受信処理→eventによる情報処理
-        視覚情報の処理→情報処理完了
-        ・上の２つで送る情報をある程度生成
-        現在の状態の確認→
-        ・埋まっている→救助要請、rest
-        ・目標決まってない→情報より対象設定・補充が必要ならば避難場所、move
-        ・目標決まってる→通れるか確認、move
-        ・対象付近→救助活動
-        情報の送信
-         */
         this.updateInfo(changed, manager);
 
         if(this.someoneOnBoard()) {
             if (this.location instanceof Refuge) {
                 this.rescueTarget = null;
                 return AmbulanceAction.unload(this, time);
-                /*if(this.rescueTarget != null){
-                    //this.bus.getOutput().addMessage(this.bus.getAgent().messageFactory.createInformationMessage(this.bus.getMemory().getTime(), (Human)this.bus.getAgent().getModel().getEntity(this.bus.getMemory(AmbulanceMemory.class).getRescueTarget())));
-                }*/
             }
             else {
                 return this.moveRefuge(time);
             }
         }
-
-
-        manager.addSendMessage(new DummyMessage(time, 10, 0));
-        return AmbulanceAction.rest(this, time);
+        if(this.rescueTarget != null) {
+            Human target = (Human)this.model.getEntity(this.rescueTarget);
+            if(target.getPosition().equals(location.getID())) {
+                if ((target instanceof Civilian) && target.getBuriedness() == 0 && !(this.location instanceof Refuge)) {
+                    return AmbulanceAction.load(this, time, this.rescueTarget);
+                } else if (target.getBuriedness() > 0) {
+                    return AmbulanceAction.rescue(this, time, this.rescueTarget);
+                }
+                else {
+                    this.rescueTarget = null;
+                    List<EntityID> path = this.routeSearcher.randomWalk();
+                    return path != null ? AmbulanceAction.move(this, time, path) : AmbulanceAction.rest(this, time);
+                }
+            }
+            else {
+                return AmbulanceAction.move(this, time, this.routeSearcher.getPath(time, this.me, this.rescueTarget));
+            }
+        }
+        EntityID id = this.victimManager.getTarget(time);
+        if (id != null) {
+            this.rescueTarget = id;
+            return AmbulanceAction.move(this, time, this.routeSearcher.getPath(time, this.me, id));
+        }
+        if(this.me.getBuriedness() > 0) {
+            return AmbulanceAction.rest(this, time);
+        }
+        //manager.addSendMessage(new DummyMessage(time, 10, 0));
+        List<EntityID> path = this.routeSearcher.randomWalk();
+        return path != null ? AmbulanceAction.move(this, time, path) : AmbulanceAction.rest(this, time);
     }
 
     private void updateInfo(ChangeSet changed, MessageManager manager) {
         for (EntityID next : changed.getChangedEntities()) {
             StandardEntity entity = model.getEntity(next);
             if(entity instanceof Civilian) {
-                //this.civilianManager.update((Civilian)entity, manager);
+                this.victimManager.add((Civilian)entity);
             }
             else if(entity instanceof Blockade) {
                 //manager.addSendMessage(new BlockadeMessage((Blockade)entity));
@@ -100,13 +112,11 @@ public class DummyAmbulance extends AmbulanceTeamTactics {
     }*/
 
     private boolean someoneOnBoard() {
-        if(this.rescueTarget == null) {
-            return false;
-        }
-        return ((Human)this.model.getEntity(this.rescueTarget)).getPosition().equals(this.agentID);
+        return this.rescueTarget != null && ((Human) this.model.getEntity(this.rescueTarget)).getPosition().equals(this.agentID);
     }
 
     private Message moveRefuge(int time) {
-        return AmbulanceAction.move(this, time, this.routeSearch.getPath(time, this.me, this.refugeList.get(0).getID()));
+        List<EntityID> path = this.routeSearcher.getPath(time, this.me, this.refugeList.get(0).getID());
+        return path != null ? AmbulanceAction.move(this, time, path) : AmbulanceAction.rest(this, time);
     }
 }
