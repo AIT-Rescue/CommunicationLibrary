@@ -22,7 +22,7 @@ public class SampleAmbulance extends AmbulanceTeamTactics {
 
     public EntityID rescueTarget;
 
-    public DummyAmbulance() {
+    public SampleAmbulance() {
     }
 
     @Override
