@@ -21,7 +21,7 @@ dependencies {
 
 [compileJava, compileTestJava].each {
     it.options.encoding = 'UTF-8'
-    it.options.compilerArgs += ['-source', '1.7', '-target', '1.7', '-Xlint:unchecked']
+    it.options.compilerArgs += ['-source', '1.8', '-target', '1.8', '-Xlint:unchecked']
 }
 javadoc.options.encoding = 'UTF-8'
 
