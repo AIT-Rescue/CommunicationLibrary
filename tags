@@ -2402,6 +2402,7 @@ STEEL	../roborescue-roborescue/modules/misc/src/misc/MiscParameters.java	/^     
 STEEL	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/StandardEntityConstants.java	/^        STEEL,$/;"	e	enum:StandardEntityConstants.BuildingCode	file:
 STEP_TIME_MS	../roborescue-roborescue/modules/traffic3/src/traffic3/simulator/TrafficSimulator.java	/^	private static final double STEP_TIME_MS = 100;$/;"	f	class:TrafficSimulator	file:
 SYSTEM_REGISTRY	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/registry/Registry.java	/^	public static final Registry SYSTEM_REGISTRY = new Registry("System", null);$/;"	f	class:Registry
+SampleAmbulance	./basefile/sample/SampleAmbulance.java	/^    public SampleAmbulance() {$/;"	m	class:SampleAmbulance
 SampleAmbulance	./basefile/sample/SampleAmbulance.java	/^public class SampleAmbulance extends AmbulanceTeamTactics {$/;"	c
 SampleAmbulanceTeam	../roborescue-roborescue/modules/sample/src/sample/SampleAmbulanceTeam.java	/^public class SampleAmbulanceTeam extends AbstractSampleAgent<AmbulanceTeam> {$/;"	c
 SampleBlockadeManager	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleBlockadeManager.java	/^    public SampleBlockadeManager(Tactics user) {$/;"	m	class:SampleBlockadeManager
@@ -7059,6 +7060,7 @@ move	./Comlib-ADK/src_old/util/action/Action.java	/^    public static Message mo
 moveRefuge	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyAmbulance.java	/^    private Message moveRefuge(int time)$/;"	m	class:DummyAmbulance	file:
 moveRefuge	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyAmbulance.java	/^    private Message moveRefuge(int time) {$/;"	m	class:DummyAmbulance	file:
 moveRefuge	./Comlib-ADK/src_old/launcher/dummy/DummyAmbulance.java	/^    private Message moveRefuge(int time) {$/;"	m	class:DummyAmbulance	file:
+moveRefuge	./basefile/sample/SampleAmbulance.java	/^    private Message moveRefuge(int time) {$/;"	m	class:SampleAmbulance	file:
 mySelf	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Route.java	/^    private Area mySelf;$/;"	f	class:Route	file:
 mySelf	./Comlib-ADK/src_old/move/Route.java	/^    private Area mySelf;$/;"	f	class:Route	file:
 mySelf	./Comlib-ADK/src_old/util/route/sample/Route.java	/^    private Area mySelf;$/;"	f	class:Route	file:
@@ -7365,6 +7367,9 @@ preparation	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyAmbulance.
 preparation	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyFire.java	/^    public void preparation() {$/;"	m	class:DummyFire
 preparation	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyPolice.java	/^    public void preparation() {$/;"	m	class:DummyPolice
 preparation	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/Tactics.java	/^    public abstract void preparation();$/;"	m	class:Tactics
+preparation	./basefile/sample/SampleAmbulance.java	/^    public void preparation() {$/;"	m	class:SampleAmbulance
+preparation	./basefile/sample/SampleFire.java	/^    public void preparation() {$/;"	m	class:SampleFire
+preparation	./basefile/sample/SamplePolice.java	/^    public void preparation() {$/;"	m	class:SamplePolice
 press	../roborescue-roborescue/modules/maps/src/maps/osm/OSMMapExtractor.java	/^    private Point press;$/;"	f	class:OSMMapExtractor	file:
 pressCoords	../roborescue-roborescue/modules/maps/src/maps/gml/editor/MoveNodeTool.java	/^    private GMLCoordinates pressCoords;$/;"	f	class:MoveNodeTool	file:
 pressPoint	../roborescue-roborescue/modules/maps/src/maps/gml/editor/DeleteNodeTool.java	/^    private GMLCoordinates pressPoint;$/;"	f	class:DeleteNodeTool	file:
@@ -8028,6 +8033,7 @@ rescue	./Comlib-ADK/src_old/util/action/AmbulanceAction.java	/^    public static
 rescueTarget	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyAmbulance.java	/^    public EntityID rescueTarget;$/;"	f	class:DummyAmbulance
 rescueTarget	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyAmbulance.java	/^    public EntityID rescueTarget;$/;"	f	class:DummyAmbulance
 rescueTarget	./Comlib-ADK/src_old/launcher/dummy/DummyAmbulance.java	/^    public EntityID rescueTarget;$/;"	f	class:DummyAmbulance
+rescueTarget	./basefile/sample/SampleAmbulance.java	/^    public EntityID rescueTarget;$/;"	f	class:SampleAmbulance
 rescuecore2	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/Constants.java	/^package rescuecore2;$/;"	p
 rescuecore2	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/GUIComponent.java	/^package rescuecore2;$/;"	p
 rescuecore2	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/LaunchComponents.java	/^package rescuecore2;$/;"	p
@@ -8368,6 +8374,8 @@ routeSearch	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyAmbulance.
 routeSearch	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyAmbulance.java	/^    public RouteSearcher routeSearch;$/;"	f	class:DummyAmbulance
 routeSearch	./Comlib-ADK/src/main/java/comlib/adk/util/ambulance/CivilianManager.java	/^    protected RouteSearch routeSearch;$/;"	f	class:CivilianManager
 routeSearch	./Comlib-ADK/src_old/launcher/dummy/DummyAmbulance.java	/^    public RouteSearcher routeSearch;$/;"	f	class:DummyAmbulance
+routeSearcher	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyAmbulance.java	/^    public RouteSearcher routeSearcher;$/;"	f	class:DummyAmbulance
+routeSearcher	./basefile/sample/SampleAmbulance.java	/^    public RouteSearcher routeSearcher;$/;"	f	class:SampleAmbulance
 router	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/SampleRouteSearch.java	/^    private Router router;$/;"	f	class:SampleRouteSearch	file:
 router	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/SampleRouteSearcher.java	/^    private Router router;$/;"	f	class:SampleRouteSearcher	file:
 router	./Comlib-ADK/src_old/move/MoveTool.java	/^    private Router router;$/;"	f	class:MoveTool	file:
@@ -9001,6 +9009,7 @@ someoneOnBoard	../roborescue-roborescue/modules/sample/src/sample/SampleAmbulanc
 someoneOnBoard	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyAmbulance.java	/^    private boolean someoneOnBoard() {$/;"	m	class:DummyAmbulance	file:
 someoneOnBoard	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyAmbulance.java	/^    private boolean someoneOnBoard() {$/;"	m	class:DummyAmbulance	file:
 someoneOnBoard	./Comlib-ADK/src_old/launcher/dummy/DummyAmbulance.java	/^    private boolean someoneOnBoard() {$/;"	m	class:DummyAmbulance	file:
+someoneOnBoard	./basefile/sample/SampleAmbulance.java	/^    private boolean someoneOnBoard() {$/;"	m	class:SampleAmbulance	file:
 sortedList	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/EntityTools.java	/^    public static <T extends Entity> List<T> sortedList(Collection<T> input) {$/;"	m	class:EntityTools
 sources	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/kernel/LineOfSightPerception.java	/^        private transient Map<StandardEntity, Collection<Ray>> sources;$/;"	f	class:LineOfSightPerception.LOSView	file:
 space	../roborescue-roborescue/modules/maps/src/maps/gml/editor/CreateSpaceTool.java	/^        private GMLSpace space;$/;"	f	class:CreateSpaceTool.CreateSpaceEdit	file:
@@ -9645,6 +9654,7 @@ updateHealth	../roborescue-roborescue/modules/misc-new/src/misc/MiscSimulator.ja
 updateInfo	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyAmbulance.java	/^    private void updateInfo(ChangeSet changed, MessageManager manager) {$/;"	m	class:DummyAmbulance	file:
 updateInfo	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyAmbulance.java	/^    private void updateInfo(ChangeSet changed, MessageManager manager) {$/;"	m	class:DummyAmbulance	file:
 updateInfo	./Comlib-ADK/src_old/launcher/dummy/DummyAmbulance.java	/^    private void updateInfo(ChangeSet changed, MessageManager manager) {$/;"	m	class:DummyAmbulance	file:
+updateInfo	./basefile/sample/SampleAmbulance.java	/^    private void updateInfo(ChangeSet changed, MessageManager manager) {$/;"	m	class:SampleAmbulance	file:
 updateMessageIDSize	./Comlib/src/main/java/comlib/manager/RadioConfig.java	/^    public void updateMessageIDSize(int id) {$/;"	m	class:RadioConfig
 updateOverlays	../roborescue-roborescue/modules/gis2/src/gis2/scenario/ScenarioEditor.java	/^    public void updateOverlays() {$/;"	m	class:ScenarioEditor
 updatePosition	../roborescue-roborescue/modules/traffic3/src/traffic3/objects/TrafficAgent.java	/^	private void updatePosition(double dt) {$/;"	m	class:TrafficAgent	file:
@@ -9719,6 +9729,9 @@ vertexArrayToPoints	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2
 vertexArrayToPoints	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/geometry/GeometryTools2D.java	/^    public static List<Point2D> vertexArrayToPoints(int[] vertices) {$/;"	m	class:GeometryTools2D
 vertices	../roborescue-roborescue/modules/maps/src/maps/convert/osm2gml/OSMBuildingInfo.java	/^    private List<Point2D> vertices;$/;"	f	class:OSMBuildingInfo	file:
 vertices	../roborescue-roborescue/modules/maps/src/maps/convert/osm2gml/OSMIntersectionInfo.java	/^    private List<Point2D> vertices;$/;"	f	class:OSMIntersectionInfo	file:
+victimManager	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyAmbulance.java	/^    public VictimManager victimManager;$/;"	f	class:DummyAmbulance
+victimManager	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/event/AmbulanceCivilianEvent.java	/^    private VictimManager victimManager;$/;"	f	class:AmbulanceCivilianEvent	file:
+victimManager	./basefile/sample/SampleAmbulance.java	/^    public VictimManager victimManager;$/;"	f	class:SampleAmbulance
 victimMessageID	./Comlib/src_old/message/CommunicationMessage.java	/^	public static final int victimMessageID   = 2;$/;"	f	class:CommunicationMessage
 view	../roborescue-roborescue/modules/human/src/human/ControlledAgentGUI.java	/^        private StandardWorldModelViewer view;$/;"	f	class:ControlledAgentGUI.ControlViewer	file:
 view	../roborescue-roborescue/modules/maps/src/maps/gml/view/GMLMapViewer.java	/^    public void view(GMLObject... objects) {$/;"	m	class:GMLMapViewer
