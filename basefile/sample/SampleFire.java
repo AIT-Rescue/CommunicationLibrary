@@ -9,7 +9,7 @@ import rescuecore2.worldmodel.ChangeSet;
 
 public class SampleFire extends FireBrigadeTactics {
     @Override
-    public void postConnect() {
+    public void preparation() {
 
     }
 

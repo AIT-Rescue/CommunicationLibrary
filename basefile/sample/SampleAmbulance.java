@@ -9,7 +9,7 @@ import rescuecore2.worldmodel.ChangeSet;
 
 public class SampleAmbulance extends AmbulanceTeamTactics {
     @Override
-    public void postConnect() {
+    public void preparation() {
 
     }
 

@@ -11,7 +11,7 @@ import rescuecore2.worldmodel.ChangeSet;
 public class SamplePolice extends PoliceForceTactics {
 
     @Override
-    public void postConnect() {
+    public void preparation() {
 
     }
 
