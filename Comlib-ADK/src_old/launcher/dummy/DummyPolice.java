@@ -10,7 +10,7 @@ import rescuecore2.worldmodel.ChangeSet;
 public class DummyPolice extends PoliceForceTactics {
 
     @Override
-    public void preparation() {
+    public void postConnect() {
 
     }
 

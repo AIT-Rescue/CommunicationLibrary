@@ -18,22 +18,26 @@ public abstract class TacticsAgent<T extends Tactics, E extends StandardEntity> 
     @Override
     public void postConnect() {
         super.postConnect();
-        //set value
+        this.initValue();
+        this.tactics.postConnect();
+    }
+
+    public void initValue() {
         this.tactics.random = this.random;
-        this.tactics.model = this.model;
-        this.tactics.config = this.config;
-        this.tactics.agentID = this.getID(); //AgentのEntityIDはかわるのか？？
-        this.tactics.location = this.location();
-        this.setAgentEntity(this.tactics);
-        this.setAgentUniqueValue(this.tactics);
-        
-        this.tactics.preparation();
+        this.tactics.model = this.model; //this.tactics.setWorld(this.model);
+        this.tactics.config = this.config; //this.tactics.setConfig(this.config);
+        //this.tactics.agentID = this.getID(); //AgentのEntityIDはかわるのか？？
+        //this.tactics.me = this.me();
+        //this.tactics.refuges = this.getRefuges();
+        this.initAgentValue(this.tactics);
     }
     
-    public abstract void setAgentEntity(T t);
-    
-    public abstract void setAgentUniqueValue(T t);
-    
+    public abstract void initAgentValue(T t);
+
+    @Override
+    public void registerProvider(MessageManager manager) {
+    }
+
     @Override
     public void registerEvent(MessageManager manager) {
         this.tactics.registerEvent(manager);
@@ -41,18 +45,19 @@ public abstract class TacticsAgent<T extends Tactics, E extends StandardEntity> 
     
     @Override
     public void think(int time, ChangeSet changed) {
-        //set value
-        this.tactics.model = this.model;
-        this.tactics.config = this.config;
+        this.tactics.model = this.model; //this.tactics.setWorld(this.model);
+        this.tactics.config = this.config; //this.tactics.setConfig(this.config);
         this.tactics.agentID = this.getID();
+
+        //this.tactics.setMe(this.me());
+        //this.tactics.me = this.me();
+        this.setAgent();
+
         this.tactics.location = this.location();
-        this.setAgentEntity(this.tactics);
-        
         this.send(this.tactics.think(time, changed, this.manager));
     }
 
-    @Override
-    public void registerProvider(MessageManager manager) {
+    public abstract void setAgent();
 
-    }
+
 }

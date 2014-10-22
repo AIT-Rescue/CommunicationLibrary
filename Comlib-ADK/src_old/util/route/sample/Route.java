@@ -1,14 +1,11 @@
-package comlib.adk.util.move;
+package comlib.adk.util.route.sample;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-
+import comlib.adk.util.route.RouteUtil;
 import rescuecore2.standard.entities.Area;
 import rescuecore2.standard.entities.Edge;
 import rescuecore2.worldmodel.EntityID;
+
+import java.util.*;
 
 //This is SUNTORI Route
 public class Route {
@@ -82,7 +79,7 @@ public class Route {
 				if (e.getNeighbour().equals(r.getID())) {
 					for (Edge e2 : r.getPassableEdge()) {
 						if (e2.getNeighbour().equals(this.getID())) {
-							int n = Util.distance(e, e2);
+							int n = RouteUtil.distance(e, e2);
 							if (n < distance) {
 								distance = n;
 								tmp1 = e;
@@ -241,9 +238,7 @@ public class Route {
 	/**
 	 * 自エリアの中心からあるエッジまでの距離を取得する.<br>
 	 * とりあえず今はエッジの中心までの距離を返す
-	 * 
-	 * @param a
-	 *            エリア
+	 *
 	 * @param e
 	 *            エッジ
 	 * @return 距離S
@@ -254,7 +249,7 @@ public class Route {
 		int cy = (e.getStartY() + e.getEndY()) / 2;
 		int dx = this.mySelf.getX();
 		int dy = this.mySelf.getY();
-		return Util.distance(cx, cy, dx, dy);
+		return RouteUtil.distance(cx, cy, dx, dy);
 	}
 
 	/**

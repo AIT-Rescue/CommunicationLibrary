@@ -1,16 +1,12 @@
-package comlib.adk.util.move;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+package comlib.adk.util.route.sample;
 
 import rescuecore2.standard.entities.Area;
 import rescuecore2.standard.entities.StandardEntity;
 import rescuecore2.standard.entities.StandardEntityURN;
 import rescuecore2.standard.entities.StandardWorldModel;
 import rescuecore2.worldmodel.EntityID;
+
+import java.util.*;
 
 /**
  * FlyWeightを用いてRouteを生成するクラス

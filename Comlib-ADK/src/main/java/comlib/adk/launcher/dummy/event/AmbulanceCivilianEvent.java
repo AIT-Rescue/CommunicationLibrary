@@ -21,21 +21,26 @@ public class AmbulanceCivilianEvent extends CivilianMessageEvent {
     @Override
     public void receivedRadio(CivilianMessage msg) {
         if(msg.getBuriedness() > 0) {
-            Civilian civilian = (Civilian)this.model.getEntity(msg.getHumanID());
-            if (civilian == null) {
-                model.addEntity(new Civilian(msg.getHumanID()));
-                civilian = (Civilian) model.getEntity(msg.getHumanID());
-            }
-            civilian.isHPDefined();
-            civilian.isBuriednessDefined();
-            civilian.isDamageDefined();
-            civilian.isPositionDefined();
-            civilian.setHP(msg.getHP());
-            civilian.setBuriedness(msg.getBuriedness());
-            civilian.setDamage(msg.getDamage());
-            civilian.setPosition(msg.getPosition());
-
+            Civilian civilian = reflectedMessage(this.model, msg);
             this.civilianManager.add(civilian);
         }
+    }
+
+    public Civilian reflectedMessage(StandardWorldModel swm, CivilianMessage msg) {
+        Civilian civilian = (Civilian)swm.getEntity(msg.getHumanID());
+        if (civilian == null) {
+            swm.addEntity(new Civilian(msg.getHumanID()));
+            civilian = (Civilian) swm.getEntity(msg.getHumanID());
+        }
+        civilian.isHPDefined();
+        civilian.isBuriednessDefined();
+        civilian.isDamageDefined();
+        civilian.isPositionDefined();
+        civilian.setHP(msg.getHP());
+        civilian.setBuriedness(msg.getBuriedness());
+        civilian.setDamage(msg.getDamage());
+        civilian.setPosition(msg.getPosition());
+
+        return civilian;
     }
 }

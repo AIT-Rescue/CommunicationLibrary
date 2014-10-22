@@ -27,7 +27,7 @@ public class DummyAmbulance extends AmbulanceTeamTactics {
     }
 
     @Override
-    public void preparation() {
+    public void postConnect() {
         this.rescueTarget = null;
         this.routeSearch = new SampleRouteSearcher(this);
         this.civilianManager = new CivilianSearcher(this);

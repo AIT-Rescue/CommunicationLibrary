@@ -17,9 +17,12 @@ public abstract class Tactics<E extends StandardEntity> {
     public StandardEntity location;
     public E me;
 
+    //public EntityID targetID;
+    //public List<Refuge> refuges;
+
     public Random random;
 
-    public abstract void preparation();
+    public abstract void postConnect();
 
     public abstract void registerEvent(MessageManager manager);
 

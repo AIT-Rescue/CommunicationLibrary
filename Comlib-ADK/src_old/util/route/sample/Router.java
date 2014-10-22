@@ -1,17 +1,9 @@
-package comlib.adk.util.move;
+package comlib.adk.util.route.sample;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-
-import rescuecore2.standard.entities.Area;
-import rescuecore2.standard.entities.Edge;
-import rescuecore2.standard.entities.StandardEntity;
-import rescuecore2.standard.entities.StandardEntityURN;
-import rescuecore2.standard.entities.StandardWorldModel;
+import rescuecore2.standard.entities.*;
 import rescuecore2.worldmodel.EntityID;
+
+import java.util.*;
 
 //Suntori Router
 public class Router {
