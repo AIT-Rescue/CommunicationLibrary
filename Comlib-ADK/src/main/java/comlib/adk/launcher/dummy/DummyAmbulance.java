@@ -5,7 +5,8 @@ import comlib.adk.team.tactics.AmbulanceTeamTactics;
 import comlib.adk.util.action.AmbulanceAction;
 import comlib.adk.util.route.RouteSearcher;
 import comlib.adk.util.route.sample.SampleRouteSearcher;
-import comlib.adk.util.target.ambulance.CivilianSearcher;
+import comlib.adk.util.target.VictimManager;
+import comlib.adk.util.target.sample.SampleVictimManager;
 import comlib.manager.MessageManager;
 import comlib.message.DummyMessage;
 import rescuecore2.messages.Message;
@@ -17,7 +18,7 @@ public class DummyAmbulance extends AmbulanceTeamTactics {
 
     //移動経路の選択
     //救助対象の管理・選択
-    public CivilianSearcher civilianManager;
+    public VictimManager civilianManager;
 
     public RouteSearcher routeSearch;
 
@@ -30,7 +31,7 @@ public class DummyAmbulance extends AmbulanceTeamTactics {
     public void preparation() {
         this.rescueTarget = null;
         this.routeSearch = new SampleRouteSearcher(this);
-        this.civilianManager = new CivilianSearcher(this);
+        this.civilianManager = new SampleVictimManager(this);
     }
 
     @Override
