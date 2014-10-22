@@ -8,7 +8,7 @@ import java.util.EnumSet;
 
 public class AmbulanceTeamAgent extends TacticsAgent<AmbulanceTeamTactics, AmbulanceTeam> {
 
-    //public AmbulanceTeamTactics tactics;
+    public AmbulanceTeamTactics tactics;
 
     public AmbulanceTeamAgent(AmbulanceTeamTactics ambulanceTactics) {
         super(ambulanceTactics);
@@ -28,5 +28,10 @@ public class AmbulanceTeamAgent extends TacticsAgent<AmbulanceTeamTactics, Ambul
     @Override
     public void initAgentValue(AmbulanceTeamTactics ambulanceTeamTactics) {
         ambulanceTeamTactics.refugeList = this.getRefuges();
+    }
+
+    @Override
+    public void setAgent() {
+        this.tactics.me = this.me();
     }
 }

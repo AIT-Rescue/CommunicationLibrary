@@ -1,7 +1,6 @@
-package comlib.adk.util.ambulance;
+package comlib.adk.util.target.ambulance;
 
 import comlib.adk.team.tactics.Tactics;
-import comlib.adk.util.route.RouteSearch;
 import comlib.adk.util.route.RouteUtil;
 import rescuecore2.standard.entities.Civilian;
 import rescuecore2.worldmodel.EntityID;
@@ -9,17 +8,17 @@ import rescuecore2.worldmodel.EntityID;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CivilianManager {
+public class CivilianSearcher {
 
     protected Tactics tactics;
 
-    protected RouteSearch routeSearch;
+    //protected RouteSearch routeSearch;
 
     public List<EntityID> civilianList;
 
-    public CivilianManager(Tactics user, RouteSearch rs) {
+    public CivilianSearcher(Tactics user) {
         this.tactics = user;
-        this.routeSearch = rs;
+        //this.routeSearch = rs;
         this.civilianList = new ArrayList<>();
     }
 

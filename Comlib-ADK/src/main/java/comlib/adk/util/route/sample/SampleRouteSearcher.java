@@ -1,7 +1,7 @@
 package comlib.adk.util.route.sample;
 
 import comlib.adk.team.tactics.Tactics;
-import comlib.adk.util.route.RouteSearch;
+import comlib.adk.util.route.RouteSearcher;
 import rescuecore2.misc.collections.LazyMap;
 import rescuecore2.standard.entities.Area;
 import rescuecore2.standard.entities.Building;
@@ -11,7 +11,7 @@ import rescuecore2.worldmodel.EntityID;
 
 import java.util.*;
 
-public class SampleRouteSearch extends RouteSearch {
+public class SampleRouteSearcher extends RouteSearcher {
 
     private static final int RANDOM_WALK_LENGTH = 50;
 
@@ -19,7 +19,7 @@ public class SampleRouteSearch extends RouteSearch {
 
     private Map<EntityID, Set<EntityID>> neighbours;
 
-    public SampleRouteSearch(Tactics user) {
+    public SampleRouteSearcher(Tactics user) {
         super(user);
         this.router = new Router(user.model);
         this.initRandomWalk();

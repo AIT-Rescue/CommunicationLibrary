@@ -3,9 +3,9 @@ package comlib.adk.launcher.dummy;
 import comlib.adk.launcher.dummy.event.AmbulanceCivilianEvent;
 import comlib.adk.team.tactics.AmbulanceTeamTactics;
 import comlib.adk.util.action.AmbulanceAction;
-import comlib.adk.util.ambulance.CivilianManager;
-import comlib.adk.util.route.RouteSearch;
-import comlib.adk.util.route.sample.SampleRouteSearch;
+import comlib.adk.util.route.RouteSearcher;
+import comlib.adk.util.route.sample.SampleRouteSearcher;
+import comlib.adk.util.target.ambulance.CivilianSearcher;
 import comlib.manager.MessageManager;
 import comlib.message.DummyMessage;
 import rescuecore2.messages.Message;
@@ -17,9 +17,9 @@ public class DummyAmbulance extends AmbulanceTeamTactics {
 
     //移動経路の選択
     //救助対象の管理・選択
-    public CivilianManager civilianManager;
+    public CivilianSearcher civilianManager;
 
-    public RouteSearch routeSearch;
+    public RouteSearcher routeSearch;
 
     public EntityID rescueTarget;
 
@@ -29,8 +29,8 @@ public class DummyAmbulance extends AmbulanceTeamTactics {
     @Override
     public void postConnect() {
         this.rescueTarget = null;
-        this.routeSearch = new SampleRouteSearch(this);
-        this.civilianManager = new CivilianManager(this, this.routeSearch);
+        this.routeSearch = new SampleRouteSearcher(this);
+        this.civilianManager = new CivilianSearcher(this);
     }
 
     @Override

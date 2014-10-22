@@ -39,4 +39,9 @@ public class FireBrigadeAgent extends TacticsAgent<FireBrigadeTactics, FireBriga
         fireBrigadeTactics.maxPower = this.config.getIntValue(MAX_POWER_KEY);
         fireBrigadeTactics.refugeList = this.getRefuges();
     }
+
+    @Override
+    public void setAgent() {
+        this.tactics.me = this.me();
+    }
 }

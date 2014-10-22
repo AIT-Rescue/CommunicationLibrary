@@ -8,10 +8,10 @@ import rescuecore2.worldmodel.EntityID;
 
 import java.util.List;
 
-public abstract class RouteSearch {
+public abstract class RouteSearcher {
     protected Tactics tactics;
 
-    public RouteSearch(Tactics user) {
+    public RouteSearcher(Tactics user) {
         this.tactics = user;
     }
 

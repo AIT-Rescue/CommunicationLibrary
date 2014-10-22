@@ -1,6 +1,8 @@
 package comlib.adk.launcher.dummy.event;
 
-import comlib.adk.util.ambulance.CivilianManager;
+//import comlib.adk.util.ambulance.CivilianManager;
+
+import comlib.adk.util.target.ambulance.CivilianSearcher;
 import comlib.event.information.CivilianMessageEvent;
 import comlib.message.information.CivilianMessage;
 import rescuecore2.standard.entities.Civilian;
@@ -9,9 +11,9 @@ import rescuecore2.standard.entities.StandardWorldModel;
 public class AmbulanceCivilianEvent extends CivilianMessageEvent {
 
     private StandardWorldModel model;
-    private CivilianManager civilianManager;
+    private CivilianSearcher civilianManager;
 
-    public AmbulanceCivilianEvent(StandardWorldModel swm, CivilianManager sm) {
+    public AmbulanceCivilianEvent(StandardWorldModel swm, CivilianSearcher sm) {
         this.model = swm;
         this.civilianManager = sm;
     }

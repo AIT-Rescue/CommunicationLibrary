@@ -39,12 +39,4 @@ public abstract class Tactics<E extends StandardEntity> {
     public E me() {
         return this.me;
     }
-
-    public void setMe(StandardEntity entity) {
-        try {
-            this.me = (E)entity;
-        }
-        catch (ClassCastException e){
-        }
-    }
 }

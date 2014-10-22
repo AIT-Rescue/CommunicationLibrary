@@ -50,11 +50,14 @@ public abstract class TacticsAgent<T extends Tactics, E extends StandardEntity> 
         this.tactics.agentID = this.getID();
 
         //this.tactics.setMe(this.me());
-        this.tactics.me = this.me();
+        //this.tactics.me = this.me();
+        this.setAgent();
 
         this.tactics.location = this.location();
         this.send(this.tactics.think(time, changed, this.manager));
     }
+
+    public abstract void setAgent();
 
 
 }
