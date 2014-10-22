@@ -7,6 +7,8 @@ import rescuecore2.worldmodel.EntityID;
 public abstract class HumanMessage extends InformationMessage
 {
 
+	protected int rawHumanID;
+	protected int rawHumanPosition;
 	protected EntityID humanID;
 	protected int humanHP;
 	protected int humanBuriedness;
@@ -23,17 +25,22 @@ public abstract class HumanMessage extends InformationMessage
 		humanPosition = human.getPosition();
 	}
 
-	public HumanMessage(int messageID, int time, int ttl, int hp, int buriedness, int damage, EntityID position, EntityID id)
+	public HumanMessage(int messageID, int time, int ttl, int hp, int buriedness, int damage, int position, int id)
 	{
 		super(messageID, time, ttl);
 		humanHP = hp;
 		humanBuriedness = buriedness;
 		humanDamage = damage;
-		humanPosition = position;
-		humanID = id;
+		rawHumanPosition = position;
+		rawHumanID = id;
 	}
 
-	public EntityID getHumanID() { return this.humanID; }
+	public EntityID getHumanID()
+	{
+		if (this.humanID == null)
+		{ this.humanID = new EntityID(this.rawHumanID); }
+		return this.humanID;
+	}
 
 	public int getHP() { return this.humanHP; }
 
@@ -41,6 +48,11 @@ public abstract class HumanMessage extends InformationMessage
 
 	public int getDamage() { return this.humanDamage; }
 
-	public EntityID getPosition() { return this.humanPosition; }
+	public EntityID getPosition()
+	{
+		if (this.humanPosition == null)
+		{ this.humanPosition = new EntityID(this.rawHumanPosition); }
+		return this.humanPosition;
+	}
 }
 

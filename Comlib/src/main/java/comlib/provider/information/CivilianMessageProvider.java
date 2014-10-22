@@ -35,8 +35,8 @@ public class CivilianMessageProvider extends HumanMessageProvider<CivilianMessag
 				bsr.getBits(config.getSizeOfHumanHP()),
 				bsr.getBits(config.getSizeOfHumanBuriedness()),
 				bsr.getBits(config.getSizeOfHumanDamage()),
-				new EntityID(bsr.getBits(config.getSizeOfHumanPosition())),
-				new EntityID(bsr.getBits(config.getSizeOfCivilianID()))
+				bsr.getBits(config.getSizeOfHumanPosition()),
+				bsr.getBits(config.getSizeOfCivilianID())
 				);
 	}
 
