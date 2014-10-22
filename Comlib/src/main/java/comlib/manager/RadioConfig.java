@@ -38,6 +38,13 @@ public class RadioConfig {
 
     public int getSizeOfCivilianID() { return 32; }
 
+    public int getSizeOfAmbulanceTeamID() { return 32; }
+
+    public int getSizeOfFireBrigadeID() { return 32; }
+    public int getSizeOfFireBrigadeWater() { return 32; }
+
+    public int getSizeOfPoliceForceID() { return 32; }
+
     /*
 		public int getSizeOfEntityID(Class<? extends Building> c) {
 
