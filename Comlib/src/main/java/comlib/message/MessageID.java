@@ -9,4 +9,6 @@ public interface MessageID
 	int fireBrigadeMessage = 1;
 	int policeForceMessage = 2;
 	int ambulanceTeamMessage = 3;
+
+	int buildingMessage = 4;
 }

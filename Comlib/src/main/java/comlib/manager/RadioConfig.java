@@ -45,6 +45,8 @@ public class RadioConfig {
 
     public int getSizeOfPoliceForceID() { return 32; }
 
+    public int getSizeOfBuildingID() { return 32; }
+
     /*
 		public int getSizeOfEntityID(Class<? extends Building> c) {
 
