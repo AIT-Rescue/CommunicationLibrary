@@ -8,6 +8,7 @@ import comlib.adk.util.route.sample.SampleRouteSearcher;
 import comlib.adk.util.target.VictimManager;
 import comlib.adk.util.target.sample.SampleVictimManager;
 import comlib.manager.MessageManager;
+import comlib.message.information.BuildingMessage;
 import rescuecore2.messages.Message;
 import rescuecore2.standard.entities.*;
 import rescuecore2.worldmodel.ChangeSet;
@@ -45,14 +46,22 @@ public class DummyAmbulance extends AmbulanceTeamTactics {
         this.updateInfo(changed, manager);
 
         if(this.someoneOnBoard()) {
+            //LOAD_TARGET_REFUGE
             if (this.location instanceof Refuge) {
                 this.rescueTarget = null;
                 return AmbulanceAction.unload(this, time);
             }
             else {
+                //LOAD_TARGET_MOVE
                 return this.moveRefuge(time);
             }
         }
+
+        //RESCUE_TARGET
+        //RESCUE_TARGET_LOAD
+        //RESCUE_TARGET_RESCUE
+        //RANDOM_MOVE
+        //RESCUE_TARGET_MOVE
         if(this.rescueTarget != null) {
             Human target = (Human)this.model.getEntity(this.rescueTarget);
             if(target.getPosition().equals(location.getID())) {
@@ -96,7 +105,7 @@ public class DummyAmbulance extends AmbulanceTeamTactics {
             else if(entity instanceof Building) {
                 Building b = (Building)entity;
                 if(b.getFieryness() > 0) {
-                    //manager.addSendMessage(new BuildingMessage(b));
+                    manager.addSendMessage(new BuildingMessage(b));
                 }
             }
         }
