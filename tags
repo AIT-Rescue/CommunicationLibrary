@@ -406,6 +406,7 @@ BuildingMessage	./Comlib/src/main/java/comlib/message/information/BuildingMessag
 BuildingMessage	./Comlib/src_old/message/information/BuildingMessage.java	/^	public BuildingMessage(int t, Building building)$/;"	m	class:BuildingMessage
 BuildingMessage	./Comlib/src_old/message/information/BuildingMessage.java	/^	public BuildingMessage(int t, int l, Building building)$/;"	m	class:BuildingMessage
 BuildingMessage	./Comlib/src_old/message/information/BuildingMessage.java	/^public class BuildingMessage extends MapMessage$/;"	c
+BuildingMessageEvent	./Comlib/src/main/java/comlib/event/information/BuildingMessageEvent.java	/^public abstract class BuildingMessageEvent extends MessageEvent<BuildingMessage>$/;"	c
 BuildingSpaceFiller	../roborescue-roborescue/modules/maps/src/maps/convert/osm2gml/buildings/BuildingSpaceFiller.java	/^public interface BuildingSpaceFiller {$/;"	i
 BuriedAgentsCommandFilter	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/kernel/BuriedAgentsCommandFilter.java	/^public class BuriedAgentsCommandFilter extends AbstractCommandFilter {$/;"	c
 BuriednessStats	../roborescue-roborescue/modules/misc-new/src/misc/MiscSimulator.java	/^        BuriednessStats(int code, Config config) {$/;"	m	class:MiscSimulator.BuriednessStats
@@ -3724,6 +3725,7 @@ comlib.event	./Comlib/src/main/java/comlib/event/information/CivilianMessageEven
 comlib.event	./Comlib/src/main/java/comlib/event/information/FireBrigadeMessageEvent.java	/^package comlib.event;$/;"	p
 comlib.event	./Comlib/src/main/java/comlib/event/information/PoliceForceMessageEvent.java	/^package comlib.event;$/;"	p
 comlib.event.information	./Comlib/src/main/java/comlib/event/information/AmbulanceTeamMessageEvent.java	/^package comlib.event.information;$/;"	p
+comlib.event.information	./Comlib/src/main/java/comlib/event/information/BuildingMessageEvent.java	/^package comlib.event.information;$/;"	p
 comlib.event.information	./Comlib/src/main/java/comlib/event/information/CivilianMessageEvent.java	/^package comlib.event.information;$/;"	p
 comlib.event.information	./Comlib/src/main/java/comlib/event/information/FireBrigadeMessageEvent.java	/^package comlib.event.information;$/;"	p
 comlib.event.information	./Comlib/src/main/java/comlib/event/information/PoliceForceMessageEvent.java	/^package comlib.event.information;$/;"	p
@@ -7879,12 +7881,14 @@ receivedRadio	./Comlib-ADK/src_old/launcher/dummy/event/AmbulanceCivilianEvent.j
 receivedRadio	./Comlib/src/main/java/comlib/event/DummyMessageEvent.java	/^	public void receivedRadio(DummyMessage msg)$/;"	m	class:DummyMessageEvent
 receivedRadio	./Comlib/src/main/java/comlib/event/MessageEvent.java	/^	public abstract void receivedRadio(M msg);	$/;"	m	class:MessageEvent
 receivedRadio	./Comlib/src/main/java/comlib/event/information/AmbulanceTeamMessageEvent.java	/^	public void receivedRadio(AmbulanceTeamMessage msg)$/;"	m	class:AmbulanceTeamMessageEvent
+receivedRadio	./Comlib/src/main/java/comlib/event/information/BuildingMessageEvent.java	/^	public void receivedRadio(BuildingMessage msg)$/;"	m	class:BuildingMessageEvent
 receivedRadio	./Comlib/src/main/java/comlib/event/information/CivilianMessageEvent.java	/^	public void receivedRadio(CivilianMessage msg)$/;"	m	class:CivilianMessageEvent
 receivedRadio	./Comlib/src/main/java/comlib/event/information/FireBrigadeMessageEvent.java	/^	public void receivedRadio(FireBrigadeMessage msg)$/;"	m	class:FireBrigadeMessageEvent
 receivedRadio	./Comlib/src/main/java/comlib/event/information/PoliceForceMessageEvent.java	/^	public void receivedRadio(PoliceForceMessage msg)$/;"	m	class:PoliceForceMessageEvent
 receivedVoice	./Comlib/src/main/java/comlib/event/DummyMessageEvent.java	/^	public void receivedVoice(DummyMessage msg)$/;"	m	class:DummyMessageEvent
 receivedVoice	./Comlib/src/main/java/comlib/event/MessageEvent.java	/^	public abstract void receivedVoice(M msg);	$/;"	m	class:MessageEvent
 receivedVoice	./Comlib/src/main/java/comlib/event/information/AmbulanceTeamMessageEvent.java	/^	public void receivedVoice(AmbulanceTeamMessage msg)$/;"	m	class:AmbulanceTeamMessageEvent
+receivedVoice	./Comlib/src/main/java/comlib/event/information/BuildingMessageEvent.java	/^	public void receivedVoice(BuildingMessage msg)$/;"	m	class:BuildingMessageEvent
 receivedVoice	./Comlib/src/main/java/comlib/event/information/CivilianMessageEvent.java	/^	public void receivedVoice(CivilianMessage msg)$/;"	m	class:CivilianMessageEvent
 receivedVoice	./Comlib/src/main/java/comlib/event/information/FireBrigadeMessageEvent.java	/^	public void receivedVoice(FireBrigadeMessage msg)$/;"	m	class:FireBrigadeMessageEvent
 receivedVoice	./Comlib/src/main/java/comlib/event/information/PoliceForceMessageEvent.java	/^	public void receivedVoice(PoliceForceMessage msg)$/;"	m	class:PoliceForceMessageEvent
