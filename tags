@@ -407,6 +407,8 @@ BuildingMessage	./Comlib/src_old/message/information/BuildingMessage.java	/^	pub
 BuildingMessage	./Comlib/src_old/message/information/BuildingMessage.java	/^	public BuildingMessage(int t, int l, Building building)$/;"	m	class:BuildingMessage
 BuildingMessage	./Comlib/src_old/message/information/BuildingMessage.java	/^public class BuildingMessage extends MapMessage$/;"	c
 BuildingMessageEvent	./Comlib/src/main/java/comlib/event/information/BuildingMessageEvent.java	/^public abstract class BuildingMessageEvent extends MessageEvent<BuildingMessage>$/;"	c
+BuildingMessageProvider	./Comlib/src/main/java/comlib/provider/information/BuildingMessageProvider.java	/^	public BuildingMessageProvider(int id)$/;"	m	class:BuildingMessageProvider
+BuildingMessageProvider	./Comlib/src/main/java/comlib/provider/information/BuildingMessageProvider.java	/^public class BuildingMessageProvider extends MapMessageProvider<BuildingMessage, BuildingMessageEvent>$/;"	c
 BuildingSpaceFiller	../roborescue-roborescue/modules/maps/src/maps/convert/osm2gml/buildings/BuildingSpaceFiller.java	/^public interface BuildingSpaceFiller {$/;"	i
 BuriedAgentsCommandFilter	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/kernel/BuriedAgentsCommandFilter.java	/^public class BuriedAgentsCommandFilter extends AbstractCommandFilter {$/;"	c
 BuriednessStats	../roborescue-roborescue/modules/misc-new/src/misc/MiscSimulator.java	/^        BuriednessStats(int code, Config config) {$/;"	m	class:MiscSimulator.BuriednessStats
@@ -1773,6 +1775,8 @@ MapMessage	./Comlib/src/main/java/comlib/message/MapMessage.java	/^abstract publ
 MapMessage	./Comlib/src_old/message/MapMessage.java	/^	public MapMessage(int id, int t)$/;"	m	class:MapMessage
 MapMessage	./Comlib/src_old/message/MapMessage.java	/^	public MapMessage(int id, int t, int l)$/;"	m	class:MapMessage
 MapMessage	./Comlib/src_old/message/MapMessage.java	/^public class MapMessage extends InformationMessage$/;"	c
+MapMessageProvider	./Comlib/src/main/java/comlib/provider/MapMessageProvider.java	/^	public MapMessageProvider(int id)$/;"	m	class:MapMessageProvider
+MapMessageProvider	./Comlib/src/main/java/comlib/provider/MapMessageProvider.java	/^public abstract class MapMessageProvider<M extends MapMessage, E extends MessageEvent> extends InformationMessageProvider<M, E>$/;"	c
 MapReader	../roborescue-roborescue/modules/maps/src/maps/MapReader.java	/^    private MapReader() {$/;"	m	class:MapReader	file:
 MapReader	../roborescue-roborescue/modules/maps/src/maps/MapReader.java	/^public final class MapReader {$/;"	c
 MapTools	../roborescue-roborescue/modules/maps/src/maps/MapTools.java	/^    private MapTools() {$/;"	m	class:MapTools	file:
@@ -3774,9 +3778,11 @@ comlib.message.information	./Comlib/src_old/message/information/VictimMessage.ja
 comlib.provider	./Comlib/src/main/java/comlib/provider/DummyMessageProvider.java	/^package comlib.provider;$/;"	p
 comlib.provider	./Comlib/src/main/java/comlib/provider/HumanMessageProvider.java	/^package comlib.provider;$/;"	p
 comlib.provider	./Comlib/src/main/java/comlib/provider/InformationMessageProvider.java	/^package comlib.provider;$/;"	p
+comlib.provider	./Comlib/src/main/java/comlib/provider/MapMessageProvider.java	/^package comlib.provider;$/;"	p
 comlib.provider	./Comlib/src/main/java/comlib/provider/MessageProvider.java	/^package comlib.provider;$/;"	p
 comlib.provider	./Comlib/src/main/java/comlib/provider/information/CivilianMessageProvider.java	/^package comlib.provider;$/;"	p
 comlib.provider.information	./Comlib/src/main/java/comlib/provider/information/AmbulanceTeamMessageProvider.java	/^package comlib.provider.information;$/;"	p
+comlib.provider.information	./Comlib/src/main/java/comlib/provider/information/BuildingMessageProvider.java	/^package comlib.provider.information;$/;"	p
 comlib.provider.information	./Comlib/src/main/java/comlib/provider/information/CivilianMessageProvider.java	/^package comlib.provider.information;$/;"	p
 comlib.provider.information	./Comlib/src/main/java/comlib/provider/information/FireBrigadeMessageProvider.java	/^package comlib.provider.information;$/;"	p
 comlib.provider.information	./Comlib/src/main/java/comlib/provider/information/PoliceForceMessageProvider.java	/^package comlib.provider.information;$/;"	p
@@ -4041,10 +4047,14 @@ createMessage	./Comlib/src/main/java/comlib/provider/HumanMessageProvider.java	/
 createMessage	./Comlib/src/main/java/comlib/provider/HumanMessageProvider.java	/^	protected M createMessage(VoiceConfig config, int time, int ttl, String[] data, int next)$/;"	m	class:HumanMessageProvider
 createMessage	./Comlib/src/main/java/comlib/provider/InformationMessageProvider.java	/^	protected M createMessage(RadioConfig config, int time, BitStreamReader bsr)$/;"	m	class:InformationMessageProvider
 createMessage	./Comlib/src/main/java/comlib/provider/InformationMessageProvider.java	/^	protected M createMessage(VoiceConfig config, int time, int ttl, String[] data, int next)$/;"	m	class:InformationMessageProvider
+createMessage	./Comlib/src/main/java/comlib/provider/MapMessageProvider.java	/^	protected M createMessage(RadioConfig config, int time, BitStreamReader bsr)$/;"	m	class:MapMessageProvider
+createMessage	./Comlib/src/main/java/comlib/provider/MapMessageProvider.java	/^	protected M createMessage(VoiceConfig config, int time, int ttl, String[] data, int next)$/;"	m	class:MapMessageProvider
 createMessage	./Comlib/src/main/java/comlib/provider/MessageProvider.java	/^	protected abstract M createMessage(RadioConfig config, int time, BitStreamReader bsr);$/;"	m	class:MessageProvider
 createMessage	./Comlib/src/main/java/comlib/provider/MessageProvider.java	/^	protected abstract M createMessage(VoiceConfig config, int time, int ttl, String[] datas, int next);$/;"	m	class:MessageProvider
 createMessage	./Comlib/src/main/java/comlib/provider/information/AmbulanceTeamMessageProvider.java	/^	protected AmbulanceTeamMessage createMessage(RadioConfig config, int time, BitStreamReader bsr)$/;"	m	class:AmbulanceTeamMessageProvider
 createMessage	./Comlib/src/main/java/comlib/provider/information/AmbulanceTeamMessageProvider.java	/^	protected AmbulanceTeamMessage createMessage(VoiceConfig config, int time, int ttl, String[] data, int next)$/;"	m	class:AmbulanceTeamMessageProvider
+createMessage	./Comlib/src/main/java/comlib/provider/information/BuildingMessageProvider.java	/^	protected BuildingMessage createMessage(RadioConfig config, int time, BitStreamReader bsr)$/;"	m	class:BuildingMessageProvider
+createMessage	./Comlib/src/main/java/comlib/provider/information/BuildingMessageProvider.java	/^	protected BuildingMessage createMessage(VoiceConfig config, int time, int ttl, String[] data, int next)$/;"	m	class:BuildingMessageProvider
 createMessage	./Comlib/src/main/java/comlib/provider/information/CivilianMessageProvider.java	/^	protected CivilianMessage createMessage(RadioConfig config, int time, BitStreamReader bsr)$/;"	m	class:CivilianMessageProvider
 createMessage	./Comlib/src/main/java/comlib/provider/information/CivilianMessageProvider.java	/^	protected CivilianMessage createMessage(VoiceConfig config, int time, int ttl, String[] data, int next)$/;"	m	class:CivilianMessageProvider
 createMessage	./Comlib/src/main/java/comlib/provider/information/FireBrigadeMessageProvider.java	/^	protected FireBrigadeMessage createMessage(RadioConfig config, int time, BitStreamReader bsr)$/;"	m	class:FireBrigadeMessageProvider
@@ -4794,6 +4804,7 @@ getBoundsShape	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc
 getBoundsShape	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/gui/ShapeDebugFrame.java	/^        public abstract Shape getBoundsShape();$/;"	m	class:ShapeDebugFrame.ShapeInfo
 getBrokenness	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/Building.java	/^    public int getBrokenness() {$/;"	m	class:Building
 getBrokenness	./Comlib/old_src/message/information/BuildingMessage.java	/^	public int getBrokenness();$/;"	m	class:BuildingMessage
+getBrokenness	./Comlib/src/main/java/comlib/message/information/BuildingMessage.java	/^	public int getBrokenness() { return this.buildingBrokenness; }$/;"	m	class:BuildingMessage
 getBrokenness	./Comlib/src_old/message/information/BuildingMessage.java	/^	public int getBrokenness();$/;"	m	class:BuildingMessage
 getBrokennessDegree	../roborescue-roborescue/modules/misc/src/misc/MiscParameters.java	/^        public static BrokennessDegree getBrokennessDegree(Building b) {$/;"	m	class:MiscParameters.BrokennessDegree
 getBrokennessProperty	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/Building.java	/^    public IntProperty getBrokennessProperty() {$/;"	m	class:Building
@@ -5077,6 +5088,7 @@ getFarNode	../roborescue-roborescue/modules/maps/src/maps/convert/legacy2gml/Nod
 getFarNode	../roborescue-roborescue/modules/maps/src/maps/convert/osm2gml/OSMIntersectionInfo.java	/^        OSMNode getFarNode() {$/;"	m	class:OSMIntersectionInfo.RoadAspect
 getFieryness	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/Building.java	/^    public int getFieryness() {$/;"	m	class:Building
 getFieryness	./Comlib/old_src/message/information/BuildingMessage.java	/^	public int getFieryness()$/;"	m	class:BuildingMessage
+getFieryness	./Comlib/src/main/java/comlib/message/information/BuildingMessage.java	/^	public int getFieryness() { return this.buildingFieryness; }$/;"	m	class:BuildingMessage
 getFieryness	./Comlib/src_old/message/information/BuildingMessage.java	/^	public int getFieryness()$/;"	m	class:BuildingMessage
 getFierynessEnum	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/Building.java	/^    public StandardEntityConstants.Fieryness getFierynessEnum() {$/;"	m	class:Building
 getFierynessProperty	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/Building.java	/^    public IntProperty getFierynessProperty() {$/;"	m	class:Building
@@ -5696,6 +5708,8 @@ getSize	../roborescue-roborescue/modules/kernel/src/kernel/ui/ScoreTable.java	/^
 getSize	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/gui/ChangeSetComponent.java	/^        public int getSize() {$/;"	m	class:ChangeSetComponent.EntityListModel
 getSize	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/gui/ListModelList.java	/^    public int getSize() {$/;"	m	class:ListModelList
 getSizeOfAmbulanceTeamID	./Comlib/src/main/java/comlib/manager/RadioConfig.java	/^    public int getSizeOfAmbulanceTeamID() { return 32; }$/;"	m	class:RadioConfig
+getSizeOfBuildingBrokenness	./Comlib/src/main/java/comlib/manager/RadioConfig.java	/^    public int getSizeOfBuildingBrokenness() { return 32; }$/;"	m	class:RadioConfig
+getSizeOfBuildingFieryness	./Comlib/src/main/java/comlib/manager/RadioConfig.java	/^    public int getSizeOfBuildingFieryness() { return 32; }$/;"	m	class:RadioConfig
 getSizeOfBuildingID	./Comlib/src/main/java/comlib/manager/RadioConfig.java	/^    public int getSizeOfBuildingID() { return 32; }$/;"	m	class:RadioConfig
 getSizeOfCivilianID	./Comlib/src/main/java/comlib/manager/RadioConfig.java	/^    public int getSizeOfCivilianID() { return 32; }$/;"	m	class:RadioConfig
 getSizeOfDummyValue	./Comlib/src/main/java/comlib/manager/RadioConfig.java	/^    public int getSizeOfDummyValue() { return 32; }$/;"	m	class:RadioConfig
@@ -10167,10 +10181,14 @@ writeMessage	./Comlib/src/main/java/comlib/provider/HumanMessageProvider.java	/^
 writeMessage	./Comlib/src/main/java/comlib/provider/HumanMessageProvider.java	/^	protected void writeMessage(VoiceConfig config, StringBuilder sb, M msg)$/;"	m	class:HumanMessageProvider
 writeMessage	./Comlib/src/main/java/comlib/provider/InformationMessageProvider.java	/^	protected void writeMessage(RadioConfig config, BitOutputStream bos, M msg)$/;"	m	class:InformationMessageProvider
 writeMessage	./Comlib/src/main/java/comlib/provider/InformationMessageProvider.java	/^	protected void writeMessage(VoiceConfig config, StringBuilder sb, M msg)$/;"	m	class:InformationMessageProvider
+writeMessage	./Comlib/src/main/java/comlib/provider/MapMessageProvider.java	/^	protected void writeMessage(RadioConfig config, BitOutputStream bos, M msg)$/;"	m	class:MapMessageProvider
+writeMessage	./Comlib/src/main/java/comlib/provider/MapMessageProvider.java	/^	protected void writeMessage(VoiceConfig config, StringBuilder sb, M msg)$/;"	m	class:MapMessageProvider
 writeMessage	./Comlib/src/main/java/comlib/provider/MessageProvider.java	/^	protected abstract void writeMessage(RadioConfig config, BitOutputStream bos, M msg);$/;"	m	class:MessageProvider
 writeMessage	./Comlib/src/main/java/comlib/provider/MessageProvider.java	/^	protected abstract void writeMessage(VoiceConfig config, StringBuilder sb, M msg);$/;"	m	class:MessageProvider
 writeMessage	./Comlib/src/main/java/comlib/provider/information/AmbulanceTeamMessageProvider.java	/^	protected void writeMessage(RadioConfig config, BitOutputStream bos, AmbulanceTeamMessage msg)$/;"	m	class:AmbulanceTeamMessageProvider
 writeMessage	./Comlib/src/main/java/comlib/provider/information/AmbulanceTeamMessageProvider.java	/^	protected void writeMessage(VoiceConfig config, StringBuilder sb, AmbulanceTeamMessage msg)$/;"	m	class:AmbulanceTeamMessageProvider
+writeMessage	./Comlib/src/main/java/comlib/provider/information/BuildingMessageProvider.java	/^	protected void writeMessage(RadioConfig config, BitOutputStream bos, BuildingMessage msg)$/;"	m	class:BuildingMessageProvider
+writeMessage	./Comlib/src/main/java/comlib/provider/information/BuildingMessageProvider.java	/^	protected void writeMessage(VoiceConfig config, StringBuilder sb, BuildingMessage msg)$/;"	m	class:BuildingMessageProvider
 writeMessage	./Comlib/src/main/java/comlib/provider/information/CivilianMessageProvider.java	/^	protected void writeMessage(RadioConfig config, BitOutputStream bos, CivilianMessage msg)$/;"	m	class:CivilianMessageProvider
 writeMessage	./Comlib/src/main/java/comlib/provider/information/CivilianMessageProvider.java	/^	protected void writeMessage(VoiceConfig config, StringBuilder sb, CivilianMessage msg)$/;"	m	class:CivilianMessageProvider
 writeMessage	./Comlib/src/main/java/comlib/provider/information/FireBrigadeMessageProvider.java	/^	protected void writeMessage(RadioConfig config, BitOutputStream bos, FireBrigadeMessage msg)$/;"	m	class:FireBrigadeMessageProvider

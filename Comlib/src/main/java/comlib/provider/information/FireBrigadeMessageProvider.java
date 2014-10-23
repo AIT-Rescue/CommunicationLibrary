@@ -21,8 +21,8 @@ public class FireBrigadeMessageProvider extends HumanMessageProvider<FireBrigade
 	protected void writeMessage(RadioConfig config, BitOutputStream bos, FireBrigadeMessage msg)
 	{
 		super.writeMessage(config, bos, msg);
-		bos.writeBits(msg.getHP(), config.getSizeOfFireBrigadeID());
-		bos.writeBits(msg.getHP(), config.getSizeOfFireBrigadeWater());
+		bos.writeBits(msg.getHumanID().getValue(), config.getSizeOfFireBrigadeID());
+		bos.writeBits(msg.getWater(), config.getSizeOfFireBrigadeWater());
 	}
 
 	protected void writeMessage(VoiceConfig config, StringBuilder sb, FireBrigadeMessage msg)

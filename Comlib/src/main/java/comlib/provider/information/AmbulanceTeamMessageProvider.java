@@ -21,7 +21,7 @@ public class AmbulanceTeamMessageProvider extends HumanMessageProvider<Ambulance
 	protected void writeMessage(RadioConfig config, BitOutputStream bos, AmbulanceTeamMessage msg)
 	{
 		super.writeMessage(config, bos, msg);
-		bos.writeBits(msg.getHP(), config.getSizeOfAmbulanceTeamID());
+		bos.writeBits(msg.getHumanID().getValue(), config.getSizeOfAmbulanceTeamID());
 	}
 
 	protected void writeMessage(VoiceConfig config, StringBuilder sb, AmbulanceTeamMessage msg)

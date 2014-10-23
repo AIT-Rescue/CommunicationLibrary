@@ -21,7 +21,7 @@ public class CivilianMessageProvider extends HumanMessageProvider<CivilianMessag
 	protected void writeMessage(RadioConfig config, BitOutputStream bos, CivilianMessage msg)
 	{
 		super.writeMessage(config, bos, msg);
-		bos.writeBits(msg.getHP(), config.getSizeOfCivilianID());
+		bos.writeBits(msg.getHumanID().getValue(), config.getSizeOfCivilianID());
 	}
 
 	protected void writeMessage(VoiceConfig config, StringBuilder sb, CivilianMessage msg)

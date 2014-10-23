@@ -21,7 +21,7 @@ public class PoliceForceMessageProvider extends HumanMessageProvider<PoliceForce
 	protected void writeMessage(RadioConfig config, BitOutputStream bos, PoliceForceMessage msg)
 	{
 		super.writeMessage(config, bos, msg);
-		bos.writeBits(msg.getHP(), config.getSizeOfPoliceForceID());
+		bos.writeBits(msg.getHumanID().getValue(), config.getSizeOfPoliceForceID());
 	}
 
 	protected void writeMessage(VoiceConfig config, StringBuilder sb, PoliceForceMessage msg)

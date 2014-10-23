@@ -36,5 +36,9 @@ public class BuildingMessage extends MapMessage
 		{ this.buildingID = new EntityID(this.rawBuildingID); }
 		return this.buildingID;
 	}
+
+	public int getBrokenness() { return this.buildingBrokenness; }
+
+	public int getFieryness() { return this.buildingFieryness; }
 }
 
