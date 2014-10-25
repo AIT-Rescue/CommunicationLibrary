@@ -52,10 +52,18 @@ public abstract class CommunicationAgent<E extends StandardEntity> extends Stand
 	@Override
 	protected final void think(int time, ChangeSet changed, Collection<Command> heard)
 	{
+        this.receiveBefore(time, changed, heard);
 		this.manager.receiveMessage(time, heard);
 		this.think(time, changed);
 		this.send(this.manager.createSendMessage(super.getID()));
+        this.sendAfter(time, changed, heard);
 	}
+
+    public void receiveBefore(int time, ChangeSet changed, Collection<Command> heard) {
+    }
+
+    public void sendAfter(int time, ChangeSet changed, Collection<Command> heard) {
+    }
 
 	public void send(Message[] msgs)
 	{
