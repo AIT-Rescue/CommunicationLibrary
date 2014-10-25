@@ -14,7 +14,11 @@ public class SampleBuildingManager extends BuildingManager{
 
     @Override
     public void add(Building building) {
-        this.buildingList.add(building.getID());
+        if (building.isOnFire()) {
+            this.buildingList.add(building.getID());
+        }
+        //if(building.getFieryness() > 0) {
+        //}
     }
 
     @Override

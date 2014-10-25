@@ -29,6 +29,16 @@ public class AmbulanceTeamAgent extends TacticsAgent<AmbulanceTeamTactics, Ambul
     }
     
     public void setAgentUniqueValue(AmbulanceTeamTactics ambulanceTeamTactics) {
+        ambulanceTeamTactics.model.indexClass(
+                StandardEntityURN.CIVILIAN,
+                StandardEntityURN.FIRE_BRIGADE,
+                StandardEntityURN.POLICE_FORCE,
+                StandardEntityURN.AMBULANCE_TEAM,
+                StandardEntityURN.REFUGE,
+                StandardEntityURN.HYDRANT,
+                StandardEntityURN.GAS_STATION,
+                StandardEntityURN.BUILDING
+        );
         ambulanceTeamTactics.refugeList = this.getRefuges();
     }
 }

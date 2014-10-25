@@ -28,6 +28,7 @@ public class PoliceForceAgent extends TacticsAgent<PoliceForceTactics, PoliceFor
     
     @Override
     public void setAgentUniqueValue(PoliceForceTactics policeForceTactics) {
+        policeForceTactics.model.indexClass(StandardEntityURN.ROAD);
         policeForceTactics.distance = this.config.getIntValue(DISTANCE_KEY);
     }
     

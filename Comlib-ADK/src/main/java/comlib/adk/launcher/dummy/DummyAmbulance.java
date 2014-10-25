@@ -43,6 +43,48 @@ public class DummyAmbulance extends AmbulanceTeamTactics {
 
     @Override
     public Message think(int time, ChangeSet changed, MessageManager manager) {
+        //if(rescueTarget != null) {
+        //    if(this.someoneOnBoard()) {
+        //        if (this.location instanceof Refuge) {
+        //            this.rescueTarget = null;
+        //            return AmbulanceAction.unload(this, time);
+        //        }
+        //        else {
+        //            return this.moveRefuge(time);
+        //        }
+        //    }
+        //    else {
+        //        Human target = (Human)this.model.getEntity(this.rescueTarget);
+        //        if(target.getPosition().equals(location.getID())) {
+        //            if ((target instanceof Civilian) && target.getBuriedness() == 0 && !(this.location instanceof Refuge)) {
+        //                return AmbulanceAction.load(this, time, this.rescueTarget);
+        //            } else if (target.getBuriedness() > 0) {
+        //                return AmbulanceAction.rescue(this, time, this.rescueTarget);
+        //            }
+        //            else {
+        //                this.rescueTarget = null;
+        //                List<EntityID> path = this.routeSearcher.randomWalk();
+        //                return path != null ? AmbulanceAction.move(this, time, path) : AmbulanceAction.rest(this, time);
+        //            }
+        //        }
+        //        else {
+        //            return AmbulanceAction.move(this, time, this.routeSearcher.getPath(time, this.me, this.rescueTarget));
+        //        }
+        //    }
+        //}
+        //else {
+        //    EntityID id = this.victimManager.getTarget(time);
+        //    if (id != null) {
+        //        this.rescueTarget = id;
+        //        return AmbulanceAction.move(this, time, this.routeSearcher.getPath(time, this.me, id));
+        //    }
+        //    if(this.me.getBuriedness() > 0) {
+        //        return AmbulanceAction.rest(this, time);
+        //    }
+        //    List<EntityID> path = this.routeSearcher.randomWalk();
+        //    return path != null ? AmbulanceAction.move(this, time, path) : AmbulanceAction.rest(this, time);
+        //}
+
         this.updateInfo(changed, manager);
 
         if(this.someoneOnBoard()) {
