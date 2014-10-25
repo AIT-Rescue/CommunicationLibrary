@@ -3,11 +3,8 @@ package comlib.adk.agent;
 import comlib.adk.team.tactics.Tactics;
 import comlib.agent.CommunicationAgent;
 import comlib.manager.MessageManager;
-import rescuecore2.messages.Command;
 import rescuecore2.standard.entities.StandardEntity;
 import rescuecore2.worldmodel.ChangeSet;
-
-import java.util.Collection;
 
 public abstract class TacticsAgent<T extends Tactics, E extends StandardEntity> extends CommunicationAgent<E> {
     
@@ -36,6 +33,11 @@ public abstract class TacticsAgent<T extends Tactics, E extends StandardEntity> 
     public abstract void setAgentEntity(T t);
     
     public abstract void setAgentUniqueValue(T t);
+
+    @Override
+    public void registerProvider(MessageManager manager) {
+        this.tactics.registerProvider(manager);
+    }
     
     @Override
     public void registerEvent(MessageManager manager) {
@@ -43,12 +45,12 @@ public abstract class TacticsAgent<T extends Tactics, E extends StandardEntity> 
     }
     
     @Override
-    public void think(int time, ChangeSet changed) {
+    public void thinkEvent(int time, ChangeSet changed) {
         this.send(this.tactics.think(time, changed, this.manager));
     }
 
     @Override
-    public void receiveBefore(int time, ChangeSet changed, Collection<Command> heard) {
+    public void receiveBeforeEvent(int time, ChangeSet changed) {
         //set value
         this.tactics.model = this.model;
         this.tactics.config = this.config;
@@ -58,12 +60,7 @@ public abstract class TacticsAgent<T extends Tactics, E extends StandardEntity> 
     }
 
     @Override
-    public void sendAfter(int time, ChangeSet changed, Collection<Command> heard) {
-
-    }
-
-    @Override
-    public void registerProvider(MessageManager manager) {
+    public void sendAfterEvent(int time, ChangeSet changed) {
 
     }
 }

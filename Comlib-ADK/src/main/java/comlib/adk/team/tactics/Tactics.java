@@ -23,6 +23,9 @@ public abstract class Tactics<E extends StandardEntity> {
 
     public abstract void registerEvent(MessageManager manager);
 
+    public void registerProvider(MessageManager manager) {
+    }
+
     public abstract Message think(int time, ChangeSet changed, MessageManager manager);
 
     public StandardEntity location() {
