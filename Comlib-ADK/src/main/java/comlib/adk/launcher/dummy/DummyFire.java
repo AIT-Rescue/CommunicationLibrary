@@ -124,4 +124,12 @@ public class DummyFire extends FireBrigadeTactics {
         List<EntityID> path = this.routeSearcher.getPath(time, this.me, this.refugeList.get(0).getID());
         return path != null ? FireAction.move(this, time, path) : FireAction.move(this, time, this.routeSearcher.randomWalk());
     }
+
+    //  →false→他のTargetはあるか
+    //    →true→移動して放水できるか
+    //      →true→移動
+    //      →false→給水(moveRefuge)
+    //    →false→給水が必要か
+    //      →true→給水(moveRefuge)
+    //      →false→ランダム移動
 }
