@@ -2,10 +2,21 @@ package sample;
 
 import comlib.adk.team.tactics.FireBrigadeTactics;
 import comlib.adk.util.action.FireAction;
+import comlib.adk.util.route.RouteSearcher;
+import comlib.adk.util.route.sample.SampleRouteSearcher;
+import comlib.adk.util.target.BuildingManager;
+import comlib.adk.util.target.sample.SampleBuildingManager;
 import comlib.manager.MessageManager;
-import comlib.message.DummyMessage;
+import comlib.message.information.CivilianMessage;
 import rescuecore2.messages.Message;
+import rescuecore2.standard.entities.Building;
+import rescuecore2.standard.entities.Civilian;
+import rescuecore2.standard.entities.Refuge;
+import rescuecore2.standard.entities.StandardEntity;
 import rescuecore2.worldmodel.ChangeSet;
+import rescuecore2.worldmodel.EntityID;
+
+import java.util.List;
 
 public class SampleFire extends FireBrigadeTactics {
     public RouteSearcher routeSearcher;

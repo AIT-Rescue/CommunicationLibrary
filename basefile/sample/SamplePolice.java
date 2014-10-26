@@ -1,7 +1,6 @@
 package sample;
 
 import comlib.adk.team.tactics.PoliceForceTactics;
-import comlib.adk.util.action.Action;
 import comlib.adk.util.action.PoliceAction;
 import comlib.manager.MessageManager;
 import comlib.message.DummyMessage;

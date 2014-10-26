@@ -8,6 +8,7 @@ import comlib.adk.util.route.sample.SampleRouteSearcher;
 import comlib.adk.util.target.VictimManager;
 import comlib.adk.util.target.sample.SampleVictimManager;
 import comlib.manager.MessageManager;
+import comlib.message.information.BuildingMessage;
 import rescuecore2.messages.Message;
 import rescuecore2.standard.entities.*;
 import rescuecore2.worldmodel.ChangeSet;
@@ -86,13 +87,13 @@ public class SampleAmbulance extends AmbulanceTeamTactics {
             if(entity instanceof Civilian) {
                 this.victimManager.add((Civilian)entity);
             }
-            else if(entity instanceof Blockade) {
+            /*else if(entity instanceof Blockade) {
                 //manager.addSendMessage(new BlockadeMessage((Blockade)entity));
-            }
+            }*/
             else if(entity instanceof Building) {
                 Building b = (Building)entity;
-                if(b.getFieryness() > 0) {
-                    //manager.addSendMessage(new BuildingMessage(b));
+                if(b.isOnFire()) {
+                    manager.addSendMessage(new BuildingMessage(b));
                 }
             }
         }
