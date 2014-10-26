@@ -34,7 +34,7 @@ public class SampleAmbulance extends AmbulanceTeamTactics {
 
     @Override
     public void registerEvent(MessageManager manager) {
-        manager.registerEvent(new AmbulanceCivilianEvent(this.model, this.victimManager));
+        manager.registerEvent(new SampleCivilianEvent(this.model, this.victimManager));
     }
 
     @Override

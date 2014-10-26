@@ -30,7 +30,7 @@ public class SampleFire extends FireBrigadeTactics {
 
     @Override
     public void registerEvent(MessageManager manager) {
-
+        manager.registerEvent(new SampleBuildingEvent(this.model, this.buildingManager));
     }
 
     @Override

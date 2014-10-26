@@ -1,6 +1,6 @@
 package comlib.adk.launcher.dummy;
 
-import comlib.adk.launcher.dummy.event.AmbulanceCivilianEvent;
+import comlib.adk.launcher.dummy.event.DummyCivilianEvent;
 import comlib.adk.team.tactics.AmbulanceTeamTactics;
 import comlib.adk.util.action.AmbulanceAction;
 import comlib.adk.util.route.RouteSearcher;
@@ -36,7 +36,7 @@ public class DummyAmbulance extends AmbulanceTeamTactics {
 
     @Override
     public void registerEvent(MessageManager manager) {
-        manager.registerEvent(new AmbulanceCivilianEvent(this.model, this.victimManager));
+        manager.registerEvent(new DummyCivilianEvent(this.model, this.victimManager));
     }
 
     @Override

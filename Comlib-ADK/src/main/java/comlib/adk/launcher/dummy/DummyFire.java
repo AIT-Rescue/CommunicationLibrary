@@ -1,5 +1,6 @@
 package comlib.adk.launcher.dummy;
 
+import comlib.adk.launcher.dummy.event.DummyBuildingEvent;
 import comlib.adk.team.tactics.FireBrigadeTactics;
 import comlib.adk.util.action.FireAction;
 import comlib.adk.util.route.RouteSearcher;
@@ -28,7 +29,7 @@ public class DummyFire extends FireBrigadeTactics {
 
     @Override
     public void registerEvent(MessageManager manager) {
-
+        manager.registerEvent(new DummyBuildingEvent(this.model, this.buildingManager));
     }
 
     @Override
