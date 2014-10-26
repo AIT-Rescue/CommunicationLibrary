@@ -22,14 +22,11 @@ public class SampleAmbulance extends AmbulanceTeamTactics {
     //移動経路の選択
     public RouteSearcher routeSearcher;
 
-    public EntityID rescueTarget;
-
     public SampleAmbulance() {
     }
 
     @Override
     public void preparation() {
-        this.rescueTarget = null;
         this.routeSearcher = new SampleRouteSearcher(this);
         this.victimManager = new SampleVictimManager(this);
     }
@@ -45,34 +42,34 @@ public class SampleAmbulance extends AmbulanceTeamTactics {
 
         if(this.someoneOnBoard()) {
             if (this.location instanceof Refuge) {
-                this.rescueTarget = null;
+                this.target = null;
                 return AmbulanceAction.unload(this, time);
             }
             else {
                 return this.moveRefuge(time);
             }
         }
-        if(this.rescueTarget != null) {
-            Human target = (Human)this.model.getEntity(this.rescueTarget);
-            if(target.getPosition().equals(location.getID())) {
-                if ((target instanceof Civilian) && target.getBuriedness() == 0 && !(this.location instanceof Refuge)) {
-                    return AmbulanceAction.load(this, time, this.rescueTarget);
-                } else if (target.getBuriedness() > 0) {
-                    return AmbulanceAction.rescue(this, time, this.rescueTarget);
+        if(this.target != null) {
+            Human human = (Human)this.model.getEntity(this.target);
+            if(human.getPosition().equals(location.getID())) {
+                if ((human instanceof Civilian) && human.getBuriedness() == 0 && !(this.location instanceof Refuge)) {
+                    return AmbulanceAction.load(this, time, this.target);
+                } else if (human.getBuriedness() > 0) {
+                    return AmbulanceAction.rescue(this, time, this.target);
                 }
                 else {
-                    this.rescueTarget = null;
+                    this.target = null;
                     List<EntityID> path = this.routeSearcher.randomWalk();
                     return path != null ? AmbulanceAction.move(this, time, path) : AmbulanceAction.rest(this, time);
                 }
             }
             else {
-                return AmbulanceAction.move(this, time, this.routeSearcher.getPath(time, this.me, this.rescueTarget));
+                return AmbulanceAction.move(this, time, this.routeSearcher.getPath(time, this.me, this.target));
             }
         }
         EntityID id = this.victimManager.getTarget(time);
         if (id != null) {
-            this.rescueTarget = id;
+            this.target = id;
             return AmbulanceAction.move(this, time, this.routeSearcher.getPath(time, this.me, id));
         }
         if(this.me.getBuriedness() > 0) {
@@ -111,7 +108,7 @@ public class SampleAmbulance extends AmbulanceTeamTactics {
     }*/
 
     private boolean someoneOnBoard() {
-        return this.rescueTarget != null && ((Human) this.model.getEntity(this.rescueTarget)).getPosition().equals(this.agentID);
+        return this.target != null && ((Human) this.model.getEntity(this.target)).getPosition().equals(this.agentID);
     }
 
     private Message moveRefuge(int time) {
