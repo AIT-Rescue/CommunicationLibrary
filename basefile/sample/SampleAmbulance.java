@@ -1,6 +1,5 @@
 package sample;
 
-import comlib.adk.launcher.dummy.event.AmbulanceCivilianEvent;
 import comlib.adk.team.tactics.AmbulanceTeamTactics;
 import comlib.adk.util.action.AmbulanceAction;
 import comlib.adk.util.route.RouteSearcher;
@@ -13,6 +12,7 @@ import rescuecore2.messages.Message;
 import rescuecore2.standard.entities.*;
 import rescuecore2.worldmodel.ChangeSet;
 import rescuecore2.worldmodel.EntityID;
+import sample.event.SampleCivilianEvent;
 
 import java.util.List;
 

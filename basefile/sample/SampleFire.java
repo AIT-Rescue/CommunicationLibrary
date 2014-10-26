@@ -15,6 +15,7 @@ import rescuecore2.standard.entities.Refuge;
 import rescuecore2.standard.entities.StandardEntity;
 import rescuecore2.worldmodel.ChangeSet;
 import rescuecore2.worldmodel.EntityID;
+import sample.event.SampleBuildingEvent;
 
 import java.util.List;
 
