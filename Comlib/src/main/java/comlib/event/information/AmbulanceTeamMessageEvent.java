@@ -4,17 +4,10 @@ import comlib.event.MessageEvent;
 import comlib.message.information.AmbulanceTeamMessage;
 
 
-public abstract class AmbulanceTeamMessageEvent extends MessageEvent<AmbulanceTeamMessage>
-{
-	public void receivedRadio(AmbulanceTeamMessage msg)
-	{
-		// You cannot write here.
-	}
+public interface AmbulanceTeamMessageEvent extends MessageEvent<AmbulanceTeamMessage> {
+	@Override
+    public void receivedRadio(AmbulanceTeamMessage msg);
 
-	public void receivedVoice(AmbulanceTeamMessage msg)
-	{
-		// You cannot write here.
-		// This code is default handler.
-		this.receivedRadio(msg);
-	}
+    @Override
+	public void receivedVoice(AmbulanceTeamMessage msg);
 }

@@ -4,17 +4,10 @@ import comlib.event.MessageEvent;
 import comlib.message.information.FireBrigadeMessage;
 
 
-public abstract class FireBrigadeMessageEvent extends MessageEvent<FireBrigadeMessage>
-{
-	public void receivedRadio(FireBrigadeMessage msg)
-	{
-		// You cannot write here.
-	}
+public interface FireBrigadeMessageEvent extends MessageEvent<FireBrigadeMessage> {
+	@Override
+    public void receivedRadio(FireBrigadeMessage msg);
 
-	public void receivedVoice(FireBrigadeMessage msg)
-	{
-		// You cannot write here.
-		// This code is default handler.
-		this.receivedRadio(msg);
-	}
+    @Override
+	public void receivedVoice(FireBrigadeMessage msg);
 }

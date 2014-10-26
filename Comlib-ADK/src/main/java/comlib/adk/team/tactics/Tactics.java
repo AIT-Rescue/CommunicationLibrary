@@ -19,6 +19,8 @@ public abstract class Tactics<E extends StandardEntity> {
 
     public Random random;
 
+    public EntityID target;
+
     public abstract void preparation();
 
     public abstract void registerEvent(MessageManager manager);

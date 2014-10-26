@@ -4,17 +4,10 @@ import comlib.event.MessageEvent;
 import comlib.message.information.CivilianMessage;
 
 
-public abstract class CivilianMessageEvent extends MessageEvent<CivilianMessage>
-{
-	public void receivedRadio(CivilianMessage msg)
-	{
-		// You cannot write here.
-	}
+public interface CivilianMessageEvent extends MessageEvent<CivilianMessage> {
+    @Override
+	public void receivedRadio(CivilianMessage msg);
 
-	public void receivedVoice(CivilianMessage msg)
-	{
-		// You cannot write here.
-		// This code is default handler.
-		this.receivedRadio(msg);
-	}
+    @Override
+	public void receivedVoice(CivilianMessage msg);
 }

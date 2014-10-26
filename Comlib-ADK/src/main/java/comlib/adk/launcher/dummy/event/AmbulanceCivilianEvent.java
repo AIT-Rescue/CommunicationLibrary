@@ -8,7 +8,7 @@ import comlib.message.information.CivilianMessage;
 import rescuecore2.standard.entities.Civilian;
 import rescuecore2.standard.entities.StandardWorldModel;
 
-public class AmbulanceCivilianEvent extends CivilianMessageEvent {
+public class AmbulanceCivilianEvent implements CivilianMessageEvent {
 
     private StandardWorldModel model;
     private VictimManager victimManager;
@@ -24,6 +24,11 @@ public class AmbulanceCivilianEvent extends CivilianMessageEvent {
             Civilian civilian = reflectedMessage(this.model, msg);
             this.victimManager.add(civilian);
         }
+    }
+
+    @Override
+    public void receivedVoice(CivilianMessage msg) {
+        this.receivedRadio(msg);
     }
 
     public Civilian reflectedMessage(StandardWorldModel swm, CivilianMessage msg) {
