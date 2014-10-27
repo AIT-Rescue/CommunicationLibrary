@@ -3,36 +3,36 @@ package comlib.adk.util.target.sample;
 import comlib.adk.team.tactics.Tactics;
 import comlib.adk.util.route.RouteUtil;
 import comlib.adk.util.target.VictimSelector;
-import rescuecore2.standard.entities.AmbulanceTeam;
-import rescuecore2.standard.entities.Civilian;
-import rescuecore2.standard.entities.FireBrigade;
-import rescuecore2.standard.entities.PoliceForce;
+import rescuecore2.standard.entities.*;
 import rescuecore2.worldmodel.EntityID;
+
+import java.util.HashSet;
+import java.util.Set;
+
 
 public class SampleVictimSelector extends VictimSelector {
 
+    public Set<EntityID> civilianList;
+    public Set<EntityID> agentList;
+
     public SampleVictimSelector(Tactics user) {
         super(user);
+        this.civilianList = new HashSet<>();
+        this.agentList = new HashSet<>();
     }
 
     @Override
     public void add(Civilian civilian) {
-        this.civilianList.add(civilian.getID());
+        if(civilian.getBuriedness() > 0) {
+            this.civilianList.add(civilian.getID());
+        }
     }
 
     @Override
-    public void add(AmbulanceTeam agent) {
-        this.agentList.add(agent.getID());
-    }
-
-    @Override
-    public void add(FireBrigade agent) {
-        this.agentList.add(agent.getID());
-    }
-
-    @Override
-    public void add(PoliceForce agent) {
-        this.agentList.add(agent.getID());
+    public void add(Human agent) {
+        if(agent.getBuriedness() > 0) {
+            this.agentList.add(agent.getID());
+        }
     }
 
     @Override
@@ -41,17 +41,7 @@ public class SampleVictimSelector extends VictimSelector {
     }
 
     @Override
-    public void remove(AmbulanceTeam agent) {
-        this.agentList.remove(agent.getID());
-    }
-
-    @Override
-    public void remove(FireBrigade agent) {
-        this.agentList.remove(agent.getID());
-    }
-
-    @Override
-    public void remove(PoliceForce agent) {
+    public void remove(Human agent) {
         this.agentList.remove(agent.getID());
     }
 

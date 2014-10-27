@@ -6,10 +6,18 @@ import comlib.adk.util.target.BlockadeSelector;
 import rescuecore2.standard.entities.Blockade;
 import rescuecore2.worldmodel.EntityID;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 public class SampleBlockadeSelector extends BlockadeSelector {
+
+    public Set<EntityID> blockadeList;
 
     public SampleBlockadeSelector(Tactics user) {
         super(user);
+        this.blockadeList = new HashSet<>();
     }
 
     @Override

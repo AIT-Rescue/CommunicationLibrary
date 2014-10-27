@@ -6,10 +6,16 @@ import comlib.adk.util.target.BuildingSelector;
 import rescuecore2.standard.entities.Building;
 import rescuecore2.worldmodel.EntityID;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class SampleBuildingSelector extends BuildingSelector {
+
+    public Set<EntityID> buildingList;
 
     public SampleBuildingSelector(Tactics user) {
         super(user);
+        this.buildingList = new HashSet<>();
     }
 
     @Override

@@ -26,7 +26,7 @@ public class SampleFire extends FireBrigadeTactics {
     @Override
     public void preparation() {
         this.routeSearcher = new SampleRouteSearcher(this);
-        this.buildingSelector = new SampleBuildingManager(this);
+        this.buildingSelector = new SampleBuildingSelector(this);
     }
 
     @Override

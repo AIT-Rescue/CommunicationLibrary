@@ -19,17 +19,17 @@ import java.util.List;
 public class DummyFire extends FireBrigadeTactics {
 
     public RouteSearcher routeSearcher;
-    public BuildingSelector buildingManager;
+    public BuildingSelector buildingSelector;
 
     @Override
     public void preparation() {
         this.routeSearcher = new SampleRouteSearcher(this);
-        this.buildingManager = new SampleBuildingSelector(this);
+        this.buildingSelector = new SampleBuildingSelector(this);
     }
 
     @Override
     public void registerEvent(MessageManager manager) {
-        manager.registerEvent(new DummyBuildingEvent(this.model, this.buildingManager));
+        manager.registerEvent(new DummyBuildingEvent(this.model, this.buildingSelector));
     }
 
     @Override
@@ -52,7 +52,7 @@ public class DummyFire extends FireBrigadeTactics {
                 }
             }
             else {
-                this.target = this.buildingManager.getTarget(time);
+                this.target = this.buildingSelector.getTarget(time);
                 if(this.target != null) {
                     List<EntityID> path = this.routeSearcher.getPath(time, this.me, this.target);
                     path.remove(path.size() - 1);
@@ -68,7 +68,7 @@ public class DummyFire extends FireBrigadeTactics {
                         return FireAction.rest(this, time);
                     }
                     else {
-                        this.target = this.buildingManager.getTarget(time);
+                        this.target = this.buildingSelector.getTarget(time);
                         if(this.target != null) {
                             List<EntityID> path = this.routeSearcher.getPath(time, this.me, this.target);
                             path.remove(path.size() - 1);
@@ -78,7 +78,7 @@ public class DummyFire extends FireBrigadeTactics {
                     }
                 }
                 else {
-                    this.target = this.buildingManager.getTarget(time);
+                    this.target = this.buildingSelector.getTarget(time);
                     if(this.target != null) {
                         List<EntityID> path = this.routeSearcher.getPath(time, this.me, this.target);
                         path.remove(path.size() - 1);
@@ -100,7 +100,7 @@ public class DummyFire extends FireBrigadeTactics {
                 //manager.addSendMessage(new RoadMessage((Blockade)entity));
             //}
             else if(entity instanceof Building) {
-                this.buildingManager.add((Building)entity);
+                this.buildingSelector.add((Building) entity);
             }
         }
     }
