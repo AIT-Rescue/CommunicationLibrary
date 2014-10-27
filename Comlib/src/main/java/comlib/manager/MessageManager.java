@@ -5,6 +5,7 @@ import comlib.provider.MessageProvider;
 import comlib.event.MessageEvent;
 import comlib.message.CommunicationMessage;
 import comlib.message.MessageID;
+import comlib.provider.information.*;
 import comlib.util.BitOutputStream;
 import comlib.util.BitStreamReader;
 
@@ -209,6 +210,11 @@ public class MessageManager
 	{
 		// TODO: Load provider
 		this.registerStandardProvider(new DummyMessageProvider(MessageID.dummyMessage));
+        this.registerStandardProvider(new CivilianMessageProvider(MessageID.civilianMessage));
+        this.registerStandardProvider(new FireBrigadeMessageProvider(MessageID.fireBrigadeMessage));
+        this.registerStandardProvider(new PoliceForceMessageProvider(MessageID.policeForceMessage));
+        this.registerStandardProvider(new AmbulanceTeamMessageProvider(MessageID.ambulanceTeamMessage));
+        this.registerStandardProvider(new BuildingMessageProvider(MessageID.buildingMessage));
 		//this.register(CommunicationMessage.buildingMessageID, new BuildingMessageProvider(this.event));
 		//this.register(CommunicationMessage.blockadeMessageID, new BlockadeMessageProvider(this.event));
 		//this.register(CommunicationMessage.victimMessageID,   new VictimMessageProvider());
@@ -252,15 +258,20 @@ public class MessageManager
 
 	private void searchProvider(MessageEvent event)
 	{
-		for (MessageProvider provider : this.providerList)
-		{ provider.trySetEvent(event); }
+            for (MessageProvider provider : this.providerList) {
+                if(provider != null) {
+                    provider.trySetEvent(event);
+                }
+            }
 	}
 
 	private void searchEvent(MessageProvider provider)
 	{
 		// if (this.eventList.size() < 1)
 		// {	return; }
-		for (MessageEvent event : this.eventList)
-		{ provider.trySetEvent(event); }
+
+		for (MessageEvent event : this.eventList) {
+            provider.trySetEvent(event);
+        }
 	}
 }
