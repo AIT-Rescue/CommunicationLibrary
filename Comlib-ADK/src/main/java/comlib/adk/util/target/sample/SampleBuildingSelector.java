@@ -23,6 +23,9 @@ public class SampleBuildingSelector extends BuildingSelector {
         if (building.isOnFire()) {
             this.buildingList.add(building.getID());
         }
+        else {
+            this.buildingList.remove(building.getID());
+        }
         //if(building.getFieryness() > 0) {
         //}
     }

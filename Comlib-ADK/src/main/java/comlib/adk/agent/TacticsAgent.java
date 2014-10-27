@@ -47,7 +47,7 @@ public abstract class TacticsAgent<T extends Tactics, E extends StandardEntity> 
     }
     
     @Override
-    public void thinkEvent(int time, ChangeSet changed) {
+    public void think(int time, ChangeSet changed) {
         this.send(this.tactics.think(time, changed, this.manager));
     }
 

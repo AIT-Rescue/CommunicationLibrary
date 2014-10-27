@@ -20,22 +20,15 @@ public abstract class StraightAmbulance extends AmbulanceTeamTactics{
 
     public RouteSearcher routeSearcher;
 
-
     @Override
     public void preparation() {
         this.victimSelector = this.getVictimSelector();
         this.routeSearcher = this.getRouteSearcher();
-
     }
 
     public abstract VictimSelector getVictimSelector();
 
     public abstract RouteSearcher getRouteSearcher();
-
-    @Override
-    public void registerEvent(MessageManager manager) {
-
-    }
 
     @Override
     public Message think(int time, ChangeSet changed, MessageManager manager) {

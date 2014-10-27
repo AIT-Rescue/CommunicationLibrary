@@ -26,12 +26,18 @@ public class SampleVictimSelector extends VictimSelector {
         if(civilian.getBuriedness() > 0) {
             this.civilianList.add(civilian.getID());
         }
+        else {
+            this.civilianList.remove(civilian.getID());
+        }
     }
 
     @Override
     public void add(Human agent) {
         if(agent.getBuriedness() > 0) {
             this.agentList.add(agent.getID());
+        }
+        else {
+            this.agentList.remove(agent.getID());
         }
     }
 

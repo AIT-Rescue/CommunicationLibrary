@@ -1,24 +1,23 @@
-package sample.event;
+package comlib.adk.team.tactics.straight.event;
 
-import comlib.adk.util.target.BuildingManager;
+import comlib.adk.team.tactics.straight.StraightFire;
+import comlib.adk.util.target.BuildingSelector;
 import comlib.event.information.BuildingMessageEvent;
 import comlib.message.information.BuildingMessage;
 import rescuecore2.standard.entities.Building;
 import rescuecore2.standard.entities.StandardWorldModel;
 
-public class SampleBuildingEvent implements BuildingMessageEvent{
+public class StraightBuildingEvent implements BuildingMessageEvent{
 
-    private StandardWorldModel model;
-    private BuildingManager buildingManager;
+    private StraightFire tactics;
 
-    public SampleBuildingEvent(StandardWorldModel swm, BuildingManager bm) {
-        this.model = swm;
-        this.buildingManager = bm;
+    public StraightBuildingEvent(StraightFire straightFire) {
+        this.tactics = straightFire;
     }
 
     @Override
     public void receivedRadio(BuildingMessage msg) {
-        this.buildingManager.add(this.reflectedMessage(this.model, msg));
+        this.tactics.buildingSelector.add(this.reflectedMessage(this.tactics.model, msg));
     }
 
     @Override

@@ -27,7 +27,7 @@ public abstract class CommunicationAgent<E extends StandardEntity> extends Stand
 
 	public abstract void registerEvent(MessageManager manager);
 
-	public abstract void thinkEvent(int time, ChangeSet changed);
+	public abstract void think(int time, ChangeSet changed);
 
 
 	public void sendSpeak(CommunicationMessage msg)
@@ -54,7 +54,7 @@ public abstract class CommunicationAgent<E extends StandardEntity> extends Stand
 	{
         this.receiveBeforeEvent(time, changed);
 		this.manager.receiveMessage(time, heard);
-		this.thinkEvent(time, changed);
+		this.think(time, changed);
 		this.send(this.manager.createSendMessage(super.getID()));
         this.sendAfterEvent(time, changed);
 	}

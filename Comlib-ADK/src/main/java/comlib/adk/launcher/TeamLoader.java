@@ -44,7 +44,6 @@ public class TeamLoader {
     }
 
     private void load(File file, Config config) {
-        this.addDummyTeam();
         if (!file.exists()) {
             file.mkdir();
             return;
@@ -54,6 +53,9 @@ public class TeamLoader {
         List<String> list = new ArrayList<>();
         this.loadJar(file, loader, list);
         this.loadTeam(loader, list, config);
+        if(this.nameList.isEmpty()) {
+            this.addDummyTeam();
+        }
     }
 
     private void addDummyTeam() {
@@ -85,15 +87,7 @@ public class TeamLoader {
                     System.out.println("Found Target Class : " + target);
                     list.add(target);
                 }
-            } catch (NoSuchMethodException e) { //URLClassLoader
-                e.printStackTrace();
-            } catch (InvocationTargetException e) { //File
-                e.printStackTrace();
-            } catch (MalformedURLException e) { //File
-                e.printStackTrace();
-            } catch (IllegalAccessException e) { //File
-                e.printStackTrace();
-            } catch (IOException e) { //File
+            } catch (NoSuchMethodException | IOException | IllegalAccessException | InvocationTargetException e) {
                 e.printStackTrace();
             }
         }
@@ -112,11 +106,7 @@ public class TeamLoader {
                     this.teamMap.put(name, team);
                     team.readConfig(config);
                 }
-            } catch (ClassNotFoundException e) { //loadClass
-                e.printStackTrace();
-            } catch (InstantiationException e) { //instance
-                e.printStackTrace();
-            } catch (IllegalAccessException e) { //instance
+            } catch (ClassNotFoundException | IllegalAccessException | InstantiationException e) { //loadClass
                 e.printStackTrace();
             }
         }
