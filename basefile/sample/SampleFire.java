@@ -21,17 +21,17 @@ import java.util.List;
 
 public class SampleFire extends FireBrigadeTactics {
     public RouteSearcher routeSearcher;
-    public BuildingManager buildingManager;
+    public BuildingSelector buildingSelector;
 
     @Override
     public void preparation() {
         this.routeSearcher = new SampleRouteSearcher(this);
-        this.buildingManager = new SampleBuildingManager(this);
+        this.buildingSelector = new SampleBuildingManager(this);
     }
 
     @Override
     public void registerEvent(MessageManager manager) {
-        manager.registerEvent(new SampleBuildingEvent(this.model, this.buildingManager));
+        manager.registerEvent(new SampleBuildingEvent(this.model, this.buildingSelector));
     }
 
     @Override
@@ -54,7 +54,7 @@ public class SampleFire extends FireBrigadeTactics {
                 }
             }
             else {
-                this.target = this.buildingManager.getTarget(time);
+                this.target = this.buildingSelector.getTarget(time);
                 if(this.target != null) {
                     List<EntityID> path = this.routeSearcher.getPath(time, this.me, this.target);
                     path.remove(path.size() - 1);
@@ -70,7 +70,7 @@ public class SampleFire extends FireBrigadeTactics {
                     return FireAction.rest(this, time);
                 }
                 else {
-                    this.target = this.buildingManager.getTarget(time);
+                    this.target = this.buildingSelector.getTarget(time);
                     if(this.target != null) {
                         List<EntityID> path = this.routeSearcher.getPath(time, this.me, this.target);
                         path.remove(path.size() - 1);
@@ -80,7 +80,7 @@ public class SampleFire extends FireBrigadeTactics {
                 }
             }
             else {
-                this.target = this.buildingManager.getTarget(time);
+                this.target = this.buildingSelector.getTarget(time);
                 if(this.target != null) {
                     List<EntityID> path = this.routeSearcher.getPath(time, this.me, this.target);
                     path.remove(path.size() - 1);
@@ -102,7 +102,7 @@ public class SampleFire extends FireBrigadeTactics {
             //manager.addSendMessage(new RoadMessage((Blockade)entity));
             //}
             else if(entity instanceof Building) {
-                this.buildingManager.add((Building)entity);
+                this.buildingSelector.add((Building) entity);
             }
         }
     }

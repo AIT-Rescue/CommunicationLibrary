@@ -2,13 +2,13 @@ package comlib.adk.util.target.sample;
 
 import comlib.adk.team.tactics.Tactics;
 import comlib.adk.util.route.RouteUtil;
-import comlib.adk.util.target.BuildingManager;
+import comlib.adk.util.target.BuildingSelector;
 import rescuecore2.standard.entities.Building;
 import rescuecore2.worldmodel.EntityID;
 
-public class SampleBuildingManager extends BuildingManager{
+public class SampleBuildingSelector extends BuildingSelector {
 
-    public SampleBuildingManager(Tactics user) {
+    public SampleBuildingSelector(Tactics user) {
         super(user);
     }
 

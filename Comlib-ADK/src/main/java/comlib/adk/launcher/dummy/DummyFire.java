@@ -5,8 +5,8 @@ import comlib.adk.team.tactics.FireBrigadeTactics;
 import comlib.adk.util.action.FireAction;
 import comlib.adk.util.route.RouteSearcher;
 import comlib.adk.util.route.sample.SampleRouteSearcher;
-import comlib.adk.util.target.BuildingManager;
-import comlib.adk.util.target.sample.SampleBuildingManager;
+import comlib.adk.util.target.BuildingSelector;
+import comlib.adk.util.target.sample.SampleBuildingSelector;
 import comlib.manager.MessageManager;
 import comlib.message.information.CivilianMessage;
 import rescuecore2.messages.Message;
@@ -19,12 +19,12 @@ import java.util.List;
 public class DummyFire extends FireBrigadeTactics {
 
     public RouteSearcher routeSearcher;
-    public BuildingManager buildingManager;
+    public BuildingSelector buildingManager;
 
     @Override
     public void preparation() {
         this.routeSearcher = new SampleRouteSearcher(this);
-        this.buildingManager = new SampleBuildingManager(this);
+        this.buildingManager = new SampleBuildingSelector(this);
     }
 
     @Override

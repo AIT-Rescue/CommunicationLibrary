@@ -19,7 +19,7 @@ import java.util.List;
 public class SampleAmbulance extends AmbulanceTeamTactics {
 
     //救助対象の管理・選択
-    public VictimManager victimManager;
+    public VictimSelector victimSelector;
     //移動経路の選択
     public RouteSearcher routeSearcher;
 
@@ -29,12 +29,12 @@ public class SampleAmbulance extends AmbulanceTeamTactics {
     @Override
     public void preparation() {
         this.routeSearcher = new SampleRouteSearcher(this);
-        this.victimManager = new SampleVictimManager(this);
+        this.victimSelector = new SampleVictimManager(this);
     }
 
     @Override
     public void registerEvent(MessageManager manager) {
-        manager.registerEvent(new SampleCivilianEvent(this.model, this.victimManager));
+        manager.registerEvent(new SampleCivilianEvent(this.model, this.victimSelector));
     }
 
     @Override
@@ -68,7 +68,7 @@ public class SampleAmbulance extends AmbulanceTeamTactics {
                 return AmbulanceAction.move(this, time, this.routeSearcher.getPath(time, this.me, this.target));
             }
         }
-        EntityID id = this.victimManager.getTarget(time);
+        EntityID id = this.victimSelector.getTarget(time);
         if (id != null) {
             this.target = id;
             return AmbulanceAction.move(this, time, this.routeSearcher.getPath(time, this.me, id));
@@ -85,7 +85,7 @@ public class SampleAmbulance extends AmbulanceTeamTactics {
         for (EntityID next : changed.getChangedEntities()) {
             StandardEntity entity = model.getEntity(next);
             if(entity instanceof Civilian) {
-                this.victimManager.add((Civilian)entity);
+                this.victimSelector.add((Civilian) entity);
             }
             /*else if(entity instanceof Blockade) {
                 //manager.addSendMessage(new BlockadeMessage((Blockade)entity));

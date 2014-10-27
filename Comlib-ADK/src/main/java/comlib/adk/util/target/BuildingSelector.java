@@ -7,11 +7,11 @@ import rescuecore2.worldmodel.EntityID;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class BuildingManager extends TargetManager {
+public abstract class BuildingSelector extends TargetSelector {
 
     public List<EntityID> buildingList;
 
-    public BuildingManager(Tactics user) {
+    public BuildingSelector(Tactics user) {
         super(user);
         this.buildingList = new ArrayList<>();
     }

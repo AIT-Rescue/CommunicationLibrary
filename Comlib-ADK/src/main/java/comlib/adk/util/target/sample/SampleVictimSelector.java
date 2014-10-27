@@ -2,16 +2,16 @@ package comlib.adk.util.target.sample;
 
 import comlib.adk.team.tactics.Tactics;
 import comlib.adk.util.route.RouteUtil;
-import comlib.adk.util.target.VictimManager;
+import comlib.adk.util.target.VictimSelector;
 import rescuecore2.standard.entities.AmbulanceTeam;
 import rescuecore2.standard.entities.Civilian;
 import rescuecore2.standard.entities.FireBrigade;
 import rescuecore2.standard.entities.PoliceForce;
 import rescuecore2.worldmodel.EntityID;
 
-public class SampleVictimManager extends VictimManager{
+public class SampleVictimSelector extends VictimSelector {
 
-    public SampleVictimManager(Tactics user) {
+    public SampleVictimSelector(Tactics user) {
         super(user);
     }
 

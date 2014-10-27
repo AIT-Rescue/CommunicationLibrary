@@ -2,13 +2,13 @@ package comlib.adk.util.target.sample;
 
 import comlib.adk.team.tactics.Tactics;
 import comlib.adk.util.route.RouteUtil;
-import comlib.adk.util.target.BlockadeManager;
+import comlib.adk.util.target.BlockadeSelector;
 import rescuecore2.standard.entities.Blockade;
 import rescuecore2.worldmodel.EntityID;
 
-public class SampleBlockadeManager extends BlockadeManager{
+public class SampleBlockadeSelector extends BlockadeSelector {
 
-    public SampleBlockadeManager(Tactics user) {
+    public SampleBlockadeSelector(Tactics user) {
         super(user);
     }
 

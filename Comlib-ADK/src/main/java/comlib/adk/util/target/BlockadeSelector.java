@@ -7,11 +7,11 @@ import rescuecore2.worldmodel.EntityID;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class BlockadeManager extends TargetManager{
+public abstract class BlockadeSelector extends TargetSelector {
 
     public List<EntityID> blockadeList;
 
-    public BlockadeManager(Tactics user) {
+    public BlockadeSelector(Tactics user) {
         super(user);
         this.blockadeList = new ArrayList<>();
     }

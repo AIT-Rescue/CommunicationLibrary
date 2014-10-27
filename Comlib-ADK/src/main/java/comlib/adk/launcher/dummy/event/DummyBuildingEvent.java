@@ -1,6 +1,6 @@
 package comlib.adk.launcher.dummy.event;
 
-import comlib.adk.util.target.BuildingManager;
+import comlib.adk.util.target.BuildingSelector;
 import comlib.event.information.BuildingMessageEvent;
 import comlib.message.information.BuildingMessage;
 import rescuecore2.standard.entities.Building;
@@ -9,9 +9,9 @@ import rescuecore2.standard.entities.StandardWorldModel;
 public class DummyBuildingEvent implements BuildingMessageEvent{
 
     private StandardWorldModel model;
-    private BuildingManager buildingManager;
+    private BuildingSelector buildingManager;
 
-    public DummyBuildingEvent(StandardWorldModel swm, BuildingManager bm) {
+    public DummyBuildingEvent(StandardWorldModel swm, BuildingSelector bm) {
         this.model = swm;
         this.buildingManager = bm;
     }

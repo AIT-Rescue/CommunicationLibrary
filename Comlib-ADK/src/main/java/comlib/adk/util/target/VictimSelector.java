@@ -10,13 +10,13 @@ import rescuecore2.worldmodel.EntityID;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class VictimManager extends TargetManager{
+public abstract class VictimSelector extends TargetSelector {
     //survivor in need of help
 
     public List<EntityID> civilianList;
     public List<EntityID> agentList;
 
-    public VictimManager(Tactics user) {
+    public VictimSelector(Tactics user) {
         super(user);
         this.civilianList = new ArrayList<>();
         this.agentList = new ArrayList<>();
