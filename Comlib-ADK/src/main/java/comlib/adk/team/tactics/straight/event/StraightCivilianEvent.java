@@ -1,14 +1,12 @@
 package comlib.adk.team.tactics.straight.event;
 
-import comlib.adk.team.tactics.Tactics;
 import comlib.adk.team.tactics.straight.StraightAmbulance;
-import comlib.adk.util.target.VictimSelector;
 import comlib.event.information.CivilianMessageEvent;
 import comlib.message.information.CivilianMessage;
 import rescuecore2.standard.entities.Civilian;
 import rescuecore2.standard.entities.StandardWorldModel;
 
-public class StraightCivilianEvent implements CivilianMessageEvent {
+public class StraightCivilianEvent implements CivilianMessageEvent{
 
     private StraightAmbulance tactics;
 
@@ -18,10 +16,8 @@ public class StraightCivilianEvent implements CivilianMessageEvent {
 
     @Override
     public void receivedRadio(CivilianMessage msg) {
-        if(msg.getBuriedness() > 0) {
-            Civilian civilian = reflectedMessage(this.tactics.model, msg);
-            this.tactics.victimSelector.add(civilian);
-        }
+        Civilian civilian = reflectedMessage(this.tactics.model, msg);
+        this.tactics.victimSelector.add(civilian);
     }
 
     @Override
