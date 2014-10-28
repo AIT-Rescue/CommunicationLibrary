@@ -45,7 +45,7 @@ public class AgentConnector {
 
     private void connectAmbulance(ComponentLauncher cl, String name, int count) {
         Team team = this.loader.get(name);
-        if(team.getAmbulanceTeamTactics() == null) {
+        while(team.getAmbulanceTeamTactics() == null) {
             team = this.loader.getRandomTeam();
         }
         name = team.getTeamName();
@@ -64,7 +64,7 @@ public class AgentConnector {
 
     private void connectFire(ComponentLauncher cl, String name, int count) {
         Team team = this.loader.get(name);
-        if(team.getFireBrigadeTactics() == null) {
+        while(team.getFireBrigadeTactics() == null) {
             team = this.loader.getRandomTeam();
         }
         name = team.getTeamName();
@@ -83,7 +83,7 @@ public class AgentConnector {
 
     private void connectPolice(ComponentLauncher cl, String name, int count) {
         Team team = this.loader.get(name);
-        if(team.getPoliceForceTactics() == null) {
+        while(team.getPoliceForceTactics() == null) {
             team = this.loader.getRandomTeam();
         }
         name = team.getTeamName();
