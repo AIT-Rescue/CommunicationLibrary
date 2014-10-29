@@ -7,6 +7,8 @@ import comlib.adk.util.route.sample.SampleRouteSearcher;
 import comlib.adk.util.target.BlockadeSelector;
 import comlib.adk.util.target.sample.SampleBlockadeSelector;
 import comlib.manager.MessageManager;
+import comlib.message.information.BuildingMessage;
+import comlib.message.information.CivilianMessage;
 import rescuecore2.messages.Message;
 import rescuecore2.misc.geometry.GeometryTools2D;
 import rescuecore2.misc.geometry.Line2D;
@@ -47,10 +49,12 @@ public class DummyPolice extends PoliceForceTactics {
 
     @Override
     public Message think(int time, ChangeSet changed, MessageManager manager) {
-        Blockade target = getTargetBlockade();
-        if (target != null) {
-//            sendClear(time, target.getX(), target.getY());
-            List<Line2D> lines = GeometryTools2D.pointsToLines(GeometryTools2D.vertexArrayToPoints(target.getApexes()), true);
+        this.updateInfo(changed, manager);
+
+        //Blockade targetBlockade = getTargetBlockade();
+        Blockade targetBlockade = (Blockade)this.model.getEntity(this.target != null ? this.target : this.blockadeSelector.getTarget(time));
+        if (targetBlockade != null) {
+            List<Line2D> lines = GeometryTools2D.pointsToLines(GeometryTools2D.vertexArrayToPoints(targetBlockade.getApexes()), true);
             double best = Double.MAX_VALUE;
             Point2D bestPoint = null;
             Point2D origin = new Point2D(me().getX(), me().getY());
@@ -87,6 +91,27 @@ public class DummyPolice extends PoliceForceTactics {
             }
         }
         return result;
+    }
+
+    private void updateInfo(ChangeSet changed, MessageManager manager) {
+        for (EntityID next : changed.getChangedEntities()) {
+            StandardEntity entity = model.getEntity(next);
+            if(entity instanceof Civilian) {
+                Civilian civilian = (Civilian)entity;
+                if(civilian.getBuriedness() > 0) {
+                    manager.addSendMessage(new CivilianMessage(civilian));
+                }
+            }
+            else if(entity instanceof Blockade) {
+                this.blockadeSelector.add((Blockade)entity);
+            }
+            else if(entity instanceof Building) {
+                Building b = (Building)entity;
+                if(b.isOnFire()) {
+                    manager.addSendMessage(new BuildingMessage(b));
+                }
+            }
+        }
     }
 
     private Blockade getTargetBlockade() {
