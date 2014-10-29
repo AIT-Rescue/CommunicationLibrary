@@ -21,6 +21,8 @@ public abstract class Tactics<E extends StandardEntity> {
 
     public EntityID target;
 
+    public int ignoreTime;
+
     public abstract void preparation();
 
     public abstract void registerEvent(MessageManager manager);

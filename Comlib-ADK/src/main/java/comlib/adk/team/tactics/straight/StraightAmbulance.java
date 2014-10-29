@@ -22,6 +22,16 @@ public abstract class StraightAmbulance extends AmbulanceTeamTactics{
 
     @Override
     public void preparation() {
+        this.model.indexClass(
+                StandardEntityURN.CIVILIAN,
+                StandardEntityURN.FIRE_BRIGADE,
+                StandardEntityURN.POLICE_FORCE,
+                StandardEntityURN.AMBULANCE_TEAM,
+                StandardEntityURN.REFUGE,
+                StandardEntityURN.HYDRANT,
+                StandardEntityURN.GAS_STATION,
+                StandardEntityURN.BUILDING
+        );
         this.victimSelector = this.getVictimSelector();
         this.routeSearcher = this.getRouteSearcher();
     }

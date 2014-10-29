@@ -9,10 +9,7 @@ import comlib.adk.util.target.BuildingSelector;
 import comlib.manager.MessageManager;
 import comlib.message.information.CivilianMessage;
 import rescuecore2.messages.Message;
-import rescuecore2.standard.entities.Building;
-import rescuecore2.standard.entities.Civilian;
-import rescuecore2.standard.entities.Refuge;
-import rescuecore2.standard.entities.StandardEntity;
+import rescuecore2.standard.entities.*;
 import rescuecore2.worldmodel.ChangeSet;
 import rescuecore2.worldmodel.EntityID;
 
@@ -26,6 +23,12 @@ public abstract class StraightFire extends FireBrigadeTactics {
 
     @Override
     public void preparation() {
+        this.model.indexClass(
+                StandardEntityURN.BUILDING,
+                StandardEntityURN.REFUGE,
+                StandardEntityURN.HYDRANT,
+                StandardEntityURN.GAS_STATION
+        );
         this.buildingSelector = this.getBuildingSelector();
         this.routeSearcher = this.getRouteSearcher();
     }

@@ -24,6 +24,7 @@ public abstract class TacticsAgent<T extends Tactics, E extends StandardEntity> 
         this.tactics.random = this.random;
         this.tactics.model = this.model;
         this.tactics.config = this.config;
+        this.tactics.ignoreTime = this.config.getIntValue(kernel.KernelConstants.IGNORE_AGENT_COMMANDS_KEY);
         this.tactics.agentID = this.getID(); //AgentのEntityIDはかわるのか？？
         this.tactics.location = this.location();
         this.setAgentEntity(this.tactics);
