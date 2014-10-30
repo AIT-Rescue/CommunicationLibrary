@@ -1,3 +1,5 @@
+import java.text.SimpleDateFormat
+
 apply plugin: 'java'
 apply plugin: 'idea'
 //apply plugin: 'eclipse'
@@ -39,6 +41,25 @@ jar {
     it.options.compilerArgs += ['-source', '1.8', '-target', '1.8']
 }
 javadoc.options.encoding = 'UTF-8'
+
+task backupSrc(type: Zip) {
+    SimpleDateFormat sdf = new SimpleDateFormat('yyyyMMddHHmmss')
+    String date = sdf.format(Calendar.getInstance().getTime())
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    destinationDir = new File(projectDir, 'backup')
+    String buildName = teamName + '-source-' + date
+    archiveName = buildName + '.zip'
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    into(buildName) {
+        into('src') {
+            from 'src'
+        }
+        into('config') {
+            from 'config'
+        }
+        from 'build.gradle'
+    }
+}
 
 task start (type: JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
