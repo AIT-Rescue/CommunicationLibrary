@@ -30,5 +30,7 @@ hs_err_pid*
 # ignore shell script
 *.ignore.sh
 
-# tags (no update/update yourself)
+# vimFiles (no update/update yourself)
 tags
+.vimrc.local
+.syntastic-classpath
