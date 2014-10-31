@@ -18,8 +18,6 @@ import rescuecore2.standard.entities.*;
 import rescuecore2.worldmodel.ChangeSet;
 import rescuecore2.worldmodel.EntityID;
 
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 public class DummyPolice extends PoliceForceTactics {
@@ -47,7 +45,7 @@ public class DummyPolice extends PoliceForceTactics {
     public void registerEvent(MessageManager manager) {
     }
 
-    @Override
+    /*@Override
     public Message think(int time, ChangeSet changed, MessageManager manager) {
         this.updateInfo(changed, manager);
 
@@ -79,11 +77,110 @@ public class DummyPolice extends PoliceForceTactics {
             return PoliceAction.move(this, time, path, b.getX(), b.getY());
         }
         return PoliceAction.move(this, time, this.routeSearcher.randomWalk());
+    }*/
+
+    @Override
+    public Message think(int time, ChangeSet changed, MessageManager manager) {
+        this.updateInfo(changed, manager);
+        if(this.target != null) {
+            Blockade blockade = (Blockade)this.model.getEntity(this.target);
+            if(blockade != null) {
+                if(blockade.getPosition().equals(this.location.getID())) {
+                    List<Line2D> lines = GeometryTools2D.pointsToLines(GeometryTools2D.vertexArrayToPoints(blockade.getApexes()), true);
+                    double best = Double.MAX_VALUE;
+                    Point2D bestPoint = null;
+                    Point2D origin = new Point2D(this.me.getX(), this.me.getY());
+                    for (Line2D next : lines) {
+                        Point2D closest = GeometryTools2D.getClosestPointOnSegment(next, origin);
+                        double d = GeometryTools2D.getDistance(origin, closest);
+                        if (d < best) {
+                            best = d;
+                            bestPoint = closest;
+                        }
+                    }
+                    Vector2D v = bestPoint.minus(new Point2D(this.me.getX(), this.me.getY()));
+                    v = v.normalised().scale(1000000);
+                    return PoliceAction.clear(this, time, (int) (this.me.getX() + v.getX()), (int) (this.me.getY() + v.getY()));
+                }
+                else {
+                    List<EntityID> path = this.routeSearcher.getPath(time, this.me, blockade);
+                    return path != null ? PoliceAction.move(this, time, path) : PoliceAction.move(this, time, this.routeSearcher.randomWalk());
+                }
+            }
+            else {
+                this.target = null;
+                this.blockadeSelector.remove(blockade);
+            }
+        }
+        this.target = this.blockadeSelector.getTarget(time);
+        if(this.target != null) {
+            Blockade blockade = (Blockade)this.model.getEntity(this.target);
+            if(blockade != null) {
+                if(blockade.getPosition().equals(this.location.getID())) {
+                    List<Line2D> lines = GeometryTools2D.pointsToLines(GeometryTools2D.vertexArrayToPoints(blockade.getApexes()), true);
+                    double best = Double.MAX_VALUE;
+                    Point2D bestPoint = null;
+                    Point2D origin = new Point2D(this.me.getX(), this.me.getY());
+                    for (Line2D next : lines) {
+                        Point2D closest = GeometryTools2D.getClosestPointOnSegment(next, origin);
+                        double d = GeometryTools2D.getDistance(origin, closest);
+                        if (d < best) {
+                            best = d;
+                            bestPoint = closest;
+                        }
+                    }
+                    Vector2D v = bestPoint.minus(new Point2D(this.me.getX(), this.me.getY()));
+                    v = v.normalised().scale(1000000);
+                    return PoliceAction.clear(this, time, (int) (this.me.getX() + v.getX()), (int) (this.me.getY() + v.getY()));
+                }
+                else {
+                    List<EntityID> path = this.routeSearcher.getPath(time, this.me, blockade);
+                    return path != null ? PoliceAction.move(this, time, path) : PoliceAction.move(this, time, this.routeSearcher.randomWalk());
+                }
+            }
+        }
+
+        return PoliceAction.move(this, time, this.routeSearcher.randomWalk());
     }
 
-    private List<EntityID> getBlockedRoads() {
+    public Message newThink(int time, ChangeSet changed, MessageManager manager) {
+        this.updateInfo(changed, manager);
+        if(this.target == null) {
+            this.target = this.blockadeSelector.getTarget(time);
+        }
+        Blockade blockade = (Blockade)this.model.getEntity(this.target);
+        if(blockade != null) {
+            if(blockade.getPosition().equals(this.location.getID())) {
+                List<Line2D> lines = GeometryTools2D.pointsToLines(GeometryTools2D.vertexArrayToPoints(blockade.getApexes()), true);
+                double best = Double.MAX_VALUE;
+                Point2D bestPoint = null;
+                Point2D origin = new Point2D(this.me.getX(), this.me.getY());
+                for (Line2D next : lines) {
+                    Point2D closest = GeometryTools2D.getClosestPointOnSegment(next, origin);
+                    double d = GeometryTools2D.getDistance(origin, closest);
+                    if (d < best) {
+                        best = d;
+                        bestPoint = closest;
+                    }
+                }
+                Vector2D v = bestPoint.minus(new Point2D(this.me.getX(), this.me.getY()));
+                v = v.normalised().scale(1000000);
+                return PoliceAction.clear(this, time, (int) (this.me.getX() + v.getX()), (int) (this.me.getY() + v.getY()));
+            }
+            else {
+                List<EntityID> path = this.routeSearcher.getPath(time, this.me, blockade);
+                return path != null ? PoliceAction.move(this, time, path) : PoliceAction.move(this, time, this.routeSearcher.randomWalk());
+            }
+        }
+        else {
+            this.blockadeSelector.remove(blockade);
+        }
+        return PoliceAction.move(this, time, this.routeSearcher.randomWalk());
+    }
+
+    /*private List<EntityID> getBlockedRoads() {
         Collection<StandardEntity> e = model.getEntitiesOfType(StandardEntityURN.ROAD);
-        List<EntityID> result = new ArrayList<EntityID>();
+        List<EntityID> result = new ArrayList<>();
         for (StandardEntity next : e) {
             Road r = (Road)next;
             if (r.isBlockadesDefined() && !r.getBlockades().isEmpty()) {
@@ -91,7 +188,7 @@ public class DummyPolice extends PoliceForceTactics {
             }
         }
         return result;
-    }
+    }*/
 
     private void updateInfo(ChangeSet changed, MessageManager manager) {
         for (EntityID next : changed.getChangedEntities()) {
@@ -114,7 +211,7 @@ public class DummyPolice extends PoliceForceTactics {
         }
     }
 
-    private Blockade getTargetBlockade() {
+    /*private Blockade getTargetBlockade() {
         Area location = (Area)location();
         Blockade result = getTargetBlockade(location, distance);
         if (result != null) {
@@ -128,9 +225,9 @@ public class DummyPolice extends PoliceForceTactics {
             }
         }
         return null;
-    }
+    }*/
 
-    private Blockade getTargetBlockade(Area area, int maxDistance) {
+    /*private Blockade getTargetBlockade(Area area, int maxDistance) {
         if (area == null || !area.isBlockadesDefined()) {
             return null;
         }
@@ -146,9 +243,9 @@ public class DummyPolice extends PoliceForceTactics {
             }
         }
         return null;
-    }
+    }*/
 
-    private int findDistanceTo(Blockade b, int x, int y) {
+    /*private int findDistanceTo(Blockade b, int x, int y) {
         List<Line2D> lines = GeometryTools2D.pointsToLines(GeometryTools2D.vertexArrayToPoints(b.getApexes()), true);
         double best = Double.MAX_VALUE;
         Point2D origin = new Point2D(x, y);
@@ -160,5 +257,5 @@ public class DummyPolice extends PoliceForceTactics {
             }
         }
         return (int)best;
-    }
+    }*/
 }
