@@ -4,6 +4,7 @@ import comlib.adk.team.tactics.Tactics;
 import comlib.adk.util.route.RouteUtil;
 import comlib.adk.util.target.BuildingSelector;
 import rescuecore2.standard.entities.Building;
+import rescuecore2.standard.entities.StandardEntity;
 import rescuecore2.worldmodel.EntityID;
 
 import java.util.HashSet;
@@ -31,8 +32,21 @@ public class SampleBuildingSelector extends BuildingSelector {
     }
 
     @Override
+    public void add(EntityID id) {
+        StandardEntity entity = this.tactics.model.getEntity(id);
+        if(entity instanceof Building) {
+            this.add((Building)entity);
+        }
+    }
+
+    @Override
     public void remove(Building building) {
         this.buildingList.remove(building.getID());
+    }
+
+    @Override
+    public void remove(EntityID id) {
+        this.buildingList.remove(id);
     }
 
     @Override

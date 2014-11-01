@@ -4,11 +4,10 @@ import comlib.adk.team.tactics.Tactics;
 import comlib.adk.util.route.RouteUtil;
 import comlib.adk.util.target.BlockadeSelector;
 import rescuecore2.standard.entities.Blockade;
+import rescuecore2.standard.entities.StandardEntity;
 import rescuecore2.worldmodel.EntityID;
 
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 public class SampleBlockadeSelector extends BlockadeSelector {
@@ -26,8 +25,21 @@ public class SampleBlockadeSelector extends BlockadeSelector {
     }
 
     @Override
+    public void add(EntityID id) {
+        StandardEntity entity = this.tactics.model.getEntity(id);
+        if(entity instanceof Blockade) {
+            this.blockadeList.add(id);
+        }
+    }
+
+    @Override
     public void remove(Blockade blockade) {
         this.blockadeList.remove(blockade.getID());
+    }
+
+    @Override
+    public void remove(EntityID id) {
+        this.blockadeList.remove(id);
     }
 
     @Override

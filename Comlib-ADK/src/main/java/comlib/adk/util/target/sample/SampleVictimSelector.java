@@ -42,6 +42,18 @@ public class SampleVictimSelector extends VictimSelector {
     }
 
     @Override
+    public void add(EntityID id) {
+        StandardEntity entity = this.tactics.model.getEntity(id);
+        if(entity instanceof Civilian) {
+            this.add((Civilian)entity);
+        }
+        else if(entity instanceof Human) {
+            this.add((Human)entity);
+        }
+
+    }
+
+    @Override
     public void remove(Civilian civilian) {
         this.civilianList.remove(civilian.getID());
     }
@@ -49,6 +61,12 @@ public class SampleVictimSelector extends VictimSelector {
     @Override
     public void remove(Human agent) {
         this.agentList.remove(agent.getID());
+    }
+
+    @Override
+    public void remove(EntityID id) {
+        this.civilianList.remove(id);
+        this.agentList.remove(id);
     }
 
     @Override
