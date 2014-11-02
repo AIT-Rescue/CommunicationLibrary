@@ -1781,8 +1781,11 @@ MapGenerator	../roborescue-roborescue/modules/maps/src/maps/gml/generator/MapGen
 MapMessage	./Comlib/old_src/message/MapMessage.java	/^	public MapMessage(int id, int t)$/;"	m	class:MapMessage
 MapMessage	./Comlib/old_src/message/MapMessage.java	/^	public MapMessage(int id, int t, int l)$/;"	m	class:MapMessage
 MapMessage	./Comlib/old_src/message/MapMessage.java	/^public class MapMessage extends InformationMessage$/;"	c
+MapMessage	./Comlib/src/main/java/comlib/message/MapMessage.java	/^	public MapMessage(int messageID) {$/;"	m	class:MapMessage
 MapMessage	./Comlib/src/main/java/comlib/message/MapMessage.java	/^	public MapMessage(int messageID)$/;"	m	class:MapMessage
+MapMessage	./Comlib/src/main/java/comlib/message/MapMessage.java	/^	public MapMessage(int messageID, int time, int ttl) {$/;"	m	class:MapMessage
 MapMessage	./Comlib/src/main/java/comlib/message/MapMessage.java	/^	public MapMessage(int messageID, int time, int ttl)$/;"	m	class:MapMessage
+MapMessage	./Comlib/src/main/java/comlib/message/MapMessage.java	/^abstract public class MapMessage extends InformationMessage {$/;"	c
 MapMessage	./Comlib/src/main/java/comlib/message/MapMessage.java	/^abstract public class MapMessage extends InformationMessage$/;"	c
 MapMessage	./Comlib/src_old/message/MapMessage.java	/^	public MapMessage(int id, int t)$/;"	m	class:MapMessage
 MapMessage	./Comlib/src_old/message/MapMessage.java	/^	public MapMessage(int id, int t, int l)$/;"	m	class:MapMessage
@@ -2342,6 +2345,12 @@ RoadInfo	../roborescue-roborescue/modules/maps/src/maps/convert/legacy2gml/RoadI
 RoadInfo	../roborescue-roborescue/modules/maps/src/maps/convert/legacy2gml/RoadInfo.java	/^public class RoadInfo {$/;"	c
 RoadLayer	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/view/RoadLayer.java	/^    public RoadLayer() {$/;"	m	class:RoadLayer
 RoadLayer	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/view/RoadLayer.java	/^public class RoadLayer extends AreaLayer<Road> {$/;"	c
+RoadMessage	./Comlib/src/main/java/comlib/message/information/RoadMessage.java	/^    public RoadMessage(Blockade blockade) {$/;"	m	class:RoadMessage
+RoadMessage	./Comlib/src/main/java/comlib/message/information/RoadMessage.java	/^    public RoadMessage(int time, int ttl, int id, int position, int cost) {$/;"	m	class:RoadMessage
+RoadMessage	./Comlib/src/main/java/comlib/message/information/RoadMessage.java	/^public class RoadMessage extends MapMessage {$/;"	c
+RoadMessageEvent	./Comlib/src/main/java/comlib/event/information/RoadMessageEvent.java	/^public interface RoadMessageEvent extends MessageEvent<RoadMessage> {$/;"	i
+RoadMessageProvider	./Comlib/src/main/java/comlib/provider/information/RoadMessageProvider.java	/^    public RoadMessageProvider(int id) {$/;"	m	class:RoadMessageProvider
+RoadMessageProvider	./Comlib/src/main/java/comlib/provider/information/RoadMessageProvider.java	/^public class RoadMessageProvider extends MapMessageProvider<RoadMessage, RoadMessageEvent> {$/;"	c
 RobocupFormat	../roborescue-roborescue/modules/maps/src/maps/gml/formats/RobocupFormat.java	/^    private RobocupFormat() {$/;"	m	class:RobocupFormat	file:
 RobocupFormat	../roborescue-roborescue/modules/maps/src/maps/gml/formats/RobocupFormat.java	/^public final class RobocupFormat extends GMLMapFormat {$/;"	c
 RoundingNumberGenerator	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/RoundingNumberGenerator.java	/^    public RoundingNumberGenerator(NumberGenerator<? extends Number> downstream) {$/;"	m	class:RoundingNumberGenerator
@@ -2654,6 +2663,8 @@ StraightFireEvent	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/ev
 StraightPolice	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/StraightPolice.java	/^public abstract class StraightPolice extends PoliceForceTactics{$/;"	c
 StraightPoliceEvent	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightPoliceEvent.java	/^    public StraightPoliceEvent(StraightAmbulance straightAmbulance) {$/;"	m	class:StraightPoliceEvent
 StraightPoliceEvent	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightPoliceEvent.java	/^public class StraightPoliceEvent implements PoliceForceMessageEvent{$/;"	c
+StraightRoadEvent	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightRoadEvent.java	/^    public StraightRoadEvent(StraightPolice straightPolice) {$/;"	m	class:StraightRoadEvent
+StraightRoadEvent	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightRoadEvent.java	/^public class StraightRoadEvent implements RoadMessageEvent {$/;"	c
 StreamConnection	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/connection/StreamConnection.java	/^    public StreamConnection(InputStream in, OutputStream out) {$/;"	m	class:StreamConnection
 StreamConnection	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/connection/StreamConnection.java	/^public class StreamConnection extends AbstractConnection {$/;"	c
 StreamConnectionTest	../roborescue-roborescue/modules/rescuecore2/test/rescuecore2/connection/StreamConnectionTest.java	/^public class StreamConnectionTest extends ConnectionTestCommon {$/;"	c
@@ -3331,6 +3342,7 @@ block	../roborescue-roborescue/modules/collapse/src/collapse/CollapseSimulator.j
 block	../roborescue-roborescue/modules/collapse/src/collapse/CollapseSimulatorGUI.java	/^    private int block;$/;"	f	class:CollapseSimulatorGUI	file:
 blockade	../roborescue-roborescue/modules/traffic3/src/traffic3/objects/TrafficBlockade.java	/^    private Blockade blockade;$/;"	f	class:TrafficBlockade	file:
 blockadeByID	../roborescue-roborescue/modules/traffic3/src/traffic3/manager/TrafficManager.java	/^    private Map<Integer, TrafficBlockade> blockadeByID;$/;"	f	class:TrafficManager	file:
+blockadeID	./Comlib/src/main/java/comlib/message/information/RoadMessage.java	/^    private EntityID blockadeID;$/;"	f	class:RoadMessage	file:
 blockadeLines	../roborescue-roborescue/modules/traffic3/src/traffic3/objects/TrafficArea.java	/^	private List<Line2D> blockadeLines;$/;"	f	class:TrafficArea	file:
 blockadeList	./Comlib-ADK/src/main/java/comlib/adk/util/target/BlockadeManager.java	/^    public List<EntityID> blockadeList;$/;"	f	class:BlockadeManager
 blockadeList	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleBlockadeSelector.java	/^    public Set<EntityID> blockadeList;$/;"	f	class:SampleBlockadeSelector
@@ -3742,6 +3754,7 @@ comlib.adk.team.tactics.straight.event	./Comlib-ADK/src/main/java/comlib/adk/tea
 comlib.adk.team.tactics.straight.event	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightCivilianEvent.java	/^package comlib.adk.team.tactics.straight.event;$/;"	p
 comlib.adk.team.tactics.straight.event	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightFireEvent.java	/^package comlib.adk.team.tactics.straight.event;$/;"	p
 comlib.adk.team.tactics.straight.event	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightPoliceEvent.java	/^package comlib.adk.team.tactics.straight.event;$/;"	p
+comlib.adk.team.tactics.straight.event	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightRoadEvent.java	/^package comlib.adk.team.tactics.straight.event;$/;"	p
 comlib.adk.util.action	./Comlib-ADK/src/main/java/comlib/adk/util/action/Action.java	/^package comlib.adk.util.action;$/;"	p
 comlib.adk.util.action	./Comlib-ADK/src/main/java/comlib/adk/util/action/AmbulanceAction.java	/^package comlib.adk.util.action;$/;"	p
 comlib.adk.util.action	./Comlib-ADK/src/main/java/comlib/adk/util/action/FireAction.java	/^package comlib.adk.util.action;$/;"	p
@@ -3808,6 +3821,7 @@ comlib.event.information	./Comlib/src/main/java/comlib/event/information/Buildin
 comlib.event.information	./Comlib/src/main/java/comlib/event/information/CivilianMessageEvent.java	/^package comlib.event.information;$/;"	p
 comlib.event.information	./Comlib/src/main/java/comlib/event/information/FireBrigadeMessageEvent.java	/^package comlib.event.information;$/;"	p
 comlib.event.information	./Comlib/src/main/java/comlib/event/information/PoliceForceMessageEvent.java	/^package comlib.event.information;$/;"	p
+comlib.event.information	./Comlib/src/main/java/comlib/event/information/RoadMessageEvent.java	/^package comlib.event.information;$/;"	p
 comlib.manager	./Comlib/old_src/manager/MessageManager.java	/^package comlib.manager;$/;"	p
 comlib.manager	./Comlib/old_src/manager/RadioConfig.java	/^package comlib.manager;$/;"	p
 comlib.manager	./Comlib/old_src/manager/VoiceConfig.java	/^package comlib.manager;$/;"	p
@@ -3845,6 +3859,7 @@ comlib.message.information	./Comlib/src/main/java/comlib/message/information/Bui
 comlib.message.information	./Comlib/src/main/java/comlib/message/information/CivilianMessage.java	/^package comlib.message.information;$/;"	p
 comlib.message.information	./Comlib/src/main/java/comlib/message/information/FireBrigadeMessage.java	/^package comlib.message.information;$/;"	p
 comlib.message.information	./Comlib/src/main/java/comlib/message/information/PoliceForceMessage.java	/^package comlib.message.information;$/;"	p
+comlib.message.information	./Comlib/src/main/java/comlib/message/information/RoadMessage.java	/^package comlib.message.information;$/;"	p
 comlib.message.information	./Comlib/src_old/message/information/AmbulanceTeamMessage.java	/^package comlib.message.information;$/;"	p
 comlib.message.information	./Comlib/src_old/message/information/BuildingMessage.java	/^package comlib.message.information;$/;"	p
 comlib.message.information	./Comlib/src_old/message/information/FireBrigadeMessage.java	/^package comlib.message.information;$/;"	p
@@ -3861,6 +3876,7 @@ comlib.provider.information	./Comlib/src/main/java/comlib/provider/information/B
 comlib.provider.information	./Comlib/src/main/java/comlib/provider/information/CivilianMessageProvider.java	/^package comlib.provider.information;$/;"	p
 comlib.provider.information	./Comlib/src/main/java/comlib/provider/information/FireBrigadeMessageProvider.java	/^package comlib.provider.information;$/;"	p
 comlib.provider.information	./Comlib/src/main/java/comlib/provider/information/PoliceForceMessageProvider.java	/^package comlib.provider.information;$/;"	p
+comlib.provider.information	./Comlib/src/main/java/comlib/provider/information/RoadMessageProvider.java	/^package comlib.provider.information;$/;"	p
 comlib.util	./Comlib/src/main/java/comlib/util/BitOutputStream.java	/^package comlib.util;$/;"	p
 comlib.util	./Comlib/src/main/java/comlib/util/BitStreamReader.java	/^package comlib.util;$/;"	p
 comlib.util	./Comlib/src/main/java/comlib/util/IntegerDataHelper.java	/^package comlib.util;$/;"	p
@@ -4136,6 +4152,8 @@ createMessage	./Comlib/src/main/java/comlib/provider/information/FireBrigadeMess
 createMessage	./Comlib/src/main/java/comlib/provider/information/FireBrigadeMessageProvider.java	/^	protected FireBrigadeMessage createMessage(VoiceConfig config, int time, int ttl, String[] data, int next)$/;"	m	class:FireBrigadeMessageProvider
 createMessage	./Comlib/src/main/java/comlib/provider/information/PoliceForceMessageProvider.java	/^	protected PoliceForceMessage createMessage(RadioConfig config, int time, BitStreamReader bsr)$/;"	m	class:PoliceForceMessageProvider
 createMessage	./Comlib/src/main/java/comlib/provider/information/PoliceForceMessageProvider.java	/^	protected PoliceForceMessage createMessage(VoiceConfig config, int time, int ttl, String[] data, int next)$/;"	m	class:PoliceForceMessageProvider
+createMessage	./Comlib/src/main/java/comlib/provider/information/RoadMessageProvider.java	/^    protected RoadMessage createMessage(RadioConfig config, int time, BitStreamReader bsr) {$/;"	m	class:RoadMessageProvider
+createMessage	./Comlib/src/main/java/comlib/provider/information/RoadMessageProvider.java	/^    protected RoadMessage createMessage(VoiceConfig config, int time, int ttl, String[] data, int next) {$/;"	m	class:RoadMessageProvider
 createMessage	./Comlib/src_old/creator/MessageCreator.java	/^	public abstract CommunicationMessage createMessage(RadioConfig config, int time, BitStreamReader bsr);$/;"	m	class:MessageCreator
 createMessage	./Comlib/src_old/creator/MessageCreator.java	/^	public abstract CommunicationMessage createMessage(VoiceConfig config, int time, int ttl, String[] datas);$/;"	m	class:MessageCreator
 createMessage	./Comlib/src_old/creator/information/VictimMessageCreator.java	/^	public CommunicationMessage createMessage(RadioConfig config, int time, BitStreamReader bsr)$/;"	m	class:VictimMessageCreator
@@ -4883,6 +4901,7 @@ getBoundsShape	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc
 getBrokenness	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/Building.java	/^    public int getBrokenness() {$/;"	m	class:Building
 getBrokenness	./Comlib/old_src/message/information/BuildingMessage.java	/^	public int getBrokenness();$/;"	m	class:BuildingMessage
 getBrokenness	./Comlib/src/main/java/comlib/message/information/BuildingMessage.java	/^	public int getBrokenness() { return this.buildingBrokenness; }$/;"	m	class:BuildingMessage
+getBrokenness	./Comlib/src/main/java/comlib/message/information/BuildingMessage.java	/^	public int getBrokenness() {$/;"	m	class:BuildingMessage
 getBrokenness	./Comlib/src_old/message/information/BuildingMessage.java	/^	public int getBrokenness();$/;"	m	class:BuildingMessage
 getBrokennessDegree	../roborescue-roborescue/modules/misc/src/misc/MiscParameters.java	/^        public static BrokennessDegree getBrokennessDegree(Building b) {$/;"	m	class:MiscParameters.BrokennessDegree
 getBrokennessProperty	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/Building.java	/^    public IntProperty getBrokennessProperty() {$/;"	m	class:Building
@@ -5170,6 +5189,7 @@ getFarNode	../roborescue-roborescue/modules/maps/src/maps/convert/osm2gml/OSMInt
 getFieryness	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/Building.java	/^    public int getFieryness() {$/;"	m	class:Building
 getFieryness	./Comlib/old_src/message/information/BuildingMessage.java	/^	public int getFieryness()$/;"	m	class:BuildingMessage
 getFieryness	./Comlib/src/main/java/comlib/message/information/BuildingMessage.java	/^	public int getFieryness() { return this.buildingFieryness; }$/;"	m	class:BuildingMessage
+getFieryness	./Comlib/src/main/java/comlib/message/information/BuildingMessage.java	/^	public int getFieryness() {$/;"	m	class:BuildingMessage
 getFieryness	./Comlib/src_old/message/information/BuildingMessage.java	/^	public int getFieryness()$/;"	m	class:BuildingMessage
 getFierynessEnum	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/Building.java	/^    public StandardEntityConstants.Fieryness getFierynessEnum() {$/;"	m	class:Building
 getFierynessProperty	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/Building.java	/^    public IntProperty getFierynessProperty() {$/;"	m	class:Building
@@ -5266,6 +5286,7 @@ getID	./Comlib-ADK/src_old/util/route/sample/Route.java	/^	public EntityID getID
 getID	./Comlib/old_src/message/HumanMessage.java	/^	public EntityID getID()$/;"	m	class:HumanMessage
 getID	./Comlib/old_src/message/information/BlockadeInformationMessage.java	/^	public EntityID getID() {$/;"	m	class:BlockadeInformationMessage
 getID	./Comlib/old_src/message/information/BuildingMessage.java	/^	public EntityID getID()$/;"	m	class:BuildingMessage
+getID	./Comlib/src/main/java/comlib/message/information/RoadMessage.java	/^    public EntityID getID() {$/;"	m	class:RoadMessage
 getID	./Comlib/src_old/message/HumanMessage.java	/^	public EntityID getID()$/;"	m	class:HumanMessage
 getID	./Comlib/src_old/message/information/BlockadeInformationMessage.java	/^	public EntityID getID() {$/;"	m	class:BlockadeInformationMessage
 getID	./Comlib/src_old/message/information/BuildingMessage.java	/^	public EntityID getID()$/;"	m	class:BuildingMessage
@@ -5616,6 +5637,7 @@ getPosition	./Comlib/old_src/message/HumanMessage.java	/^	public EntityID getPos
 getPosition	./Comlib/old_src/message/information/BlockadeInformationMessage.java	/^	public EntityID getPosition() {$/;"	m	class:BlockadeInformationMessage
 getPosition	./Comlib/src/main/java/comlib/message/HumanMessage.java	/^	public EntityID getPosition() { return this.humanPosition; }$/;"	m	class:HumanMessage
 getPosition	./Comlib/src/main/java/comlib/message/HumanMessage.java	/^	public EntityID getPosition()$/;"	m	class:HumanMessage
+getPosition	./Comlib/src/main/java/comlib/message/information/RoadMessage.java	/^    public EntityID getPosition() {$/;"	m	class:RoadMessage
 getPosition	./Comlib/src_old/message/HumanMessage.java	/^	public EntityID getPosition()$/;"	m	class:HumanMessage
 getPosition	./Comlib/src_old/message/information/BlockadeInformationMessage.java	/^	public EntityID getPosition() {$/;"	m	class:BlockadeInformationMessage
 getPositionHistory	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/Human.java	/^    public int[] getPositionHistory() {$/;"	m	class:Human
@@ -5677,6 +5699,7 @@ getRemainBuffer	./Comlib/src/main/java/comlib/util/BitStreamReader.java	/^	publi
 getRemainingToCollapse	../roborescue-roborescue/modules/collapse/src/collapse/CSBuilding.java	/^	public double getRemainingToCollapse(double floorHeight) {$/;"	m	class:CSBuilding
 getRepairCost	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/Blockade.java	/^    public int getRepairCost() {$/;"	m	class:Blockade
 getRepairCost	./Comlib/old_src/message/information/BlockadeInformationMessage.java	/^	public int getRepairCost() {$/;"	m	class:BlockadeInformationMessage
+getRepairCost	./Comlib/src/main/java/comlib/message/information/RoadMessage.java	/^    public int getRepairCost() {$/;"	m	class:RoadMessage
 getRepairCost	./Comlib/src_old/message/information/BlockadeInformationMessage.java	/^	public int getRepairCost() {$/;"	m	class:BlockadeInformationMessage
 getRepairCostProperty	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/Blockade.java	/^    public IntProperty getRepairCostProperty() {$/;"	m	class:Blockade
 getRequestID	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/messages/control/AKAcknowledge.java	/^    public int getRequestID() {$/;"	m	class:AKAcknowledge
@@ -6304,6 +6327,7 @@ humanID	./Comlib/src/main/java/comlib/message/HumanMessage.java	/^	protected Ent
 humanID	./Comlib/src_old/message/HumanMessage.java	/^	protected EntityID humanID;$/;"	f	class:HumanMessage
 humanIDs	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/view/AnimatedHumanLayer.java	/^    private Set<EntityID> humanIDs;$/;"	f	class:AnimatedHumanLayer	file:
 humanPosition	./Comlib/src/main/java/comlib/message/HumanMessage.java	/^	protected EntityID humanPosition;$/;"	f	class:HumanMessage
+humanPosition	./Comlib/src/main/java/comlib/message/information/RoadMessage.java	/^    private EntityID humanPosition;$/;"	f	class:RoadMessage	file:
 humanRectangles	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/StandardWorldModel.java	/^    private Map<Human, Rectangle> humanRectangles;$/;"	f	class:StandardWorldModel	file:
 humans	../roborescue-roborescue/modules/misc/src/misc/MiscSimulator.java	/^	private Map<EntityID, HumanAttributes> humans;$/;"	f	class:MiscSimulator	file:
 humans	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/view/AnimatedWorldModelViewer.java	/^    private AnimatedHumanLayer humans;$/;"	f	class:AnimatedWorldModelViewer	file:
@@ -7818,9 +7842,11 @@ range	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/kernel/
 rangeMap	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Route.java	/^    private Map<Edge, Integer> rangeMap;$/;"	f	class:Route	file:
 rangeMap	./Comlib-ADK/src_old/move/Route.java	/^    private Map<Edge, Integer> rangeMap;$/;"	f	class:Route	file:
 rangeMap	./Comlib-ADK/src_old/util/route/sample/Route.java	/^    private Map<Edge, Integer> rangeMap;$/;"	f	class:Route	file:
+rawBlockadeID	./Comlib/src/main/java/comlib/message/information/RoadMessage.java	/^    private int rawBlockadeID;$/;"	f	class:RoadMessage	file:
 rawBuildingID	./Comlib/src/main/java/comlib/message/information/BuildingMessage.java	/^	protected int rawBuildingID;$/;"	f	class:BuildingMessage
 rawHumanID	./Comlib/src/main/java/comlib/message/HumanMessage.java	/^	protected int rawHumanID;$/;"	f	class:HumanMessage
 rawHumanPosition	./Comlib/src/main/java/comlib/message/HumanMessage.java	/^	protected int rawHumanPosition;$/;"	f	class:HumanMessage
+rawHumanPosition	./Comlib/src/main/java/comlib/message/information/RoadMessage.java	/^    private int rawHumanPosition;$/;"	f	class:RoadMessage	file:
 ray	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/kernel/LineOfSightPerception.java	/^        private Line2D ray;$/;"	f	class:LineOfSightPerception.Ray	file:
 rayCount	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/kernel/LineOfSightPerception.java	/^    private int rayCount;$/;"	f	class:LineOfSightPerception	file:
 rays	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/kernel/LineOfSightPerception.java	/^        private transient Collection<Ray> rays;$/;"	f	class:LineOfSightPerception.LOSView	file:
@@ -8002,6 +8028,7 @@ receivedRadio	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/
 receivedRadio	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightCivilianEvent.java	/^    public void receivedRadio(CivilianMessage msg) {$/;"	m	class:StraightCivilianEvent
 receivedRadio	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightFireEvent.java	/^    public void receivedRadio(FireBrigadeMessage msg) {$/;"	m	class:StraightFireEvent
 receivedRadio	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightPoliceEvent.java	/^    public void receivedRadio(PoliceForceMessage msg) {$/;"	m	class:StraightPoliceEvent
+receivedRadio	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightRoadEvent.java	/^    public void receivedRadio(RoadMessage msg) {$/;"	m	class:StraightRoadEvent
 receivedRadio	./Comlib-ADK/src_old/launcher/dummy/event/AmbulanceCivilianEvent.java	/^    public void receivedRadio(CivilianMessage msg) {$/;"	m	class:AmbulanceCivilianEvent
 receivedRadio	./Comlib/src/main/java/comlib/event/DummyMessageEvent.java	/^	public void receivedRadio(DummyMessage msg)$/;"	m	class:DummyMessageEvent
 receivedRadio	./Comlib/src/main/java/comlib/event/MessageEvent.java	/^	public abstract void receivedRadio(M msg);	$/;"	m	class:MessageEvent
@@ -8016,11 +8043,13 @@ receivedRadio	./Comlib/src/main/java/comlib/event/information/FireBrigadeMessage
 receivedRadio	./Comlib/src/main/java/comlib/event/information/FireBrigadeMessageEvent.java	/^    public void receivedRadio(FireBrigadeMessage msg);$/;"	m	interface:FireBrigadeMessageEvent
 receivedRadio	./Comlib/src/main/java/comlib/event/information/PoliceForceMessageEvent.java	/^	public void receivedRadio(PoliceForceMessage msg)$/;"	m	class:PoliceForceMessageEvent
 receivedRadio	./Comlib/src/main/java/comlib/event/information/PoliceForceMessageEvent.java	/^    public void receivedRadio(PoliceForceMessage msg);$/;"	m	interface:PoliceForceMessageEvent
+receivedRadio	./Comlib/src/main/java/comlib/event/information/RoadMessageEvent.java	/^    public abstract void receivedRadio(RoadMessage msg);$/;"	m	interface:RoadMessageEvent
 receivedVoice	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightAmbulanceEvent.java	/^    public void receivedVoice(AmbulanceTeamMessage msg) {$/;"	m	class:StraightAmbulanceEvent
 receivedVoice	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightBuildingEvent.java	/^    public void receivedVoice(BuildingMessage msg) {$/;"	m	class:StraightBuildingEvent
 receivedVoice	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightCivilianEvent.java	/^    public void receivedVoice(CivilianMessage msg) {$/;"	m	class:StraightCivilianEvent
 receivedVoice	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightFireEvent.java	/^    public void receivedVoice(FireBrigadeMessage msg) {$/;"	m	class:StraightFireEvent
 receivedVoice	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightPoliceEvent.java	/^    public void receivedVoice(PoliceForceMessage msg) {$/;"	m	class:StraightPoliceEvent
+receivedVoice	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightRoadEvent.java	/^    public void receivedVoice(RoadMessage msg) {$/;"	m	class:StraightRoadEvent
 receivedVoice	./Comlib/src/main/java/comlib/event/DummyMessageEvent.java	/^	public void receivedVoice(DummyMessage msg)$/;"	m	class:DummyMessageEvent
 receivedVoice	./Comlib/src/main/java/comlib/event/MessageEvent.java	/^	public abstract void receivedVoice(M msg);	$/;"	m	class:MessageEvent
 receivedVoice	./Comlib/src/main/java/comlib/event/MessageEvent.java	/^	public abstract void receivedVoice(M msg);	$/;"	m	interface:MessageEvent
@@ -8034,6 +8063,7 @@ receivedVoice	./Comlib/src/main/java/comlib/event/information/FireBrigadeMessage
 receivedVoice	./Comlib/src/main/java/comlib/event/information/FireBrigadeMessageEvent.java	/^	public void receivedVoice(FireBrigadeMessage msg);$/;"	m	interface:FireBrigadeMessageEvent
 receivedVoice	./Comlib/src/main/java/comlib/event/information/PoliceForceMessageEvent.java	/^	public void receivedVoice(PoliceForceMessage msg)$/;"	m	class:PoliceForceMessageEvent
 receivedVoice	./Comlib/src/main/java/comlib/event/information/PoliceForceMessageEvent.java	/^	public void receivedVoice(PoliceForceMessage msg);$/;"	m	interface:PoliceForceMessageEvent
+receivedVoice	./Comlib/src/main/java/comlib/event/information/RoadMessageEvent.java	/^    public abstract void receivedVoice(RoadMessage msg);$/;"	m	interface:RoadMessageEvent
 recomputeBounds	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/geometry/spatialindex/BBTree.java	/^        abstract void recomputeBounds();$/;"	m	class:BBTree.Node
 recomputeBounds	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/geometry/spatialindex/BBTree.java	/^        void recomputeBounds() {$/;"	m	class:BBTree.Branch
 recomputeBounds	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/geometry/spatialindex/BBTree.java	/^        void recomputeBounds() {$/;"	m	class:BBTree.Leaf
@@ -8083,6 +8113,7 @@ reflectedMessage	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/eve
 reflectedMessage	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightCivilianEvent.java	/^    public Civilian reflectedMessage(StandardWorldModel swm, CivilianMessage msg) {$/;"	m	class:StraightCivilianEvent
 reflectedMessage	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightFireEvent.java	/^    public FireBrigade reflectedMessage(StandardWorldModel swm, FireBrigadeMessage msg) {$/;"	m	class:StraightFireEvent
 reflectedMessage	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightPoliceEvent.java	/^    public PoliceForce reflectedMessage(StandardWorldModel swm, PoliceForceMessage msg) {$/;"	m	class:StraightPoliceEvent
+reflectedMessage	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightRoadEvent.java	/^    public Blockade  reflectedMessage(StandardWorldModel world, RoadMessage msg) {$/;"	m	class:StraightRoadEvent
 reflectedMessage	./Comlib/old_src/message/information/BlockadeInformationMessage.java	/^	public void reflectedMessage(StandardWorldModel world) {$/;"	m	class:BlockadeInformationMessage
 reflectedMessage	./Comlib/src_old/message/information/BlockadeInformationMessage.java	/^	public void reflectedMessage(StandardWorldModel world) {$/;"	m	class:BlockadeInformationMessage
 refresh	../roborescue-roborescue/modules/human/src/human/ControlledAgentGUI.java	/^        public void refresh() {$/;"	m	class:ControlledAgentGUI.ListListModel
@@ -8341,6 +8372,7 @@ renderUnloadAction	../roborescue-roborescue/modules/standard/src/rescuecore2/sta
 renderedObjects	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/view/ViewComponent.java	/^    private List<RenderedObject> renderedObjects;$/;"	f	class:ViewComponent	file:
 reorderEdges	../roborescue-roborescue/modules/maps/src/maps/gml/GMLShape.java	/^    public void reorderEdges(List<GMLDirectedEdge> newEdges) {$/;"	m	class:GMLShape
 repairCost	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/Blockade.java	/^    private IntProperty repairCost;$/;"	f	class:Blockade	file:
+repairCost	./Comlib/src/main/java/comlib/message/information/RoadMessage.java	/^    private int repairCost;$/;"	f	class:RoadMessage	file:
 repaircost	./Comlib/old_src/message/information/BlockadeInformationMessage.java	/^	private int repaircost;$/;"	f	class:BlockadeInformationMessage	file:
 repaircost	./Comlib/src_old/message/information/BlockadeInformationMessage.java	/^	private int repaircost;$/;"	f	class:BlockadeInformationMessage	file:
 replace	../roborescue-roborescue/modules/maps/src/maps/osm/OSMWay.java	/^    public void replace(Long oldID, Long newID) {$/;"	m	class:OSMWay
@@ -8705,6 +8737,7 @@ roadDecorators	../roborescue-roborescue/modules/maps/src/maps/gml/view/Decorator
 roadDecorators	../roborescue-roborescue/modules/maps/src/maps/gml/view/GMLMapViewer.java	/^    private transient Map<GMLRoad, RoadDecorator> roadDecorators;$/;"	f	class:GMLMapViewer	file:
 roadIDs	../roborescue-roborescue/modules/sample/src/sample/AbstractSampleAgent.java	/^    protected List<EntityID> roadIDs;$/;"	f	class:AbstractSampleAgent
 roadLeft	../roborescue-roborescue/modules/maps/src/maps/convert/legacy2gml/BuildingInfo.java	/^    private Point2D roadLeft;$/;"	f	class:BuildingInfo	file:
+roadMessage	./Comlib/src/main/java/comlib/message/MessageID.java	/^    int roadMessage = 5;$/;"	f	interface:MessageID
 roadRight	../roborescue-roborescue/modules/maps/src/maps/convert/legacy2gml/BuildingInfo.java	/^    private Point2D roadRight;$/;"	f	class:BuildingInfo	file:
 roads	../roborescue-roborescue/modules/maps/src/maps/convert/osm2gml/OSMIntersectionInfo.java	/^    private List<RoadAspect> roads;$/;"	f	class:OSMIntersectionInfo	file:
 roads	../roborescue-roborescue/modules/maps/src/maps/convert/osm2gml/ScanOSMStep.java	/^    private List<OSMRoadInfo> roads;$/;"	f	class:ScanOSMStep	file:
@@ -9478,6 +9511,7 @@ tactics	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/Straig
 tactics	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightCivilianEvent.java	/^    private StraightAmbulance tactics;$/;"	f	class:StraightCivilianEvent	file:
 tactics	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightFireEvent.java	/^    private StraightAmbulance tactics;$/;"	f	class:StraightFireEvent	file:
 tactics	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightPoliceEvent.java	/^    private StraightAmbulance tactics;$/;"	f	class:StraightPoliceEvent	file:
+tactics	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightRoadEvent.java	/^    private StraightPolice tactics;$/;"	f	class:StraightRoadEvent	file:
 tactics	./Comlib-ADK/src/main/java/comlib/adk/util/ambulance/CivilianManager.java	/^    protected Tactics tactics;$/;"	f	class:CivilianManager
 tactics	./Comlib-ADK/src/main/java/comlib/adk/util/route/RouteSearch.java	/^    protected Tactics tactics;$/;"	f	class:RouteSearch
 tactics	./Comlib-ADK/src/main/java/comlib/adk/util/route/RouteSearcher.java	/^    protected Tactics tactics;$/;"	f	class:RouteSearcher
@@ -10363,6 +10397,8 @@ writeMessage	./Comlib/src/main/java/comlib/provider/information/FireBrigadeMessa
 writeMessage	./Comlib/src/main/java/comlib/provider/information/FireBrigadeMessageProvider.java	/^	protected void writeMessage(VoiceConfig config, StringBuilder sb, FireBrigadeMessage msg)$/;"	m	class:FireBrigadeMessageProvider
 writeMessage	./Comlib/src/main/java/comlib/provider/information/PoliceForceMessageProvider.java	/^	protected void writeMessage(RadioConfig config, BitOutputStream bos, PoliceForceMessage msg)$/;"	m	class:PoliceForceMessageProvider
 writeMessage	./Comlib/src/main/java/comlib/provider/information/PoliceForceMessageProvider.java	/^	protected void writeMessage(VoiceConfig config, StringBuilder sb, PoliceForceMessage msg)$/;"	m	class:PoliceForceMessageProvider
+writeMessage	./Comlib/src/main/java/comlib/provider/information/RoadMessageProvider.java	/^    protected void writeMessage(RadioConfig config, BitOutputStream bos, RoadMessage msg) {$/;"	m	class:RoadMessageProvider
+writeMessage	./Comlib/src/main/java/comlib/provider/information/RoadMessageProvider.java	/^    protected void writeMessage(VoiceConfig config, StringBuilder sb, RoadMessage msg) {$/;"	m	class:RoadMessageProvider
 writeNodes	../roborescue-roborescue/modules/maps/src/maps/gml/formats/MeijoFormat.java	/^    private void writeNodes(GMLMap map, Element parent) {$/;"	m	class:MeijoFormat	file:
 writeNodes	../roborescue-roborescue/modules/maps/src/maps/gml/formats/RobocupFormat.java	/^    private void writeNodes(GMLMap map, Element parent) {$/;"	m	class:RobocupFormat	file:
 writeProperty	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/EncodingTools.java	/^	public static void writeProperty(Property p, DataOutput out)$/;"	m	class:EncodingTools
