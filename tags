@@ -271,6 +271,7 @@ AmbulanceTeamMessage	./Comlib/src_old/message/information/AmbulanceTeamMessage.j
 AmbulanceTeamMessage	./Comlib/src_old/message/information/AmbulanceTeamMessage.java	/^	public AmbulanceTeamMessage(int t, int l, AmbulanceTeam ambulance)$/;"	m	class:AmbulanceTeamMessage
 AmbulanceTeamMessage	./Comlib/src_old/message/information/AmbulanceTeamMessage.java	/^public class AmbulanceTeamMessage extends HumanMessage$/;"	c
 AmbulanceTeamMessageEvent	./Comlib/src/main/java/comlib/event/information/AmbulanceTeamMessageEvent.java	/^public abstract class AmbulanceTeamMessageEvent extends MessageEvent<AmbulanceTeamMessage>$/;"	c
+AmbulanceTeamMessageEvent	./Comlib/src/main/java/comlib/event/information/AmbulanceTeamMessageEvent.java	/^public interface AmbulanceTeamMessageEvent extends MessageEvent<AmbulanceTeamMessage> {$/;"	i
 AmbulanceTeamMessageProvider	./Comlib/src/main/java/comlib/provider/information/AmbulanceTeamMessageProvider.java	/^	public AmbulanceTeamMessageProvider(int id)$/;"	m	class:AmbulanceTeamMessageProvider
 AmbulanceTeamMessageProvider	./Comlib/src/main/java/comlib/provider/information/AmbulanceTeamMessageProvider.java	/^public class AmbulanceTeamMessageProvider extends HumanMessageProvider<AmbulanceTeamMessage, AmbulanceTeamMessageEvent>$/;"	c
 AmbulanceTeamTactics	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/AmbulanceTeamTactics.java	/^public abstract class AmbulanceTeamTactics extends Tactics<AmbulanceTeam>{$/;"	c
@@ -366,6 +367,8 @@ BlockadeInformationMessage	./Comlib/src_old/message/information/BlockadeInformat
 BlockadeInformationMessage	./Comlib/src_old/message/information/BlockadeInformationMessage.java	/^public class BlockadeInformationMessage extends InformationMessage implements WorldInformationMessage {$/;"	c
 BlockadeManager	./Comlib-ADK/src/main/java/comlib/adk/util/target/BlockadeManager.java	/^    public BlockadeManager(Tactics user) {$/;"	m	class:BlockadeManager
 BlockadeManager	./Comlib-ADK/src/main/java/comlib/adk/util/target/BlockadeManager.java	/^public abstract class BlockadeManager extends TargetManager{$/;"	c
+BlockadeSelector	./Comlib-ADK/src/main/java/comlib/adk/util/target/BlockadeSelector.java	/^    public BlockadeSelector(Tactics user) {$/;"	m	class:BlockadeSelector
+BlockadeSelector	./Comlib-ADK/src/main/java/comlib/adk/util/target/BlockadeSelector.java	/^public abstract class BlockadeSelector extends TargetSelector {$/;"	c
 BooleanProperty	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/worldmodel/properties/BooleanProperty.java	/^    public BooleanProperty(BooleanProperty other) {$/;"	m	class:BooleanProperty
 BooleanProperty	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/worldmodel/properties/BooleanProperty.java	/^    public BooleanProperty(Enum<?> urn) {$/;"	m	class:BooleanProperty
 BooleanProperty	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/worldmodel/properties/BooleanProperty.java	/^    public BooleanProperty(Enum<?> urn, boolean value) {$/;"	m	class:BooleanProperty
@@ -407,8 +410,11 @@ BuildingMessage	./Comlib/src_old/message/information/BuildingMessage.java	/^	pub
 BuildingMessage	./Comlib/src_old/message/information/BuildingMessage.java	/^	public BuildingMessage(int t, int l, Building building)$/;"	m	class:BuildingMessage
 BuildingMessage	./Comlib/src_old/message/information/BuildingMessage.java	/^public class BuildingMessage extends MapMessage$/;"	c
 BuildingMessageEvent	./Comlib/src/main/java/comlib/event/information/BuildingMessageEvent.java	/^public abstract class BuildingMessageEvent extends MessageEvent<BuildingMessage>$/;"	c
+BuildingMessageEvent	./Comlib/src/main/java/comlib/event/information/BuildingMessageEvent.java	/^public interface BuildingMessageEvent extends MessageEvent<BuildingMessage> {$/;"	i
 BuildingMessageProvider	./Comlib/src/main/java/comlib/provider/information/BuildingMessageProvider.java	/^	public BuildingMessageProvider(int id)$/;"	m	class:BuildingMessageProvider
 BuildingMessageProvider	./Comlib/src/main/java/comlib/provider/information/BuildingMessageProvider.java	/^public class BuildingMessageProvider extends MapMessageProvider<BuildingMessage, BuildingMessageEvent>$/;"	c
+BuildingSelector	./Comlib-ADK/src/main/java/comlib/adk/util/target/BuildingSelector.java	/^    public BuildingSelector(Tactics user) {$/;"	m	class:BuildingSelector
+BuildingSelector	./Comlib-ADK/src/main/java/comlib/adk/util/target/BuildingSelector.java	/^public abstract class BuildingSelector extends TargetSelector {$/;"	c
 BuildingSpaceFiller	../roborescue-roborescue/modules/maps/src/maps/convert/osm2gml/buildings/BuildingSpaceFiller.java	/^public interface BuildingSpaceFiller {$/;"	i
 BuriedAgentsCommandFilter	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/kernel/BuriedAgentsCommandFilter.java	/^public class BuriedAgentsCommandFilter extends AbstractCommandFilter {$/;"	c
 BuriednessStats	../roborescue-roborescue/modules/misc-new/src/misc/MiscSimulator.java	/^        BuriednessStats(int code, Config config) {$/;"	m	class:MiscSimulator.BuriednessStats
@@ -523,6 +529,7 @@ CivilianMessage	./Comlib/src/main/java/comlib/message/information/CivilianMessag
 CivilianMessage	./Comlib/src/main/java/comlib/message/information/CivilianMessage.java	/^abstract public class CivilianMessage extends HumanMessage$/;"	c
 CivilianMessage	./Comlib/src/main/java/comlib/message/information/CivilianMessage.java	/^public class CivilianMessage extends HumanMessage$/;"	c
 CivilianMessageEvent	./Comlib/src/main/java/comlib/event/information/CivilianMessageEvent.java	/^public abstract class CivilianMessageEvent extends MessageEvent<CivilianMessage>$/;"	c
+CivilianMessageEvent	./Comlib/src/main/java/comlib/event/information/CivilianMessageEvent.java	/^public interface CivilianMessageEvent extends MessageEvent<CivilianMessage> {$/;"	i
 CivilianMessageProvider	./Comlib/src/main/java/comlib/provider/information/CivilianMessageProvider.java	/^	public CivilianMessageProvider(int id)$/;"	m	class:CivilianMessageProvider
 CivilianMessageProvider	./Comlib/src/main/java/comlib/provider/information/CivilianMessageProvider.java	/^public class CivilianMessageProvider extends HumanMessageProvider<CivilianMessage, CivilianMessageEvent>$/;"	c
 CivilianMessageProvider	./Comlib/src/main/java/comlib/provider/information/CivilianMessageProvider.java	/^public class CivilianMessageProvider extends MessageProvider<CivilianMessage, CivilianMessageEvent>$/;"	c
@@ -906,19 +913,23 @@ DummyAmbulance	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyAmbulance.java	/
 DummyAmbulance	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyAmbulance.java	/^public class DummyAmbulance extends AmbulanceTeamTactics {$/;"	c
 DummyAmbulance	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyAmbulance.java	/^    public DummyAmbulance() {$/;"	m	class:DummyAmbulance
 DummyAmbulance	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyAmbulance.java	/^public class DummyAmbulance extends AmbulanceTeamTactics {$/;"	c
+DummyAmbulance	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyAmbulance.java	/^public class DummyAmbulance extends StraightAmbulance {$/;"	c
 DummyAmbulance	./Comlib-ADK/src_old/launcher/dummy/DummyAmbulance.java	/^    public DummyAmbulance() {$/;"	m	class:DummyAmbulance
 DummyAmbulance	./Comlib-ADK/src_old/launcher/dummy/DummyAmbulance.java	/^public class DummyAmbulance extends AmbulanceTeamTactics {$/;"	c
 DummyFire	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyFire.java	/^public class DummyFire extends FireBrigadeTactics {$/;"	c
 DummyFire	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyFire.java	/^public class DummyFire extends FireBrigadeTactics {$/;"	c
+DummyFire	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyFire.java	/^public class DummyFire extends StraightFire {$/;"	c
 DummyFire	./Comlib-ADK/src_old/launcher/dummy/DummyFire.java	/^public class DummyFire extends FireBrigadeTactics {$/;"	c
 DummyMessage	./Comlib/src/main/java/comlib/message/DummyMessage.java	/^	public DummyMessage(int test)$/;"	m	class:DummyMessage
 DummyMessage	./Comlib/src/main/java/comlib/message/DummyMessage.java	/^	public DummyMessage(int time, int ttl, int test)$/;"	m	class:DummyMessage
 DummyMessage	./Comlib/src/main/java/comlib/message/DummyMessage.java	/^public class DummyMessage extends CommunicationMessage$/;"	c
 DummyMessageEvent	./Comlib/src/main/java/comlib/event/DummyMessageEvent.java	/^public abstract class DummyMessageEvent extends MessageEvent<DummyMessage> {$/;"	c
+DummyMessageEvent	./Comlib/src/main/java/comlib/event/DummyMessageEvent.java	/^public class DummyMessageEvent implements MessageEvent<DummyMessage> {$/;"	c
 DummyMessageProvider	./Comlib/src/main/java/comlib/provider/DummyMessageProvider.java	/^	public DummyMessageProvider(int id)$/;"	m	class:DummyMessageProvider
 DummyMessageProvider	./Comlib/src/main/java/comlib/provider/DummyMessageProvider.java	/^public class DummyMessageProvider extends MessageProvider<DummyMessage, DummyMessageEvent>$/;"	c
 DummyPolice	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyPolice.java	/^public class DummyPolice extends PoliceForceTactics {$/;"	c
 DummyPolice	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyPolice.java	/^public class DummyPolice extends PoliceForceTactics {$/;"	c
+DummyPolice	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyPolice.java	/^public class DummyPolice extends StraightPolice {$/;"	c
 DummyPolice	./Comlib-ADK/src_old/launcher/dummy/DummyPolice.java	/^public class DummyPolice extends PoliceForceTactics {$/;"	c
 DummyTeam	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyTeam.java	/^public class DummyTeam extends Team {$/;"	c
 DummyTeam	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyTeam.java	/^public class DummyTeam implements Team {$/;"	c
@@ -1122,6 +1133,7 @@ FireBrigadeMessage	./Comlib/src_old/message/information/FireBrigadeMessage.java	
 FireBrigadeMessage	./Comlib/src_old/message/information/FireBrigadeMessage.java	/^	public FireBrigadeMessage(int t, l, FireBrigade fire)$/;"	m	class:FireBrigadeMessage
 FireBrigadeMessage	./Comlib/src_old/message/information/FireBrigadeMessage.java	/^public class FireBrigadeMessage$/;"	c
 FireBrigadeMessageEvent	./Comlib/src/main/java/comlib/event/information/FireBrigadeMessageEvent.java	/^public abstract class FireBrigadeMessageEvent extends MessageEvent<FireBrigadeMessage>$/;"	c
+FireBrigadeMessageEvent	./Comlib/src/main/java/comlib/event/information/FireBrigadeMessageEvent.java	/^public interface FireBrigadeMessageEvent extends MessageEvent<FireBrigadeMessage> {$/;"	i
 FireBrigadeMessageProvider	./Comlib/src/main/java/comlib/provider/information/FireBrigadeMessageProvider.java	/^	public FireBrigadeMessageProvider(int id)$/;"	m	class:FireBrigadeMessageProvider
 FireBrigadeMessageProvider	./Comlib/src/main/java/comlib/provider/information/FireBrigadeMessageProvider.java	/^public class FireBrigadeMessageProvider extends HumanMessageProvider<FireBrigadeMessage, FireBrigadeMessageEvent>$/;"	c
 FireBrigadeTactics	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/FireBrigadeTactics.java	/^public abstract class FireBrigadeTactics extends Tactics<FireBrigade> {$/;"	c
@@ -1808,6 +1820,7 @@ MessageCreator	./Comlib/src_old/creator/MessageCreator.java	/^	public MessageCre
 MessageCreator	./Comlib/src_old/creator/MessageCreator.java	/^public abstract class MessageCreator<M extends CommunicationMessage>$/;"	c
 MessageEvent	./Comlib/old_src/agent/MessageEvent.java	/^public interface MessageEvent$/;"	i
 MessageEvent	./Comlib/src/main/java/comlib/event/MessageEvent.java	/^public abstract class MessageEvent<M extends CommunicationMessage> {$/;"	c
+MessageEvent	./Comlib/src/main/java/comlib/event/MessageEvent.java	/^public interface MessageEvent<M extends CommunicationMessage> {$/;"	i
 MessageEvent	./Comlib/src_old/agent/MessageEvent.java	/^public interface MessageEvent$/;"	i
 MessageFactory	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/registry/MessageFactory.java	/^public interface MessageFactory {$/;"	i
 MessageFactoryRegisterCallback	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/java/LoadableTypeProcessor.java	/^        private MessageFactoryRegisterCallback(Registry registry) {$/;"	m	class:LoadableTypeProcessor.MessageFactoryRegisterCallback	file:
@@ -2113,6 +2126,7 @@ PoliceForceMessage	./Comlib/src_old/message/information/PoliceForceMessage.java	
 PoliceForceMessage	./Comlib/src_old/message/information/PoliceForceMessage.java	/^	public PoliceForceMessage(int t, int l, PoliceForce police)$/;"	m	class:PoliceForceMessage
 PoliceForceMessage	./Comlib/src_old/message/information/PoliceForceMessage.java	/^public class PoliceForceMessage extends HumanMessage$/;"	c
 PoliceForceMessageEvent	./Comlib/src/main/java/comlib/event/information/PoliceForceMessageEvent.java	/^public abstract class PoliceForceMessageEvent extends MessageEvent<PoliceForceMessage>$/;"	c
+PoliceForceMessageEvent	./Comlib/src/main/java/comlib/event/information/PoliceForceMessageEvent.java	/^public interface PoliceForceMessageEvent extends MessageEvent<PoliceForceMessage> {$/;"	i
 PoliceForceMessageProvider	./Comlib/src/main/java/comlib/provider/information/PoliceForceMessageProvider.java	/^	public PoliceForceMessageProvider(int id)$/;"	m	class:PoliceForceMessageProvider
 PoliceForceMessageProvider	./Comlib/src/main/java/comlib/provider/information/PoliceForceMessageProvider.java	/^public class PoliceForceMessageProvider extends HumanMessageProvider<PoliceForceMessage, PoliceForceMessageEvent>$/;"	c
 PoliceForceTactics	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/PoliceForceTactics.java	/^public abstract class PoliceForceTactics extends Tactics<PoliceForce>{$/;"	c
@@ -2458,16 +2472,23 @@ STEP_TIME_MS	../roborescue-roborescue/modules/traffic3/src/traffic3/simulator/Tr
 SYSTEM_REGISTRY	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/registry/Registry.java	/^	public static final Registry SYSTEM_REGISTRY = new Registry("System", null);$/;"	f	class:Registry
 SampleAmbulance	./basefile/sample/SampleAmbulance.java	/^    public SampleAmbulance() {$/;"	m	class:SampleAmbulance
 SampleAmbulance	./basefile/sample/SampleAmbulance.java	/^public class SampleAmbulance extends AmbulanceTeamTactics {$/;"	c
+SampleAmbulance	./basefile/sample/SampleAmbulance.java	/^public class SampleAmbulance extends StraightAmbulance {$/;"	c
 SampleAmbulanceTeam	../roborescue-roborescue/modules/sample/src/sample/SampleAmbulanceTeam.java	/^public class SampleAmbulanceTeam extends AbstractSampleAgent<AmbulanceTeam> {$/;"	c
 SampleBlockadeManager	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleBlockadeManager.java	/^    public SampleBlockadeManager(Tactics user) {$/;"	m	class:SampleBlockadeManager
 SampleBlockadeManager	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleBlockadeManager.java	/^public class SampleBlockadeManager extends BlockadeManager{$/;"	c
+SampleBlockadeSelector	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleBlockadeSelector.java	/^    public SampleBlockadeSelector(Tactics user) {$/;"	m	class:SampleBlockadeSelector
+SampleBlockadeSelector	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleBlockadeSelector.java	/^public class SampleBlockadeSelector extends BlockadeSelector {$/;"	c
 SampleBuildingManager	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleBuildingManager.java	/^    public SampleBuildingManager(Tactics user) {$/;"	m	class:SampleBuildingManager
 SampleBuildingManager	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleBuildingManager.java	/^public class SampleBuildingManager extends BuildingManager{$/;"	c
+SampleBuildingSelector	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleBuildingSelector.java	/^    public SampleBuildingSelector(Tactics user) {$/;"	m	class:SampleBuildingSelector
+SampleBuildingSelector	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleBuildingSelector.java	/^public class SampleBuildingSelector extends BuildingSelector {$/;"	c
 SampleCentre	../roborescue-roborescue/modules/sample/src/sample/SampleCentre.java	/^public class SampleCentre extends StandardAgent<Building> {$/;"	c
 SampleCivilian	../roborescue-roborescue/modules/sample/src/sample/SampleCivilian.java	/^public class SampleCivilian extends AbstractSampleAgent<Civilian> {$/;"	c
 SampleFire	./basefile/sample/SampleFire.java	/^public class SampleFire extends FireBrigadeTactics {$/;"	c
+SampleFire	./basefile/sample/SampleFire.java	/^public class SampleFire extends StraightFire {$/;"	c
 SampleFireBrigade	../roborescue-roborescue/modules/sample/src/sample/SampleFireBrigade.java	/^public class SampleFireBrigade extends AbstractSampleAgent<FireBrigade> {$/;"	c
 SamplePolice	./basefile/sample/SamplePolice.java	/^public class SamplePolice extends PoliceForceTactics {$/;"	c
+SamplePolice	./basefile/sample/SamplePolice.java	/^public class SamplePolice extends StraightPolice {$/;"	c
 SamplePoliceForce	../roborescue-roborescue/modules/sample/src/sample/SamplePoliceForce.java	/^public class SamplePoliceForce extends AbstractSampleAgent<PoliceForce> {$/;"	c
 SampleRouteSearch	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/SampleRouteSearch.java	/^    public SampleRouteSearch(Tactics user) {$/;"	m	class:SampleRouteSearch
 SampleRouteSearch	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/SampleRouteSearch.java	/^public class SampleRouteSearch extends RouteSearch {$/;"	c
@@ -2483,6 +2504,8 @@ SampleTeam	./basefile/sample/SampleTeam.java	/^public class SampleTeam extends T
 SampleTeam	./basefile/sample/SampleTeam.java	/^public class SampleTeam implements Team {$/;"	c
 SampleVictimManager	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleVictimManager.java	/^    public SampleVictimManager(Tactics user) {$/;"	m	class:SampleVictimManager
 SampleVictimManager	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleVictimManager.java	/^public class SampleVictimManager extends VictimManager{$/;"	c
+SampleVictimSelector	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleVictimSelector.java	/^    public SampleVictimSelector(Tactics user) {$/;"	m	class:SampleVictimSelector
+SampleVictimSelector	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleVictimSelector.java	/^public class SampleVictimSelector extends VictimSelector {$/;"	c
 SampleViewer	../roborescue-roborescue/modules/sample/src/sample/SampleViewer.java	/^public class SampleViewer extends StandardViewer {$/;"	c
 ScaleConversion	../roborescue-roborescue/modules/maps/src/maps/ScaleConversion.java	/^    public ScaleConversion(double xOrigin, double yOrigin, double xScale, double yScale) {$/;"	m	class:ScaleConversion
 ScaleConversion	../roborescue-roborescue/modules/maps/src/maps/ScaleConversion.java	/^public class ScaleConversion implements CoordinateConversion {$/;"	c
@@ -2618,6 +2641,19 @@ StaticNoise	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/k
 StaticNoise	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/kernel/comms/StaticNoise.java	/^public class StaticNoise implements Noise {$/;"	c
 StaticSeedGenerator	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/config/Config.java	/^        StaticSeedGenerator(byte[] data) {$/;"	m	class:Config.StaticSeedGenerator
 StaticSeedGenerator	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/config/Config.java	/^    private static class StaticSeedGenerator implements SeedGenerator {$/;"	c	class:Config
+StraightAmbulance	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/StraightAmbulance.java	/^public abstract class StraightAmbulance extends AmbulanceTeamTactics{$/;"	c
+StraightAmbulanceEvent	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightAmbulanceEvent.java	/^    public StraightAmbulanceEvent(StraightAmbulance straightAmbulance) {$/;"	m	class:StraightAmbulanceEvent
+StraightAmbulanceEvent	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightAmbulanceEvent.java	/^public class StraightAmbulanceEvent implements AmbulanceTeamMessageEvent {$/;"	c
+StraightBuildingEvent	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightBuildingEvent.java	/^    public StraightBuildingEvent(StraightFire straightFire) {$/;"	m	class:StraightBuildingEvent
+StraightBuildingEvent	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightBuildingEvent.java	/^public class StraightBuildingEvent implements BuildingMessageEvent{$/;"	c
+StraightCivilianEvent	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightCivilianEvent.java	/^    public StraightCivilianEvent(StraightAmbulance straightAmbulance) {$/;"	m	class:StraightCivilianEvent
+StraightCivilianEvent	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightCivilianEvent.java	/^public class StraightCivilianEvent implements CivilianMessageEvent{$/;"	c
+StraightFire	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/StraightFire.java	/^public abstract class StraightFire extends FireBrigadeTactics {$/;"	c
+StraightFireEvent	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightFireEvent.java	/^    public StraightFireEvent(StraightAmbulance straightAmbulance) {$/;"	m	class:StraightFireEvent
+StraightFireEvent	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightFireEvent.java	/^public class StraightFireEvent implements FireBrigadeMessageEvent{$/;"	c
+StraightPolice	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/StraightPolice.java	/^public abstract class StraightPolice extends PoliceForceTactics{$/;"	c
+StraightPoliceEvent	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightPoliceEvent.java	/^    public StraightPoliceEvent(StraightAmbulance straightAmbulance) {$/;"	m	class:StraightPoliceEvent
+StraightPoliceEvent	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightPoliceEvent.java	/^public class StraightPoliceEvent implements PoliceForceMessageEvent{$/;"	c
 StreamConnection	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/connection/StreamConnection.java	/^    public StreamConnection(InputStream in, OutputStream out) {$/;"	m	class:StreamConnection
 StreamConnection	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/connection/StreamConnection.java	/^public class StreamConnection extends AbstractConnection {$/;"	c
 StreamConnectionTest	../roborescue-roborescue/modules/rescuecore2/test/rescuecore2/connection/StreamConnectionTest.java	/^public class StreamConnectionTest extends ConnectionTestCommon {$/;"	c
@@ -2702,6 +2738,8 @@ TacticsAgent	./Comlib-ADK/src_old/agent/TacticsAgent.java	/^    public TacticsAg
 TacticsAgent	./Comlib-ADK/src_old/agent/TacticsAgent.java	/^public abstract class TacticsAgent<T extends Tactics, E extends StandardEntity> extends CommunicationAgent<E> {$/;"	c
 TargetManager	./Comlib-ADK/src/main/java/comlib/adk/util/target/TargetManager.java	/^    public TargetManager(Tactics t) {$/;"	m	class:TargetManager
 TargetManager	./Comlib-ADK/src/main/java/comlib/adk/util/target/TargetManager.java	/^public abstract class TargetManager {$/;"	c
+TargetSelector	./Comlib-ADK/src/main/java/comlib/adk/util/target/TargetSelector.java	/^    public TargetSelector(Tactics t) {$/;"	m	class:TargetSelector
+TargetSelector	./Comlib-ADK/src/main/java/comlib/adk/util/target/TargetSelector.java	/^public abstract class TargetSelector {$/;"	c
 Team	./Comlib-ADK/src/main/java/comlib/adk/team/Team.java	/^public abstract class Team {$/;"	c
 Team	./Comlib-ADK/src/main/java/comlib/adk/team/Team.java	/^public interface Team {$/;"	i
 Team	./Comlib-ADK/src_old/team/Team.java	/^public abstract class Team {$/;"	c
@@ -2856,6 +2894,8 @@ VictimMessageCreator	./Comlib/old_src/creator/information/VictimMessageCreator.j
 VictimMessageCreator	./Comlib/old_src/creator/information/VictimMessageCreator.java	/^public class VictimMessageCreator extends HumanMessageCreator<VictimMessage>$/;"	c
 VictimMessageCreator	./Comlib/src_old/creator/information/VictimMessageCreator.java	/^	public VictimMessageCreator(){}$/;"	m	class:VictimMessageCreator
 VictimMessageCreator	./Comlib/src_old/creator/information/VictimMessageCreator.java	/^public class VictimMessageCreator extends HumanMessageCreator<VictimMessage>$/;"	c
+VictimSelector	./Comlib-ADK/src/main/java/comlib/adk/util/target/VictimSelector.java	/^    public VictimSelector(Tactics user) {$/;"	m	class:VictimSelector
+VictimSelector	./Comlib-ADK/src/main/java/comlib/adk/util/target/VictimSelector.java	/^public abstract class VictimSelector extends TargetSelector {$/;"	c
 ViewComponent	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/view/ViewComponent.java	/^    protected ViewComponent() {$/;"	m	class:ViewComponent
 ViewComponent	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/view/ViewComponent.java	/^public abstract class ViewComponent extends JComponent {$/;"	c
 ViewGMLMap	../roborescue-roborescue/modules/maps/src/maps/gml/ViewGMLMap.java	/^    private ViewGMLMap() {$/;"	m	class:ViewGMLMap	file:
@@ -2985,18 +3025,32 @@ add	../roborescue-roborescue/modules/traffic3/src/traffic3/objects/Force.java	/^
 add	./Comlib-ADK/src/main/java/comlib/adk/dummy/util/CivilianManager.java	/^    public void add(Civilian civilian) {$/;"	m	class:CivilianManager
 add	./Comlib-ADK/src/main/java/comlib/adk/util/ambulance/CivilianManager.java	/^    public void add(Civilian civilian) {$/;"	m	class:CivilianManager
 add	./Comlib-ADK/src/main/java/comlib/adk/util/target/BlockadeManager.java	/^    public abstract void add(Blockade blockade);$/;"	m	class:BlockadeManager
+add	./Comlib-ADK/src/main/java/comlib/adk/util/target/BlockadeSelector.java	/^    public abstract void add(Blockade blockade);$/;"	m	class:BlockadeSelector
+add	./Comlib-ADK/src/main/java/comlib/adk/util/target/BlockadeSelector.java	/^    public abstract void add(EntityID id);$/;"	m	class:BlockadeSelector
 add	./Comlib-ADK/src/main/java/comlib/adk/util/target/BuildingManager.java	/^    public abstract void add(Building building);$/;"	m	class:BuildingManager
+add	./Comlib-ADK/src/main/java/comlib/adk/util/target/BuildingSelector.java	/^    public abstract void add(Building building);$/;"	m	class:BuildingSelector
+add	./Comlib-ADK/src/main/java/comlib/adk/util/target/BuildingSelector.java	/^    public abstract void add(EntityID id);$/;"	m	class:BuildingSelector
 add	./Comlib-ADK/src/main/java/comlib/adk/util/target/VictimManager.java	/^    public abstract void add(AmbulanceTeam agent);$/;"	m	class:VictimManager
 add	./Comlib-ADK/src/main/java/comlib/adk/util/target/VictimManager.java	/^    public abstract void add(Civilian civilian);$/;"	m	class:VictimManager
 add	./Comlib-ADK/src/main/java/comlib/adk/util/target/VictimManager.java	/^    public abstract void add(FireBrigade agent);$/;"	m	class:VictimManager
 add	./Comlib-ADK/src/main/java/comlib/adk/util/target/VictimManager.java	/^    public abstract void add(PoliceForce agent);$/;"	m	class:VictimManager
+add	./Comlib-ADK/src/main/java/comlib/adk/util/target/VictimSelector.java	/^    public abstract void add(Civilian civilian);$/;"	m	class:VictimSelector
+add	./Comlib-ADK/src/main/java/comlib/adk/util/target/VictimSelector.java	/^    public abstract void add(EntityID id);$/;"	m	class:VictimSelector
+add	./Comlib-ADK/src/main/java/comlib/adk/util/target/VictimSelector.java	/^    public abstract void add(Human agent);$/;"	m	class:VictimSelector
 add	./Comlib-ADK/src/main/java/comlib/adk/util/target/ambulance/CivilianSearcher.java	/^    public void add(Civilian civilian) {$/;"	m	class:CivilianSearcher
 add	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleBlockadeManager.java	/^    public void add(Blockade blockade) {$/;"	m	class:SampleBlockadeManager
+add	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleBlockadeSelector.java	/^    public void add(Blockade blockade) {$/;"	m	class:SampleBlockadeSelector
+add	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleBlockadeSelector.java	/^    public void add(EntityID id) {$/;"	m	class:SampleBlockadeSelector
 add	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleBuildingManager.java	/^    public void add(Building building) {$/;"	m	class:SampleBuildingManager
+add	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleBuildingSelector.java	/^    public void add(Building building) {$/;"	m	class:SampleBuildingSelector
+add	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleBuildingSelector.java	/^    public void add(EntityID id) {$/;"	m	class:SampleBuildingSelector
 add	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleVictimManager.java	/^    public void add(AmbulanceTeam agent) {$/;"	m	class:SampleVictimManager
 add	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleVictimManager.java	/^    public void add(Civilian civilian) {$/;"	m	class:SampleVictimManager
 add	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleVictimManager.java	/^    public void add(FireBrigade agent) {$/;"	m	class:SampleVictimManager
 add	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleVictimManager.java	/^    public void add(PoliceForce agent) {$/;"	m	class:SampleVictimManager
+add	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleVictimSelector.java	/^    public void add(Civilian civilian) {$/;"	m	class:SampleVictimSelector
+add	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleVictimSelector.java	/^    public void add(EntityID id) {$/;"	m	class:SampleVictimSelector
+add	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleVictimSelector.java	/^    public void add(Human agent) {$/;"	m	class:SampleVictimSelector
 add	./Comlib-ADK/src_old/util/CivilianManager.java	/^    public void add(Civilian civilian) {$/;"	m	class:CivilianManager
 add	./Comlib-ADK/src_old/util/target/ambulance/CivilianSearcher.java	/^    public void add(Civilian civilian) {$/;"	m	class:CivilianSearcher
 add	./Comlib/old_src/creator/MessageCreator.java	/^	public void add(RadioConfig config, BitOutputStream bos, CommunicationMessage msg)$/;"	m	class:MessageCreator
@@ -3157,6 +3211,7 @@ agentID	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/messages/co
 agentID	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/Tactics.java	/^    public EntityID agentID;$/;"	f	class:Tactics
 agentID	./Comlib-ADK/src_old/team/tactics/Tactics.java	/^    public EntityID agentID;$/;"	f	class:Tactics
 agentList	./Comlib-ADK/src/main/java/comlib/adk/util/target/VictimManager.java	/^    public List<EntityID> agentList;$/;"	f	class:VictimManager
+agentList	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleVictimSelector.java	/^    public Set<EntityID> agentList;$/;"	f	class:SampleVictimSelector
 agentLock	../roborescue-roborescue/modules/kernel/src/kernel/ComponentManager.java	/^	private final Object agentLock = new Object();$/;"	f	class:ComponentManager	file:
 agentName	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/messages/control/AKConnect.java	/^    private StringComponent agentName;$/;"	f	class:AKConnect	file:
 agentOverlay	../roborescue-roborescue/modules/gis2/src/gis2/scenario/ScenarioEditor.java	/^    private AgentOverlay agentOverlay;$/;"	f	class:ScenarioEditor	file:
@@ -3278,12 +3333,14 @@ blockade	../roborescue-roborescue/modules/traffic3/src/traffic3/objects/TrafficB
 blockadeByID	../roborescue-roborescue/modules/traffic3/src/traffic3/manager/TrafficManager.java	/^    private Map<Integer, TrafficBlockade> blockadeByID;$/;"	f	class:TrafficManager	file:
 blockadeLines	../roborescue-roborescue/modules/traffic3/src/traffic3/objects/TrafficArea.java	/^	private List<Line2D> blockadeLines;$/;"	f	class:TrafficArea	file:
 blockadeList	./Comlib-ADK/src/main/java/comlib/adk/util/target/BlockadeManager.java	/^    public List<EntityID> blockadeList;$/;"	f	class:BlockadeManager
+blockadeList	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleBlockadeSelector.java	/^    public Set<EntityID> blockadeList;$/;"	f	class:SampleBlockadeSelector
 blockadeMap	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Route.java	/^    private Map<EntityID, Route> blockadeMap;$/;"	f	class:Route	file:
 blockadeMap	./Comlib-ADK/src_old/move/Route.java	/^    private Map<EntityID, Route> blockadeMap;$/;"	f	class:Route	file:
 blockadeMap	./Comlib-ADK/src_old/util/route/sample/Route.java	/^    private Map<EntityID, Route> blockadeMap;$/;"	f	class:Route	file:
 blockadeMessageID	./Comlib/old_src/message/CommunicationMessage.java	/^	public static final int blockadeMessageID = 1;$/;"	f	class:CommunicationMessage
 blockadeMessageID	./Comlib/src_old/message/CommunicationMessage.java	/^	public static final int blockadeMessageID = 1;$/;"	f	class:CommunicationMessage
 blockadeProgress	../roborescue-roborescue/modules/collapse/src/collapse/CollapseSimulatorGUI.java	/^    private JProgressBar blockadeProgress;$/;"	f	class:CollapseSimulatorGUI	file:
+blockadeSelector	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/StraightPolice.java	/^    public BlockadeSelector blockadeSelector;$/;"	f	class:StraightPolice
 blockadeToArea	../roborescue-roborescue/modules/collapse/src/collapse/CollapseSimulator.java	/^	private java.awt.geom.Area blockadeToArea(Blockade b) {$/;"	m	class:CollapseSimulator	file:
 blockades	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/Area.java	/^    private EntityRefListProperty blockades;$/;"	f	class:Area	file:
 blocking	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/kernel/LineOfSightPerception.java	/^        private boolean blocking;$/;"	f	class:LineOfSightPerception.LineInfo	file:
@@ -3336,9 +3393,11 @@ buildingID	./Comlib/src/main/java/comlib/message/information/BuildingMessage.jav
 buildingID	./Comlib/src_old/message/information/BuildingMessage.java	/^	protected EntityID buildingID;$/;"	f	class:BuildingMessage
 buildingIDs	../roborescue-roborescue/modules/sample/src/sample/AbstractSampleAgent.java	/^    protected List<EntityID> buildingIDs;$/;"	f	class:AbstractSampleAgent
 buildingList	./Comlib-ADK/src/main/java/comlib/adk/util/target/BuildingManager.java	/^    public List<EntityID> buildingList;$/;"	f	class:BuildingManager
+buildingList	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleBuildingSelector.java	/^    public Set<EntityID> buildingList;$/;"	f	class:SampleBuildingSelector
 buildingMessage	./Comlib/src/main/java/comlib/message/MessageID.java	/^	int buildingMessage = 4;$/;"	f	interface:MessageID
 buildingMessageID	./Comlib/old_src/message/CommunicationMessage.java	/^	public static final int buildingMessageID = 0;$/;"	f	class:CommunicationMessage
 buildingMessageID	./Comlib/src_old/message/CommunicationMessage.java	/^	public static final int buildingMessageID = 0;$/;"	f	class:CommunicationMessage
+buildingSelector	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/StraightFire.java	/^    public BuildingSelector buildingSelector;$/;"	f	class:StraightFire
 buildingSet	../roborescue-roborescue/modules/sample/src/sample/SampleSearch.java	/^	private Set<EntityID> buildingSet;$/;"	f	class:SampleSearch	file:
 buildingWidth	../roborescue-roborescue/modules/maps/src/maps/convert/osm2gml/buildings/row/RectangularDuplexRowFiller.java	/^    private final double buildingWidth;$/;"	f	class:RectangularDuplexRowFiller	file:
 buildingWidth	../roborescue-roborescue/modules/maps/src/maps/convert/osm2gml/buildings/row/ThinDuplexRowFiller.java	/^    private final double buildingWidth;$/;"	f	class:ThinDuplexRowFiller	file:
@@ -3470,6 +3529,7 @@ civilianList	./Comlib-ADK/src/main/java/comlib/adk/dummy/util/CivilianManager.ja
 civilianList	./Comlib-ADK/src/main/java/comlib/adk/util/ambulance/CivilianManager.java	/^    public List<EntityID> civilianList;$/;"	f	class:CivilianManager
 civilianList	./Comlib-ADK/src/main/java/comlib/adk/util/target/VictimManager.java	/^    public List<EntityID> civilianList;$/;"	f	class:VictimManager
 civilianList	./Comlib-ADK/src/main/java/comlib/adk/util/target/ambulance/CivilianSearcher.java	/^    public List<EntityID> civilianList;$/;"	f	class:CivilianSearcher
+civilianList	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleVictimSelector.java	/^    public Set<EntityID> civilianList;$/;"	f	class:SampleVictimSelector
 civilianList	./Comlib-ADK/src_old/util/CivilianManager.java	/^    private Set<Civilian> civilianList;$/;"	f	class:CivilianManager	file:
 civilianList	./Comlib-ADK/src_old/util/target/ambulance/CivilianSearcher.java	/^    public List<EntityID> civilianList;$/;"	f	class:CivilianSearcher
 civilianManager	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyAmbulance.java	/^    public CivilianManager civilianManager;$/;"	f	class:DummyAmbulance
@@ -3674,6 +3734,14 @@ comlib.adk.team.tactics	./Comlib-ADK/src_old/team/tactics/AmbulanceTeamTactics.j
 comlib.adk.team.tactics	./Comlib-ADK/src_old/team/tactics/FireBrigadeTactics.java	/^package comlib.adk.team.tactics;$/;"	p
 comlib.adk.team.tactics	./Comlib-ADK/src_old/team/tactics/PoliceForceTactics.java	/^package comlib.adk.team.tactics;$/;"	p
 comlib.adk.team.tactics	./Comlib-ADK/src_old/team/tactics/Tactics.java	/^package comlib.adk.team.tactics;$/;"	p
+comlib.adk.team.tactics.straight	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/StraightAmbulance.java	/^package comlib.adk.team.tactics.straight;$/;"	p
+comlib.adk.team.tactics.straight	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/StraightFire.java	/^package comlib.adk.team.tactics.straight;$/;"	p
+comlib.adk.team.tactics.straight	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/StraightPolice.java	/^package comlib.adk.team.tactics.straight;$/;"	p
+comlib.adk.team.tactics.straight.event	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightAmbulanceEvent.java	/^package comlib.adk.team.tactics.straight.event;$/;"	p
+comlib.adk.team.tactics.straight.event	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightBuildingEvent.java	/^package comlib.adk.team.tactics.straight.event;$/;"	p
+comlib.adk.team.tactics.straight.event	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightCivilianEvent.java	/^package comlib.adk.team.tactics.straight.event;$/;"	p
+comlib.adk.team.tactics.straight.event	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightFireEvent.java	/^package comlib.adk.team.tactics.straight.event;$/;"	p
+comlib.adk.team.tactics.straight.event	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightPoliceEvent.java	/^package comlib.adk.team.tactics.straight.event;$/;"	p
 comlib.adk.util.action	./Comlib-ADK/src/main/java/comlib/adk/util/action/Action.java	/^package comlib.adk.util.action;$/;"	p
 comlib.adk.util.action	./Comlib-ADK/src/main/java/comlib/adk/util/action/AmbulanceAction.java	/^package comlib.adk.util.action;$/;"	p
 comlib.adk.util.action	./Comlib-ADK/src/main/java/comlib/adk/util/action/FireAction.java	/^package comlib.adk.util.action;$/;"	p
@@ -3703,14 +3771,21 @@ comlib.adk.util.route.sample	./Comlib-ADK/src_old/util/route/sample/RouteFactory
 comlib.adk.util.route.sample	./Comlib-ADK/src_old/util/route/sample/Router.java	/^package comlib.adk.util.route.sample;$/;"	p
 comlib.adk.util.route.sample	./Comlib-ADK/src_old/util/route/sample/SampleRouteSearcher.java	/^package comlib.adk.util.route.sample;$/;"	p
 comlib.adk.util.target	./Comlib-ADK/src/main/java/comlib/adk/util/target/BlockadeManager.java	/^package comlib.adk.util.target;$/;"	p
+comlib.adk.util.target	./Comlib-ADK/src/main/java/comlib/adk/util/target/BlockadeSelector.java	/^package comlib.adk.util.target;$/;"	p
 comlib.adk.util.target	./Comlib-ADK/src/main/java/comlib/adk/util/target/BuildingManager.java	/^package comlib.adk.util.target;$/;"	p
+comlib.adk.util.target	./Comlib-ADK/src/main/java/comlib/adk/util/target/BuildingSelector.java	/^package comlib.adk.util.target;$/;"	p
 comlib.adk.util.target	./Comlib-ADK/src/main/java/comlib/adk/util/target/TargetManager.java	/^package comlib.adk.util.target;$/;"	p
+comlib.adk.util.target	./Comlib-ADK/src/main/java/comlib/adk/util/target/TargetSelector.java	/^package comlib.adk.util.target;$/;"	p
 comlib.adk.util.target	./Comlib-ADK/src/main/java/comlib/adk/util/target/VictimManager.java	/^package comlib.adk.util.target;$/;"	p
+comlib.adk.util.target	./Comlib-ADK/src/main/java/comlib/adk/util/target/VictimSelector.java	/^package comlib.adk.util.target;$/;"	p
 comlib.adk.util.target.ambulance	./Comlib-ADK/src/main/java/comlib/adk/util/target/ambulance/CivilianSearcher.java	/^package comlib.adk.util.target.ambulance;$/;"	p
 comlib.adk.util.target.ambulance	./Comlib-ADK/src_old/util/target/ambulance/CivilianSearcher.java	/^package comlib.adk.util.target.ambulance;$/;"	p
 comlib.adk.util.target.sample	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleBlockadeManager.java	/^package comlib.adk.util.target.sample;$/;"	p
+comlib.adk.util.target.sample	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleBlockadeSelector.java	/^package comlib.adk.util.target.sample;$/;"	p
 comlib.adk.util.target.sample	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleBuildingManager.java	/^package comlib.adk.util.target.sample;$/;"	p
+comlib.adk.util.target.sample	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleBuildingSelector.java	/^package comlib.adk.util.target.sample;$/;"	p
 comlib.adk.util.target.sample	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleVictimManager.java	/^package comlib.adk.util.target.sample;$/;"	p
+comlib.adk.util.target.sample	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleVictimSelector.java	/^package comlib.adk.util.target.sample;$/;"	p
 comlib.agent	./Comlib/old_src/agent/CommunicationAgent.java	/^package comlib.agent;$/;"	p
 comlib.agent	./Comlib/old_src/agent/MessageEvent.java	/^package comlib.agent;$/;"	p
 comlib.agent	./Comlib/src/main/java/comlib/agent/CommunicationAgent.java	/^package comlib.agent;$/;"	p
@@ -4771,6 +4846,9 @@ getBlockadeLines	../roborescue-roborescue/modules/traffic3/src/traffic3/objects/
 getBlockadeMap	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Route.java	/^	public Map<EntityID, Route> getBlockadeMap() {$/;"	m	class:Route
 getBlockadeMap	./Comlib-ADK/src_old/move/Route.java	/^	public Map<EntityID, Route> getBlockadeMap() {$/;"	m	class:Route
 getBlockadeMap	./Comlib-ADK/src_old/util/route/sample/Route.java	/^	public Map<EntityID, Route> getBlockadeMap() {$/;"	m	class:Route
+getBlockadeSelector	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyPolice.java	/^    public BlockadeSelector getBlockadeSelector() {$/;"	m	class:DummyPolice
+getBlockadeSelector	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/StraightPolice.java	/^    public abstract BlockadeSelector getBlockadeSelector();$/;"	m	class:StraightPolice
+getBlockadeSelector	./basefile/sample/SamplePolice.java	/^    public BlockadeSelector getBlockadeSelector() {$/;"	m	class:SamplePolice
 getBlockades	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/Area.java	/^    public List<EntityID> getBlockades() {$/;"	m	class:Area
 getBlockades	../roborescue-roborescue/modules/traffic3/src/traffic3/manager/TrafficManager.java	/^    public Collection<TrafficBlockade> getBlockades() {$/;"	m	class:TrafficManager
 getBlockades	../roborescue-roborescue/modules/traffic3/src/traffic3/objects/TrafficArea.java	/^	public Collection<TrafficBlockade> getBlockades() {$/;"	m	class:TrafficArea
@@ -4822,6 +4900,9 @@ getBuildingDecorator	../roborescue-roborescue/modules/maps/src/maps/gml/view/GML
 getBuildingID	../roborescue-roborescue/modules/maps/src/maps/convert/osm2gml/OSMBuildingInfo.java	/^    public long getBuildingID() {$/;"	m	class:OSMBuildingInfo
 getBuildingID	../roborescue-roborescue/modules/maps/src/maps/convert/osm2gml/TemporaryBuilding.java	/^    public long getBuildingID() {$/;"	m	class:TemporaryBuilding
 getBuildingID	./Comlib/src/main/java/comlib/message/information/BuildingMessage.java	/^	public EntityID getBuildingID()$/;"	m	class:BuildingMessage
+getBuildingSelector	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyFire.java	/^    public BuildingSelector getBuildingSelector() {$/;"	m	class:DummyFire
+getBuildingSelector	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/StraightFire.java	/^    public abstract BuildingSelector getBuildingSelector();$/;"	m	class:StraightFire
+getBuildingSelector	./basefile/sample/SampleFire.java	/^    public BuildingSelector getBuildingSelector() {$/;"	m	class:SampleFire
 getBuildings	../roborescue-roborescue/modules/maps/src/maps/convert/osm2gml/TemporaryMap.java	/^    public Collection<TemporaryBuilding> getBuildings() {$/;"	m	class:TemporaryMap
 getBuildings	../roborescue-roborescue/modules/maps/src/maps/gml/GMLMap.java	/^    public Set<GMLBuilding> getBuildings() {$/;"	m	class:GMLMap
 getBuildings	../roborescue-roborescue/modules/maps/src/maps/legacy/LegacyMap.java	/^    public Collection<LegacyBuilding> getBuildings() {$/;"	m	class:LegacyMap
@@ -5668,6 +5749,15 @@ getRoute	./Comlib-ADK/src_old/util/route/sample/Router.java	/^	public Route getR
 getRouteFactory	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Router.java	/^	public RouteFactory getRouteFactory() {$/;"	m	class:Router
 getRouteFactory	./Comlib-ADK/src_old/move/Router.java	/^	public RouteFactory getRouteFactory() {$/;"	m	class:Router
 getRouteFactory	./Comlib-ADK/src_old/util/route/sample/Router.java	/^	public RouteFactory getRouteFactory() {$/;"	m	class:Router
+getRouteSearcher	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyAmbulance.java	/^    public RouteSearcher getRouteSearcher() {$/;"	m	class:DummyAmbulance
+getRouteSearcher	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyFire.java	/^    public RouteSearcher getRouteSearcher() {$/;"	m	class:DummyFire
+getRouteSearcher	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyPolice.java	/^    public RouteSearcher getRouteSearcher() {$/;"	m	class:DummyPolice
+getRouteSearcher	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/StraightAmbulance.java	/^    public abstract RouteSearcher getRouteSearcher();$/;"	m	class:StraightAmbulance
+getRouteSearcher	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/StraightFire.java	/^    public abstract RouteSearcher getRouteSearcher();$/;"	m	class:StraightFire
+getRouteSearcher	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/StraightPolice.java	/^    public abstract RouteSearcher getRouteSearcher();$/;"	m	class:StraightPolice
+getRouteSearcher	./basefile/sample/SampleAmbulance.java	/^    public RouteSearcher getRouteSearcher() {$/;"	m	class:SampleAmbulance
+getRouteSearcher	./basefile/sample/SampleFire.java	/^    public RouteSearcher getRouteSearcher() {$/;"	m	class:SampleFire
+getRouteSearcher	./basefile/sample/SamplePolice.java	/^    public RouteSearcher getRouteSearcher() {$/;"	m	class:SamplePolice
 getRowCount	../roborescue-roborescue/modules/kernel/src/kernel/ui/ScoreTable.java	/^            public int getRowCount() {$/;"	m	class:ScoreTable.ScoreModel.ScoreTableModel
 getRowCount	../roborescue-roborescue/modules/maps/src/maps/gml/view/GMLObjectInspector.java	/^        public int getRowCount() {$/;"	m	class:GMLObjectInspector.EdgeTableModel
 getRowCount	../roborescue-roborescue/modules/maps/src/maps/gml/view/GMLObjectInspector.java	/^        public int getRowCount() {$/;"	m	class:GMLObjectInspector.NodeTableModel
@@ -5798,10 +5888,14 @@ getTarget	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/mes
 getTarget	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/messages/AKRescue.java	/^    public EntityID getTarget() {$/;"	m	class:AKRescue
 getTarget	./Comlib-ADK/src/main/java/comlib/adk/util/ambulance/CivilianManager.java	/^    public EntityID getTarget(int time) {$/;"	m	class:CivilianManager
 getTarget	./Comlib-ADK/src/main/java/comlib/adk/util/target/TargetManager.java	/^    public abstract EntityID getTarget(int time);$/;"	m	class:TargetManager
+getTarget	./Comlib-ADK/src/main/java/comlib/adk/util/target/TargetSelector.java	/^    public abstract EntityID getTarget(int time);$/;"	m	class:TargetSelector
 getTarget	./Comlib-ADK/src/main/java/comlib/adk/util/target/ambulance/CivilianSearcher.java	/^    public EntityID getTarget(int time) {$/;"	m	class:CivilianSearcher
 getTarget	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleBlockadeManager.java	/^    public EntityID getTarget(int time) {$/;"	m	class:SampleBlockadeManager
+getTarget	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleBlockadeSelector.java	/^    public EntityID getTarget(int time) {$/;"	m	class:SampleBlockadeSelector
 getTarget	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleBuildingManager.java	/^    public EntityID getTarget(int time) {$/;"	m	class:SampleBuildingManager
+getTarget	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleBuildingSelector.java	/^    public EntityID getTarget(int time) {$/;"	m	class:SampleBuildingSelector
 getTarget	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleVictimManager.java	/^    public EntityID getTarget(int time) {$/;"	m	class:SampleVictimManager
+getTarget	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleVictimSelector.java	/^    public EntityID getTarget(int time) {$/;"	m	class:SampleVictimSelector
 getTarget	./Comlib-ADK/src_old/util/target/ambulance/CivilianSearcher.java	/^    public EntityID getTarget(int time) {$/;"	m	class:CivilianSearcher
 getTargetBlockade	../roborescue-roborescue/modules/sample/src/sample/SamplePoliceForce.java	/^    private Blockade getTargetBlockade() {$/;"	m	class:SamplePoliceForce	file:
 getTargetBlockade	../roborescue-roborescue/modules/sample/src/sample/SamplePoliceForce.java	/^    private Blockade getTargetBlockade(Area area, int maxDistance) {$/;"	m	class:SamplePoliceForce	file:
@@ -5920,6 +6014,9 @@ getVertices	../roborescue-roborescue/modules/maps/src/maps/convert/osm2gml/OSMBu
 getVertices	../roborescue-roborescue/modules/maps/src/maps/convert/osm2gml/OSMIntersectionInfo.java	/^    public List<Point2D> getVertices() {$/;"	m	class:OSMIntersectionInfo
 getVertices	../roborescue-roborescue/modules/maps/src/maps/convert/osm2gml/OSMRoadInfo.java	/^    public List<Point2D> getVertices() {$/;"	m	class:OSMRoadInfo
 getVertices	../roborescue-roborescue/modules/maps/src/maps/convert/osm2gml/OSMShape.java	/^    List<Point2D> getVertices();$/;"	m	interface:OSMShape
+getVictimSelector	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyAmbulance.java	/^    public VictimSelector getVictimSelector() {$/;"	m	class:DummyAmbulance
+getVictimSelector	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/StraightAmbulance.java	/^    public abstract VictimSelector getVictimSelector();$/;"	m	class:StraightAmbulance
+getVictimSelector	./basefile/sample/SampleAmbulance.java	/^    public VictimSelector getVictimSelector() {$/;"	m	class:SampleAmbulance
 getViewBounds	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/gui/ScreenTransform.java	/^    public Rectangle2D getViewBounds() {$/;"	m	class:ScreenTransform
 getViewer	../roborescue-roborescue/modules/gis2/src/gis2/scenario/ScenarioEditor.java	/^    public GMLMapViewer getViewer() {$/;"	m	class:ScenarioEditor
 getViewer	../roborescue-roborescue/modules/maps/src/maps/gml/editor/GMLEditor.java	/^    public GMLMapViewer getViewer() {$/;"	m	class:GMLEditor
@@ -6269,6 +6366,8 @@ ignition	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/enti
 ignitionModel	../roborescue-roborescue/modules/ignition/src/ignition/IgnitionSimulator.java	/^    private IgnitionModel ignitionModel;$/;"	f	class:IgnitionSimulator	file:
 ignitionTimes	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/kernel/StandardPerception.java	/^    private Map<Building, Integer> ignitionTimes;$/;"	f	class:StandardPerception	file:
 ignore	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/java/LoadableTypeProcessor.java	/^    private Set<String> ignore;$/;"	f	class:LoadableTypeProcessor	file:
+ignoreAgentCommand	./Comlib-ADK/src/main/java/comlib/adk/agent/TacticsAgent.java	/^    private int ignoreAgentCommand;$/;"	f	class:TacticsAgent	file:
+ignoreTime	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/Tactics.java	/^    public int ignoreTime;$/;"	f	class:Tactics
 imageViewer	../roborescue-roborescue/modules/sample/src/sample/LiveLogExtractor.java	/^    private ViewComponent imageViewer;$/;"	f	class:LiveLogExtractor	file:
 impassableLines	../roborescue-roborescue/modules/maps/src/maps/validate/GMLTraversabilityValidator.java	/^    private static Geometry impassableLines(GMLShape shape) {$/;"	m	class:GMLTraversabilityValidator	file:
 importance	../roborescue-roborescue/modules/maps/src/maps/gml/GMLBuilding.java	/^    private int importance;$/;"	f	class:GMLBuilding	file:
@@ -7238,6 +7337,8 @@ move	./Comlib-ADK/src_old/util/action/Action.java	/^    public static Message mo
 move	./Comlib-ADK/src_old/util/action/Action.java	/^    public static Message move(Tactics tactics, int time, List<EntityID> path, int destX, int destY) {$/;"	m	class:Action
 moveRefuge	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyAmbulance.java	/^    private Message moveRefuge(int time)$/;"	m	class:DummyAmbulance	file:
 moveRefuge	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyAmbulance.java	/^    private Message moveRefuge(int time) {$/;"	m	class:DummyAmbulance	file:
+moveRefuge	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/StraightAmbulance.java	/^    private Message moveRefuge(int time) {$/;"	m	class:StraightAmbulance	file:
+moveRefuge	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/StraightFire.java	/^    private Message moveRefuge(int time) {$/;"	m	class:StraightFire	file:
 moveRefuge	./Comlib-ADK/src_old/launcher/dummy/DummyAmbulance.java	/^    private Message moveRefuge(int time) {$/;"	m	class:DummyAmbulance	file:
 moveRefuge	./basefile/sample/SampleAmbulance.java	/^    private Message moveRefuge(int time) {$/;"	m	class:SampleAmbulance	file:
 mySelf	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Route.java	/^    private Area mySelf;$/;"	f	class:Route	file:
@@ -7550,6 +7651,9 @@ preparation	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyAmbulance.
 preparation	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyFire.java	/^    public void preparation() {$/;"	m	class:DummyFire
 preparation	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyPolice.java	/^    public void preparation() {$/;"	m	class:DummyPolice
 preparation	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/Tactics.java	/^    public abstract void preparation();$/;"	m	class:Tactics
+preparation	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/StraightAmbulance.java	/^    public void preparation() {$/;"	m	class:StraightAmbulance
+preparation	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/StraightFire.java	/^    public void preparation() {$/;"	m	class:StraightFire
+preparation	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/StraightPolice.java	/^    public void preparation() {$/;"	m	class:StraightPolice
 preparation	./basefile/sample/SampleAmbulance.java	/^    public void preparation() {$/;"	m	class:SampleAmbulance
 preparation	./basefile/sample/SampleFire.java	/^    public void preparation() {$/;"	m	class:SampleFire
 preparation	./basefile/sample/SamplePolice.java	/^    public void preparation() {$/;"	m	class:SamplePolice
@@ -7864,6 +7968,8 @@ reason	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/messages/con
 reason	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/messages/control/KAConnectError.java	/^    private StringComponent reason;$/;"	f	class:KAConnectError	file:
 reason	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/messages/control/KSConnectError.java	/^    private StringComponent reason;$/;"	f	class:KSConnectError	file:
 reason	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/messages/control/KVConnectError.java	/^    private StringComponent reason;$/;"	f	class:KVConnectError	file:
+receiveBeforeEvent	./Comlib-ADK/src/main/java/comlib/adk/agent/TacticsAgent.java	/^    public void receiveBeforeEvent(int time, ChangeSet changed) {$/;"	m	class:TacticsAgent
+receiveBeforeEvent	./Comlib/src/main/java/comlib/agent/CommunicationAgent.java	/^    public void receiveBeforeEvent(int time, ChangeSet changed) {$/;"	m	class:CommunicationAgent
 receiveMessage	./Comlib/old_src/agent/MessageEvent.java	/^	public void receiveMessage(AmbulanceMessage msg);$/;"	m	interface:MessageEvent
 receiveMessage	./Comlib/old_src/agent/MessageEvent.java	/^	public void receiveMessage(BlockadeMessage msg);$/;"	m	interface:MessageEvent
 receiveMessage	./Comlib/old_src/agent/MessageEvent.java	/^	public void receiveMessage(BuildingMessage msg);$/;"	m	interface:MessageEvent
@@ -7891,21 +7997,43 @@ receivedMessages	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	pr
 receivedMessages	./Comlib/src_old/manager/MessageManager.java	/^	private List<CommunicationMessage> receivedMessages;$/;"	f	class:MessageManager	file:
 receivedRadio	./Comlib-ADK/src/main/java/comlib/adk/dummy/event/AmbulanceCivilianEvent.java	/^    public void receivedRadio(CivilianMessage msg) {$/;"	m	class:AmbulanceCivilianEvent
 receivedRadio	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/event/AmbulanceCivilianEvent.java	/^    public void receivedRadio(CivilianMessage msg) {$/;"	m	class:AmbulanceCivilianEvent
+receivedRadio	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightAmbulanceEvent.java	/^    public void receivedRadio(AmbulanceTeamMessage msg) {$/;"	m	class:StraightAmbulanceEvent
+receivedRadio	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightBuildingEvent.java	/^    public void receivedRadio(BuildingMessage msg) {$/;"	m	class:StraightBuildingEvent
+receivedRadio	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightCivilianEvent.java	/^    public void receivedRadio(CivilianMessage msg) {$/;"	m	class:StraightCivilianEvent
+receivedRadio	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightFireEvent.java	/^    public void receivedRadio(FireBrigadeMessage msg) {$/;"	m	class:StraightFireEvent
+receivedRadio	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightPoliceEvent.java	/^    public void receivedRadio(PoliceForceMessage msg) {$/;"	m	class:StraightPoliceEvent
 receivedRadio	./Comlib-ADK/src_old/launcher/dummy/event/AmbulanceCivilianEvent.java	/^    public void receivedRadio(CivilianMessage msg) {$/;"	m	class:AmbulanceCivilianEvent
 receivedRadio	./Comlib/src/main/java/comlib/event/DummyMessageEvent.java	/^	public void receivedRadio(DummyMessage msg)$/;"	m	class:DummyMessageEvent
 receivedRadio	./Comlib/src/main/java/comlib/event/MessageEvent.java	/^	public abstract void receivedRadio(M msg);	$/;"	m	class:MessageEvent
+receivedRadio	./Comlib/src/main/java/comlib/event/MessageEvent.java	/^	public abstract void receivedRadio(M msg);	$/;"	m	interface:MessageEvent
 receivedRadio	./Comlib/src/main/java/comlib/event/information/AmbulanceTeamMessageEvent.java	/^	public void receivedRadio(AmbulanceTeamMessage msg)$/;"	m	class:AmbulanceTeamMessageEvent
+receivedRadio	./Comlib/src/main/java/comlib/event/information/AmbulanceTeamMessageEvent.java	/^    public void receivedRadio(AmbulanceTeamMessage msg);$/;"	m	interface:AmbulanceTeamMessageEvent
 receivedRadio	./Comlib/src/main/java/comlib/event/information/BuildingMessageEvent.java	/^	public void receivedRadio(BuildingMessage msg)$/;"	m	class:BuildingMessageEvent
+receivedRadio	./Comlib/src/main/java/comlib/event/information/BuildingMessageEvent.java	/^	public void receivedRadio(BuildingMessage msg);$/;"	m	interface:BuildingMessageEvent
 receivedRadio	./Comlib/src/main/java/comlib/event/information/CivilianMessageEvent.java	/^	public void receivedRadio(CivilianMessage msg)$/;"	m	class:CivilianMessageEvent
+receivedRadio	./Comlib/src/main/java/comlib/event/information/CivilianMessageEvent.java	/^	public void receivedRadio(CivilianMessage msg);$/;"	m	interface:CivilianMessageEvent
 receivedRadio	./Comlib/src/main/java/comlib/event/information/FireBrigadeMessageEvent.java	/^	public void receivedRadio(FireBrigadeMessage msg)$/;"	m	class:FireBrigadeMessageEvent
+receivedRadio	./Comlib/src/main/java/comlib/event/information/FireBrigadeMessageEvent.java	/^    public void receivedRadio(FireBrigadeMessage msg);$/;"	m	interface:FireBrigadeMessageEvent
 receivedRadio	./Comlib/src/main/java/comlib/event/information/PoliceForceMessageEvent.java	/^	public void receivedRadio(PoliceForceMessage msg)$/;"	m	class:PoliceForceMessageEvent
+receivedRadio	./Comlib/src/main/java/comlib/event/information/PoliceForceMessageEvent.java	/^    public void receivedRadio(PoliceForceMessage msg);$/;"	m	interface:PoliceForceMessageEvent
+receivedVoice	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightAmbulanceEvent.java	/^    public void receivedVoice(AmbulanceTeamMessage msg) {$/;"	m	class:StraightAmbulanceEvent
+receivedVoice	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightBuildingEvent.java	/^    public void receivedVoice(BuildingMessage msg) {$/;"	m	class:StraightBuildingEvent
+receivedVoice	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightCivilianEvent.java	/^    public void receivedVoice(CivilianMessage msg) {$/;"	m	class:StraightCivilianEvent
+receivedVoice	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightFireEvent.java	/^    public void receivedVoice(FireBrigadeMessage msg) {$/;"	m	class:StraightFireEvent
+receivedVoice	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightPoliceEvent.java	/^    public void receivedVoice(PoliceForceMessage msg) {$/;"	m	class:StraightPoliceEvent
 receivedVoice	./Comlib/src/main/java/comlib/event/DummyMessageEvent.java	/^	public void receivedVoice(DummyMessage msg)$/;"	m	class:DummyMessageEvent
 receivedVoice	./Comlib/src/main/java/comlib/event/MessageEvent.java	/^	public abstract void receivedVoice(M msg);	$/;"	m	class:MessageEvent
+receivedVoice	./Comlib/src/main/java/comlib/event/MessageEvent.java	/^	public abstract void receivedVoice(M msg);	$/;"	m	interface:MessageEvent
 receivedVoice	./Comlib/src/main/java/comlib/event/information/AmbulanceTeamMessageEvent.java	/^	public void receivedVoice(AmbulanceTeamMessage msg)$/;"	m	class:AmbulanceTeamMessageEvent
+receivedVoice	./Comlib/src/main/java/comlib/event/information/AmbulanceTeamMessageEvent.java	/^	public void receivedVoice(AmbulanceTeamMessage msg);$/;"	m	interface:AmbulanceTeamMessageEvent
 receivedVoice	./Comlib/src/main/java/comlib/event/information/BuildingMessageEvent.java	/^	public void receivedVoice(BuildingMessage msg)$/;"	m	class:BuildingMessageEvent
+receivedVoice	./Comlib/src/main/java/comlib/event/information/BuildingMessageEvent.java	/^	public void receivedVoice(BuildingMessage msg);$/;"	m	interface:BuildingMessageEvent
 receivedVoice	./Comlib/src/main/java/comlib/event/information/CivilianMessageEvent.java	/^	public void receivedVoice(CivilianMessage msg)$/;"	m	class:CivilianMessageEvent
+receivedVoice	./Comlib/src/main/java/comlib/event/information/CivilianMessageEvent.java	/^	public void receivedVoice(CivilianMessage msg);$/;"	m	interface:CivilianMessageEvent
 receivedVoice	./Comlib/src/main/java/comlib/event/information/FireBrigadeMessageEvent.java	/^	public void receivedVoice(FireBrigadeMessage msg)$/;"	m	class:FireBrigadeMessageEvent
+receivedVoice	./Comlib/src/main/java/comlib/event/information/FireBrigadeMessageEvent.java	/^	public void receivedVoice(FireBrigadeMessage msg);$/;"	m	interface:FireBrigadeMessageEvent
 receivedVoice	./Comlib/src/main/java/comlib/event/information/PoliceForceMessageEvent.java	/^	public void receivedVoice(PoliceForceMessage msg)$/;"	m	class:PoliceForceMessageEvent
+receivedVoice	./Comlib/src/main/java/comlib/event/information/PoliceForceMessageEvent.java	/^	public void receivedVoice(PoliceForceMessage msg);$/;"	m	interface:PoliceForceMessageEvent
 recomputeBounds	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/geometry/spatialindex/BBTree.java	/^        abstract void recomputeBounds();$/;"	m	class:BBTree.Node
 recomputeBounds	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/geometry/spatialindex/BBTree.java	/^        void recomputeBounds() {$/;"	m	class:BBTree.Branch
 recomputeBounds	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/geometry/spatialindex/BBTree.java	/^        void recomputeBounds() {$/;"	m	class:BBTree.Leaf
@@ -7950,6 +8078,11 @@ redoAction	../roborescue-roborescue/modules/gis2/src/gis2/scenario/ScenarioEdito
 redoAction	../roborescue-roborescue/modules/maps/src/maps/gml/editor/GMLEditor.java	/^    private Action redoAction;$/;"	f	class:GMLEditor	file:
 reference	../roborescue-roborescue/modules/sample/src/sample/DistanceSorter.java	/^    private StandardEntity reference;$/;"	f	class:DistanceSorter	file:
 reflectedMessage	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/event/AmbulanceCivilianEvent.java	/^    public Civilian reflectedMessage(StandardWorldModel swm, CivilianMessage msg) {$/;"	m	class:AmbulanceCivilianEvent
+reflectedMessage	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightAmbulanceEvent.java	/^    public AmbulanceTeam reflectedMessage(StandardWorldModel swm, AmbulanceTeamMessage msg) {$/;"	m	class:StraightAmbulanceEvent
+reflectedMessage	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightBuildingEvent.java	/^    public Building reflectedMessage(StandardWorldModel swm, BuildingMessage msg) {$/;"	m	class:StraightBuildingEvent
+reflectedMessage	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightCivilianEvent.java	/^    public Civilian reflectedMessage(StandardWorldModel swm, CivilianMessage msg) {$/;"	m	class:StraightCivilianEvent
+reflectedMessage	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightFireEvent.java	/^    public FireBrigade reflectedMessage(StandardWorldModel swm, FireBrigadeMessage msg) {$/;"	m	class:StraightFireEvent
+reflectedMessage	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightPoliceEvent.java	/^    public PoliceForce reflectedMessage(StandardWorldModel swm, PoliceForceMessage msg) {$/;"	m	class:StraightPoliceEvent
 reflectedMessage	./Comlib/old_src/message/information/BlockadeInformationMessage.java	/^	public void reflectedMessage(StandardWorldModel world) {$/;"	m	class:BlockadeInformationMessage
 reflectedMessage	./Comlib/src_old/message/information/BlockadeInformationMessage.java	/^	public void reflectedMessage(StandardWorldModel world) {$/;"	m	class:BlockadeInformationMessage
 refresh	../roborescue-roborescue/modules/human/src/human/ControlledAgentGUI.java	/^        public void refresh() {$/;"	m	class:ControlledAgentGUI.ListListModel
@@ -8014,6 +8147,7 @@ registerProperties	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/
 registerPropertyFactory	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/registry/Registry.java	/^	public void registerPropertyFactory(PropertyFactory factory) {$/;"	m	class:Registry
 registerPropertyFactory	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/registry/Registry.java	/^	public void registerPropertyFactory(String urn, PropertyFactory factory) {$/;"	m	class:Registry
 registerProvider	./Comlib-ADK/src/main/java/comlib/adk/agent/TacticsAgent.java	/^    public void registerProvider(MessageManager manager) {$/;"	m	class:TacticsAgent
+registerProvider	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/Tactics.java	/^    public void registerProvider(MessageManager manager) {$/;"	m	class:Tactics
 registerProvider	./Comlib-ADK/src_old/agent/TacticsAgent.java	/^    public void registerProvider(MessageManager manager) {$/;"	m	class:TacticsAgent
 registerProvider	./Comlib/src/main/java/comlib/agent/CommunicationAgent.java	/^	public abstract void registerProvider(MessageManager manager);$/;"	m	class:CommunicationAgent
 registerProvider	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	public boolean registerProvider(MessageProvider provider)$/;"	m	class:MessageManager
@@ -8050,19 +8184,33 @@ remove	./Comlib-ADK/src/main/java/comlib/adk/dummy/util/CivilianManager.java	/^ 
 remove	./Comlib-ADK/src/main/java/comlib/adk/util/ambulance/CivilianManager.java	/^    public void remove(Civilian civilian) {$/;"	m	class:CivilianManager
 remove	./Comlib-ADK/src/main/java/comlib/adk/util/ambulance/CivilianManager.java	/^    public void remove(EntityID id) {$/;"	m	class:CivilianManager
 remove	./Comlib-ADK/src/main/java/comlib/adk/util/target/BlockadeManager.java	/^    public abstract void remove(Blockade blockade);$/;"	m	class:BlockadeManager
+remove	./Comlib-ADK/src/main/java/comlib/adk/util/target/BlockadeSelector.java	/^    public abstract void remove(Blockade blockade);$/;"	m	class:BlockadeSelector
+remove	./Comlib-ADK/src/main/java/comlib/adk/util/target/BlockadeSelector.java	/^    public abstract void remove(EntityID id);$/;"	m	class:BlockadeSelector
 remove	./Comlib-ADK/src/main/java/comlib/adk/util/target/BuildingManager.java	/^    public abstract void remove(Building building);$/;"	m	class:BuildingManager
+remove	./Comlib-ADK/src/main/java/comlib/adk/util/target/BuildingSelector.java	/^    public abstract void remove(Building building);$/;"	m	class:BuildingSelector
+remove	./Comlib-ADK/src/main/java/comlib/adk/util/target/BuildingSelector.java	/^    public abstract void remove(EntityID id);$/;"	m	class:BuildingSelector
 remove	./Comlib-ADK/src/main/java/comlib/adk/util/target/VictimManager.java	/^    public abstract void remove(AmbulanceTeam agent);$/;"	m	class:VictimManager
 remove	./Comlib-ADK/src/main/java/comlib/adk/util/target/VictimManager.java	/^    public abstract void remove(Civilian civilian);$/;"	m	class:VictimManager
 remove	./Comlib-ADK/src/main/java/comlib/adk/util/target/VictimManager.java	/^    public abstract void remove(FireBrigade agent);$/;"	m	class:VictimManager
 remove	./Comlib-ADK/src/main/java/comlib/adk/util/target/VictimManager.java	/^    public abstract void remove(PoliceForce agent);$/;"	m	class:VictimManager
+remove	./Comlib-ADK/src/main/java/comlib/adk/util/target/VictimSelector.java	/^    public abstract void remove(Civilian civilian);$/;"	m	class:VictimSelector
+remove	./Comlib-ADK/src/main/java/comlib/adk/util/target/VictimSelector.java	/^    public abstract void remove(EntityID id);$/;"	m	class:VictimSelector
+remove	./Comlib-ADK/src/main/java/comlib/adk/util/target/VictimSelector.java	/^    public abstract void remove(Human agent);$/;"	m	class:VictimSelector
 remove	./Comlib-ADK/src/main/java/comlib/adk/util/target/ambulance/CivilianSearcher.java	/^    public void remove(Civilian civilian) {$/;"	m	class:CivilianSearcher
 remove	./Comlib-ADK/src/main/java/comlib/adk/util/target/ambulance/CivilianSearcher.java	/^    public void remove(EntityID id) {$/;"	m	class:CivilianSearcher
 remove	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleBlockadeManager.java	/^    public void remove(Blockade blockade) {$/;"	m	class:SampleBlockadeManager
+remove	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleBlockadeSelector.java	/^    public void remove(Blockade blockade) {$/;"	m	class:SampleBlockadeSelector
+remove	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleBlockadeSelector.java	/^    public void remove(EntityID id) {$/;"	m	class:SampleBlockadeSelector
 remove	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleBuildingManager.java	/^    public void remove(Building building) {$/;"	m	class:SampleBuildingManager
+remove	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleBuildingSelector.java	/^    public void remove(Building building) {$/;"	m	class:SampleBuildingSelector
+remove	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleBuildingSelector.java	/^    public void remove(EntityID id) {$/;"	m	class:SampleBuildingSelector
 remove	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleVictimManager.java	/^    public void remove(AmbulanceTeam agent) {$/;"	m	class:SampleVictimManager
 remove	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleVictimManager.java	/^    public void remove(Civilian civilian) {$/;"	m	class:SampleVictimManager
 remove	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleVictimManager.java	/^    public void remove(FireBrigade agent) {$/;"	m	class:SampleVictimManager
 remove	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleVictimManager.java	/^    public void remove(PoliceForce agent) {$/;"	m	class:SampleVictimManager
+remove	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleVictimSelector.java	/^    public void remove(Civilian civilian) {$/;"	m	class:SampleVictimSelector
+remove	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleVictimSelector.java	/^    public void remove(EntityID id) {$/;"	m	class:SampleVictimSelector
+remove	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleVictimSelector.java	/^    public void remove(Human agent) {$/;"	m	class:SampleVictimSelector
 remove	./Comlib-ADK/src_old/util/CivilianManager.java	/^    public void remove(Civilian civilian) {$/;"	m	class:CivilianManager
 remove	./Comlib-ADK/src_old/util/target/ambulance/CivilianSearcher.java	/^    public void remove(Civilian civilian) {$/;"	m	class:CivilianSearcher
 remove	./Comlib-ADK/src_old/util/target/ambulance/CivilianSearcher.java	/^    public void remove(EntityID id) {$/;"	m	class:CivilianSearcher
@@ -8579,6 +8727,9 @@ routeSearch	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyAmbulance.
 routeSearch	./Comlib-ADK/src/main/java/comlib/adk/util/ambulance/CivilianManager.java	/^    protected RouteSearch routeSearch;$/;"	f	class:CivilianManager
 routeSearch	./Comlib-ADK/src_old/launcher/dummy/DummyAmbulance.java	/^    public RouteSearcher routeSearch;$/;"	f	class:DummyAmbulance
 routeSearcher	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyAmbulance.java	/^    public RouteSearcher routeSearcher;$/;"	f	class:DummyAmbulance
+routeSearcher	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/StraightAmbulance.java	/^    public RouteSearcher routeSearcher;$/;"	f	class:StraightAmbulance
+routeSearcher	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/StraightFire.java	/^    public RouteSearcher routeSearcher;$/;"	f	class:StraightFire
+routeSearcher	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/StraightPolice.java	/^    public RouteSearcher routeSearcher;$/;"	f	class:StraightPolice
 routeSearcher	./basefile/sample/SampleAmbulance.java	/^    public RouteSearcher routeSearcher;$/;"	f	class:SampleAmbulance
 router	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/SampleRouteSearch.java	/^    private Router router;$/;"	f	class:SampleRouteSearch	file:
 router	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/SampleRouteSearcher.java	/^    private Router router;$/;"	f	class:SampleRouteSearcher	file:
@@ -8695,6 +8846,8 @@ send	./Comlib/src/main/java/comlib/agent/CommunicationAgent.java	/^	public void 
 send	./Comlib/src_old/agent/CommunicationAgent.java	/^    public void send(List<Message> msgs) {$/;"	m	class:CommunicationAgent
 send	./Comlib/src_old/agent/CommunicationAgent.java	/^    public void send(Message[] msgs) {$/;"	m	class:CommunicationAgent
 sendAdditionalInfoToSim	../roborescue-roborescue/modules/kernel/src/kernel/ComponentManager.java	/^		private void sendAdditionalInfoToSim(SimulatorProxy sim)$/;"	m	class:ComponentManager.ComponentConnectionListener	file:
+sendAfterEvent	./Comlib-ADK/src/main/java/comlib/adk/agent/TacticsAgent.java	/^    public void sendAfterEvent(int time, ChangeSet changed) {$/;"	m	class:TacticsAgent
+sendAfterEvent	./Comlib/src/main/java/comlib/agent/CommunicationAgent.java	/^    public void sendAfterEvent(int time, ChangeSet changed) {$/;"	m	class:CommunicationAgent
 sendAgentCommands	../roborescue-roborescue/modules/kernel/src/kernel/SimulatorProxy.java	/^    public void sendAgentCommands(int time, Collection<? extends Command> commands) {$/;"	m	class:SimulatorProxy
 sendAgentUpdates	../roborescue-roborescue/modules/kernel/src/kernel/Kernel.java	/^    private void sendAgentUpdates(Timestep timestep, Collection<Command> commandsLastTimestep) throws InterruptedException, KernelException, LogException {$/;"	m	class:Kernel	file:
 sendBytes	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/connection/AbstractConnection.java	/^    protected abstract void sendBytes(byte[] b) throws IOException;$/;"	m	class:AbstractConnection
@@ -9224,6 +9377,7 @@ socket	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/connection/T
 someoneOnBoard	../roborescue-roborescue/modules/sample/src/sample/SampleAmbulanceTeam.java	/^    private boolean someoneOnBoard() {$/;"	m	class:SampleAmbulanceTeam	file:
 someoneOnBoard	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyAmbulance.java	/^    private boolean someoneOnBoard() {$/;"	m	class:DummyAmbulance	file:
 someoneOnBoard	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyAmbulance.java	/^    private boolean someoneOnBoard() {$/;"	m	class:DummyAmbulance	file:
+someoneOnBoard	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/StraightAmbulance.java	/^    private boolean someoneOnBoard() {$/;"	m	class:StraightAmbulance	file:
 someoneOnBoard	./Comlib-ADK/src_old/launcher/dummy/DummyAmbulance.java	/^    private boolean someoneOnBoard() {$/;"	m	class:DummyAmbulance	file:
 someoneOnBoard	./basefile/sample/SampleAmbulance.java	/^    private boolean someoneOnBoard() {$/;"	m	class:SampleAmbulance	file:
 sortedList	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/EntityTools.java	/^    public static <T extends Entity> List<T> sortedList(Collection<T> input) {$/;"	m	class:EntityTools
@@ -9319,10 +9473,16 @@ tactics	./Comlib-ADK/src/main/java/comlib/adk/agent/AmbulanceTeamAgent.java	/^  
 tactics	./Comlib-ADK/src/main/java/comlib/adk/agent/FireBrigadeAgent.java	/^    public FireBrigadeTactics tactics;$/;"	f	class:FireBrigadeAgent
 tactics	./Comlib-ADK/src/main/java/comlib/adk/agent/PoliceForceAgent.java	/^    public PoliceForceTactics tactics;$/;"	f	class:PoliceForceAgent
 tactics	./Comlib-ADK/src/main/java/comlib/adk/agent/TacticsAgent.java	/^    public T tactics;$/;"	f	class:TacticsAgent
+tactics	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightAmbulanceEvent.java	/^    private StraightAmbulance tactics;$/;"	f	class:StraightAmbulanceEvent	file:
+tactics	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightBuildingEvent.java	/^    private StraightFire tactics;$/;"	f	class:StraightBuildingEvent	file:
+tactics	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightCivilianEvent.java	/^    private StraightAmbulance tactics;$/;"	f	class:StraightCivilianEvent	file:
+tactics	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightFireEvent.java	/^    private StraightAmbulance tactics;$/;"	f	class:StraightFireEvent	file:
+tactics	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/event/StraightPoliceEvent.java	/^    private StraightAmbulance tactics;$/;"	f	class:StraightPoliceEvent	file:
 tactics	./Comlib-ADK/src/main/java/comlib/adk/util/ambulance/CivilianManager.java	/^    protected Tactics tactics;$/;"	f	class:CivilianManager
 tactics	./Comlib-ADK/src/main/java/comlib/adk/util/route/RouteSearch.java	/^    protected Tactics tactics;$/;"	f	class:RouteSearch
 tactics	./Comlib-ADK/src/main/java/comlib/adk/util/route/RouteSearcher.java	/^    protected Tactics tactics;$/;"	f	class:RouteSearcher
 tactics	./Comlib-ADK/src/main/java/comlib/adk/util/target/TargetManager.java	/^    protected Tactics tactics;$/;"	f	class:TargetManager
+tactics	./Comlib-ADK/src/main/java/comlib/adk/util/target/TargetSelector.java	/^    protected Tactics tactics;$/;"	f	class:TargetSelector
 tactics	./Comlib-ADK/src/main/java/comlib/adk/util/target/ambulance/CivilianSearcher.java	/^    protected Tactics tactics;$/;"	f	class:CivilianSearcher
 tactics	./Comlib-ADK/src_old/agent/AmbulanceTeamAgent.java	/^    public AmbulanceTeamTactics tactics;$/;"	f	class:AmbulanceTeamAgent
 tactics	./Comlib-ADK/src_old/agent/PoliceForceAgent.java	/^    public PoliceForceTactics tactics;$/;"	f	class:PoliceForceAgent
@@ -9351,6 +9511,7 @@ target	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/messag
 target	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/messages/AKExtinguish.java	/^    private EntityIDComponent target;$/;"	f	class:AKExtinguish	file:
 target	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/messages/AKLoad.java	/^    private EntityIDComponent target;$/;"	f	class:AKLoad	file:
 target	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/messages/AKRescue.java	/^    private EntityIDComponent target;$/;"	f	class:AKRescue	file:
+target	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/Tactics.java	/^    public EntityID target;$/;"	f	class:Tactics
 targetID	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/Tactics.java	/^    public EntityID targetID;$/;"	f	class:Tactics
 teamLabel	../roborescue-roborescue/modules/sample/src/sample/LiveLogExtractor.java	/^    private JLabel teamLabel;$/;"	f	class:LiveLogExtractor	file:
 teamLabel	../roborescue-roborescue/modules/sample/src/sample/SampleViewer.java	/^    private JLabel teamLabel;$/;"	f	class:SampleViewer	file:
@@ -9518,6 +9679,9 @@ think	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyAmbulance.java	/
 think	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyFire.java	/^    public Message think(int time, ChangeSet changed, MessageManager manager) {$/;"	m	class:DummyFire
 think	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyPolice.java	/^    public Message think(int time, ChangeSet changed, MessageManager manager) {$/;"	m	class:DummyPolice
 think	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/Tactics.java	/^    public abstract Message think(int time, ChangeSet changed, MessageManager manager);$/;"	m	class:Tactics
+think	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/StraightAmbulance.java	/^    public Message think(int time, ChangeSet changed, MessageManager manager) {$/;"	m	class:StraightAmbulance
+think	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/StraightFire.java	/^    public Message think(int time, ChangeSet changed, MessageManager manager) {$/;"	m	class:StraightFire
+think	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/StraightPolice.java	/^    public Message think(int time, ChangeSet changed, MessageManager manager) {$/;"	m	class:StraightPolice
 think	./Comlib-ADK/src_old/agent/TacticsAgent.java	/^    public void think(int time, ChangeSet changed) {$/;"	m	class:TacticsAgent
 think	./Comlib-ADK/src_old/launcher/dummy/DummyAmbulance.java	/^    public Message think(int time, ChangeSet changed, MessageManager manager) {$/;"	m	class:DummyAmbulance
 think	./Comlib-ADK/src_old/launcher/dummy/DummyFire.java	/^    public Message think(int time, ChangeSet changed, MessageManager manager) {$/;"	m	class:DummyFire
@@ -9876,6 +10040,9 @@ updateHPPrecision	../roborescue-roborescue/modules/standard/src/rescuecore2/stan
 updateHealth	../roborescue-roborescue/modules/misc-new/src/misc/MiscSimulator.java	/^    private void updateHealth() {$/;"	m	class:MiscSimulator	file:
 updateInfo	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyAmbulance.java	/^    private void updateInfo(ChangeSet changed, MessageManager manager) {$/;"	m	class:DummyAmbulance	file:
 updateInfo	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyAmbulance.java	/^    private void updateInfo(ChangeSet changed, MessageManager manager) {$/;"	m	class:DummyAmbulance	file:
+updateInfo	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/StraightAmbulance.java	/^    private void updateInfo(ChangeSet changed, MessageManager manager) {$/;"	m	class:StraightAmbulance	file:
+updateInfo	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/StraightFire.java	/^    private void updateInfo(ChangeSet changed, MessageManager manager) {$/;"	m	class:StraightFire	file:
+updateInfo	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/StraightPolice.java	/^    private void updateInfo(ChangeSet changed, MessageManager manager) {$/;"	m	class:StraightPolice	file:
 updateInfo	./Comlib-ADK/src_old/launcher/dummy/DummyAmbulance.java	/^    private void updateInfo(ChangeSet changed, MessageManager manager) {$/;"	m	class:DummyAmbulance	file:
 updateInfo	./basefile/sample/SampleAmbulance.java	/^    private void updateInfo(ChangeSet changed, MessageManager manager) {$/;"	m	class:SampleAmbulance	file:
 updateMessageIDSize	./Comlib/src/main/java/comlib/manager/RadioConfig.java	/^    public void updateMessageIDSize(int id) {$/;"	m	class:RadioConfig
@@ -9959,6 +10126,7 @@ victimManager	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/event/Ambulan
 victimManager	./basefile/sample/SampleAmbulance.java	/^    public VictimManager victimManager;$/;"	f	class:SampleAmbulance
 victimMessageID	./Comlib/old_src/message/CommunicationMessage.java	/^	public static final int victimMessageID   = 2;$/;"	f	class:CommunicationMessage
 victimMessageID	./Comlib/src_old/message/CommunicationMessage.java	/^	public static final int victimMessageID   = 2;$/;"	f	class:CommunicationMessage
+victimSelector	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/StraightAmbulance.java	/^    public VictimSelector victimSelector;$/;"	f	class:StraightAmbulance
 view	../roborescue-roborescue/modules/human/src/human/ControlledAgentGUI.java	/^        private StandardWorldModelViewer view;$/;"	f	class:ControlledAgentGUI.ControlViewer	file:
 view	../roborescue-roborescue/modules/maps/src/maps/gml/view/GMLMapViewer.java	/^    public void view(GMLObject... objects) {$/;"	m	class:GMLMapViewer
 view	../roborescue-roborescue/modules/maps/src/maps/gml/view/GMLMapViewer.java	/^    public void view(List<? extends GMLObject> objects) {$/;"	m	class:GMLMapViewer
