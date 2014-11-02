@@ -1,6 +1,7 @@
 package sample;
 
 import comlib.adk.team.tactics.straight.StraightPolice;
+import comlib.adk.team.tactics.straight.event.StraightRoadEvent;
 import comlib.adk.util.route.RouteSearcher;
 import comlib.adk.util.route.sample.SampleRouteSearcher;
 import comlib.adk.util.target.BlockadeSelector;
@@ -21,5 +22,6 @@ public class SamplePolice extends StraightPolice {
 
     @Override
     public void registerEvent(MessageManager manager) {
+        manager.registerEvent(new StraightRoadEvent(this));
     }
 }
