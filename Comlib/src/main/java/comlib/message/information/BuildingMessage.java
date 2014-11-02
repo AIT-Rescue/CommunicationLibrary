@@ -32,13 +32,18 @@ public class BuildingMessage extends MapMessage
 
 	public EntityID getBuildingID()
 	{
-		if (this.buildingID == null)
-		{ this.buildingID = new EntityID(this.rawBuildingID); }
+		if (this.buildingID == null) {
+            this.buildingID = new EntityID(this.rawBuildingID);
+        }
 		return this.buildingID;
 	}
 
-	public int getBrokenness() { return this.buildingBrokenness; }
+	public int getBrokenness() {
+        return this.buildingBrokenness;
+    }
 
-	public int getFieryness() { return this.buildingFieryness; }
+	public int getFieryness() {
+        return this.buildingFieryness;
+    }
 }
 

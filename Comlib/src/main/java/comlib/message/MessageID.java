@@ -11,4 +11,5 @@ public interface MessageID
 	int ambulanceTeamMessage = 3;
 
 	int buildingMessage = 4;
+    int roadMessage = 5;
 }
