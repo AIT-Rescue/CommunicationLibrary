@@ -1,13 +1,13 @@
 package sample;
 
-import comlib.adk.team.tactics.PoliceForceTactics;
-import comlib.adk.util.action.PoliceAction;
+import comlib.adk.team.tactics.straight.StraightPolice;
+import comlib.adk.util.route.RouteSearcher;
+import comlib.adk.util.route.sample.SampleRouteSearcher;
+import comlib.adk.util.target.BlockadeSelector;
+import comlib.adk.util.target.sample.SampleBlockadeSelector;
 import comlib.manager.MessageManager;
-import comlib.message.DummyMessage;
-import rescuecore2.messages.Message;
-import rescuecore2.worldmodel.ChangeSet;
 
-public class SamplePolice extends extends StraightPolice {
+public class SamplePolice extends StraightPolice {
 
     @Override
     public BlockadeSelector getBlockadeSelector() {
