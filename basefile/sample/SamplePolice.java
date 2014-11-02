@@ -7,21 +7,19 @@ import comlib.message.DummyMessage;
 import rescuecore2.messages.Message;
 import rescuecore2.worldmodel.ChangeSet;
 
-public class SamplePolice extends PoliceForceTactics {
+public class SamplePolice extends extends StraightPolice {
 
     @Override
-    public void preparation() {
+    public BlockadeSelector getBlockadeSelector() {
+        return new SampleBlockadeSelector(this);
+    }
 
+    @Override
+    public RouteSearcher getRouteSearcher() {
+        return new SampleRouteSearcher(this);
     }
 
     @Override
     public void registerEvent(MessageManager manager) {
-
-    }
-
-    @Override
-    public Message think(int time, ChangeSet changed, MessageManager manager) {
-        manager.addSendMessage(new DummyMessage(time, 10, 0));
-        return PoliceAction.rest(this, time);
     }
 }
