@@ -12,12 +12,18 @@ public class DummyPolice extends StraightPolice {
 
     @Override
     public BlockadeSelector getBlockadeSelector() {
-        return new SampleBlockadeSelector(this);
+        if(this.blockadeSelector == null) {
+            this.blockadeSelector = new SampleBlockadeSelector(this);
+        }
+        return this.blockadeSelector;
     }
 
     @Override
     public RouteSearcher getRouteSearcher() {
-        return new SampleRouteSearcher(this);
+        if(this.routeSearcher == null) {
+            this.routeSearcher = new SampleRouteSearcher(this);
+        }
+        return this.routeSearcher;
     }
 
     @Override

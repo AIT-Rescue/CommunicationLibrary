@@ -17,11 +17,17 @@ public class DummyFire extends StraightFire {
 
     @Override
     public BuildingSelector getBuildingSelector() {
-        return new SampleBuildingSelector(this);
+        if(this.buildingSelector == null) {
+            this.buildingSelector = new SampleBuildingSelector(this);
+        }
+        return this.buildingSelector;
     }
 
     @Override
     public RouteSearcher getRouteSearcher() {
-        return new SampleRouteSearcher(this);
+        if(this.routeSearcher == null) {
+            this.routeSearcher = new SampleRouteSearcher(this);
+        }
+        return this.routeSearcher;
     }
 }

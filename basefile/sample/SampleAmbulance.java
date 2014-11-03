@@ -23,11 +23,17 @@ public class SampleAmbulance extends StraightAmbulance {
 
     @Override
     public VictimSelector getVictimSelector() {
-        return new SampleVictimSelector(this);
+        if(this.victimSelector == null) {
+            this.victimSelector = new SampleVictimSelector(this);
+        }
+        return this.victimSelector;
     }
 
     @Override
     public RouteSearcher getRouteSearcher() {
-        return new SampleRouteSearcher(this);
+        if(this.routeSearcher == null) {
+            this.routeSearcher = new SampleRouteSearcher(this);
+        }
+        return this.routeSearcher;
     }
 }
