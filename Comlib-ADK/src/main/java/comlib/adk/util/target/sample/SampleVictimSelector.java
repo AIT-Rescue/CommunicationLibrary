@@ -76,19 +76,25 @@ public class SampleVictimSelector extends VictimSelector {
         int minDistance = Integer.MAX_VALUE;
         if(!this.civilianList.isEmpty()) {
             for (EntityID id : this.civilianList) {
-                int d = RouteUtil.distance(this.tactics.model, this.tactics.me, this.tactics.model.getEntity(id));
-                if (minDistance >= d) {
-                    minDistance = d;
-                    result = id;
+                StandardEntity civilian = this.tactics.model.getEntity(id);
+                if(civilian != null) {
+                    int d = RouteUtil.distance(this.tactics.model, this.tactics.me, civilian);
+                    if (minDistance >= d) {
+                        minDistance = d;
+                        result = id;
+                    }
                 }
             }
         }
-        else {
+        if(result == null) {
             for (EntityID id : this.agentList) {
-                int d = RouteUtil.distance(this.tactics.model, this.tactics.me, this.tactics.model.getEntity(id));
-                if (minDistance >= d) {
-                    minDistance = d;
-                    result = id;
+                StandardEntity agent = this.tactics.model.getEntity(id);
+                if(agent != null) {
+                    int d = RouteUtil.distance(this.tactics.model, this.tactics.me, agent);
+                    if (minDistance >= d) {
+                        minDistance = d;
+                        result = id;
+                    }
                 }
             }
         }

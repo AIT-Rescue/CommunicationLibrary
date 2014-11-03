@@ -54,10 +54,13 @@ public class SampleBuildingSelector extends BuildingSelector {
         EntityID result = null;
         int minDistance = Integer.MAX_VALUE;
         for (EntityID id : this.buildingList) {
-            int d = RouteUtil.distance(this.tactics.model, this.tactics.me, this.tactics.model.getEntity(id));
-            if (minDistance >= d) {
-                minDistance = d;
-                result = id;
+            StandardEntity building = this.tactics.model.getEntity(id);
+            if(building != null) {
+                int d = RouteUtil.distance(this.tactics.model, this.tactics.me, building);
+                if (minDistance >= d) {
+                    minDistance = d;
+                    result = id;
+                }
             }
         }
         return result;
