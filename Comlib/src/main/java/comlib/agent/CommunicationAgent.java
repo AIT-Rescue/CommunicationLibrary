@@ -52,18 +52,24 @@ public abstract class CommunicationAgent<E extends StandardEntity> extends Stand
 	@Override
 	protected final void think(int time, ChangeSet changed, Collection<Command> heard)
 	{
-        this.receiveBeforeEvent(time, changed);
-		this.manager.receiveMessage(time, heard);
-		this.think(time, changed);
-		this.send(this.manager.createSendMessage(super.getID()));
-        this.sendAfterEvent(time, changed);
+		System.out.println("@receiveBeforeEvent");
+		// this.receiveBeforeEvent(time, changed);
+		System.out.println("@manager.receiveMessage");
+		// this.manager.receiveMessage(time, heard);
+		System.out.println("@think");
+		// this.think(time, changed);
+		System.out.println("@send");
+		// this.send(this.manager.createSendMessage(super.getID()));
+		System.out.println("@sendAfterEvent(");
+		// this.sendAfterEvent(time, changed);
+		System.out.println("@END");
 	}
 
-    public void receiveBeforeEvent(int time, ChangeSet changed) {
-    }
+	public void receiveBeforeEvent(int time, ChangeSet changed) {
+	}
 
-    public void sendAfterEvent(int time, ChangeSet changed) {
-    }
+	public void sendAfterEvent(int time, ChangeSet changed) {
+	}
 
 	public void send(Message[] msgs)
 	{
