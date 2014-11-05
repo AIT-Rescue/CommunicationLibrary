@@ -1,5 +1,7 @@
 package comlib.adk.launcher;
 
+import comlib.adk.launcher.dummy.DummyTeam; //TMP
+
 import comlib.adk.agent.AmbulanceTeamAgent;
 import comlib.adk.agent.FireBrigadeAgent;
 import comlib.adk.agent.PoliceForceAgent;
@@ -59,8 +61,7 @@ public class AgentConnector {
         try {
             for (int i = 0; i != count; ++i) {
                 System.out.println("Connect Ambulance Team (Team Name : " + name + ")");
-                // cl.connect(new AmbulanceTeamAgent(team.getAmbulanceTeamTactics()));
-                cl.connect(new AmbulanceTeamAgent(this.loader.getDummy().getAmbulanceTeamTactics()));
+                cl.connect(new AmbulanceTeamAgent(team.getAmbulanceTeamTactics()));
             }
         } catch (ComponentConnectionException | InterruptedException | ConnectionException ignored) {
         }
@@ -86,7 +87,8 @@ public class AgentConnector {
         try {
             for (int i = 0; i != count; ++i) {
                 System.out.println("Connect Fire Brigade   (Team Name : " + name + ")");
-                cl.connect(new FireBrigadeAgent(team.getFireBrigadeTactics()));
+                // cl.connect(new FireBrigadeAgent(team.getFireBrigadeTactics()));
+                cl.connect(new FireBrigadeAgent((new DummyTeam()).getFireBrigadeTactics()));
             }
         } catch (ComponentConnectionException | InterruptedException | ConnectionException ignored) {
         }
