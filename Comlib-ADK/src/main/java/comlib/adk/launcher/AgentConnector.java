@@ -26,6 +26,7 @@ public class AgentConnector {
     }
 
     private void init(String[] args) {
+			this.config = new Config();
         this.config = ConfigInitializer.getConfig(args);
         System.out.println("Load Team");
         this.loader = new TeamLoader(new File(config.getValue(ConfigKey.KEY_DIRECTORY, "."), "tactics"), config);
