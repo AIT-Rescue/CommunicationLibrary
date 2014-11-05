@@ -8,7 +8,6 @@ import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLClassLoader;
 import java.util.*;
@@ -22,11 +21,14 @@ public class TeamLoader {
     private List<String> nameList;
 
     private Random random;
+
+    private Team dummy;
     
     public TeamLoader(File dir, Config config) {
         this.teamMap = new HashMap<>();
         this.nameList = new ArrayList<>();
         this.random = new Random((new Date()).getTime());
+        this.dummy = new DummyTeam();
         this.load(dir, config);
     }
 
@@ -37,6 +39,10 @@ public class TeamLoader {
     public Team getTeam(String name) {
         Team team = this.teamMap.get(name);
         return team == null ? this.getRandomTeam() : team;
+    }
+
+    public Team getDummy() {
+        return this.dummy;
     }
 
     public Team getRandomTeam() {
@@ -59,10 +65,9 @@ public class TeamLoader {
     }
 
     private void addDummyTeam() {
-        Team team = new DummyTeam();
-        String name = team.getTeamName();
+        String name = this.dummy.getTeamName();
         this.nameList.add(name);
-        this.teamMap.put(name, team);
+        this.teamMap.put(name, this.dummy);
     }
 
     private void loadJar(File file, URLClassLoader loader, List<String> list) {
@@ -77,7 +82,8 @@ public class TeamLoader {
                 //add url
                 Method method = URLClassLoader.class.getDeclaredMethod("addURL", new Class[]{URL.class});
                 method.setAccessible(true);
-                method.invoke(loader, new Object[]{file.toURI().toURL()});
+                //method.invoke(loader, new Object[]{file.toURI().toURL()});
+                method.invoke(loader, file.toURI().toURL());
                 //load target class name
                 JarFile jar = new JarFile(file);
                 Manifest manifest = jar.getManifest();
