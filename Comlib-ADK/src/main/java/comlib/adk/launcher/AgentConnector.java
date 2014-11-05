@@ -1,7 +1,6 @@
 package comlib.adk.launcher;
 
-import comlib.adk.launcher.dummy.DummyTeam;
-
+import sample.SampleAmbulanceTeam;
 
 import comlib.adk.agent.AmbulanceTeamAgent;
 import comlib.adk.agent.FireBrigadeAgent;
@@ -63,7 +62,7 @@ public class AgentConnector {
             for (int i = 0; i != count; ++i) {
                 System.out.println("Connect Ambulance Team (Team Name : " + name + ")");
                 // cl.connect(new AmbulanceTeamAgent(team.getAmbulanceTeamTactics()));
-                cl.connect(new AmbulanceTeamAgent((new DummyTeam()).getAmbulanceTeamTactics()));
+                cl.connect(new SampleAmbulanceTeam());
 
             }
         } catch (ComponentConnectionException | InterruptedException | ConnectionException ignored) {
