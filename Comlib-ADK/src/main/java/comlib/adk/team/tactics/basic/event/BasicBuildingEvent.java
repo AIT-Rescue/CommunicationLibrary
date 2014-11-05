@@ -1,18 +1,17 @@
-package comlib.adk.team.tactics.straight.event;
+package comlib.adk.team.tactics.basic.event;
 
-import comlib.adk.team.tactics.straight.StraightFire;
-import comlib.adk.util.target.BuildingSelector;
+import comlib.adk.team.tactics.basic.BasicFire;
 import comlib.event.information.BuildingMessageEvent;
 import comlib.message.information.BuildingMessage;
 import rescuecore2.standard.entities.Building;
 import rescuecore2.standard.entities.StandardWorldModel;
 
-public class StraightBuildingEvent implements BuildingMessageEvent{
+public class BasicBuildingEvent implements BuildingMessageEvent{
 
-    private StraightFire tactics;
+    private BasicFire tactics;
 
-    public StraightBuildingEvent(StraightFire straightFire) {
-        this.tactics = straightFire;
+    public BasicBuildingEvent(BasicFire basicFire) {
+        this.tactics = basicFire;
     }
 
     @Override
