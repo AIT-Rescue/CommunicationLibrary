@@ -225,6 +225,7 @@ AgentConnectionListener	../roborescue-roborescue/modules/rescuecore2/src/rescuec
 AgentConnectionListener	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/components/AbstractAgent.java	/^    private class AgentConnectionListener implements ConnectionListener {$/;"	c	class:AbstractAgent
 AgentConnector	../roborescue-roborescue/modules/human/src/human/ControlledAgentGUI.java	/^        public AgentConnector(ComponentLauncher launcher) {$/;"	m	class:ControlledAgentGUI.AgentConnector
 AgentConnector	../roborescue-roborescue/modules/human/src/human/ControlledAgentGUI.java	/^    private class AgentConnector extends Thread {$/;"	c	class:ControlledAgentGUI
+AgentConnector	./Comlib-ADK/src/main/java/comlib/adk/launcher/AgentConnector.java	/^	public AgentConnector(String[] args) {$/;"	m	class:AgentConnector
 AgentConnector	./Comlib-ADK/src/main/java/comlib/adk/launcher/AgentConnector.java	/^    public AgentConnector(String[] args) {$/;"	m	class:AgentConnector
 AgentConnector	./Comlib-ADK/src/main/java/comlib/adk/launcher/AgentConnector.java	/^public class AgentConnector {$/;"	c
 AgentConnector	./Comlib-ADK/src_old/launcher/AgentConnector.java	/^    public AgentConnector(String[] args) {$/;"	m	class:AgentConnector
@@ -3989,6 +3990,7 @@ config	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/view/LayerVi
 config	../roborescue-roborescue/modules/rescuecore2/test/rescuecore2/config/ConfigTest.java	/^    private Config config;$/;"	f	class:ConfigTest	file:
 config	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/kernel/LineOfSightPerception.java	/^    private Config config;$/;"	f	class:LineOfSightPerception	file:
 config	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/kernel/StandardPerception.java	/^    private Config config;$/;"	f	class:StandardPerception	file:
+config	./Comlib-ADK/src/main/java/comlib/adk/launcher/AgentConnector.java	/^	private Config config;$/;"	f	class:AgentConnector	file:
 config	./Comlib-ADK/src/main/java/comlib/adk/launcher/AgentConnector.java	/^    private Config config;$/;"	f	class:AgentConnector	file:
 config	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/Tactics.java	/^    public Config config;$/;"	f	class:Tactics
 config	./Comlib-ADK/src_old/launcher/AgentConnector.java	/^    private Config config;$/;"	f	class:AgentConnector	file:
@@ -4002,14 +4004,20 @@ connect	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/components/
 connect	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/components/ComponentLauncher.java	/^    public void connect(Component c) throws InterruptedException, ConnectionException, ComponentConnectionException {$/;"	m	class:ComponentLauncher
 connect	../roborescue-roborescue/modules/sample/src/sample/LaunchSampleAgents.java	/^    private static void connect(ComponentLauncher launcher, int fb, int pf, int at, Config config) throws InterruptedException, ConnectionException {$/;"	m	class:LaunchSampleAgents	file:
 connectAgents	../roborescue-roborescue/modules/human/src/human/ControlledAgentGUI.java	/^        private <T extends Agent> void connectAgents(AgentType<T> type, List<? super T> list, ListListModel model) {$/;"	m	class:ControlledAgentGUI.AgentConnector	file:
+connectAmbulance	./Comlib-ADK/src/main/java/comlib/adk/launcher/AgentConnector.java	/^	private void connectAmbulance(ComponentLauncher cl) {$/;"	m	class:AgentConnector	file:
+connectAmbulance	./Comlib-ADK/src/main/java/comlib/adk/launcher/AgentConnector.java	/^	private void connectAmbulance(ComponentLauncher cl, String name, int count) {$/;"	m	class:AgentConnector	file:
 connectAmbulance	./Comlib-ADK/src/main/java/comlib/adk/launcher/AgentConnector.java	/^    private void connectAmbulance(ComponentLauncher cl) {$/;"	m	class:AgentConnector	file:
 connectAmbulance	./Comlib-ADK/src/main/java/comlib/adk/launcher/AgentConnector.java	/^    private void connectAmbulance(ComponentLauncher cl, String name, int count) {$/;"	m	class:AgentConnector	file:
 connectAmbulance	./Comlib-ADK/src_old/launcher/AgentConnector.java	/^    private void connectAmbulance(ComponentLauncher cl) {$/;"	m	class:AgentConnector	file:
 connectAmbulance	./Comlib-ADK/src_old/launcher/AgentConnector.java	/^    private void connectAmbulance(ComponentLauncher cl, String name, int count) {$/;"	m	class:AgentConnector	file:
+connectFire	./Comlib-ADK/src/main/java/comlib/adk/launcher/AgentConnector.java	/^	private void connectFire(ComponentLauncher cl) {$/;"	m	class:AgentConnector	file:
+connectFire	./Comlib-ADK/src/main/java/comlib/adk/launcher/AgentConnector.java	/^	private void connectFire(ComponentLauncher cl, String name, int count) {$/;"	m	class:AgentConnector	file:
 connectFire	./Comlib-ADK/src/main/java/comlib/adk/launcher/AgentConnector.java	/^    private void connectFire(ComponentLauncher cl) {$/;"	m	class:AgentConnector	file:
 connectFire	./Comlib-ADK/src/main/java/comlib/adk/launcher/AgentConnector.java	/^    private void connectFire(ComponentLauncher cl, String name, int count) {$/;"	m	class:AgentConnector	file:
 connectFire	./Comlib-ADK/src_old/launcher/AgentConnector.java	/^    private void connectFire(ComponentLauncher cl) {$/;"	m	class:AgentConnector	file:
 connectFire	./Comlib-ADK/src_old/launcher/AgentConnector.java	/^    private void connectFire(ComponentLauncher cl, String name, int count) {$/;"	m	class:AgentConnector	file:
+connectPolice	./Comlib-ADK/src/main/java/comlib/adk/launcher/AgentConnector.java	/^	private void connectPolice(ComponentLauncher cl) {$/;"	m	class:AgentConnector	file:
+connectPolice	./Comlib-ADK/src/main/java/comlib/adk/launcher/AgentConnector.java	/^	private void connectPolice(ComponentLauncher cl, String name, int count) {$/;"	m	class:AgentConnector	file:
 connectPolice	./Comlib-ADK/src/main/java/comlib/adk/launcher/AgentConnector.java	/^    private void connectPolice(ComponentLauncher cl) {$/;"	m	class:AgentConnector	file:
 connectPolice	./Comlib-ADK/src/main/java/comlib/adk/launcher/AgentConnector.java	/^    private void connectPolice(ComponentLauncher cl, String name, int count) {$/;"	m	class:AgentConnector	file:
 connectPolice	./Comlib-ADK/src_old/launcher/AgentConnector.java	/^    private void connectPolice(ComponentLauncher cl) {$/;"	m	class:AgentConnector	file:
@@ -6473,6 +6481,7 @@ init	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/messages/Abstr
 init	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/messages/AbstractCommand.java	/^    private void init(EntityID id, int t) {$/;"	m	class:AbstractCommand	file:
 init	../roborescue-roborescue/modules/traffic3/src/traffic3/simulator/TrafficConstants.java	/^    static void init(Config config) {$/;"	m	class:TrafficConstants
 init	./Comlib-ADK/gradlew.bat	/^:init$/;"	l
+init	./Comlib-ADK/src/main/java/comlib/adk/launcher/AgentConnector.java	/^	private void init(String[] args) {$/;"	m	class:AgentConnector	file:
 init	./Comlib-ADK/src/main/java/comlib/adk/launcher/AgentConnector.java	/^    private void init(String[] args) {$/;"	m	class:AgentConnector	file:
 init	./Comlib-ADK/src_old/launcher/AgentConnector.java	/^    private void init(String[] args) {$/;"	m	class:AgentConnector	file:
 init	./Comlib/gradlew.bat	/^:init$/;"	l
@@ -6814,6 +6823,7 @@ loadJar	./Comlib-ADK/src/main/java/comlib/adk/launcher/TeamLoader.java	/^    pri
 loadJar	./Comlib-ADK/src_old/launcher/TeamLoader.java	/^    private void loadJar(File file, URLClassLoader loader, List<String> list) {$/;"	m	class:TeamLoader	file:
 loadTeam	./Comlib-ADK/src/main/java/comlib/adk/launcher/TeamLoader.java	/^    private void loadTeam(URLClassLoader loader, List<String> list, Config config) {$/;"	m	class:TeamLoader	file:
 loadTeam	./Comlib-ADK/src_old/launcher/TeamLoader.java	/^    private void loadTeam(URLClassLoader loader, List<String> list, Config config) {$/;"	m	class:TeamLoader	file:
+loader	./Comlib-ADK/src/main/java/comlib/adk/launcher/AgentConnector.java	/^	private TeamLoader loader;$/;"	f	class:AgentConnector	file:
 loader	./Comlib-ADK/src/main/java/comlib/adk/launcher/AgentConnector.java	/^    private TeamLoader loader;$/;"	f	class:AgentConnector	file:
 loader	./Comlib-ADK/src_old/launcher/AgentConnector.java	/^    private TeamLoader loader;$/;"	f	class:AgentConnector	file:
 location	../roborescue-roborescue/modules/human/src/human/ControlledAmbulanceTeam.java	/^    protected StandardEntity location() {$/;"	m	class:ControlledAmbulanceTeam
@@ -9512,6 +9522,7 @@ start	../roborescue-roborescue/modules/maps/src/maps/gml/editor/SplitShapeTool.j
 start	../roborescue-roborescue/modules/maps/src/maps/gml/view/LineOverlay.java	/^    private Point2D start;$/;"	f	class:LineOverlay	file:
 start	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/Edge.java	/^    private Point2D start;$/;"	f	class:Edge	file:
 start	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/misc/AgentPath.java	/^        private Pair<Integer, Integer> start;$/;"	f	class:AgentPath.AbstractPath	file:
+start	./Comlib-ADK/src/main/java/comlib/adk/launcher/AgentConnector.java	/^	public void start() {$/;"	m	class:AgentConnector
 start	./Comlib-ADK/src/main/java/comlib/adk/launcher/AgentConnector.java	/^    public void start() {$/;"	m	class:AgentConnector
 start	./Comlib-ADK/src_old/launcher/AgentConnector.java	/^    public void start() {$/;"	m	class:AgentConnector
 startBlock	../roborescue-roborescue/modules/collapse/src/collapse/CollapseSimulatorGUI.java	/^    void startBlock(final int buildingCount) {$/;"	m	class:CollapseSimulatorGUI
