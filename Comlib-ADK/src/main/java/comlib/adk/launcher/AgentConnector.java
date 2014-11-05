@@ -1,6 +1,7 @@
 package comlib.adk.launcher;
 
 import sample.SampleAmbulanceTeam;
+import java.io.*;
 
 import comlib.adk.agent.AmbulanceTeamAgent;
 import comlib.adk.agent.FireBrigadeAgent;
@@ -36,6 +37,16 @@ public class AgentConnector {
 		int port = config.getIntValue(Constants.KERNEL_PORT_NUMBER_KEY, Constants.DEFAULT_KERNEL_PORT_NUMBER);
 		ComponentLauncher cl = new TCPComponentLauncher(host, port, this.config);
 		System.out.println("Start Connect (Server Info : " + host + ":" + port + ")");
+
+		System.out.println("--------------------------------------------------");
+		try
+		{
+			config.write(new PrintWriter(System.out));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		System.out.println("--------------------------------------------------");
+
 		this.connectAmbulance(cl);
 		this.connectFire(cl);
 		this.connectPolice(cl);
