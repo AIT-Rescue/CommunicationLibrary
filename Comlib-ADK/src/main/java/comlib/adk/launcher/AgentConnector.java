@@ -59,7 +59,8 @@ public class AgentConnector {
         try {
             for (int i = 0; i != count; ++i) {
                 System.out.println("Connect Ambulance Team (Team Name : " + name + ")");
-                cl.connect(new AmbulanceTeamAgent(team.getAmbulanceTeamTactics()));
+                // cl.connect(new AmbulanceTeamAgent(team.getAmbulanceTeamTactics()));
+                cl.connect(new AmbulanceTeamAgent(this.loader.getDummy().getAmbulanceTeamTactics()));
             }
         } catch (ComponentConnectionException | InterruptedException | ConnectionException ignored) {
         }
