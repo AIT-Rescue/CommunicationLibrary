@@ -52,6 +52,7 @@ public abstract class CommunicationAgent<E extends StandardEntity> extends Stand
 	@Override
 	protected final void think(int time, ChangeSet changed, Collection<Command> heard)
 	{
+		me();
 		System.out.println("@ID:" + me().getID().getValue());
 		System.out.println("@receiveBeforeEvent");
 		// this.receiveBeforeEvent(time, changed);
