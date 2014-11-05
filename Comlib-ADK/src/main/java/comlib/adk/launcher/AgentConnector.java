@@ -1,7 +1,6 @@
 package comlib.adk.launcher;
 
 import sample.SampleAmbulanceTeam;
-import rescuecore2.misc.CommandLineOptions;
 
 import comlib.adk.agent.AmbulanceTeamAgent;
 import comlib.adk.agent.FireBrigadeAgent;
@@ -27,15 +26,7 @@ public class AgentConnector {
 	}
 
 	private void init(String[] args) {
-		this.config = new Config();
-		try
-		{
-			args = CommandLineOptions.processArgs(args, config);
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-		}
-		// this.config = ConfigInitializer.getConfig(args);
+		this.config = ConfigInitializer.getConfig(args);
 		System.out.println("Load Team");
 		this.loader = new TeamLoader(new File(config.getValue(ConfigKey.KEY_DIRECTORY, "."), "tactics"), config);
 	}
