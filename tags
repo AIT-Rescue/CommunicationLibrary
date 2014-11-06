@@ -103,6 +103,7 @@ AMBULANCE_TEAM_COLOUR	../roborescue-roborescue/modules/gis2/src/gis2/scenario/Ag
 AMBULANCE_TEAM_COLOUR	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/view/HumanLayer.java	/^    private static final Color AMBULANCE_TEAM_COLOUR = Color.WHITE;$/;"	f	class:HumanLayer	file:
 AMBULANCE_TEAM_COLOUR	../roborescue-roborescue/modules/traffic3/src/traffic3/simulator/TrafficSimulator.java	/^	private static final Color AMBULANCE_TEAM_COLOUR = Color.WHITE;$/;"	f	class:TrafficSimulator	file:
 AMBULANCE_TEAM_COUNT_KEY	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/StandardConstants.java	/^    public static final String AMBULANCE_TEAM_COUNT_KEY = "scenario.agents.at";$/;"	f	class:StandardConstants
+AMBULANCE_TEAM_FLAG	../roborescue-roborescue/modules/sample/src/sample/LaunchSampleAgents.java	/^	private static final String AMBULANCE_TEAM_FLAG = "-at";$/;"	f	class:LaunchSampleAgents	file:
 AMBULANCE_TEAM_FLAG	../roborescue-roborescue/modules/sample/src/sample/LaunchSampleAgents.java	/^    private static final String AMBULANCE_TEAM_FLAG = "-at";$/;"	f	class:LaunchSampleAgents	file:
 ANIMATION_TIME	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/view/AnimatedWorldModelViewer.java	/^    private static final int ANIMATION_TIME = 750;$/;"	f	class:AnimatedWorldModelViewer	file:
 APEXES	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/StandardPropertyURN.java	/^    APEXES(PROPERTY_URN_PREFIX + "apexes"),$/;"	e	enum:StandardPropertyURN	file:
@@ -172,6 +173,7 @@ AbstractProperty	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/wo
 AbstractPropertyFactory	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/registry/AbstractPropertyFactory.java	/^    protected AbstractPropertyFactory(Class<T> clazz) {$/;"	m	class:AbstractPropertyFactory
 AbstractPropertyFactory	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/registry/AbstractPropertyFactory.java	/^public abstract class AbstractPropertyFactory<T extends Enum<T>> implements PropertyFactory {$/;"	c
 AbstractSampleAgent	../roborescue-roborescue/modules/sample/src/sample/AbstractSampleAgent.java	/^    protected AbstractSampleAgent() {$/;"	m	class:AbstractSampleAgent
+AbstractSampleAgent	../roborescue-roborescue/modules/sample/src/sample/AbstractSampleAgent.java	/^    protected AbstractSampleAgent() {}$/;"	m	class:AbstractSampleAgent
 AbstractSampleAgent	../roborescue-roborescue/modules/sample/src/sample/AbstractSampleAgent.java	/^public abstract class AbstractSampleAgent<E extends StandardEntity> extends StandardAgent<E> {$/;"	c
 AbstractScoreFunction	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/score/AbstractScoreFunction.java	/^    protected AbstractScoreFunction(String name) {$/;"	m	class:AbstractScoreFunction
 AbstractScoreFunction	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/score/AbstractScoreFunction.java	/^public abstract class AbstractScoreFunction implements ScoreFunction {$/;"	c
@@ -444,6 +446,7 @@ CIVILIAN	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/enti
 CIVILIAN_COLOUR	../roborescue-roborescue/modules/gis2/src/gis2/scenario/AgentOverlay.java	/^	private static final Color CIVILIAN_COLOUR = Color.GREEN;$/;"	f	class:AgentOverlay	file:
 CIVILIAN_COLOUR	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/view/HumanLayer.java	/^    private static final Color CIVILIAN_COLOUR = Color.GREEN;$/;"	f	class:HumanLayer	file:
 CIVILIAN_COLOUR	../roborescue-roborescue/modules/traffic3/src/traffic3/simulator/TrafficSimulator.java	/^	private static final Color CIVILIAN_COLOUR = Color.GREEN;$/;"	f	class:TrafficSimulator	file:
+CIVILIAN_FLAG	../roborescue-roborescue/modules/sample/src/sample/LaunchSampleAgents.java	/^	private static final String CIVILIAN_FLAG = "-cv";$/;"	f	class:LaunchSampleAgents	file:
 CIVILIAN_FLAG	../roborescue-roborescue/modules/sample/src/sample/LaunchSampleAgents.java	/^    private static final String CIVILIAN_FLAG = "-cv";$/;"	f	class:LaunchSampleAgents	file:
 CIVILIAN_RADIUS	../roborescue-roborescue/modules/traffic3/src/traffic3/simulator/TrafficSimulator.java	/^	private static final int CIVILIAN_RADIUS = 200;$/;"	f	class:TrafficSimulator	file:
 CIVILIAN_VELOCITY_MEAN	../roborescue-roborescue/modules/traffic3/src/traffic3/simulator/TrafficSimulator.java	/^	private static final double CIVILIAN_VELOCITY_MEAN = 0.2;$/;"	f	class:TrafficSimulator	file:
@@ -1089,6 +1092,7 @@ FIRE_BRIGADE_COLOUR	../roborescue-roborescue/modules/gis2/src/gis2/scenario/Agen
 FIRE_BRIGADE_COLOUR	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/view/HumanLayer.java	/^    private static final Color FIRE_BRIGADE_COLOUR = Color.RED;$/;"	f	class:HumanLayer	file:
 FIRE_BRIGADE_COLOUR	../roborescue-roborescue/modules/traffic3/src/traffic3/simulator/TrafficSimulator.java	/^	private static final Color FIRE_BRIGADE_COLOUR = Color.RED;$/;"	f	class:TrafficSimulator	file:
 FIRE_BRIGADE_COUNT_KEY	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/StandardConstants.java	/^    public static final String FIRE_BRIGADE_COUNT_KEY = "scenario.agents.fb";$/;"	f	class:StandardConstants
+FIRE_BRIGADE_FLAG	../roborescue-roborescue/modules/sample/src/sample/LaunchSampleAgents.java	/^	private static final String FIRE_BRIGADE_FLAG = "-fb";$/;"	f	class:LaunchSampleAgents	file:
 FIRE_BRIGADE_FLAG	../roborescue-roborescue/modules/sample/src/sample/LaunchSampleAgents.java	/^    private static final String FIRE_BRIGADE_FLAG = "-fb";$/;"	f	class:LaunchSampleAgents	file:
 FIRE_COLOUR	../roborescue-roborescue/modules/gis2/src/gis2/scenario/ScenarioEditor.java	/^    private static final Color FIRE_COLOUR = new Color(255, 0, 0, 128);$/;"	f	class:ScenarioEditor	file:
 FIRE_QNAME	../roborescue-roborescue/modules/gis2/src/gis2/GisScenario.java	/^	private static final QName FIRE_QNAME = DocumentHelper.createQName("fire",$/;"	f	class:GisScenario	file:
@@ -1631,6 +1635,7 @@ LOSView	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/kerne
 L_SHAPE_DETACHED	../roborescue-roborescue/modules/maps/src/maps/convert/osm2gml/buildings/RowHousingType.java	/^    L_SHAPE_DETACHED,$/;"	e	enum:RowHousingType	file:
 LaunchComponents	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/LaunchComponents.java	/^    private LaunchComponents() {}$/;"	m	class:LaunchComponents	file:
 LaunchComponents	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/LaunchComponents.java	/^public final class LaunchComponents {$/;"	c
+LaunchSampleAgents	../roborescue-roborescue/modules/sample/src/sample/LaunchSampleAgents.java	/^	private LaunchSampleAgents() {}$/;"	m	class:LaunchSampleAgents	file:
 LaunchSampleAgents	../roborescue-roborescue/modules/sample/src/sample/LaunchSampleAgents.java	/^    private LaunchSampleAgents() {}$/;"	m	class:LaunchSampleAgents	file:
 LaunchSampleAgents	../roborescue-roborescue/modules/sample/src/sample/LaunchSampleAgents.java	/^public final class LaunchSampleAgents {$/;"	c
 LayerAction	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/view/LayerViewComponent.java	/^        public LayerAction(ViewLayer layer) {$/;"	m	class:LayerViewComponent.LayerAction
@@ -1729,11 +1734,13 @@ MAX	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/score/Hea
 MAXIMISE_KEY	../roborescue-roborescue/modules/sample/src/sample/LiveLogExtractor.java	/^    private static final String MAXIMISE_KEY = "viewer.maximise";$/;"	f	class:LiveLogExtractor	file:
 MAXIMISE_KEY	../roborescue-roborescue/modules/sample/src/sample/SampleViewer.java	/^    private static final String MAXIMISE_KEY = "viewer.maximise";$/;"	f	class:SampleViewer	file:
 MAX_COLLAPSE	../roborescue-roborescue/modules/collapse/src/collapse/CollapseSimulator.java	/^	private static final int MAX_COLLAPSE = 100;$/;"	f	class:CollapseSimulator	file:
+MAX_DISTANCE_KEY	../roborescue-roborescue/modules/sample/src/sample/SampleFireBrigade.java	/^	private static final String MAX_DISTANCE_KEY = "fire.extinguish.max-distance";$/;"	f	class:SampleFireBrigade	file:
 MAX_DISTANCE_KEY	../roborescue-roborescue/modules/sample/src/sample/SampleFireBrigade.java	/^    private static final String MAX_DISTANCE_KEY = "fire.extinguish.max-distance";$/;"	f	class:SampleFireBrigade	file:
 MAX_DISTANCE_KEY	./Comlib-ADK/src/main/java/comlib/adk/agent/FireBrigadeAgent.java	/^    public static final String MAX_DISTANCE_KEY = "fire.extinguish.max-distance";$/;"	f	class:FireBrigadeAgent
 MAX_DISTANCE_KEY	./Comlib-ADK/src_old/agent/FireBrigadeAgent.java	/^    public static final String MAX_DISTANCE_KEY = "fire.extinguish.max-distance";$/;"	f	class:FireBrigadeAgent
 MAX_FLOOR	../roborescue-roborescue/modules/gis2/src/gis2/GMLWorldModelCreator.java	/^	private static final String MAX_FLOOR = "gis.map.max-floor";$/;"	f	class:GMLWorldModelCreator	file:
 MAX_OFFSET_M	../roborescue-roborescue/modules/maps/src/maps/convert/osm2gml/buildings/row/ThinDuplexRowFiller.java	/^    private static final double MAX_OFFSET_M = 3;$/;"	f	class:ThinDuplexRowFiller	file:
+MAX_POWER_KEY	../roborescue-roborescue/modules/sample/src/sample/SampleFireBrigade.java	/^	private static final String MAX_POWER_KEY = "fire.extinguish.max-sum";$/;"	f	class:SampleFireBrigade	file:
 MAX_POWER_KEY	../roborescue-roborescue/modules/sample/src/sample/SampleFireBrigade.java	/^    private static final String MAX_POWER_KEY = "fire.extinguish.max-sum";$/;"	f	class:SampleFireBrigade	file:
 MAX_POWER_KEY	./Comlib-ADK/src/main/java/comlib/adk/agent/FireBrigadeAgent.java	/^    public static final String MAX_POWER_KEY = "fire.extinguish.max-sum";$/;"	f	class:FireBrigadeAgent
 MAX_POWER_KEY	./Comlib-ADK/src_old/agent/FireBrigadeAgent.java	/^    public static final String MAX_POWER_KEY = "fire.extinguish.max-sum";$/;"	f	class:FireBrigadeAgent
@@ -1742,6 +1749,7 @@ MAX_RUN_LENGTH	../roborescue-roborescue/modules/maps/src/maps/convert/osm2gml/bu
 MAX_SIZE_KEY	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/kernel/comms/StandardCommunicationModel.java	/^    private static final String MAX_SIZE_KEY = "comms.standard.size.max";$/;"	f	class:StandardCommunicationModel	file:
 MAX_WATER	../roborescue-roborescue/modules/human/src/human/ControlledFireBrigade.java	/^    private static final int MAX_WATER = 15000;$/;"	f	class:ControlledFireBrigade	file:
 MAX_WATER_KEY	../roborescue-roborescue/modules/resq-fire/src/firesimulator/FireSimulatorWrapper.java	/^    private static final String MAX_WATER_KEY = "fire.tank.maximum";$/;"	f	class:FireSimulatorWrapper	file:
+MAX_WATER_KEY	../roborescue-roborescue/modules/sample/src/sample/SampleFireBrigade.java	/^	private static final String MAX_WATER_KEY = "fire.tank.maximum";$/;"	f	class:SampleFireBrigade	file:
 MAX_WATER_KEY	../roborescue-roborescue/modules/sample/src/sample/SampleFireBrigade.java	/^    private static final String MAX_WATER_KEY = "fire.tank.maximum";$/;"	f	class:SampleFireBrigade	file:
 MAX_WATER_KEY	./Comlib-ADK/src/main/java/comlib/adk/agent/FireBrigadeAgent.java	/^    public static final String MAX_WATER_KEY = "fire.tank.maximum";$/;"	f	class:FireBrigadeAgent
 MAX_WATER_KEY	./Comlib-ADK/src_old/agent/FireBrigadeAgent.java	/^    public static final String MAX_WATER_KEY = "fire.tank.maximum";$/;"	f	class:FireBrigadeAgent
@@ -2047,6 +2055,7 @@ POLICE_FORCE_COLOUR	../roborescue-roborescue/modules/gis2/src/gis2/scenario/Agen
 POLICE_FORCE_COLOUR	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/view/HumanLayer.java	/^    private static final Color POLICE_FORCE_COLOUR = Color.BLUE;$/;"	f	class:HumanLayer	file:
 POLICE_FORCE_COLOUR	../roborescue-roborescue/modules/traffic3/src/traffic3/simulator/TrafficSimulator.java	/^	private static final Color POLICE_FORCE_COLOUR = Color.BLUE;$/;"	f	class:TrafficSimulator	file:
 POLICE_FORCE_COUNT_KEY	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/StandardConstants.java	/^    public static final String POLICE_FORCE_COUNT_KEY = "scenario.agents.pf";$/;"	f	class:StandardConstants
+POLICE_FORCE_FLAG	../roborescue-roborescue/modules/sample/src/sample/LaunchSampleAgents.java	/^	private static final String POLICE_FORCE_FLAG = "-pf";$/;"	f	class:LaunchSampleAgents	file:
 POLICE_FORCE_FLAG	../roborescue-roborescue/modules/sample/src/sample/LaunchSampleAgents.java	/^    private static final String POLICE_FORCE_FLAG = "-pf";$/;"	f	class:LaunchSampleAgents	file:
 POLICE_OFFICE	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/StandardEntityURN.java	/^    POLICE_OFFICE(ENTITY_URN_PREFIX + "policeoffice"),$/;"	e	enum:StandardEntityURN	file:
 POLICE_OFFICE	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/view/AreaIconLayer.java	/^    private static final ImageIcon POLICE_OFFICE = new ImageIcon(BuildingLayer.class.getClassLoader().getResource("rescuecore2\/standard\/view\/PoliceOffice-" + ICON_SIZE + "x" + ICON_SIZE + ".png"));$/;"	f	class:AreaIconLayer	file:
@@ -2502,6 +2511,8 @@ SampleAmbulance	./basefile/sample/SampleAmbulance.java	/^    public SampleAmbula
 SampleAmbulance	./basefile/sample/SampleAmbulance.java	/^public class SampleAmbulance extends AmbulanceTeamTactics {$/;"	c
 SampleAmbulance	./basefile/sample/SampleAmbulance.java	/^public class SampleAmbulance extends BasicAmbulance {$/;"	c
 SampleAmbulance	./basefile/sample/SampleAmbulance.java	/^public class SampleAmbulance extends StraightAmbulance {$/;"	c
+SampleAmbulanceTeam	../roborescue-roborescue/modules/sample/src/sample/SampleAmbulanceTeam.java	/^	public SampleAmbulanceTeam() {$/;"	m	class:SampleAmbulanceTeam
+SampleAmbulanceTeam	../roborescue-roborescue/modules/sample/src/sample/SampleAmbulanceTeam.java	/^	public SampleAmbulanceTeam(Config config) {$/;"	m	class:SampleAmbulanceTeam
 SampleAmbulanceTeam	../roborescue-roborescue/modules/sample/src/sample/SampleAmbulanceTeam.java	/^public class SampleAmbulanceTeam extends AbstractSampleAgent<AmbulanceTeam> {$/;"	c
 SampleBlockadeManager	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleBlockadeManager.java	/^    public SampleBlockadeManager(Tactics user) {$/;"	m	class:SampleBlockadeManager
 SampleBlockadeManager	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleBlockadeManager.java	/^public class SampleBlockadeManager extends BlockadeManager{$/;"	c
@@ -4002,6 +4013,7 @@ connect	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/components/
 connect	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/components/AbstractViewer.java	/^    public void connect(Connection connection, RequestIDGenerator generator, Config config) throws ConnectionException, ComponentConnectionException, InterruptedException {$/;"	m	class:AbstractViewer
 connect	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/components/Component.java	/^    void connect(Connection connection, RequestIDGenerator generator, Config config) throws ConnectionException, ComponentConnectionException, InterruptedException;$/;"	m	interface:Component
 connect	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/components/ComponentLauncher.java	/^    public void connect(Component c) throws InterruptedException, ConnectionException, ComponentConnectionException {$/;"	m	class:ComponentLauncher
+connect	../roborescue-roborescue/modules/sample/src/sample/LaunchSampleAgents.java	/^	private static void connect(ComponentLauncher launcher, int fb, int pf, int at, Config config) throws InterruptedException, ConnectionException {$/;"	m	class:LaunchSampleAgents	file:
 connect	../roborescue-roborescue/modules/sample/src/sample/LaunchSampleAgents.java	/^    private static void connect(ComponentLauncher launcher, int fb, int pf, int at, Config config) throws InterruptedException, ConnectionException {$/;"	m	class:LaunchSampleAgents	file:
 connectAgents	../roborescue-roborescue/modules/human/src/human/ControlledAgentGUI.java	/^        private <T extends Agent> void connectAgents(AgentType<T> type, List<? super T> list, ListListModel model) {$/;"	m	class:ControlledAgentGUI.AgentConnector	file:
 connectAmbulance	./Comlib-ADK/src/main/java/comlib/adk/launcher/AgentConnector.java	/^	private void connectAmbulance(ComponentLauncher cl) {$/;"	m	class:AgentConnector	file:
@@ -4976,6 +4988,7 @@ getBuriedness	./Comlib/src/main/java/comlib/message/HumanMessage.java	/^	public 
 getBuriedness	./Comlib/src_old/message/HumanMessage.java	/^	public int getBuriedness()$/;"	m	class:HumanMessage
 getBuriednessDamage	../roborescue-roborescue/modules/misc/src/misc/HumanAttributes.java	/^    public double getBuriednessDamage() {$/;"	m	class:HumanAttributes
 getBuriednessProperty	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/Human.java	/^    public IntProperty getBuriednessProperty() {$/;"	m	class:Human
+getBurningBuildings	../roborescue-roborescue/modules/sample/src/sample/SampleFireBrigade.java	/^	private Collection<EntityID> getBurningBuildings() {$/;"	m	class:SampleFireBrigade	file:
 getBurningBuildings	../roborescue-roborescue/modules/sample/src/sample/SampleFireBrigade.java	/^    private Collection<EntityID> getBurningBuildings() {$/;"	m	class:SampleFireBrigade	file:
 getBuryDamage	../roborescue-roborescue/modules/misc/src/misc/MiscParameters.java	/^    public int getBuryDamage(Building b, Human agent) {$/;"	m	class:MiscParameters
 getBuryInjury	../roborescue-roborescue/modules/misc/src/misc/MiscParameters.java	/^        public Injury getBuryInjury() {$/;"	m	class:MiscParameters.BuildingClass
@@ -5769,9 +5782,11 @@ getRequestedEntityURNsEnum	../roborescue-roborescue/modules/human/src/human/Cont
 getRequestedEntityURNsEnum	../roborescue-roborescue/modules/sample/src/sample/ChannelTestAgent.java	/^    protected EnumSet<StandardEntityURN> getRequestedEntityURNsEnum() {$/;"	m	class:ChannelTestAgent
 getRequestedEntityURNsEnum	../roborescue-roborescue/modules/sample/src/sample/CustomRegistryTestAgent.java	/^    protected EnumSet<StandardEntityURN> getRequestedEntityURNsEnum() {$/;"	m	class:CustomRegistryTestAgent
 getRequestedEntityURNsEnum	../roborescue-roborescue/modules/sample/src/sample/DummyAgent.java	/^    protected EnumSet<StandardEntityURN> getRequestedEntityURNsEnum() {$/;"	m	class:DummyAgent
+getRequestedEntityURNsEnum	../roborescue-roborescue/modules/sample/src/sample/SampleAmbulanceTeam.java	/^	protected EnumSet<StandardEntityURN> getRequestedEntityURNsEnum() {$/;"	m	class:SampleAmbulanceTeam
 getRequestedEntityURNsEnum	../roborescue-roborescue/modules/sample/src/sample/SampleAmbulanceTeam.java	/^    protected EnumSet<StandardEntityURN> getRequestedEntityURNsEnum() {$/;"	m	class:SampleAmbulanceTeam
 getRequestedEntityURNsEnum	../roborescue-roborescue/modules/sample/src/sample/SampleCentre.java	/^    protected EnumSet<StandardEntityURN> getRequestedEntityURNsEnum() {$/;"	m	class:SampleCentre
 getRequestedEntityURNsEnum	../roborescue-roborescue/modules/sample/src/sample/SampleCivilian.java	/^    protected EnumSet<StandardEntityURN> getRequestedEntityURNsEnum() {$/;"	m	class:SampleCivilian
+getRequestedEntityURNsEnum	../roborescue-roborescue/modules/sample/src/sample/SampleFireBrigade.java	/^	protected EnumSet<StandardEntityURN> getRequestedEntityURNsEnum() {$/;"	m	class:SampleFireBrigade
 getRequestedEntityURNsEnum	../roborescue-roborescue/modules/sample/src/sample/SampleFireBrigade.java	/^    protected EnumSet<StandardEntityURN> getRequestedEntityURNsEnum() {$/;"	m	class:SampleFireBrigade
 getRequestedEntityURNsEnum	../roborescue-roborescue/modules/sample/src/sample/SamplePoliceForce.java	/^    protected EnumSet<StandardEntityURN> getRequestedEntityURNsEnum() {$/;"	m	class:SamplePoliceForce
 getRequestedEntityURNsEnum	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/components/StandardAgent.java	/^    protected abstract EnumSet<StandardEntityURN> getRequestedEntityURNsEnum();$/;"	m	class:StandardAgent
@@ -5972,6 +5987,7 @@ getTargetBlockade	../roborescue-roborescue/modules/sample/src/sample/SamplePolic
 getTargetID	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/messages/control/KSCommands.java	/^    public int getTargetID() {$/;"	m	class:KSCommands
 getTargetID	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/messages/control/KSUpdate.java	/^    public int getTargetID() {$/;"	m	class:KSUpdate
 getTargetID	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/messages/control/KVTimestep.java	/^    public int getTargetID() {$/;"	m	class:KVTimestep
+getTargets	../roborescue-roborescue/modules/sample/src/sample/SampleAmbulanceTeam.java	/^	private List<Human> getTargets() {$/;"	m	class:SampleAmbulanceTeam	file:
 getTargets	../roborescue-roborescue/modules/sample/src/sample/SampleAmbulanceTeam.java	/^    private List<Human> getTargets() {$/;"	m	class:SampleAmbulanceTeam	file:
 getTeam	./Comlib-ADK/src/main/java/comlib/adk/launcher/TeamLoader.java	/^    public Team getTeam(String name) {$/;"	m	class:TeamLoader
 getTeam	./Comlib-ADK/src_old/launcher/TeamLoader.java	/^    public Team getTeam(String name) {$/;"	m	class:TeamLoader
@@ -6873,6 +6889,7 @@ main	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/LaunchComponen
 main	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/log/LogExtractor.java	/^    public static void main(String[] args) {$/;"	m	class:LogExtractor
 main	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/log/LogViewer.java	/^    public static void main(String[] args) {$/;"	m	class:LogViewer
 main	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/geometry/spatialindex/BBTree.java	/^    public static void main(String[] args) {$/;"	m	class:BBTree
+main	../roborescue-roborescue/modules/sample/src/sample/LaunchSampleAgents.java	/^	public static void main(String[] args) {$/;"	m	class:LaunchSampleAgents
 main	../roborescue-roborescue/modules/sample/src/sample/LaunchSampleAgents.java	/^    public static void main(String[] args) {$/;"	m	class:LaunchSampleAgents
 main	./Comlib-ADK/src/main/java/comlib/adk/launcher/Main.java	/^    public static void main(String... args) {$/;"	m	class:Main
 main	./Comlib-ADK/src_old/launcher/Main.java	/^    public static void main(String... args) {$/;"	m	class:Main
@@ -7133,6 +7150,7 @@ maxATs	../roborescue-roborescue/modules/gis2/src/gis2/RandomScenarioGenerator.ja
 maxBandWidthList	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	private int[] maxBandWidthList;$/;"	f	class:MessageManager	file:
 maxChildren	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/geometry/spatialindex/BBTree.java	/^    private int maxChildren;$/;"	f	class:BBTree	file:
 maxCivs	../roborescue-roborescue/modules/gis2/src/gis2/RandomScenarioGenerator.java	/^    private int maxCivs;$/;"	f	class:RandomScenarioGenerator	file:
+maxDistance	../roborescue-roborescue/modules/sample/src/sample/SampleFireBrigade.java	/^	private int maxDistance;$/;"	f	class:SampleFireBrigade	file:
 maxDistance	../roborescue-roborescue/modules/sample/src/sample/SampleFireBrigade.java	/^    private int maxDistance;$/;"	f	class:SampleFireBrigade	file:
 maxDistance	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/FireBrigadeTactics.java	/^    public int maxDistance;$/;"	f	class:FireBrigadeTactics
 maxDistance	./Comlib-ADK/src_old/team/tactics/FireBrigadeTactics.java	/^    public int maxDistance;$/;"	f	class:FireBrigadeTactics
@@ -7146,6 +7164,7 @@ maxOffset	../roborescue-roborescue/modules/maps/src/maps/convert/osm2gml/buildin
 maxOffset	../roborescue-roborescue/modules/maps/src/maps/convert/osm2gml/buildings/row/ThinDuplexRowFiller.java	/^    private final double maxOffset;$/;"	f	class:ThinDuplexRowFiller	file:
 maxPFs	../roborescue-roborescue/modules/gis2/src/gis2/RandomScenarioGenerator.java	/^    private int maxPFs;$/;"	f	class:RandomScenarioGenerator	file:
 maxPOs	../roborescue-roborescue/modules/gis2/src/gis2/RandomScenarioGenerator.java	/^    private int maxPOs;$/;"	f	class:RandomScenarioGenerator	file:
+maxPower	../roborescue-roborescue/modules/sample/src/sample/SampleFireBrigade.java	/^	private int maxPower;$/;"	f	class:SampleFireBrigade	file:
 maxPower	../roborescue-roborescue/modules/sample/src/sample/SampleFireBrigade.java	/^    private int maxPower;$/;"	f	class:SampleFireBrigade	file:
 maxPower	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/FireBrigadeTactics.java	/^    public int maxPower;$/;"	f	class:FireBrigadeTactics
 maxPower	./Comlib-ADK/src_old/team/tactics/FireBrigadeTactics.java	/^    public int maxPower;$/;"	f	class:FireBrigadeTactics
@@ -7157,6 +7176,7 @@ maxTime	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/log/FileLog
 maxTime	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/log/LogExtractor.java	/^    private int maxTime;$/;"	f	class:LogExtractor	file:
 maxTime	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/log/LogViewer.java	/^    private int maxTime;$/;"	f	class:LogViewer	file:
 maxTime	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/log/StreamLogReader.java	/^    private int maxTime;$/;"	f	class:StreamLogReader	file:
+maxWater	../roborescue-roborescue/modules/sample/src/sample/SampleFireBrigade.java	/^	private int maxWater;$/;"	f	class:SampleFireBrigade	file:
 maxWater	../roborescue-roborescue/modules/sample/src/sample/SampleFireBrigade.java	/^    private int maxWater;$/;"	f	class:SampleFireBrigade	file:
 maxWater	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/FireBrigadeTactics.java	/^    public int maxWater;$/;"	f	class:FireBrigadeTactics
 maxWater	./Comlib-ADK/src_old/team/tactics/FireBrigadeTactics.java	/^    public int maxWater;$/;"	f	class:FireBrigadeTactics
@@ -7622,6 +7642,7 @@ placeCentres	../roborescue-roborescue/modules/gis2/src/gis2/RandomScenarioGenera
 placeFires	../roborescue-roborescue/modules/gis2/src/gis2/RandomScenarioGenerator.java	/^    private void placeFires(Iterator<GMLBuilding> it, GisScenario result, int num) {$/;"	m	class:RandomScenarioGenerator	file:
 placeRefuges	../roborescue-roborescue/modules/gis2/src/gis2/RandomScenarioGenerator.java	/^    private void placeRefuges(Iterator<GMLBuilding> it, GisScenario result, int num) {$/;"	m	class:RandomScenarioGenerator	file:
 planPathToFire	../roborescue-roborescue/modules/human/src/human/ControlledFireBrigade.java	/^    private List<EntityID> planPathToFire() {$/;"	m	class:ControlledFireBrigade	file:
+planPathToFire	../roborescue-roborescue/modules/sample/src/sample/SampleFireBrigade.java	/^	private List<EntityID> planPathToFire(EntityID target) {$/;"	m	class:SampleFireBrigade	file:
 planPathToFire	../roborescue-roborescue/modules/sample/src/sample/SampleFireBrigade.java	/^    private List<EntityID> planPathToFire(EntityID target) {$/;"	m	class:SampleFireBrigade	file:
 platoonMax	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/kernel/comms/ChannelCommunicationModel.java	/^    private int platoonMax;$/;"	f	class:ChannelCommunicationModel	file:
 platoonMax	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/kernel/comms/StandardCommunicationModel.java	/^    private int platoonMax;$/;"	f	class:StandardCommunicationModel	file:
@@ -7685,8 +7706,10 @@ postConnect	../roborescue-roborescue/modules/sample/src/sample/AbstractSampleAge
 postConnect	../roborescue-roborescue/modules/sample/src/sample/ChannelTestAgent.java	/^    protected void postConnect() {$/;"	m	class:ChannelTestAgent
 postConnect	../roborescue-roborescue/modules/sample/src/sample/CustomRegistryTestAgent.java	/^    protected void postConnect() {$/;"	m	class:CustomRegistryTestAgent
 postConnect	../roborescue-roborescue/modules/sample/src/sample/LiveLogExtractor.java	/^    protected void postConnect() {$/;"	m	class:LiveLogExtractor
+postConnect	../roborescue-roborescue/modules/sample/src/sample/SampleAmbulanceTeam.java	/^	protected void postConnect() {$/;"	m	class:SampleAmbulanceTeam
 postConnect	../roborescue-roborescue/modules/sample/src/sample/SampleAmbulanceTeam.java	/^    protected void postConnect() {$/;"	m	class:SampleAmbulanceTeam
 postConnect	../roborescue-roborescue/modules/sample/src/sample/SampleCivilian.java	/^    protected void postConnect() {$/;"	m	class:SampleCivilian
+postConnect	../roborescue-roborescue/modules/sample/src/sample/SampleFireBrigade.java	/^	protected void postConnect() {$/;"	m	class:SampleFireBrigade
 postConnect	../roborescue-roborescue/modules/sample/src/sample/SampleFireBrigade.java	/^    protected void postConnect() {$/;"	m	class:SampleFireBrigade
 postConnect	../roborescue-roborescue/modules/sample/src/sample/SamplePoliceForce.java	/^    protected void postConnect() {$/;"	m	class:SamplePoliceForce
 postConnect	../roborescue-roborescue/modules/sample/src/sample/SampleSimulator.java	/^    protected void postConnect() {$/;"	m	class:SampleSimulator
@@ -9485,6 +9508,7 @@ snap	../roborescue-roborescue/modules/maps/src/maps/gml/editor/Snap.java	/^    p
 socket	../roborescue-roborescue/modules/gis2/src/gis2/GISServer.java	/^        private Socket socket;$/;"	f	class:GISServer.ServerThread	file:
 socket	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/connection/ConnectionManager.java	/^        private ServerSocket socket;$/;"	f	class:ConnectionManager.Reader	file:
 socket	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/connection/TCPConnection.java	/^    private Socket socket;$/;"	f	class:TCPConnection	file:
+someoneOnBoard	../roborescue-roborescue/modules/sample/src/sample/SampleAmbulanceTeam.java	/^	private boolean someoneOnBoard() {$/;"	m	class:SampleAmbulanceTeam	file:
 someoneOnBoard	../roborescue-roborescue/modules/sample/src/sample/SampleAmbulanceTeam.java	/^    private boolean someoneOnBoard() {$/;"	m	class:SampleAmbulanceTeam	file:
 someoneOnBoard	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyAmbulance.java	/^    private boolean someoneOnBoard() {$/;"	m	class:DummyAmbulance	file:
 someoneOnBoard	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyAmbulance.java	/^    private boolean someoneOnBoard() {$/;"	m	class:DummyAmbulance	file:
@@ -9786,9 +9810,11 @@ think	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/components/Ab
 think	../roborescue-roborescue/modules/sample/src/sample/ChannelTestAgent.java	/^    protected void think(int time, ChangeSet changed, Collection<Command> heard) {$/;"	m	class:ChannelTestAgent
 think	../roborescue-roborescue/modules/sample/src/sample/CustomRegistryTestAgent.java	/^    protected void think(int time, ChangeSet changed, Collection<Command> heard) {$/;"	m	class:CustomRegistryTestAgent
 think	../roborescue-roborescue/modules/sample/src/sample/DummyAgent.java	/^    protected void think(int time, ChangeSet changed, Collection<Command> heard) {$/;"	m	class:DummyAgent
+think	../roborescue-roborescue/modules/sample/src/sample/SampleAmbulanceTeam.java	/^	protected void think(int time, ChangeSet changed, Collection<Command> heard) {$/;"	m	class:SampleAmbulanceTeam
 think	../roborescue-roborescue/modules/sample/src/sample/SampleAmbulanceTeam.java	/^    protected void think(int time, ChangeSet changed, Collection<Command> heard) {$/;"	m	class:SampleAmbulanceTeam
 think	../roborescue-roborescue/modules/sample/src/sample/SampleCentre.java	/^    protected void think(int time, ChangeSet changed, Collection<Command> heard) {$/;"	m	class:SampleCentre
 think	../roborescue-roborescue/modules/sample/src/sample/SampleCivilian.java	/^    protected void think(int time, ChangeSet changed, Collection<Command> heard) {$/;"	m	class:SampleCivilian
+think	../roborescue-roborescue/modules/sample/src/sample/SampleFireBrigade.java	/^	protected void think(int time, ChangeSet changed, Collection<Command> heard) {$/;"	m	class:SampleFireBrigade
 think	../roborescue-roborescue/modules/sample/src/sample/SampleFireBrigade.java	/^    protected void think(int time, ChangeSet changed, Collection<Command> heard) {$/;"	m	class:SampleFireBrigade
 think	../roborescue-roborescue/modules/sample/src/sample/SamplePoliceForce.java	/^    protected void think(int time, ChangeSet changed, Collection<Command> heard) {$/;"	m	class:SamplePoliceForce
 think	./Comlib-ADK/src/main/java/comlib/adk/agent/TacticsAgent.java	/^    public void think(int time, ChangeSet changed) {$/;"	m	class:TacticsAgent
@@ -9959,9 +9985,11 @@ toString	../roborescue-roborescue/modules/sample/src/sample/ChannelTestAgent.jav
 toString	../roborescue-roborescue/modules/sample/src/sample/CustomRegistryTestAgent.java	/^        public String toString() {$/;"	m	class:CustomRegistryTestAgent.CustomEntityFactory
 toString	../roborescue-roborescue/modules/sample/src/sample/CustomRegistryTestAgent.java	/^    public String toString() {$/;"	m	class:CustomRegistryTestAgent
 toString	../roborescue-roborescue/modules/sample/src/sample/LiveLogExtractor.java	/^    public String toString() {$/;"	m	class:LiveLogExtractor
+toString	../roborescue-roborescue/modules/sample/src/sample/SampleAmbulanceTeam.java	/^	public String toString() {$/;"	m	class:SampleAmbulanceTeam
 toString	../roborescue-roborescue/modules/sample/src/sample/SampleAmbulanceTeam.java	/^    public String toString() {$/;"	m	class:SampleAmbulanceTeam
 toString	../roborescue-roborescue/modules/sample/src/sample/SampleCentre.java	/^    public String toString() {$/;"	m	class:SampleCentre
 toString	../roborescue-roborescue/modules/sample/src/sample/SampleCivilian.java	/^    public String toString() {$/;"	m	class:SampleCivilian
+toString	../roborescue-roborescue/modules/sample/src/sample/SampleFireBrigade.java	/^	public String toString() {$/;"	m	class:SampleFireBrigade
 toString	../roborescue-roborescue/modules/sample/src/sample/SampleFireBrigade.java	/^    public String toString() {$/;"	m	class:SampleFireBrigade
 toString	../roborescue-roborescue/modules/sample/src/sample/SamplePoliceForce.java	/^    public String toString() {$/;"	m	class:SamplePoliceForce
 toString	../roborescue-roborescue/modules/sample/src/sample/SampleViewer.java	/^    public String toString() {$/;"	m	class:SampleViewer
@@ -10120,6 +10148,7 @@ undoAction	../roborescue-roborescue/modules/gis2/src/gis2/scenario/ScenarioEdito
 undoAction	../roborescue-roborescue/modules/maps/src/maps/gml/editor/GMLEditor.java	/^    private Action undoAction;$/;"	f	class:GMLEditor	file:
 undoManager	../roborescue-roborescue/modules/gis2/src/gis2/scenario/ScenarioEditor.java	/^    private UndoManager undoManager;$/;"	f	class:ScenarioEditor	file:
 undoManager	../roborescue-roborescue/modules/maps/src/maps/gml/editor/GMLEditor.java	/^    private UndoManager undoManager;$/;"	f	class:GMLEditor	file:
+unexploredBuildings	../roborescue-roborescue/modules/sample/src/sample/SampleAmbulanceTeam.java	/^	private Collection<EntityID> unexploredBuildings;$/;"	f	class:SampleAmbulanceTeam	file:
 unexploredBuildings	../roborescue-roborescue/modules/sample/src/sample/SampleAmbulanceTeam.java	/^    private Collection<EntityID> unexploredBuildings;$/;"	f	class:SampleAmbulanceTeam	file:
 unindexedEntities	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/StandardWorldModel.java	/^    private Set<StandardEntity> unindexedEntities;$/;"	f	class:StandardWorldModel	file:
 unload	./Comlib-ADK/src/main/java/comlib/adk/util/action/AmbulanceAction.java	/^    private static Message unload(EntityID id, int time) {$/;"	m	class:AmbulanceAction	file:
@@ -10181,6 +10210,7 @@ updateSize	./Comlib/old_src/manager/RadioConfig.java	/^	public void updateSize(i
 updateSize	./Comlib/src_old/manager/RadioConfig.java	/^	public void updateSize(int id)$/;"	m	class:RadioConfig
 updateStatusLabel	../roborescue-roborescue/modules/gis2/src/gis2/scenario/ScenarioEditor.java	/^    private void updateStatusLabel() {$/;"	m	class:ScenarioEditor	file:
 updateUncontrolledAgents	../roborescue-roborescue/modules/kernel/src/kernel/ui/ComponentManagerGUI.java	/^    public void updateUncontrolledAgents(final List<String> data) {$/;"	m	class:ComponentManagerGUI
+updateUnexploredBuildings	../roborescue-roborescue/modules/sample/src/sample/SampleAmbulanceTeam.java	/^	private void updateUnexploredBuildings(ChangeSet changed) {$/;"	m	class:SampleAmbulanceTeam	file:
 updateUnexploredBuildings	../roborescue-roborescue/modules/sample/src/sample/SampleAmbulanceTeam.java	/^    private void updateUnexploredBuildings(ChangeSet changed) {$/;"	m	class:SampleAmbulanceTeam	file:
 updateUseFarFires	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/kernel/StandardPerception.java	/^    private void updateUseFarFires(boolean value) {$/;"	m	class:StandardPerception	file:
 updateViewDistance	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/kernel/StandardPerception.java	/^    private void updateViewDistance(int value) {$/;"	m	class:StandardPerception	file:
