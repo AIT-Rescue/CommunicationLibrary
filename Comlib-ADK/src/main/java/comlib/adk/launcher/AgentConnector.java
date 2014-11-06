@@ -1,5 +1,9 @@
 package comlib.adk.launcher;
 
+import rescuecore2.registry.Registry;
+import rescuecore2.standard.entities.StandardEntityFactory;
+import rescuecore2.standard.entities.StandardPropertyFactory;
+import rescuecore2.standard.messages.StandardMessageFactory;
 import sample.SampleAmbulanceTeam;
 import java.io.*;
 
@@ -27,6 +31,9 @@ public class AgentConnector {
 	}
 
 	private void init(String[] args) {
+        Registry.SYSTEM_REGISTRY.registerEntityFactory(StandardEntityFactory.INSTANCE);
+        Registry.SYSTEM_REGISTRY.registerMessageFactory(StandardMessageFactory.INSTANCE);
+        Registry.SYSTEM_REGISTRY.registerPropertyFactory(StandardPropertyFactory.INSTANCE);
 		this.config = ConfigInitializer.getConfig(args);
 		System.out.println("Load Team");
 		this.loader = new TeamLoader(new File(config.getValue(ConfigKey.KEY_DIRECTORY, "."), "tactics"), config);
@@ -38,6 +45,7 @@ public class AgentConnector {
 		ComponentLauncher cl = new TCPComponentLauncher(host, port, this.config);
 		System.out.println("Start Connect (Server Info : " + host + ":" + port + ")");
 
+		/*
 		System.out.println("--------------------------------------------------");
 		try
 		{
@@ -46,6 +54,7 @@ public class AgentConnector {
 			e.printStackTrace();
 		}
 		System.out.println("--------------------------------------------------");
+		*/
 
 		this.connectAmbulance(cl);
 		this.connectFire(cl);
@@ -72,8 +81,8 @@ public class AgentConnector {
 		try {
 			for (int i = 0; i != count; ++i) {
 				System.out.println("Connect Ambulance Team (Team Name : " + name + ")");
-				// cl.connect(new AmbulanceTeamAgent(team.getAmbulanceTeamTactics()));
-				cl.connect(new SampleAmbulanceTeam());
+				cl.connect(new AmbulanceTeamAgent(team.getAmbulanceTeamTactics()));
+				//cl.connect(new SampleAmbulanceTeam());
 
 			}
 		} catch (ComponentConnectionException | InterruptedException | ConnectionException ignored) {

@@ -23,8 +23,6 @@ public abstract class CommunicationAgent<E extends StandardEntity> extends Stand
 		super();
 	}
 
-	public abstract void registerProvider(MessageManager manager);
-
 	public abstract void registerEvent(MessageManager manager);
 
 	public abstract void think(int time, ChangeSet changed);
@@ -48,6 +46,8 @@ public abstract class CommunicationAgent<E extends StandardEntity> extends Stand
 		this.registerProvider(this.manager);
 		this.registerEvent(this.manager);
 	}
+
+    public void registerProvider(MessageManager manager){}
 
 	@Override
 	protected final void think(int time, ChangeSet changed, Collection<Command> heard)
