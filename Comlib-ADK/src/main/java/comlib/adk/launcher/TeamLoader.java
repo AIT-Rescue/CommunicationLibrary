@@ -46,7 +46,7 @@ public class TeamLoader {
     }
 
     public Team getRandomTeam() {
-        return this.teamMap.get(this.nameList.get(this.random.nextInt(1 + this.nameList.size())));
+        return this.teamMap.get(this.nameList.get(this.random.nextInt(this.nameList.size())));
     }
 
     private void load(File file, Config config) {
