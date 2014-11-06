@@ -1,14 +1,14 @@
 package comlib.adk.launcher.dummy;
 
-import comlib.adk.team.tactics.straight.StraightPolice;
-import comlib.adk.team.tactics.straight.event.StraightRoadEvent;
+import comlib.adk.team.tactics.basic.BasicPolice;
+import comlib.adk.team.tactics.basic.event.BasicRoadEvent;
 import comlib.adk.util.route.RouteSearcher;
 import comlib.adk.util.route.sample.SampleRouteSearcher;
 import comlib.adk.util.target.BlockadeSelector;
 import comlib.adk.util.target.sample.SampleBlockadeSelector;
 import comlib.manager.MessageManager;
 
-public class DummyPolice extends StraightPolice {
+public class DummyPolice extends BasicPolice {
 
     @Override
     public BlockadeSelector getBlockadeSelector() {
@@ -28,7 +28,7 @@ public class DummyPolice extends StraightPolice {
 
     @Override
     public void registerEvent(MessageManager manager) {
-        manager.registerEvent(new StraightRoadEvent(this));
+        manager.registerEvent(new BasicRoadEvent(this));
     }
 
     /*private List<EntityID> getBlockedRoads() {

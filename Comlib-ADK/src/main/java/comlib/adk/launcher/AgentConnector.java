@@ -38,6 +38,15 @@ public class AgentConnector {
 		ComponentLauncher cl = new TCPComponentLauncher(host, port, this.config);
 		System.out.println("Start Connect (Server Info : " + host + ":" + port + ")");
 
+		System.out.println("--------------------------------------------------");
+		try
+		{
+			config.write(new PrintWriter(System.out));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		System.out.println("--------------------------------------------------");
+
 		this.connectAmbulance(cl);
 		this.connectFire(cl);
 		this.connectPolice(cl);
@@ -63,9 +72,9 @@ public class AgentConnector {
 		try {
 			for (int i = 0; i != count; ++i) {
 				System.out.println("Connect Ambulance Team (Team Name : " + name + ")");
-				AmbulanceTeamAgent agent = new AmbulanceTeamAgent(team.getAmbulanceTeamTactics());
-				agent.initialise();
-				cl.connect(agent);
+				// cl.connect(new AmbulanceTeamAgent(team.getAmbulanceTeamTactics()));
+				cl.connect(new SampleAmbulanceTeam());
+
 			}
 		} catch (ComponentConnectionException | InterruptedException | ConnectionException ignored) {
 		}
