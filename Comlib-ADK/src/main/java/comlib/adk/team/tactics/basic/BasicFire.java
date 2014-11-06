@@ -1,4 +1,4 @@
-package comlib.adk.team.tactics.straight;
+package comlib.adk.team.tactics.basic;
 
 import comlib.adk.team.tactics.FireBrigadeTactics;
 import comlib.adk.util.action.AmbulanceAction;
@@ -15,7 +15,7 @@ import rescuecore2.worldmodel.EntityID;
 
 import java.util.List;
 
-public abstract class StraightFire extends FireBrigadeTactics {
+public abstract class BasicFire extends FireBrigadeTactics {
 
     public BuildingSelector buildingSelector;
 
