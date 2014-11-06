@@ -1,17 +1,17 @@
-package comlib.adk.team.tactics.basic.event;
+package comlib.adk.team.tactics.straight.event;
 
-import comlib.adk.team.tactics.basic.BasicPolice;
+import comlib.adk.team.tactics.straight.StraightPolice;
 import comlib.event.information.RoadMessageEvent;
 import comlib.message.information.RoadMessage;
 import rescuecore2.standard.entities.Blockade;
 import rescuecore2.standard.entities.StandardWorldModel;
 
-public class BasicRoadEvent implements RoadMessageEvent {
+public class StraightRoadEvent implements RoadMessageEvent {
 
-    private BasicPolice tactics;
+    private StraightPolice tactics;
 
-    public BasicRoadEvent(BasicPolice basicPolice) {
-        this.tactics = basicPolice;
+    public StraightRoadEvent(StraightPolice straightPolice) {
+        this.tactics = straightPolice;
     }
 
     @Override

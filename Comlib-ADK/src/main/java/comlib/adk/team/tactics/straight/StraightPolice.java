@@ -1,4 +1,4 @@
-package comlib.adk.team.tactics.basic;
+package comlib.adk.team.tactics.straight;
 
 import comlib.adk.team.tactics.PoliceForceTactics;
 import comlib.adk.util.action.PoliceAction;
@@ -18,7 +18,7 @@ import rescuecore2.worldmodel.EntityID;
 
 import java.util.List;
 
-public abstract class BasicPolice extends PoliceForceTactics{
+public abstract class StraightPolice extends PoliceForceTactics{
 
     public BlockadeSelector blockadeSelector;
 

@@ -1,24 +1,24 @@
 package sample;
 
-import comlib.adk.team.tactics.basic.BasicAmbulance;
-import comlib.adk.team.tactics.basic.event.BasicAmbulanceEvent;
-import comlib.adk.team.tactics.basic.event.BasicCivilianEvent;
-import comlib.adk.team.tactics.basic.event.BasicFireEvent;
-import comlib.adk.team.tactics.basic.event.BasicPoliceEvent;
+import comlib.adk.team.tactics.straight.StraightAmbulance;
+import comlib.adk.team.tactics.straight.event.StraightAmbulanceEvent;
+import comlib.adk.team.tactics.straight.event.StraightCivilianEvent;
+import comlib.adk.team.tactics.straight.event.StraightFireEvent;
+import comlib.adk.team.tactics.straight.event.StraightPoliceEvent;
 import comlib.adk.util.route.RouteSearcher;
 import comlib.adk.util.route.sample.SampleRouteSearcher;
 import comlib.adk.util.target.VictimSelector;
 import comlib.adk.util.target.sample.SampleVictimSelector;
 import comlib.manager.MessageManager;
 
-public class SampleAmbulance extends BasicAmbulance {
+public class SampleAmbulance extends StraightAmbulance {
 
     @Override
     public void registerEvent(MessageManager manager) {
-        manager.registerEvent(new BasicCivilianEvent(this));
-        manager.registerEvent(new BasicAmbulanceEvent(this));
-        manager.registerEvent(new BasicFireEvent(this));
-        manager.registerEvent(new BasicPoliceEvent(this));
+        manager.registerEvent(new StraightCivilianEvent(this));
+        manager.registerEvent(new StraightAmbulanceEvent(this));
+        manager.registerEvent(new StraightFireEvent(this));
+        manager.registerEvent(new StraightPoliceEvent(this));
     }
 
     @Override

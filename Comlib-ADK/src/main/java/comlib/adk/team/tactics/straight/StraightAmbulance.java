@@ -1,4 +1,4 @@
-package comlib.adk.team.tactics.basic;
+package comlib.adk.team.tactics.straight;
 
 import comlib.adk.team.tactics.AmbulanceTeamTactics;
 import comlib.adk.util.action.AmbulanceAction;
@@ -14,7 +14,7 @@ import rescuecore2.worldmodel.EntityID;
 
 import java.util.List;
 
-public abstract class BasicAmbulance extends AmbulanceTeamTactics{
+public abstract class StraightAmbulance extends AmbulanceTeamTactics{
 
     public VictimSelector victimSelector;
 

@@ -1,17 +1,17 @@
-package comlib.adk.team.tactics.basic.event;
+package comlib.adk.team.tactics.straight.event;
 
-import comlib.adk.team.tactics.basic.BasicAmbulance;
+import comlib.adk.team.tactics.straight.StraightAmbulance;
 import comlib.event.information.AmbulanceTeamMessageEvent;
 import comlib.message.information.AmbulanceTeamMessage;
 import rescuecore2.standard.entities.AmbulanceTeam;
 import rescuecore2.standard.entities.StandardWorldModel;
 
-public class BasicAmbulanceEvent implements AmbulanceTeamMessageEvent {
+public class StraightAmbulanceEvent implements AmbulanceTeamMessageEvent {
 
-    private BasicAmbulance tactics;
+    private StraightAmbulance tactics;
 
-    public BasicAmbulanceEvent(BasicAmbulance basicAmbulance) {
-        this.tactics = basicAmbulance;
+    public StraightAmbulanceEvent(StraightAmbulance straightAmbulance) {
+        this.tactics = straightAmbulance;
     }
 
     @Override
