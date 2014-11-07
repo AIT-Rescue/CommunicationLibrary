@@ -8,7 +8,7 @@ import rescuecore2.worldmodel.ChangeSet;
 
 public abstract class TacticsAgent<T extends Tactics, E extends StandardEntity> extends CommunicationAgent<E> {
     
-    public T tactics;
+    public Tactics tactics;
     //private int ignoreAgentCommand;
 
     public TacticsAgent(T t) {
@@ -27,15 +27,15 @@ public abstract class TacticsAgent<T extends Tactics, E extends StandardEntity> 
         this.tactics.ignoreTime = this.config.getIntValue(kernel.KernelConstants.IGNORE_AGENT_COMMANDS_KEY);
         this.tactics.agentID = this.getID(); //AgentのEntityIDはかわるのか？？
         this.tactics.location = this.location();
-        this.setAgentEntity(this.tactics);
-        this.setAgentUniqueValue(this.tactics);
+        this.setAgentEntity();
+        this.setAgentUniqueValue();
         
         this.tactics.preparation();
     }
     
-    public abstract void setAgentEntity(T t);
+    public abstract void setAgentEntity();
     
-    public abstract void setAgentUniqueValue(T t);
+    public abstract void setAgentUniqueValue();
 
     @Override
     public void registerProvider(MessageManager manager) {
@@ -59,7 +59,7 @@ public abstract class TacticsAgent<T extends Tactics, E extends StandardEntity> 
         this.tactics.config = this.config;
         this.tactics.agentID = this.getID();
         this.tactics.location = this.location();
-        this.setAgentEntity(this.tactics);
+        this.setAgentEntity();
     }
 
     @Override

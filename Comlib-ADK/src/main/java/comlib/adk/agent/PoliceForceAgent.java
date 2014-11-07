@@ -10,10 +10,11 @@ public class PoliceForceAgent extends TacticsAgent<PoliceForceTactics, PoliceFor
     
     public static final String DISTANCE_KEY = "clear.repair.distance";
     
-    public PoliceForceTactics tactics;
+    public PoliceForceTactics pft;
     
     public PoliceForceAgent(PoliceForceTactics policeForceTactics) {
         super(policeForceTactics);
+        this.pft = policeForceTactics;
     }
     
     @Override
@@ -27,12 +28,12 @@ public class PoliceForceAgent extends TacticsAgent<PoliceForceTactics, PoliceFor
     }
     
     @Override
-    public void setAgentUniqueValue(PoliceForceTactics policeForceTactics) {
-        policeForceTactics.distance = this.config.getIntValue(DISTANCE_KEY);
+    public void setAgentUniqueValue() {
+        this.pft.distance = this.config.getIntValue(DISTANCE_KEY);
     }
     
     @Override
-    public void setAgentEntity(PoliceForceTactics policeForceTactics) {
-        policeForceTactics.me = this.me();
+    public void setAgentEntity() {
+        this.pft.me = this.me();
     }
 }

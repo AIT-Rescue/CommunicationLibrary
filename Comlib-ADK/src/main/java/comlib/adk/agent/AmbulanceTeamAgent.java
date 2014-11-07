@@ -8,10 +8,11 @@ import java.util.EnumSet;
 
 public class AmbulanceTeamAgent extends TacticsAgent<AmbulanceTeamTactics, AmbulanceTeam> {
     
-    public AmbulanceTeamTactics tactics;
+    public AmbulanceTeamTactics att;
     
     public AmbulanceTeamAgent(AmbulanceTeamTactics ambulanceTactics) {
         super(ambulanceTactics);
+        this.att = ambulanceTactics;
     }
     
     @Override
@@ -23,12 +24,14 @@ public class AmbulanceTeamAgent extends TacticsAgent<AmbulanceTeamTactics, Ambul
     protected EnumSet<StandardEntityURN> getRequestedEntityURNsEnum() {
         return EnumSet.of(StandardEntityURN.AMBULANCE_TEAM);
     }
-    
-    public void setAgentEntity(AmbulanceTeamTactics ambulanceTeamTactics) {
-        ambulanceTeamTactics.me = this.me();
+
+    @Override
+    public void setAgentEntity() {
+        this.att.me = this.me();
     }
-    
-    public void setAgentUniqueValue(AmbulanceTeamTactics ambulanceTeamTactics) {
-        ambulanceTeamTactics.refugeList = this.getRefuges();
+
+    @Override
+    public void setAgentUniqueValue() {
+        this.att.refugeList = this.getRefuges();
     }
 }

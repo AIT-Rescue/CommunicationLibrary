@@ -12,10 +12,11 @@ public class FireBrigadeAgent extends TacticsAgent<FireBrigadeTactics, FireBriga
     public static final String MAX_DISTANCE_KEY = "fire.extinguish.max-distance";
     public static final String MAX_POWER_KEY = "fire.extinguish.max-sum";
     
-    public FireBrigadeTactics tactics;
+    public FireBrigadeTactics fbt;
     
     public FireBrigadeAgent(FireBrigadeTactics fireBrigadeTactics) {
         super(fireBrigadeTactics);
+        this.fbt = fireBrigadeTactics;
     }
     
     @Override
@@ -27,15 +28,17 @@ public class FireBrigadeAgent extends TacticsAgent<FireBrigadeTactics, FireBriga
     protected EnumSet<StandardEntityURN> getRequestedEntityURNsEnum() {
         return EnumSet.of(StandardEntityURN.FIRE_BRIGADE);
     }
-    
-    public void setAgentEntity(FireBrigadeTactics fireBrigadeTactics) {
-        fireBrigadeTactics.me = this.me();
+
+    @Override
+    public void setAgentEntity() {
+        this.fbt.me = this.me();
     }
-    
-    public void setAgentUniqueValue(FireBrigadeTactics fireBrigadeTactics) {
-        fireBrigadeTactics.maxWater = this.config.getIntValue(MAX_WATER_KEY);
-        fireBrigadeTactics.maxDistance = this.config.getIntValue(MAX_DISTANCE_KEY);
-        fireBrigadeTactics.maxPower = this.config.getIntValue(MAX_POWER_KEY);
-        fireBrigadeTactics.refugeList = this.getRefuges();
+
+    @Override
+    public void setAgentUniqueValue() {
+        this.fbt.maxWater = this.config.getIntValue(MAX_WATER_KEY);
+        this.fbt.maxDistance = this.config.getIntValue(MAX_DISTANCE_KEY);
+        this.fbt.maxPower = this.config.getIntValue(MAX_POWER_KEY);
+        this.fbt.refugeList = this.getRefuges();
     }
 }

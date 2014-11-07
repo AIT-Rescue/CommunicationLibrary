@@ -32,6 +32,14 @@ public abstract class Tactics<E extends StandardEntity> {
 
     public abstract Message think(int time, ChangeSet changed, MessageManager manager);
 
+    public Config getConfig() {
+        return this.config;
+    }
+
+    public StandardWorldModel getModel() {
+        return this.model;
+    }
+
     public StandardEntity location() {
         return this.location;
     }
