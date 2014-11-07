@@ -8,7 +8,7 @@ import comlib.adk.util.target.BuildingSelector;
 import comlib.adk.util.target.sample.SampleBuildingSelector;
 import comlib.manager.MessageManager;
 
-public class SampleFire extends extends BasicFire {
+public class SampleFire extends BasicFire {
 
     @Override
     public void registerEvent(MessageManager manager) {
