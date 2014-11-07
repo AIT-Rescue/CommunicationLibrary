@@ -9,7 +9,7 @@ import rescuecore2.worldmodel.ChangeSet;
 public abstract class TacticsAgent<T extends Tactics, E extends StandardEntity> extends CommunicationAgent<E> {
     
     public T tactics;
-    private int ignoreAgentCommand;
+    //private int ignoreAgentCommand;
 
     public TacticsAgent(T t) {
         super();
@@ -19,7 +19,7 @@ public abstract class TacticsAgent<T extends Tactics, E extends StandardEntity> 
     @Override
     public void postConnect() {
         super.postConnect();
-        ignoreAgentCommand = config.getIntValue(kernel.KernelConstants.IGNORE_AGENT_COMMANDS_KEY);
+        //ignoreAgentCommand = config.getIntValue(kernel.KernelConstants.IGNORE_AGENT_COMMANDS_KEY);
         //set value
         this.tactics.random = this.random;
         this.tactics.model = this.model;
@@ -57,7 +57,7 @@ public abstract class TacticsAgent<T extends Tactics, E extends StandardEntity> 
         //set value
         this.tactics.model = this.model;
         this.tactics.config = this.config;
-        //this.tactics.agentID = this.getID();
+        this.tactics.agentID = this.getID();
         this.tactics.location = this.location();
         this.setAgentEntity(this.tactics);
     }

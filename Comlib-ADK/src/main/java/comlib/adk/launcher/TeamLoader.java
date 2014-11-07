@@ -110,7 +110,7 @@ public class TeamLoader {
                     System.out.println("Load Success : " + name);
                     this.nameList.add(name);
                     this.teamMap.put(name, team);
-                    team.readConfig(config);
+                    //team.readConfig(config);
                 }
             } catch (ClassNotFoundException | IllegalAccessException | InstantiationException e) { //loadClass
                 e.printStackTrace();

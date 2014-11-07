@@ -67,6 +67,10 @@ public class MessageManager
 		this.receivedMessages = new ArrayList<>();
 		this.sendMessages = new ArrayList<>();
 
+        for(int bosl = 0; bosl < this.bitOutputStreamList.length; bosl++) {
+            this.bitOutputStreamList[bosl] = new BitOutputStream();
+        }
+
 		for (int ch = 1; ch <= numRadio; ch++)
 		{ maxBandWidthList[ch -1] = config.getIntValue("comms.channels." + ch + ".bandwidth"); }
 

@@ -9,7 +9,7 @@ public abstract class Team {
 
     public abstract String getTeamName();
 
-    public abstract void readConfig(Config config);
+    //public abstract void readConfig(Config config);
 
     public abstract AmbulanceTeamTactics getAmbulanceTeamTactics();
 

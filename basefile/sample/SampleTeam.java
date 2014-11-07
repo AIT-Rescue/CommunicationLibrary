@@ -14,10 +14,6 @@ public class SampleTeam extends Team {
     }
 
     @Override
-    public void readConfig(Config config) {
-    }
-
-    @Override
     public FireBrigadeTactics getFireBrigadeTactics() {
         return new SampleFire();
     }

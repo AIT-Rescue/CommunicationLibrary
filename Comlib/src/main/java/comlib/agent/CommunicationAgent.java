@@ -16,6 +16,8 @@ import java.util.List;
 public abstract class CommunicationAgent<E extends StandardEntity> extends StandardAgent<E>
 {
 
+    public int ignoreTime;
+
 	public MessageManager manager;
 
 	public CommunicationAgent()
@@ -45,6 +47,7 @@ public abstract class CommunicationAgent<E extends StandardEntity> extends Stand
 		this.manager = new MessageManager(this.config);
 		this.registerProvider(this.manager);
 		this.registerEvent(this.manager);
+        this.ignoreTime = this.config.getIntValue(kernel.KernelConstants.IGNORE_AGENT_COMMANDS_KEY);
 	}
 
     public void registerProvider(MessageManager manager){}
@@ -52,6 +55,9 @@ public abstract class CommunicationAgent<E extends StandardEntity> extends Stand
 	@Override
 	protected final void think(int time, ChangeSet changed, Collection<Command> heard)
 	{
+        if(time <= this.ignoreTime){
+            return;
+        }
 		this.receiveBeforeEvent(time, changed);
 		this.manager.receiveMessage(time, heard);
 		this.think(time, changed);
