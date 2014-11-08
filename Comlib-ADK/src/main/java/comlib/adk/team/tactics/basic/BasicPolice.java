@@ -74,7 +74,7 @@ public abstract class BasicPolice extends PoliceForceTactics{
 							}
 							*/
 							//return PoliceAction.clear(this, time, blockade.getID());
-                if(this.count == 7) {
+                if(this.count == 9) {
                     this.count = 0;
                     this.blockadeSelector.remove(this.target);
                     this.target = this.blockadeSelector.getTarget(time);

@@ -17,6 +17,8 @@ public abstract class Tactics<E extends StandardEntity> {
     public StandardEntity location;
     //public E me;
 
+    public int time;
+
     public Random random;
 
     public EntityID target;

@@ -55,6 +55,7 @@ public abstract class TacticsAgent<T extends Tactics, E extends StandardEntity> 
     @Override
     public void receiveBeforeEvent(int time, ChangeSet changed) {
         //set value
+        this.tactics.time = time;
         this.tactics.model = this.model;
         this.tactics.config = this.config;
         this.tactics.agentID = this.getID();
