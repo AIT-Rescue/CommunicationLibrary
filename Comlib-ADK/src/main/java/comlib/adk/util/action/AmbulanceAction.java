@@ -9,7 +9,7 @@ import rescuecore2.worldmodel.EntityID;
 
 public class AmbulanceAction extends Action {
 
-    private static Message unload(EntityID id, int time) {
+    public static Message unload(EntityID id, int time) {
         return new AKUnload(id, time);
     }
 
@@ -17,7 +17,7 @@ public class AmbulanceAction extends Action {
         return unload(tactics.agentID, time);
     }
 
-    private static Message load(EntityID id, int time, EntityID target) {
+    public static Message load(EntityID id, int time, EntityID target) {
         return new AKLoad(id, time, target);
     }
 
@@ -25,7 +25,7 @@ public class AmbulanceAction extends Action {
         return load(tactics.agentID, time, target);
     }
 
-    private static Message rescue(EntityID id, int time, EntityID target) {
+    public static Message rescue(EntityID id, int time, EntityID target) {
         return new AKRescue(id, time, target);
     }
 

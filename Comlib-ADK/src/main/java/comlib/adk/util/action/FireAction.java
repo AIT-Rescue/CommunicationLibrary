@@ -7,7 +7,7 @@ import rescuecore2.worldmodel.EntityID;
 
 public class FireAction extends Action {
 
-    private static Message extinguish(EntityID id, int time, EntityID target, int maxPower) {
+    public static Message extinguish(EntityID id, int time, EntityID target, int maxPower) {
         return new AKExtinguish(id, time, target, maxPower);
     }
 

@@ -10,7 +10,7 @@ import java.util.List;
 
 public class Action {
 
-    private static Message move(EntityID id, int time, List<EntityID> path) {
+    public static Message move(EntityID id, int time, List<EntityID> path) {
         return new AKMove(id, time, path);
     }
 
@@ -18,7 +18,7 @@ public class Action {
         return move(tactics.agentID, time, path);
     }
 
-    private static Message move(EntityID id, int time, List<EntityID> path, int destX, int destY) {
+    public static Message move(EntityID id, int time, List<EntityID> path, int destX, int destY) {
         return new AKMove(id, time, path, destX, destY);
     }
 
@@ -26,7 +26,7 @@ public class Action {
         return move(tactics.agentID, time, path, destX, destY);
     }
 
-    private static Message rest(EntityID id, int time) {
+    public static Message rest(EntityID id, int time) {
         return new AKRest(id, time);
     }
 
