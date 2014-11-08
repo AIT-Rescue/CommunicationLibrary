@@ -3385,6 +3385,7 @@ blockadeMap	./Comlib-ADK/src_old/util/route/sample/Route.java	/^    private Map<
 blockadeMessageID	./Comlib/old_src/message/CommunicationMessage.java	/^	public static final int blockadeMessageID = 1;$/;"	f	class:CommunicationMessage
 blockadeMessageID	./Comlib/src_old/message/CommunicationMessage.java	/^	public static final int blockadeMessageID = 1;$/;"	f	class:CommunicationMessage
 blockadeProgress	../roborescue-roborescue/modules/collapse/src/collapse/CollapseSimulatorGUI.java	/^    private JProgressBar blockadeProgress;$/;"	f	class:CollapseSimulatorGUI	file:
+blockadeSelector	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/basic/BasicPolice.java	/^	public BlockadeSelector blockadeSelector;$/;"	f	class:BasicPolice
 blockadeSelector	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/basic/BasicPolice.java	/^    public BlockadeSelector blockadeSelector;$/;"	f	class:BasicPolice
 blockadeSelector	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/StraightPolice.java	/^    public BlockadeSelector blockadeSelector;$/;"	f	class:StraightPolice
 blockadeToArea	../roborescue-roborescue/modules/collapse/src/collapse/CollapseSimulator.java	/^	private java.awt.geom.Area blockadeToArea(Blockade b) {$/;"	m	class:CollapseSimulator	file:
@@ -3521,6 +3522,7 @@ changed	../roborescue-roborescue/modules/maps/src/maps/gml/editor/GMLEditor.java
 changed	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/basic/BasicAmbulance.java	/^		public ChangeSet changed; \/\/ temp add$/;"	f	class:BasicAmbulance
 changed	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/basic/BasicFire.java	/^		public ChangeSet changed; \/\/ temp add$/;"	f	class:BasicFire
 changed	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/basic/BasicPolice.java	/^		public ChangeSet changed; \/\/ temp add$/;"	f	class:BasicPolice
+changed	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/basic/BasicPolice.java	/^	public ChangeSet changed; \/\/ temp add$/;"	f	class:BasicPolice
 changedModel	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/gui/ChangeSetComponent.java	/^    private EntityListModel changedModel;$/;"	f	class:ChangeSetComponent	file:
 changes	../roborescue-roborescue/modules/misc-new/src/misc/MiscSimulator.java	/^    private ChangeSet changes;$/;"	f	class:MiscSimulator	file:
 changes	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/Timestep.java	/^    private ChangeSet changes;$/;"	f	class:Timestep	file:
@@ -4922,6 +4924,7 @@ getBlockadeMap	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Route.jav
 getBlockadeMap	./Comlib-ADK/src_old/move/Route.java	/^	public Map<EntityID, Route> getBlockadeMap() {$/;"	m	class:Route
 getBlockadeMap	./Comlib-ADK/src_old/util/route/sample/Route.java	/^	public Map<EntityID, Route> getBlockadeMap() {$/;"	m	class:Route
 getBlockadeSelector	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyPolice.java	/^    public BlockadeSelector getBlockadeSelector() {$/;"	m	class:DummyPolice
+getBlockadeSelector	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/basic/BasicPolice.java	/^	public abstract BlockadeSelector getBlockadeSelector();$/;"	m	class:BasicPolice
 getBlockadeSelector	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/basic/BasicPolice.java	/^    public abstract BlockadeSelector getBlockadeSelector();$/;"	m	class:BasicPolice
 getBlockadeSelector	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/StraightPolice.java	/^    public abstract BlockadeSelector getBlockadeSelector();$/;"	m	class:StraightPolice
 getBlockadeSelector	./basefile/sample/SamplePolice.java	/^    public BlockadeSelector getBlockadeSelector() {$/;"	m	class:SamplePolice
@@ -5840,6 +5843,7 @@ getRouteSearcher	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyFire.
 getRouteSearcher	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyPolice.java	/^    public RouteSearcher getRouteSearcher() {$/;"	m	class:DummyPolice
 getRouteSearcher	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/basic/BasicAmbulance.java	/^    public abstract RouteSearcher getRouteSearcher();$/;"	m	class:BasicAmbulance
 getRouteSearcher	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/basic/BasicFire.java	/^    public abstract RouteSearcher getRouteSearcher();$/;"	m	class:BasicFire
+getRouteSearcher	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/basic/BasicPolice.java	/^	public abstract RouteSearcher getRouteSearcher();$/;"	m	class:BasicPolice
 getRouteSearcher	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/basic/BasicPolice.java	/^    public abstract RouteSearcher getRouteSearcher();$/;"	m	class:BasicPolice
 getRouteSearcher	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/StraightAmbulance.java	/^    public abstract RouteSearcher getRouteSearcher();$/;"	m	class:StraightAmbulance
 getRouteSearcher	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/StraightFire.java	/^    public abstract RouteSearcher getRouteSearcher();$/;"	m	class:StraightFire
@@ -7757,6 +7761,7 @@ preparation	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyPolice.jav
 preparation	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/Tactics.java	/^    public abstract void preparation();$/;"	m	class:Tactics
 preparation	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/basic/BasicAmbulance.java	/^    public void preparation() {$/;"	m	class:BasicAmbulance
 preparation	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/basic/BasicFire.java	/^    public void preparation() {$/;"	m	class:BasicFire
+preparation	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/basic/BasicPolice.java	/^		public void preparation() {$/;"	m	class:BasicPolice
 preparation	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/basic/BasicPolice.java	/^    public void preparation() {$/;"	m	class:BasicPolice
 preparation	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/StraightAmbulance.java	/^    public void preparation() {$/;"	m	class:StraightAmbulance
 preparation	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/StraightFire.java	/^    public void preparation() {$/;"	m	class:StraightFire
@@ -8867,6 +8872,7 @@ routeSearch	./Comlib-ADK/src_old/launcher/dummy/DummyAmbulance.java	/^    public
 routeSearcher	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyAmbulance.java	/^    public RouteSearcher routeSearcher;$/;"	f	class:DummyAmbulance
 routeSearcher	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/basic/BasicAmbulance.java	/^    public RouteSearcher routeSearcher;$/;"	f	class:BasicAmbulance
 routeSearcher	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/basic/BasicFire.java	/^    public RouteSearcher routeSearcher;$/;"	f	class:BasicFire
+routeSearcher	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/basic/BasicPolice.java	/^	public RouteSearcher routeSearcher;$/;"	f	class:BasicPolice
 routeSearcher	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/basic/BasicPolice.java	/^    public RouteSearcher routeSearcher;$/;"	f	class:BasicPolice
 routeSearcher	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/StraightAmbulance.java	/^    public RouteSearcher routeSearcher;$/;"	f	class:StraightAmbulance
 routeSearcher	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/StraightFire.java	/^    public RouteSearcher routeSearcher;$/;"	f	class:StraightFire
@@ -9842,6 +9848,7 @@ think	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyPolice.java	/^  
 think	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/Tactics.java	/^    public abstract Message think(int time, ChangeSet changed, MessageManager manager);$/;"	m	class:Tactics
 think	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/basic/BasicAmbulance.java	/^    public Message think(int time, ChangeSet changed, MessageManager manager) {$/;"	m	class:BasicAmbulance
 think	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/basic/BasicFire.java	/^    public Message think(int time, ChangeSet changed, MessageManager manager) {$/;"	m	class:BasicFire
+think	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/basic/BasicPolice.java	/^		public Message think(int time, ChangeSet changed, MessageManager manager) {$/;"	m	class:BasicPolice
 think	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/basic/BasicPolice.java	/^    public Message think(int time, ChangeSet changed, MessageManager manager) {$/;"	m	class:BasicPolice
 think	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/StraightAmbulance.java	/^    public Message think(int time, ChangeSet changed, MessageManager manager) {$/;"	m	class:StraightAmbulance
 think	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/StraightFire.java	/^    public Message think(int time, ChangeSet changed, MessageManager manager) {$/;"	m	class:StraightFire
@@ -9878,6 +9885,7 @@ time	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/messages/contr
 time	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/messages/control/KVTimestep.java	/^    private IntComponent time;$/;"	f	class:KVTimestep	file:
 time	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/messages/control/SKUpdate.java	/^    private IntComponent time;$/;"	f	class:SKUpdate	file:
 time	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/kernel/StandardPerception.java	/^    private int time;$/;"	f	class:StandardPerception	file:
+time	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/Tactics.java	/^    public int time;$/;"	f	class:Tactics
 time	./Comlib/old_src/manager/MessageManager.java	/^	private int time;$/;"	f	class:MessageManager	file:
 time	./Comlib/old_src/message/CommunicationMessage.java	/^	protected int time;$/;"	f	class:CommunicationMessage
 time	./Comlib/src_old/manager/MessageManager.java	/^	private int time;$/;"	f	class:MessageManager	file:
@@ -10207,6 +10215,7 @@ updateInfo	./Comlib-ADK/src/main/java/comlib/adk/dummy/DummyAmbulance.java	/^   
 updateInfo	./Comlib-ADK/src/main/java/comlib/adk/launcher/dummy/DummyAmbulance.java	/^    private void updateInfo(ChangeSet changed, MessageManager manager) {$/;"	m	class:DummyAmbulance	file:
 updateInfo	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/basic/BasicAmbulance.java	/^    private void updateInfo(ChangeSet changed, MessageManager manager) {$/;"	m	class:BasicAmbulance	file:
 updateInfo	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/basic/BasicFire.java	/^    private void updateInfo(ChangeSet changed, MessageManager manager) {$/;"	m	class:BasicFire	file:
+updateInfo	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/basic/BasicPolice.java	/^	private void updateInfo(ChangeSet changed, MessageManager manager) {$/;"	m	class:BasicPolice	file:
 updateInfo	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/basic/BasicPolice.java	/^    private void updateInfo(ChangeSet changed, MessageManager manager) {$/;"	m	class:BasicPolice	file:
 updateInfo	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/StraightAmbulance.java	/^    private void updateInfo(ChangeSet changed, MessageManager manager) {$/;"	m	class:StraightAmbulance	file:
 updateInfo	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/straight/StraightFire.java	/^    private void updateInfo(ChangeSet changed, MessageManager manager) {$/;"	m	class:StraightFire	file:
