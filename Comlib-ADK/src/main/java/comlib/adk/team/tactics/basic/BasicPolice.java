@@ -53,7 +53,7 @@ public abstract class BasicPolice extends PoliceForceTactics{
 			if (blockade != null) {
 				List<Line2D> lines = GeometryTools2D.pointsToLines(GeometryTools2D.vertexArrayToPoints(blockade.getApexes()), true);
 				double best = Double.MAX_VALUE;
-				best = 5000.0;
+				best = 5000.0; //MAGIC
 				Point2D bestPoint = null;
 				Point2D origin = new Point2D(this.me.getX(), this.me.getY());
 				for (Line2D next : lines) {
