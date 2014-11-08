@@ -1520,19 +1520,25 @@ KERNEL_LOG_CONTEXT	../roborescue-roborescue/modules/kernel/src/kernel/Kernel.jav
 KERNEL_PORT_NUMBER_KEY	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/Constants.java	/^    public static final String KERNEL_PORT_NUMBER_KEY = "kernel.port";$/;"	f	class:Constants
 KERNEL_STARTUP_TIME_KEY	../roborescue-roborescue/modules/kernel/src/kernel/StartKernel.java	/^	private static final String KERNEL_STARTUP_TIME_KEY = "kernel.startup.connect-time";$/;"	f	class:StartKernel	file:
 KEY_AMBULANCE_COUNT	./Comlib-ADK/src/main/java/comlib/adk/launcher/ConfigKey.java	/^    public static final String KEY_AMBULANCE_COUNT = "comlib.adk.agent.ambulance.count";$/;"	f	class:ConfigKey
+KEY_AMBULANCE_COUNT	./Comlib-ADK/src/main/java/comlib/adk/launcher/ConfigKey.java	/^    public static final String KEY_AMBULANCE_COUNT = "comlib.adk.tactics.ambulance.count";$/;"	f	class:ConfigKey
 KEY_AMBULANCE_COUNT	./Comlib-ADK/src_old/launcher/ConfigKey.java	/^    public static final String KEY_AMBULANCE_COUNT = "comlib.adk.agent.ambulance.count";$/;"	f	class:ConfigKey
 KEY_AMBULANCE_NAME	./Comlib-ADK/src/main/java/comlib/adk/launcher/ConfigKey.java	/^    public static final String KEY_AMBULANCE_NAME = "comlib.adk.agent.ambulance.name";$/;"	f	class:ConfigKey
+KEY_AMBULANCE_NAME	./Comlib-ADK/src/main/java/comlib/adk/launcher/ConfigKey.java	/^    public static final String KEY_AMBULANCE_NAME = "comlib.adk.tactics.ambulance.name";$/;"	f	class:ConfigKey
 KEY_AMBULANCE_NAME	./Comlib-ADK/src_old/launcher/ConfigKey.java	/^    public static final String KEY_AMBULANCE_NAME = "comlib.adk.agent.ambulance.name";$/;"	f	class:ConfigKey
 KEY_DIRECTORY	./Comlib-ADK/src/main/java/comlib/adk/launcher/ConfigKey.java	/^    public static final String KEY_DIRECTORY = "comlib.adk.launcher.directory";$/;"	f	class:ConfigKey
 KEY_DIRECTORY	./Comlib-ADK/src_old/launcher/ConfigKey.java	/^    public static final String KEY_DIRECTORY = "comlib.adk.launcher.directory";$/;"	f	class:ConfigKey
 KEY_FIRE_COUNT	./Comlib-ADK/src/main/java/comlib/adk/launcher/ConfigKey.java	/^    public static final String KEY_FIRE_COUNT = "comlib.adk.agent.fire.count";$/;"	f	class:ConfigKey
+KEY_FIRE_COUNT	./Comlib-ADK/src/main/java/comlib/adk/launcher/ConfigKey.java	/^    public static final String KEY_FIRE_COUNT = "comlib.adk.tactics.fire.count";$/;"	f	class:ConfigKey
 KEY_FIRE_COUNT	./Comlib-ADK/src_old/launcher/ConfigKey.java	/^    public static final String KEY_FIRE_COUNT = "comlib.adk.agent.fire.count";$/;"	f	class:ConfigKey
 KEY_FIRE_NAME	./Comlib-ADK/src/main/java/comlib/adk/launcher/ConfigKey.java	/^    public static final String KEY_FIRE_NAME = "comlib.adk.agent.fire.name";$/;"	f	class:ConfigKey
+KEY_FIRE_NAME	./Comlib-ADK/src/main/java/comlib/adk/launcher/ConfigKey.java	/^    public static final String KEY_FIRE_NAME = "comlib.adk.tactics.fire.name";$/;"	f	class:ConfigKey
 KEY_FIRE_NAME	./Comlib-ADK/src_old/launcher/ConfigKey.java	/^    public static final String KEY_FIRE_NAME = "comlib.adk.agent.fire.name";$/;"	f	class:ConfigKey
 KEY_FRAME_BUFFER_MAX_SIZE	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/log/FileLogReader.java	/^    private static final int KEY_FRAME_BUFFER_MAX_SIZE = 10;$/;"	f	class:FileLogReader	file:
 KEY_POLICE_COUNT	./Comlib-ADK/src/main/java/comlib/adk/launcher/ConfigKey.java	/^    public static final String KEY_POLICE_COUNT = "comlib.adk.agent.police.count";$/;"	f	class:ConfigKey
+KEY_POLICE_COUNT	./Comlib-ADK/src/main/java/comlib/adk/launcher/ConfigKey.java	/^    public static final String KEY_POLICE_COUNT = "comlib.adk.tactics.police.count";$/;"	f	class:ConfigKey
 KEY_POLICE_COUNT	./Comlib-ADK/src_old/launcher/ConfigKey.java	/^    public static final String KEY_POLICE_COUNT = "comlib.adk.agent.police.count";$/;"	f	class:ConfigKey
 KEY_POLICE_NAME	./Comlib-ADK/src/main/java/comlib/adk/launcher/ConfigKey.java	/^    public static final String KEY_POLICE_NAME = "comlib.adk.agent.police.name";$/;"	f	class:ConfigKey
+KEY_POLICE_NAME	./Comlib-ADK/src/main/java/comlib/adk/launcher/ConfigKey.java	/^    public static final String KEY_POLICE_NAME = "comlib.adk.tactics.police.name";$/;"	f	class:ConfigKey
 KEY_POLICE_NAME	./Comlib-ADK/src_old/launcher/ConfigKey.java	/^    public static final String KEY_POLICE_NAME = "comlib.adk.agent.police.name";$/;"	f	class:ConfigKey
 KGAcknowledge	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/messages/control/KGAcknowledge.java	/^    public KGAcknowledge() {$/;"	m	class:KGAcknowledge
 KGAcknowledge	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/messages/control/KGAcknowledge.java	/^    public KGAcknowledge(InputStream in) throws IOException {$/;"	m	class:KGAcknowledge
@@ -2182,6 +2188,7 @@ RANDOM_SEED_KEY	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/Con
 RANDOM_WALK_LENGTH	../roborescue-roborescue/modules/sample/src/sample/AbstractSampleAgent.java	/^    private static final int RANDOM_WALK_LENGTH = 50;$/;"	f	class:AbstractSampleAgent	file:
 RANDOM_WALK_LENGTH	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/SampleRouteSearch.java	/^    private static final int RANDOM_WALK_LENGTH = 50;$/;"	f	class:SampleRouteSearch	file:
 RANDOM_WALK_LENGTH	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/SampleRouteSearcher.java	/^    private static final int RANDOM_WALK_LENGTH = 50;$/;"	f	class:SampleRouteSearcher	file:
+RANDOM_WALK_LENGTH	./Comlib-ADK/src/main/java/comlib/adk/util/route/serversample/ServerSampleRouteSearcher.java	/^    private static final int RANDOM_WALK_LENGTH = 50;$/;"	f	class:ServerSampleRouteSearcher	file:
 RANDOM_WALK_LENGTH	./Comlib-ADK/src_old/move/MoveTool.java	/^    private static final int RANDOM_WALK_LENGTH = 50;$/;"	f	class:MoveTool	file:
 RANDOM_WALK_LENGTH	./Comlib-ADK/src_old/util/route/sample/SampleRouteSearcher.java	/^    private static final int RANDOM_WALK_LENGTH = 50;$/;"	f	class:SampleRouteSearcher	file:
 RANGE	../roborescue-roborescue/modules/maps/src/maps/gml/editor/AddNoiseFunction.java	/^    private static final int RANGE = 5;$/;"	f	class:AddNoiseFunction	file:
@@ -2513,6 +2520,7 @@ SampleBuildingSelector	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/
 SampleBuildingSelector	./Comlib-ADK/src/main/java/comlib/adk/util/target/sample/SampleBuildingSelector.java	/^public class SampleBuildingSelector extends BuildingSelector {$/;"	c
 SampleCentre	../roborescue-roborescue/modules/sample/src/sample/SampleCentre.java	/^public class SampleCentre extends StandardAgent<Building> {$/;"	c
 SampleCivilian	../roborescue-roborescue/modules/sample/src/sample/SampleCivilian.java	/^public class SampleCivilian extends AbstractSampleAgent<Civilian> {$/;"	c
+SampleFire	./basefile/sample/SampleFire.java	/^public class SampleFire extends BasicFire {$/;"	c
 SampleFire	./basefile/sample/SampleFire.java	/^public class SampleFire extends FireBrigadeTactics {$/;"	c
 SampleFire	./basefile/sample/SampleFire.java	/^public class SampleFire extends StraightFire {$/;"	c
 SampleFire	./basefile/sample/SampleFire.java	/^public class SampleFire extends extends BasicFire {$/;"	c
@@ -2573,6 +2581,8 @@ ScreenTransform	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/mis
 ScreenTransform	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/gui/ScreenTransform.java	/^public class ScreenTransform {$/;"	c
 SeriesInfo	../roborescue-roborescue/modules/kernel/src/kernel/ui/ScoreGraph.java	/^        public SeriesInfo(ScoreFunction function, XYSeries series, int index) {$/;"	m	class:ScoreGraph.SeriesInfo
 SeriesInfo	../roborescue-roborescue/modules/kernel/src/kernel/ui/ScoreGraph.java	/^    private static class SeriesInfo {$/;"	c	class:ScoreGraph
+ServerSampleRouteSearcher	./Comlib-ADK/src/main/java/comlib/adk/util/route/serversample/ServerSampleRouteSearcher.java	/^    public ServerSampleRouteSearcher(Tactics user) {$/;"	m	class:ServerSampleRouteSearcher
+ServerSampleRouteSearcher	./Comlib-ADK/src/main/java/comlib/adk/util/route/serversample/ServerSampleRouteSearcher.java	/^public class ServerSampleRouteSearcher extends RouteSearcher{$/;"	c
 ServerThread	../roborescue-roborescue/modules/gis2/src/gis2/GISServer.java	/^        public ServerThread(Socket socket) {$/;"	m	class:GISServer.ServerThread
 ServerThread	../roborescue-roborescue/modules/gis2/src/gis2/GISServer.java	/^    private class ServerThread extends Thread implements ConnectionListener {$/;"	c	class:GISServer
 ShapeDebugFrame	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/gui/ShapeDebugFrame.java	/^    public ShapeDebugFrame() {$/;"	m	class:ShapeDebugFrame
@@ -3340,6 +3350,7 @@ atList	../roborescue-roborescue/modules/human/src/human/ControlledAgentGUI.java	
 atListModel	../roborescue-roborescue/modules/human/src/human/ControlledAgentGUI.java	/^    private ListListModel atListModel;$/;"	f	class:ControlledAgentGUI	file:
 atLocations	../roborescue-roborescue/modules/gis2/src/gis2/GisScenario.java	/^	private Collection<Integer> atLocations;$/;"	f	class:GisScenario	file:
 ats	../roborescue-roborescue/modules/human/src/human/ControlledAgentGUI.java	/^    private List<ControlledAmbulanceTeam> ats;$/;"	f	class:ControlledAgentGUI	file:
+att	./Comlib-ADK/src/main/java/comlib/adk/agent/AmbulanceTeamAgent.java	/^    public AmbulanceTeamTactics att;$/;"	f	class:AmbulanceTeamAgent
 attachedEdges	../roborescue-roborescue/modules/maps/src/maps/gml/GMLMap.java	/^    private Map<GMLNode, Collection<GMLEdge>> attachedEdges;$/;"	f	class:GMLMap	file:
 attachedEdges	../roborescue-roborescue/modules/maps/src/maps/gml/editor/DeleteNodeTool.java	/^    private Collection<GMLEdge> attachedEdges;$/;"	f	class:DeleteNodeTool	file:
 attachedEdges	../roborescue-roborescue/modules/maps/src/maps/gml/editor/MergeLinesTool.java	/^    private Collection<GMLEdge> attachedEdges;$/;"	f	class:MergeLinesTool	file:
@@ -3816,6 +3827,7 @@ comlib.adk.util.route.sample	./Comlib-ADK/src_old/util/route/sample/Route.java	/
 comlib.adk.util.route.sample	./Comlib-ADK/src_old/util/route/sample/RouteFactory.java	/^package comlib.adk.util.route.sample;$/;"	p
 comlib.adk.util.route.sample	./Comlib-ADK/src_old/util/route/sample/Router.java	/^package comlib.adk.util.route.sample;$/;"	p
 comlib.adk.util.route.sample	./Comlib-ADK/src_old/util/route/sample/SampleRouteSearcher.java	/^package comlib.adk.util.route.sample;$/;"	p
+comlib.adk.util.route.serversample	./Comlib-ADK/src/main/java/comlib/adk/util/route/serversample/ServerSampleRouteSearcher.java	/^package comlib.adk.util.route.serversample;$/;"	p
 comlib.adk.util.target	./Comlib-ADK/src/main/java/comlib/adk/util/target/BlockadeManager.java	/^package comlib.adk.util.target;$/;"	p
 comlib.adk.util.target	./Comlib-ADK/src/main/java/comlib/adk/util/target/BlockadeSelector.java	/^package comlib.adk.util.target;$/;"	p
 comlib.adk.util.target	./Comlib-ADK/src/main/java/comlib/adk/util/target/BuildingManager.java	/^package comlib.adk.util.target;$/;"	p
@@ -4613,6 +4625,7 @@ fbList	../roborescue-roborescue/modules/human/src/human/ControlledAgentGUI.java	
 fbListModel	../roborescue-roborescue/modules/human/src/human/ControlledAgentGUI.java	/^    private ListListModel fbListModel;$/;"	f	class:ControlledAgentGUI	file:
 fbLocations	../roborescue-roborescue/modules/gis2/src/gis2/GisScenario.java	/^	private Collection<Integer> fbLocations;$/;"	f	class:GisScenario	file:
 fbs	../roborescue-roborescue/modules/human/src/human/ControlledAgentGUI.java	/^    private List<ControlledFireBrigade> fbs;$/;"	f	class:ControlledAgentGUI	file:
+fbt	./Comlib-ADK/src/main/java/comlib/adk/agent/FireBrigadeAgent.java	/^    public FireBrigadeTactics fbt;$/;"	f	class:FireBrigadeAgent
 field	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/gui/ConfigTree.java	/^        private JTextField field;$/;"	f	class:ConfigTree.ConfigEntryCellEditor	file:
 field	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/kernel/StandardWorldModelViewerComponent.java	/^    private JTextField field;$/;"	f	class:StandardWorldModelViewerComponent	file:
 fieryness	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/Building.java	/^    private IntProperty fieryness;$/;"	f	class:Building	file:
@@ -5061,6 +5074,7 @@ getConfig	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/messages/
 getConfig	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/messages/control/KSConnectOK.java	/^    public Config getConfig() {$/;"	m	class:KSConnectOK
 getConfig	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/messages/control/KVConnectOK.java	/^    public Config getConfig() {$/;"	m	class:KVConnectOK
 getConfig	./Comlib-ADK/src/main/java/comlib/adk/launcher/ConfigInitializer.java	/^    public static Config getConfig(String[] args) {$/;"	m	class:ConfigInitializer
+getConfig	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/Tactics.java	/^    public Config getConfig() {$/;"	m	class:Tactics
 getConfig	./Comlib-ADK/src_old/launcher/ConfigInitializer.java	/^    public static Config getConfig(String[] args) {$/;"	m	class:ConfigInitializer
 getConnection	../roborescue-roborescue/modules/kernel/src/kernel/AbstractKernelComponent.java	/^    public Connection getConnection() {$/;"	m	class:AbstractKernelComponent
 getConnection	../roborescue-roborescue/modules/kernel/src/kernel/KernelComponent.java	/^    Connection getConnection();$/;"	m	interface:KernelComponent
@@ -5464,6 +5478,7 @@ getMinLatitude	../roborescue-roborescue/modules/maps/src/maps/osm/OSMMap.java	/^
 getMinLongitude	../roborescue-roborescue/modules/maps/src/maps/osm/OSMMap.java	/^    public double getMinLongitude() {$/;"	m	class:OSMMap
 getMinX	../roborescue-roborescue/modules/maps/src/maps/gml/GMLMap.java	/^    public double getMinX() {$/;"	m	class:GMLMap
 getMinY	../roborescue-roborescue/modules/maps/src/maps/gml/GMLMap.java	/^    public double getMinY() {$/;"	m	class:GMLMap
+getModel	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/Tactics.java	/^    public StandardWorldModel getModel() {$/;"	m	class:Tactics
 getName	../roborescue-roborescue/modules/clear/src/clear/ClearSimulator.java	/^    public String getName() {$/;"	m	class:ClearSimulator
 getName	../roborescue-roborescue/modules/collapse/src/collapse/CollapseSimulator.java	/^	public String getName() {$/;"	m	class:CollapseSimulator
 getName	../roborescue-roborescue/modules/gis2/src/gis2/scenario/ClearAgentsFunction.java	/^    public String getName() {$/;"	m	class:ClearAgentsFunction
@@ -5634,6 +5649,7 @@ getPath	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Router.java	/^	p
 getPath	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/Router.java	/^	public List<EntityID> getPath(EntityID from, EntityID to, int time) {$/;"	m	class:Router
 getPath	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/SampleRouteSearch.java	/^    public List<EntityID> getPath(int time, EntityID from, EntityID to) {$/;"	m	class:SampleRouteSearch
 getPath	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/SampleRouteSearcher.java	/^    public List<EntityID> getPath(int time, EntityID from, EntityID to) {$/;"	m	class:SampleRouteSearcher
+getPath	./Comlib-ADK/src/main/java/comlib/adk/util/route/serversample/ServerSampleRouteSearcher.java	/^    public List<EntityID> getPath(int time, EntityID from, EntityID to) {$/;"	m	class:ServerSampleRouteSearcher
 getPath	./Comlib-ADK/src_old/move/MoveTool.java	/^    public List<EntityID> getPath(int time, EntityID from, EntityID to) {$/;"	m	class:MoveTool
 getPath	./Comlib-ADK/src_old/move/MoveTool.java	/^    public List<EntityID> getPath(int time, EntityID from, List<EntityID> to) {$/;"	m	class:MoveTool
 getPath	./Comlib-ADK/src_old/move/MoveTool.java	/^    public List<EntityID> getPath(int time, Human from, Area to) {$/;"	m	class:MoveTool
@@ -6440,6 +6456,7 @@ ignitionTimes	../roborescue-roborescue/modules/standard/src/rescuecore2/standard
 ignore	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/java/LoadableTypeProcessor.java	/^    private Set<String> ignore;$/;"	f	class:LoadableTypeProcessor	file:
 ignoreAgentCommand	./Comlib-ADK/src/main/java/comlib/adk/agent/TacticsAgent.java	/^    private int ignoreAgentCommand;$/;"	f	class:TacticsAgent	file:
 ignoreTime	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/Tactics.java	/^    public int ignoreTime;$/;"	f	class:Tactics
+ignoreTime	./Comlib/src/main/java/comlib/agent/CommunicationAgent.java	/^    public int ignoreTime;$/;"	f	class:CommunicationAgent
 imageViewer	../roborescue-roborescue/modules/sample/src/sample/LiveLogExtractor.java	/^    private ViewComponent imageViewer;$/;"	f	class:LiveLogExtractor	file:
 impassableLines	../roborescue-roborescue/modules/maps/src/maps/validate/GMLTraversabilityValidator.java	/^    private static Geometry impassableLines(GMLShape shape) {$/;"	m	class:GMLTraversabilityValidator	file:
 importance	../roborescue-roborescue/modules/maps/src/maps/gml/GMLBuilding.java	/^    private int importance;$/;"	f	class:GMLBuilding	file:
@@ -6510,6 +6527,7 @@ initOption	./Comlib-ADK/src/main/java/comlib/adk/launcher/ConfigInitializer.java
 initOption	./Comlib-ADK/src_old/launcher/ConfigInitializer.java	/^    private static Map<String, Option> initOption() {$/;"	m	class:ConfigInitializer	file:
 initRandomWalk	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/SampleRouteSearch.java	/^    private void initRandomWalk()$/;"	m	class:SampleRouteSearch	file:
 initRandomWalk	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/SampleRouteSearcher.java	/^    private void initRandomWalk()$/;"	m	class:SampleRouteSearcher	file:
+initRandomWalk	./Comlib-ADK/src/main/java/comlib/adk/util/route/serversample/ServerSampleRouteSearcher.java	/^    private void initRandomWalk()$/;"	m	class:ServerSampleRouteSearcher	file:
 initRandomWalk	./Comlib-ADK/src_old/move/MoveTool.java	/^    private void initRandomWalk()$/;"	m	class:MoveTool	file:
 initRandomWalk	./Comlib-ADK/src_old/util/route/sample/SampleRouteSearcher.java	/^    private void initRandomWalk()$/;"	m	class:SampleRouteSearcher	file:
 initTabs	./Comlib/build/reports/tests/js/report.js	/^function initTabs() {$/;"	f
@@ -7445,6 +7463,7 @@ neighbours	../roborescue-roborescue/modules/sample/src/sample/AbstractSampleAgen
 neighbours	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/Area.java	/^    private List<EntityID> neighbours;$/;"	f	class:Area	file:
 neighbours	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/SampleRouteSearch.java	/^    private Map<EntityID, Set<EntityID>> neighbours;$/;"	f	class:SampleRouteSearch	file:
 neighbours	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/SampleRouteSearcher.java	/^    private Map<EntityID, Set<EntityID>> neighbours;$/;"	f	class:SampleRouteSearcher	file:
+neighbours	./Comlib-ADK/src/main/java/comlib/adk/util/route/serversample/ServerSampleRouteSearcher.java	/^    private Map<EntityID, Set<EntityID>> neighbours;$/;"	f	class:ServerSampleRouteSearcher	file:
 neighbours	./Comlib-ADK/src_old/move/MoveTool.java	/^    private Map<EntityID, Set<EntityID>> neighbours;$/;"	f	class:MoveTool	file:
 neighbours	./Comlib-ADK/src_old/util/route/sample/SampleRouteSearcher.java	/^    private Map<EntityID, Set<EntityID>> neighbours;$/;"	f	class:SampleRouteSearcher	file:
 newConnection	../roborescue-roborescue/modules/kernel/src/kernel/ComponentManager.java	/^	public void newConnection(Connection c) {$/;"	m	class:ComponentManager
@@ -7615,6 +7634,7 @@ pfList	../roborescue-roborescue/modules/human/src/human/ControlledAgentGUI.java	
 pfListModel	../roborescue-roborescue/modules/human/src/human/ControlledAgentGUI.java	/^    private ListListModel pfListModel;$/;"	f	class:ControlledAgentGUI	file:
 pfLocations	../roborescue-roborescue/modules/gis2/src/gis2/GisScenario.java	/^	private Collection<Integer> pfLocations;$/;"	f	class:GisScenario	file:
 pfs	../roborescue-roborescue/modules/human/src/human/ControlledAgentGUI.java	/^    private List<ControlledPoliceForce> pfs;$/;"	f	class:ControlledAgentGUI	file:
+pft	./Comlib-ADK/src/main/java/comlib/adk/agent/PoliceForceAgent.java	/^    public PoliceForceTactics pft;$/;"	f	class:PoliceForceAgent
 pixelsPerX	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/gui/ScreenTransform.java	/^    private double pixelsPerX;$/;"	f	class:ScreenTransform	file:
 pixelsPerY	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/gui/ScreenTransform.java	/^    private double pixelsPerY;$/;"	f	class:ScreenTransform	file:
 placeAgents	../roborescue-roborescue/modules/gis2/src/gis2/RandomScenarioGenerator.java	/^    private void placeAgents(GMLMap map, GisScenario result, Random random, int fire, int police, int ambulance, int civ) {$/;"	m	class:RandomScenarioGenerator	file:
@@ -7886,6 +7906,7 @@ randomWalk	./Comlib-ADK/src/main/java/comlib/adk/util/route/RouteSearch.java	/^ 
 randomWalk	./Comlib-ADK/src/main/java/comlib/adk/util/route/RouteSearcher.java	/^    public abstract List<EntityID> randomWalk();$/;"	m	class:RouteSearcher
 randomWalk	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/SampleRouteSearch.java	/^    public List<EntityID> randomWalk() {$/;"	m	class:SampleRouteSearch
 randomWalk	./Comlib-ADK/src/main/java/comlib/adk/util/route/sample/SampleRouteSearcher.java	/^    public List<EntityID> randomWalk() {$/;"	m	class:SampleRouteSearcher
+randomWalk	./Comlib-ADK/src/main/java/comlib/adk/util/route/serversample/ServerSampleRouteSearcher.java	/^    public List<EntityID> randomWalk() {$/;"	m	class:ServerSampleRouteSearcher
 randomWalk	./Comlib-ADK/src_old/move/MoveTool.java	/^    public List<EntityID> randomWalk() {$/;"	m	class:MoveTool
 randomWalk	./Comlib-ADK/src_old/util/route/RouteSearcher.java	/^    public abstract List<EntityID> randomWalk();$/;"	m	class:RouteSearcher
 randomWalk	./Comlib-ADK/src_old/util/route/sample/SampleRouteSearcher.java	/^    public List<EntityID> randomWalk() {$/;"	m	class:SampleRouteSearcher
@@ -8255,6 +8276,7 @@ registerProvider	./Comlib-ADK/src/main/java/comlib/adk/agent/TacticsAgent.java	/
 registerProvider	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/Tactics.java	/^    public void registerProvider(MessageManager manager) {$/;"	m	class:Tactics
 registerProvider	./Comlib-ADK/src_old/agent/TacticsAgent.java	/^    public void registerProvider(MessageManager manager) {$/;"	m	class:TacticsAgent
 registerProvider	./Comlib/src/main/java/comlib/agent/CommunicationAgent.java	/^	public abstract void registerProvider(MessageManager manager);$/;"	m	class:CommunicationAgent
+registerProvider	./Comlib/src/main/java/comlib/agent/CommunicationAgent.java	/^    public void registerProvider(MessageManager manager){}$/;"	m	class:CommunicationAgent
 registerProvider	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	public boolean registerProvider(MessageProvider provider)$/;"	m	class:MessageManager
 registerReceiveEvent	./Comlib/old_src/agent/CommunicationAgent.java	/^    public void registerReceiveEvent() {$/;"	m	class:CommunicationAgent
 registerReceiveEvent	./Comlib/src_old/agent/CommunicationAgent.java	/^    public void registerReceiveEvent() {$/;"	m	class:CommunicationAgent
@@ -8927,6 +8949,7 @@ search	../roborescue-roborescue/modules/human/src/human/ControlledAmbulanceTeam.
 search	../roborescue-roborescue/modules/human/src/human/ControlledFireBrigade.java	/^    private SampleSearch search;$/;"	f	class:ControlledFireBrigade	file:
 search	../roborescue-roborescue/modules/human/src/human/ControlledPoliceForce.java	/^    private SampleSearch search;$/;"	f	class:ControlledPoliceForce	file:
 search	../roborescue-roborescue/modules/sample/src/sample/AbstractSampleAgent.java	/^    protected SampleSearch search;$/;"	f	class:AbstractSampleAgent
+search	./Comlib-ADK/src/main/java/comlib/adk/util/route/serversample/ServerSampleRouteSearcher.java	/^    private SampleSearch search;$/;"	f	class:ServerSampleRouteSearcher	file:
 searchEvent	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	private void searchEvent(MessageProvider provider)$/;"	m	class:MessageManager	file:
 searchProvider	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	private void searchProvider(MessageEvent event)$/;"	m	class:MessageManager	file:
 searchRadio	./Comlib/old_src/manager/MessageManager.java	/^	private boolean searchRadio(Config config)$/;"	m	class:MessageManager	file:
@@ -9012,14 +9035,22 @@ setAgent	./Comlib-ADK/src_old/agent/AmbulanceTeamAgent.java	/^    public void se
 setAgent	./Comlib-ADK/src_old/agent/FireBrigadeAgent.java	/^    public void setAgent() {$/;"	m	class:FireBrigadeAgent
 setAgent	./Comlib-ADK/src_old/agent/PoliceForceAgent.java	/^    public void setAgent() {$/;"	m	class:PoliceForceAgent
 setAgent	./Comlib-ADK/src_old/agent/TacticsAgent.java	/^    public abstract void setAgent();$/;"	m	class:TacticsAgent
+setAgentEntity	./Comlib-ADK/src/main/java/comlib/adk/agent/AmbulanceTeamAgent.java	/^    public void setAgentEntity() {$/;"	m	class:AmbulanceTeamAgent
 setAgentEntity	./Comlib-ADK/src/main/java/comlib/adk/agent/AmbulanceTeamAgent.java	/^    public void setAgentEntity(AmbulanceTeamTactics ambulanceTeamTactics) {$/;"	m	class:AmbulanceTeamAgent
+setAgentEntity	./Comlib-ADK/src/main/java/comlib/adk/agent/FireBrigadeAgent.java	/^    public void setAgentEntity() {$/;"	m	class:FireBrigadeAgent
 setAgentEntity	./Comlib-ADK/src/main/java/comlib/adk/agent/FireBrigadeAgent.java	/^    public void setAgentEntity(FireBrigadeTactics fireBrigadeTactics) {$/;"	m	class:FireBrigadeAgent
+setAgentEntity	./Comlib-ADK/src/main/java/comlib/adk/agent/PoliceForceAgent.java	/^    public void setAgentEntity() {$/;"	m	class:PoliceForceAgent
 setAgentEntity	./Comlib-ADK/src/main/java/comlib/adk/agent/PoliceForceAgent.java	/^    public void setAgentEntity(PoliceForceTactics policeForceTactics) {$/;"	m	class:PoliceForceAgent
+setAgentEntity	./Comlib-ADK/src/main/java/comlib/adk/agent/TacticsAgent.java	/^    public abstract void setAgentEntity();$/;"	m	class:TacticsAgent
 setAgentEntity	./Comlib-ADK/src/main/java/comlib/adk/agent/TacticsAgent.java	/^    public abstract void setAgentEntity(T t);$/;"	m	class:TacticsAgent
 setAgentID	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/messages/AbstractCommand.java	/^    protected void setAgentID(EntityID agentID) {$/;"	m	class:AbstractCommand
+setAgentUniqueValue	./Comlib-ADK/src/main/java/comlib/adk/agent/AmbulanceTeamAgent.java	/^    public void setAgentUniqueValue() {$/;"	m	class:AmbulanceTeamAgent
 setAgentUniqueValue	./Comlib-ADK/src/main/java/comlib/adk/agent/AmbulanceTeamAgent.java	/^    public void setAgentUniqueValue(AmbulanceTeamTactics ambulanceTeamTactics) {$/;"	m	class:AmbulanceTeamAgent
+setAgentUniqueValue	./Comlib-ADK/src/main/java/comlib/adk/agent/FireBrigadeAgent.java	/^    public void setAgentUniqueValue() {$/;"	m	class:FireBrigadeAgent
 setAgentUniqueValue	./Comlib-ADK/src/main/java/comlib/adk/agent/FireBrigadeAgent.java	/^    public void setAgentUniqueValue(FireBrigadeTactics fireBrigadeTactics) {$/;"	m	class:FireBrigadeAgent
+setAgentUniqueValue	./Comlib-ADK/src/main/java/comlib/adk/agent/PoliceForceAgent.java	/^    public void setAgentUniqueValue() {$/;"	m	class:PoliceForceAgent
 setAgentUniqueValue	./Comlib-ADK/src/main/java/comlib/adk/agent/PoliceForceAgent.java	/^    public void setAgentUniqueValue(PoliceForceTactics policeForceTactics) {$/;"	m	class:PoliceForceAgent
+setAgentUniqueValue	./Comlib-ADK/src/main/java/comlib/adk/agent/TacticsAgent.java	/^    public abstract void setAgentUniqueValue();$/;"	m	class:TacticsAgent
 setAgentUniqueValue	./Comlib-ADK/src/main/java/comlib/adk/agent/TacticsAgent.java	/^    public abstract void setAgentUniqueValue(T t);$/;"	m	class:TacticsAgent
 setAmbulanceCentres	../roborescue-roborescue/modules/gis2/src/gis2/GisScenario.java	/^	public void setAmbulanceCentres(Collection<Integer> newLocations) {$/;"	m	class:GisScenario
 setAmbulanceCentres	../roborescue-roborescue/modules/gis2/src/gis2/RandomScenarioGenerator.java	/^    public void setAmbulanceCentres(int min, int max) {$/;"	m	class:RandomScenarioGenerator
@@ -9586,6 +9617,7 @@ tactics	./Comlib-ADK/src/main/java/comlib/adk/agent/AmbulanceTeamAgent.java	/^  
 tactics	./Comlib-ADK/src/main/java/comlib/adk/agent/FireBrigadeAgent.java	/^    public FireBrigadeTactics tactics;$/;"	f	class:FireBrigadeAgent
 tactics	./Comlib-ADK/src/main/java/comlib/adk/agent/PoliceForceAgent.java	/^    public PoliceForceTactics tactics;$/;"	f	class:PoliceForceAgent
 tactics	./Comlib-ADK/src/main/java/comlib/adk/agent/TacticsAgent.java	/^    public T tactics;$/;"	f	class:TacticsAgent
+tactics	./Comlib-ADK/src/main/java/comlib/adk/agent/TacticsAgent.java	/^    public Tactics tactics;$/;"	f	class:TacticsAgent
 tactics	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/basic/event/BasicAmbulanceEvent.java	/^    private BasicAmbulance tactics;$/;"	f	class:BasicAmbulanceEvent	file:
 tactics	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/basic/event/BasicBuildingEvent.java	/^    private BasicFire tactics;$/;"	f	class:BasicBuildingEvent	file:
 tactics	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/basic/event/BasicCivilianEvent.java	/^    private BasicAmbulance tactics;$/;"	f	class:BasicCivilianEvent	file:
