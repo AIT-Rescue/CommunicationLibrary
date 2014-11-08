@@ -73,13 +73,16 @@ public abstract class BasicPolice extends PoliceForceTactics{
 							}
 							*/
 							//return PoliceAction.clear(this, time, blockade.getID());
-                if(this.count >= 13) {
+                if(this.count == 13) {
                     this.count = 0;
+                    return PoliceAction.move(this, time, this.routeSearcher.randomWalk());
                 }
-                int x = (int)(this.distance * Math.cos(30 * count));
-                int y = (int)(this.distance * Math.sin(30 * count));
-                count++;
-                return PoliceAction.clear(this, time, (int) (this.me.getX() + x), (int) (this.me.getY() + y));
+                else {
+                    int x = (int) (this.distance * Math.cos(30 * count));
+                    int y = (int) (this.distance * Math.sin(30 * count));
+                    count++;
+                    return PoliceAction.clear(this, time, (int) (this.me.getX() + x), (int) (this.me.getY() + y));
+                }
             }
             else {
                 List<EntityID> path = this.routeSearcher.getPath(time, this.me, blockade);
