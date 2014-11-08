@@ -5,6 +5,8 @@ import comlib.agent.CommunicationAgent;
 import comlib.manager.MessageManager;
 import rescuecore2.standard.entities.StandardEntity;
 import rescuecore2.worldmodel.ChangeSet;
+import rescuecore2.standard.messages.AKRest;
+import rescuecore2.messages.Message;
 
 public abstract class TacticsAgent<T extends Tactics, E extends StandardEntity> extends CommunicationAgent<E> {
     
@@ -49,7 +51,8 @@ public abstract class TacticsAgent<T extends Tactics, E extends StandardEntity> 
     
     @Override
     public void think(int time, ChangeSet changed) {
-        this.send(this.tactics.think(time, changed, this.manager));
+        Message actMessage = this.tactics.think(time, changed, this.manager);
+        this.send(actMessage == null ? new AKRest(this.getID(), time) : actMessage);
     }
 
     @Override
