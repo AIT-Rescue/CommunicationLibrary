@@ -16,6 +16,7 @@ import rescuecore2.standard.entities.*;
 import rescuecore2.worldmodel.ChangeSet;
 import rescuecore2.worldmodel.EntityID;
 
+import javax.swing.text.html.parser.Entity;
 import java.util.List;
 
 public abstract class BasicPolice extends PoliceForceTactics{
@@ -73,9 +74,15 @@ public abstract class BasicPolice extends PoliceForceTactics{
 							}
 							*/
 							//return PoliceAction.clear(this, time, blockade.getID());
-                if(this.count == 13) {
+                if(this.count == 7) {
                     this.count = 0;
-                    return PoliceAction.move(this, time, this.routeSearcher.randomWalk());
+                    this.blockadeSelector.remove(this.target);
+                    this.target = this.blockadeSelector.getTarget(time);
+                    List<EntityID> path = this.routeSearcher.getPath(time, me(), this.target);
+                    if(path == null) {
+                        path = this.routeSearcher.randomWalk();
+                    }
+                    return PoliceAction.move(this, time, path);
                 }
                 else {
                     int x = (int) (this.distance * Math.cos(30 * count));
