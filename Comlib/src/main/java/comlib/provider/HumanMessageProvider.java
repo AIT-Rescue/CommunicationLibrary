@@ -33,18 +33,11 @@ public abstract class HumanMessageProvider<M extends HumanMessage, E extends Mes
 	protected M createMessage(RadioConfig config, int time, BitStreamReader bsr)
 	{
 		return null;
-		// return new CivilianMessage(time, -1,
-		// 		bsr.getBits(config.getSizeOfCivilianValue())
-		// 		);
 	}
 
 	protected M createMessage(VoiceConfig config, int time, int ttl, String[] data, int next)
 	{
 		return null;
-		// return new CivilianMessage(
-		// 		time, ttl,
-		// 		Integer.parseInt(data[next])
-		// 		);
 	}
 
 }
