@@ -55,8 +55,9 @@ public abstract class CommunicationAgent<E extends StandardEntity> extends Stand
 	@Override
 	protected final void think(int time, ChangeSet changed, Collection<Command> heard)
 	{
-		if(time <= this.ignoreTime //TODO: これでいいのか．．．
+		if(time <= this.ignoreTime) //TODO: これでいいのか．．．
 		{ return; }
+
 		this.receiveBeforeEvent(time, changed);
 		try
 		{

@@ -3518,6 +3518,9 @@ chain	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/kernel/
 changeElementClass	./Comlib/build/reports/tests/js/report.js	/^function changeElementClass(element, classValue) {$/;"	f
 changed	../roborescue-roborescue/modules/gis2/src/gis2/scenario/ScenarioEditor.java	/^    private boolean changed;$/;"	f	class:ScenarioEditor	file:
 changed	../roborescue-roborescue/modules/maps/src/maps/gml/editor/GMLEditor.java	/^    private boolean changed;$/;"	f	class:GMLEditor	file:
+changed	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/basic/BasicAmbulance.java	/^		public ChangeSet changed; \/\/ temp add$/;"	f	class:BasicAmbulance
+changed	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/basic/BasicFire.java	/^		public ChangeSet changed; \/\/ temp add$/;"	f	class:BasicFire
+changed	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/basic/BasicPolice.java	/^		public ChangeSet changed; \/\/ temp add$/;"	f	class:BasicPolice
 changedModel	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/gui/ChangeSetComponent.java	/^    private EntityListModel changedModel;$/;"	f	class:ChangeSetComponent	file:
 changes	../roborescue-roborescue/modules/misc-new/src/misc/MiscSimulator.java	/^    private ChangeSet changes;$/;"	f	class:MiscSimulator	file:
 changes	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/Timestep.java	/^    private ChangeSet changes;$/;"	f	class:Timestep	file:
@@ -6456,6 +6459,7 @@ ignitionTimes	../roborescue-roborescue/modules/standard/src/rescuecore2/standard
 ignore	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/misc/java/LoadableTypeProcessor.java	/^    private Set<String> ignore;$/;"	f	class:LoadableTypeProcessor	file:
 ignoreAgentCommand	./Comlib-ADK/src/main/java/comlib/adk/agent/TacticsAgent.java	/^    private int ignoreAgentCommand;$/;"	f	class:TacticsAgent	file:
 ignoreTime	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/Tactics.java	/^    public int ignoreTime;$/;"	f	class:Tactics
+ignoreTime	./Comlib/src/main/java/comlib/agent/CommunicationAgent.java	/^	public int ignoreTime;$/;"	f	class:CommunicationAgent
 ignoreTime	./Comlib/src/main/java/comlib/agent/CommunicationAgent.java	/^    public int ignoreTime;$/;"	f	class:CommunicationAgent
 imageViewer	../roborescue-roborescue/modules/sample/src/sample/LiveLogExtractor.java	/^    private ViewComponent imageViewer;$/;"	f	class:LiveLogExtractor	file:
 impassableLines	../roborescue-roborescue/modules/maps/src/maps/validate/GMLTraversabilityValidator.java	/^    private static Geometry impassableLines(GMLShape shape) {$/;"	m	class:GMLTraversabilityValidator	file:
@@ -7184,11 +7188,15 @@ maxY	../roborescue-roborescue/modules/maps/src/maps/gml/GMLMap.java	/^    privat
 maxY	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/entities/StandardWorldModel.java	/^    private int maxY;$/;"	f	class:StandardWorldModel	file:
 maybeAddInitialEntity	../roborescue-roborescue/modules/standard/src/rescuecore2/standard/kernel/StandardAgentRegistrar.java	/^    private void maybeAddInitialEntity(Entity e, Set<Entity> initialEntities) {$/;"	m	class:StandardAgentRegistrar	file:
 me	../roborescue-roborescue/modules/rescuecore2/src/rescuecore2/components/AbstractAgent.java	/^    protected E me() {$/;"	m	class:AbstractAgent
+me	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/AmbulanceTeamTactics.java	/^    public AmbulanceTeam me() {$/;"	m	class:AmbulanceTeamTactics
 me	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/AmbulanceTeamTactics.java	/^    public AmbulanceTeam me;$/;"	f	class:AmbulanceTeamTactics
+me	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/FireBrigadeTactics.java	/^    public FireBrigade me() {$/;"	m	class:FireBrigadeTactics
 me	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/FireBrigadeTactics.java	/^    public FireBrigade me;$/;"	f	class:FireBrigadeTactics
+me	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/PoliceForceTactics.java	/^    public PoliceForce me() {$/;"	m	class:PoliceForceTactics
 me	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/PoliceForceTactics.java	/^    public PoliceForce me;$/;"	f	class:PoliceForceTactics
 me	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/Tactics.java	/^    public E me() {$/;"	m	class:Tactics
 me	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/Tactics.java	/^    public E me;$/;"	f	class:Tactics
+me	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/Tactics.java	/^    public abstract E me();$/;"	m	class:Tactics
 me	./Comlib-ADK/src_old/team/tactics/AmbulanceTeamTactics.java	/^    public AmbulanceTeam me;$/;"	f	class:AmbulanceTeamTactics
 me	./Comlib-ADK/src_old/team/tactics/FireBrigadeTactics.java	/^    public FireBrigade me;$/;"	f	class:FireBrigadeTactics
 me	./Comlib-ADK/src_old/team/tactics/PoliceForceTactics.java	/^    public PoliceForce me;$/;"	f	class:PoliceForceTactics
@@ -8276,6 +8284,7 @@ registerProvider	./Comlib-ADK/src/main/java/comlib/adk/agent/TacticsAgent.java	/
 registerProvider	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/Tactics.java	/^    public void registerProvider(MessageManager manager) {$/;"	m	class:Tactics
 registerProvider	./Comlib-ADK/src_old/agent/TacticsAgent.java	/^    public void registerProvider(MessageManager manager) {$/;"	m	class:TacticsAgent
 registerProvider	./Comlib/src/main/java/comlib/agent/CommunicationAgent.java	/^	public abstract void registerProvider(MessageManager manager);$/;"	m	class:CommunicationAgent
+registerProvider	./Comlib/src/main/java/comlib/agent/CommunicationAgent.java	/^	public void registerProvider(MessageManager manager){}$/;"	m	class:CommunicationAgent
 registerProvider	./Comlib/src/main/java/comlib/agent/CommunicationAgent.java	/^    public void registerProvider(MessageManager manager){}$/;"	m	class:CommunicationAgent
 registerProvider	./Comlib/src/main/java/comlib/manager/MessageManager.java	/^	public boolean registerProvider(MessageProvider provider)$/;"	m	class:MessageManager
 registerReceiveEvent	./Comlib/old_src/agent/CommunicationAgent.java	/^    public void registerReceiveEvent() {$/;"	m	class:CommunicationAgent
@@ -9851,6 +9860,7 @@ think	./Comlib/src_old/agent/CommunicationAgent.java	/^    public abstract void 
 think	./basefile/sample/SampleAmbulance.java	/^    public Message think(int time, ChangeSet changed, MessageManager manager) {$/;"	m	class:SampleAmbulance
 think	./basefile/sample/SampleFire.java	/^    public Message think(int time, ChangeSet changed, MessageManager manager) {$/;"	m	class:SampleFire
 think	./basefile/sample/SamplePolice.java	/^    public Message think(int time, ChangeSet changed, MessageManager manager) {$/;"	m	class:SamplePolice
+this.changed	./Comlib-ADK/src/main/java/comlib/adk/team/tactics/basic/BasicFire.java	/^			this.changed = changed; \/\/temp add$/;"	f	class:BasicFire
 threshold	../roborescue-roborescue/modules/maps/src/maps/convert/osm2gml/TemporaryMap.java	/^    private double threshold;$/;"	f	class:TemporaryMap	file:
 threshold	../roborescue-roborescue/modules/maps/src/maps/gml/editor/SplitEdgesFunction.java	/^    private double threshold;$/;"	f	class:SplitEdgesFunction	file:
 time	../roborescue-roborescue/modules/kernel/src/kernel/Kernel.java	/^    private int time;$/;"	f	class:Kernel	file:

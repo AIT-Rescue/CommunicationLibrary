@@ -20,6 +20,8 @@ public abstract class BasicAmbulance extends AmbulanceTeamTactics{
 
     public RouteSearcher routeSearcher;
 
+		public ChangeSet changed; // temp add
+
     @Override
     public void preparation() {
         this.model.indexClass(
@@ -42,6 +44,9 @@ public abstract class BasicAmbulance extends AmbulanceTeamTactics{
 
     @Override
     public Message think(int time, ChangeSet changed, MessageManager manager) {
+
+			this.changed = changed; //temp add
+
         this.updateInfo(changed, manager);
 
         if(this.someoneOnBoard()) {

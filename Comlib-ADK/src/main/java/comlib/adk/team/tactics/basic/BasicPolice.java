@@ -24,6 +24,8 @@ public abstract class BasicPolice extends PoliceForceTactics{
 
     public RouteSearcher routeSearcher;
 
+		public ChangeSet changed; // temp add
+
     @Override
     public void preparation() {
         this.model.indexClass(StandardEntityURN.ROAD);
@@ -37,6 +39,9 @@ public abstract class BasicPolice extends PoliceForceTactics{
 
     @Override
     public Message think(int time, ChangeSet changed, MessageManager manager) {
+
+			this.changed = changed; //temp add
+
         this.updateInfo(changed, manager);
 
         if(this.target == null) {
