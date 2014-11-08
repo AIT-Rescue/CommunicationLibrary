@@ -78,7 +78,7 @@ public class SampleVictimSelector extends VictimSelector {
             for (EntityID id : this.civilianList) {
                 StandardEntity civilian = this.tactics.model.getEntity(id);
                 if(civilian != null) {
-                    int d = RouteUtil.distance(this.tactics.model, this.tactics.me, civilian);
+                    int d = RouteUtil.distance(this.tactics.model, this.tactics.me(), civilian);
                     if (minDistance >= d) {
                         minDistance = d;
                         result = id;
@@ -90,7 +90,7 @@ public class SampleVictimSelector extends VictimSelector {
             for (EntityID id : this.agentList) {
                 StandardEntity agent = this.tactics.model.getEntity(id);
                 if(agent != null) {
-                    int d = RouteUtil.distance(this.tactics.model, this.tactics.me, agent);
+                    int d = RouteUtil.distance(this.tactics.model, this.tactics.me(), agent);
                     if (minDistance >= d) {
                         minDistance = d;
                         result = id;

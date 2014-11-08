@@ -49,7 +49,7 @@ public class SampleBlockadeSelector extends BlockadeSelector {
         for (EntityID id : this.blockadeList) {
             StandardEntity blockade = this.tactics.model.getEntity(id);
             if(blockade != null) {
-                int d = RouteUtil.distance(this.tactics.model, this.tactics.me, blockade);
+                int d = RouteUtil.distance(this.tactics.model, this.tactics.me(), blockade);
                 if (minDistance >= d) {
                     minDistance = d;
                     result = id;
