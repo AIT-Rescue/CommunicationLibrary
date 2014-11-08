@@ -7,4 +7,8 @@ public abstract class PoliceForceTactics extends Tactics<PoliceForce>{
     public PoliceForce me;
 
     public int distance;
+
+    public PoliceForce me() {
+        return this.me;
+    }
 }

@@ -72,7 +72,7 @@ public class SampleRouteSearcher extends RouteSearcher {
     public List<EntityID> randomWalkWithoutBuilding() {
         List<EntityID> result = new ArrayList<>(RANDOM_WALK_LENGTH);
         Set<EntityID> seen = new HashSet<>();
-        EntityID current = ((Human)this.tactics.me).getPosition();
+        EntityID current = ((Human)this.tactics.me()).getPosition();
         for (int i = 0; i < RANDOM_WALK_LENGTH; ++i) {
             result.add(current);
             seen.add(current);

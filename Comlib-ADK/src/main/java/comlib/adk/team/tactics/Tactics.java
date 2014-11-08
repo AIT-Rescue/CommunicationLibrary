@@ -15,7 +15,7 @@ public abstract class Tactics<E extends StandardEntity> {
     public Config config;
     public EntityID agentID;
     public StandardEntity location;
-    public E me;
+    //public E me;
 
     public Random random;
 
@@ -48,7 +48,7 @@ public abstract class Tactics<E extends StandardEntity> {
         return this.agentID;
     }
 
-    public E me() {
-        return this.me;
-    }
+
+    public abstract E me();
+
 }

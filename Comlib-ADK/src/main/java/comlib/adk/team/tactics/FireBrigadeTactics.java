@@ -14,4 +14,8 @@ public abstract class FireBrigadeTactics extends Tactics<FireBrigade> {
     public int maxPower;
 
     public List<Refuge> refugeList;
+
+    public FireBrigade me() {
+        return this.me;
+    }
 }

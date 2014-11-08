@@ -10,4 +10,8 @@ public abstract class AmbulanceTeamTactics extends Tactics<AmbulanceTeam>{
     public AmbulanceTeam me;
 
     public List<Refuge> refugeList;
+
+    public AmbulanceTeam me() {
+        return this.me;
+    }
 }
