@@ -22,6 +22,8 @@ public abstract class BasicPolice extends PoliceForceTactics{
 
     public BlockadeSelector blockadeSelector;
 
+    int count = 0;
+
     public RouteSearcher routeSearcher;
 
 		public ChangeSet changed; // temp add
@@ -50,8 +52,9 @@ public abstract class BasicPolice extends PoliceForceTactics{
         Blockade blockade = (Blockade)this.model.getEntity(this.target);
         if(blockade != null) {
             if(blockade.getPosition().equals(this.location.getID())) {
-/*
+                /*
                 List<Line2D> lines = GeometryTools2D.pointsToLines(GeometryTools2D.vertexArrayToPoints(blockade.getApexes()), true);
+
                 double best = Double.MAX_VALUE;
                 Point2D bestPoint = null;
                 Point2D origin = new Point2D(this.me.getX(), this.me.getY());
@@ -68,8 +71,15 @@ public abstract class BasicPolice extends PoliceForceTactics{
                     v = v.normalised().scale(1000000);
                     return PoliceAction.clear(this, time, (int) (this.me.getX() + v.getX()), (int) (this.me.getY() + v.getY()));
 							}
-*/
-							return PoliceAction.clear(this, time, blockade.getID());
+							*/
+							//return PoliceAction.clear(this, time, blockade.getID());
+                if(this.count >= 13) {
+                    this.count = 0;
+                }
+                int x = (int)(this.distance * Math.cos(30 * count));
+                int y = (int)(this.distance * Math.sin(30 * count));
+                count++;
+                return PoliceAction.clear(this, time, (int) (this.me.getX() + x), (int) (this.me.getY() + y));
             }
             else {
                 List<EntityID> path = this.routeSearcher.getPath(time, this.me, blockade);

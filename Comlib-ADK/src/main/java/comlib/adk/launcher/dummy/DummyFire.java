@@ -4,6 +4,7 @@ import comlib.adk.team.tactics.basic.BasicFire;
 import comlib.adk.team.tactics.basic.event.BasicBuildingEvent;
 import comlib.adk.util.route.RouteSearcher;
 import comlib.adk.util.route.sample.SampleRouteSearcher;
+import comlib.adk.util.route.serversample.ServerSampleRouteSearcher;
 import comlib.adk.util.target.BuildingSelector;
 import comlib.adk.util.target.sample.SampleBuildingSelector;
 import comlib.manager.MessageManager;
@@ -26,7 +27,7 @@ public class DummyFire extends BasicFire {
     @Override
     public RouteSearcher getRouteSearcher() {
         if(this.routeSearcher == null) {
-            this.routeSearcher = new SampleRouteSearcher(this);
+            this.routeSearcher = new ServerSampleRouteSearcher(this);
         }
         return this.routeSearcher;
     }
