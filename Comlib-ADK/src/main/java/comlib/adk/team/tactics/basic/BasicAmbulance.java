@@ -128,9 +128,9 @@ public abstract class BasicAmbulance extends AmbulanceTeamTactics{
             else if(entity instanceof Human) {
                 this.victimSelector.add((Human)entity);
             }
-            //else if(entity instanceof Blockade) {
-                //manager.addSendMessage(new BlockadeMessage((Blockade)entity));
-            //}
+            else if(entity instanceof Blockade) {
+                manager.addSendMessage(new RoadMessage(((Blockade)entity)));
+            }
             else if(entity instanceof Building) {
                 Building b = (Building)entity;
                 if(b.isOnFire()) {

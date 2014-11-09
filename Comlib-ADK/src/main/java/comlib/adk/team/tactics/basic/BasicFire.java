@@ -8,6 +8,7 @@ import comlib.adk.util.route.RouteUtil;
 import comlib.adk.util.target.BuildingSelector;
 import comlib.manager.MessageManager;
 import comlib.message.information.CivilianMessage;
+import comlib.message.information.RoadMessage;
 import rescuecore2.messages.Message;
 import rescuecore2.standard.entities.*;
 import rescuecore2.worldmodel.ChangeSet;
@@ -120,9 +121,9 @@ public abstract class BasicFire extends FireBrigadeTactics {
                     manager.addSendMessage(new CivilianMessage(civilian));
                 }
             }
-            //else if(entity instanceof Blockade) {
-            //manager.addSendMessage(new RoadMessage((Blockade)entity));
-            //}
+            else if(entity instanceof Blockade) {
+                manager.addSendMessage(new RoadMessage((Blockade) entity));
+            }
             else if(entity instanceof Building) {
                 this.buildingSelector.add((Building) entity);
             }
