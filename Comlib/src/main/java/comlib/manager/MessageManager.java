@@ -177,6 +177,7 @@ public class MessageManager
 				ch = 1;
 				bosNum = 0;
 			}
+			System.out.println("@MSG:" + sentMessageSize);
 		}
 
 		// StringBuilder sb = new StringBuilder();
