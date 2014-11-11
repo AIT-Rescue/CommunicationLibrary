@@ -24,16 +24,6 @@ dependencies {
 }
 javadoc.options.encoding = 'UTF-8'
 
-/*build.mustRunAfter 'clean'
-
-task makeArchive(type: Zip, dependsOn: [clean, build]) {
-    destinationDir = new File(buildDir, 'libs')
-    archiveName = jar.baseName + '-src.zip'
-    into('comlib') {
-        from 'src/main/java/comlib'
-    }
-}*/
-
 /*task javadocJar(type: Jar, dependsOn:javadoc) {
     classifier = 'javadoc'
     from javadoc.destinationDir
