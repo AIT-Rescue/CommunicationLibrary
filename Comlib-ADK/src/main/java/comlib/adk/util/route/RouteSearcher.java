@@ -16,7 +16,7 @@ public abstract class RouteSearcher implements IRouteSearcher {
     }
 
     @Override
-    public abstract List<EntityID> noTargetWalk();
+    public abstract List<EntityID> noTargetWalk(int time);
 
     @Override
     public abstract List<EntityID> getPath(int time, EntityID from, EntityID to);
