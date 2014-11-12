@@ -8,28 +8,21 @@ import rescuecore2.worldmodel.EntityID;
 
 import java.util.List;
 
-public abstract class RouteSearcher {
+public abstract class RouteSearcher implements IRouteSearcher {
     protected Tactics tactics;
 
     public RouteSearcher(Tactics user) {
         this.tactics = user;
     }
 
-    public abstract List<EntityID> randomWalk();
+    @Override
+    public abstract List<EntityID> noTargetWalk();
 
+    @Override
     public abstract List<EntityID> getPath(int time, EntityID from, EntityID to);
 
-    public List<EntityID> getPath(int time, Human from, EntityID to) {
-        return this.getPath(time, from.getPosition(), to);
+    public void a() {
+        Area area = (Area)this.tactics.model.getEntity(((Human)this.tactics.me()).getPosition());
+        List<EntityID> path = this.getPath(1, this.tactics.agentID, area);
     }
-
-    public List<EntityID> getPath(int time, Human from, Area to) {
-        return this.getPath(time, from.getPosition(), to.getID());
-    }
-
-    public List<EntityID> getPath(int time, Human from, Blockade blockade) {
-        return this.getPath(time, from.getPosition(), blockade.getPosition());
-    }
-
-    //public abstract List<EntityID> getPath(int time, EntityID from, List<EntityID> to);
 }

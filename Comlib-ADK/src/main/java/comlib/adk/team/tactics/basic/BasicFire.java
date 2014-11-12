@@ -62,7 +62,7 @@ public abstract class BasicFire extends FireBrigadeTactics {
                         path.remove(path.size() - 1);
                         return FireAction.move(this, time, path);
                     }
-                    return FireAction.move(this, time, this.routeSearcher.randomWalk());
+                    return FireAction.move(this, time, this.routeSearcher.noTargetWalk());
                 }
             }
             else {
@@ -75,7 +75,7 @@ public abstract class BasicFire extends FireBrigadeTactics {
                         return FireAction.move(this, time, path);
                     }
                 }
-                return FireAction.move(this, time, this.routeSearcher.randomWalk());
+                return FireAction.move(this, time, this.routeSearcher.noTargetWalk());
             }
         }
         else {
@@ -93,7 +93,7 @@ public abstract class BasicFire extends FireBrigadeTactics {
                             return FireAction.move(this, time, path);
                         }
                     }
-                    return FireAction.move(this, time, this.routeSearcher.randomWalk());
+                    return FireAction.move(this, time, this.routeSearcher.noTargetWalk());
                 }
             }
             else {
@@ -105,7 +105,7 @@ public abstract class BasicFire extends FireBrigadeTactics {
                         return FireAction.move(this, time, path);
                     }
                 }
-                return FireAction.move(this, time, this.routeSearcher.randomWalk());
+                return FireAction.move(this, time, this.routeSearcher.noTargetWalk());
             }
             //}
         }
@@ -141,6 +141,6 @@ public abstract class BasicFire extends FireBrigadeTactics {
             }
         }
         List<EntityID> path = this.routeSearcher.getPath(time, this.me, result);
-        return path != null ? AmbulanceAction.move(this, time, path) : AmbulanceAction.move(this, time, this.routeSearcher.randomWalk());
+        return path != null ? AmbulanceAction.move(this, time, path) : AmbulanceAction.move(this, time, this.routeSearcher.noTargetWalk());
     }
 }

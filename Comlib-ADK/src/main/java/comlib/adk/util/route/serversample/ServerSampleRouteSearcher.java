@@ -43,7 +43,7 @@ public class ServerSampleRouteSearcher extends RouteSearcher{
     }
 
     @Override
-    public List<EntityID> randomWalk() {
+    public List<EntityID> noTargetWalk() {
         List<EntityID> result = new ArrayList<>(RANDOM_WALK_LENGTH);
         Set<EntityID> seen = new HashSet<>();
         EntityID current = ((Human) this.tactics.me()).getPosition();
