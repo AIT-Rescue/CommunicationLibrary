@@ -80,7 +80,7 @@ public abstract class BasicPolice extends PoliceForceTactics{
 				// Road r = (Road)model.getEntity(path.get(path.size() - 1));
 				// Blockade b = getTargetBlockade(r, -1);
 
-			return PoliceAction.move(this, time, this.routeSearcher.noTargetWalk());
+			return PoliceAction.move(this, time, this.routeSearcher.noTargetWalk(time));
 		}
 
 	private void updateInfo(ChangeSet changed, MessageManager manager) {

@@ -94,16 +94,16 @@ public abstract class BasicAmbulance extends AmbulanceTeamTactics{
                     this.target = this.victimSelector.getTarget(time);
                     if (this.target != null) {
                         List<EntityID> path = this.routeSearcher.getPath(time, this.me, this.target);
-                        return path != null ? AmbulanceAction.move(this, time, path) : AmbulanceAction.move(this, time, this.routeSearcher.noTargetWalk());
+                        return path != null ? AmbulanceAction.move(this, time, path) : AmbulanceAction.move(this, time, this.routeSearcher.noTargetWalk(time));
                     }
                     else {
-                        return AmbulanceAction.move(this, time, this.routeSearcher.noTargetWalk());
+                        return AmbulanceAction.move(this, time, this.routeSearcher.noTargetWalk(time));
                     }
                 }
             }
             else {
                 List<EntityID> path = this.routeSearcher.getPath(time, this.me, this.target);
-                return path != null ? AmbulanceAction.move(this, time, path) : AmbulanceAction.move(this, time, this.routeSearcher.noTargetWalk());
+                return path != null ? AmbulanceAction.move(this, time, path) : AmbulanceAction.move(this, time, this.routeSearcher.noTargetWalk(time));
             }
         }
 
@@ -113,9 +113,9 @@ public abstract class BasicAmbulance extends AmbulanceTeamTactics{
         this.target = this.victimSelector.getTarget(time);
         if (this.target != null) {
             List<EntityID> path = this.routeSearcher.getPath(time, this.me, this.target);
-            return path != null ? AmbulanceAction.move(this, time, path) : AmbulanceAction.move(this, time, this.routeSearcher.noTargetWalk());
+            return path != null ? AmbulanceAction.move(this, time, path) : AmbulanceAction.move(this, time, this.routeSearcher.noTargetWalk(time));
         }
-        List<EntityID> path = this.routeSearcher.noTargetWalk();
+        List<EntityID> path = this.routeSearcher.noTargetWalk(time);
         return path != null ? AmbulanceAction.move(this, time, path) : AmbulanceAction.rest(this, time);
     }
 
@@ -156,6 +156,6 @@ public abstract class BasicAmbulance extends AmbulanceTeamTactics{
             }
         }
         List<EntityID> path = this.routeSearcher.getPath(time, this.me, result);
-        return path != null ? AmbulanceAction.move(this, time, path) : AmbulanceAction.move(this, time, this.routeSearcher.noTargetWalk());
+        return path != null ? AmbulanceAction.move(this, time, path) : AmbulanceAction.move(this, time, this.routeSearcher.noTargetWalk(time));
     }
 }
