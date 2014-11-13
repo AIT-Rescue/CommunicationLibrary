@@ -2,7 +2,7 @@ package comlib.adk.team.tactics;
 
 import comlib.adk.util.route.IRouteSearcher;
 
-public interface UseRouteSearcher {
+public interface RouteSearcherProvider {
 
     //public void initRouteSearcher();
 
