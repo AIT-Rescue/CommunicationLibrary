@@ -13,87 +13,80 @@ import java.util.Collection;
 import java.util.List;
 
 
-public abstract class CommunicationAgent<E extends StandardEntity> extends StandardAgent<E>
-{
+public abstract class CommunicationAgent<E extends StandardEntity> extends StandardAgent<E> {
 
-	public int ignoreTime;
+    public MessageManager manager;
 
-	public MessageManager manager;
+    public CommunicationAgent()
+    {
+        super();
+    }
 
-	public CommunicationAgent()
-	{
-		super();
-	}
+    public abstract void registerEvent(MessageManager manager);
 
-	public abstract void registerEvent(MessageManager manager);
-
-	public abstract void think(int time, ChangeSet changed);
+    public abstract void think(int time, ChangeSet changed);
 
 
-	public void sendSpeak(CommunicationMessage msg)
-	{
-		this.manager.addSendMessage(msg);
-	}
+    public void sendSpeak(CommunicationMessage msg)
+    {
+        this.manager.addSendMessage(msg);
+    }
 
-	public void sendSay(CommunicationMessage msg)
-	{
-		this.manager.addVoiceSendMessage(msg);
-	}
+    public void sendSay(CommunicationMessage msg)
+    {
+        this.manager.addVoiceSendMessage(msg);
+    }
 
-	@Override
-	public void postConnect()
-	{
-		super.postConnect();
-		this.manager = new MessageManager(this.config);
-		this.registerProvider(this.manager);
-		this.registerEvent(this.manager);
-		this.ignoreTime = this.config.getIntValue(kernel.KernelConstants.IGNORE_AGENT_COMMANDS_KEY);
-	}
+    @Override
+    public void postConnect()
+    {
+        super.postConnect();
+        this.manager = new MessageManager(this.config);
+        this.registerProvider(this.manager);
+        this.registerEvent(this.manager);
+    }
 
-	public void registerProvider(MessageManager manager){}
+    public void registerProvider(MessageManager manager){}
 
-	@Override
-	protected final void think(int time, ChangeSet changed, Collection<Command> heard)
-	{
-		if(time <= this.ignoreTime) //TODO: これでいいのか．．．
-		{ return; }
+    @Override
+    protected final void think(int time, ChangeSet changed, Collection<Command> heard)
+    {
+        this.receiveBeforeEvent(time, changed);
+        try
+        {
+            this.manager.receiveMessage(time, heard);
+        } catch (Exception s) { System.out.println("'");}
+        this.think(time, changed);
+        this.send(this.manager.createSendMessage(super.getID()));
+        this.sendAfterEvent(time, changed);
+    }
 
-		this.receiveBeforeEvent(time, changed);
-		try
-		{
-			this.manager.receiveMessage(time, heard);
-		} catch (Exception s) { System.out.println("'");}
-		this.think(time, changed);
-		this.send(this.manager.createSendMessage(super.getID()));
-		this.sendAfterEvent(time, changed);
-	}
+    public void receiveBeforeEvent(int time, ChangeSet changed) {
+    }
 
-	public void receiveBeforeEvent(int time, ChangeSet changed) {
-	}
+    public void sendAfterEvent(int time, ChangeSet changed) {
+    }
 
-	public void sendAfterEvent(int time, ChangeSet changed) {
-	}
+    public void send(Message[] msgs)
+    {
+        for(Message msg : msgs) super.send(msg);
+    }
 
-	public void send(Message[] msgs)
-	{
-		for(Message msg : msgs) super.send(msg);
-	}
+    public void send(List<Message> msgs)
+    {
+        for(Message msg : msgs) super.send(msg);
+    }
 
-	public void send(List<Message> msgs)
-	{
-		for(Message msg : msgs) super.send(msg);
-	}
-
-	// temp Leave ---
-	/*
-		 @Override
-		 protected final void sendSpeak(int time, int channel, byte[] data) {
+    // temp Leave ---
+    /*
+         @Override
+         protected final void sendSpeak(int time, int channel, byte[] data) {
 //super.sendSpeak(time, channel, data);
-		 }
+         }
 
-		 @Override
-		 protected final void sendSay(int time, byte[] data) {
+         @Override
+         protected final void sendSay(int time, byte[] data) {
 //super.sendSay(time, data);
-		 }
-		 */
+         }
+         */
 }

@@ -11,7 +11,7 @@ import rescuecore2.messages.Message;
 public abstract class TacticsAgent<T extends Tactics, E extends StandardEntity> extends CommunicationAgent<E> {
     
     public Tactics tactics;
-    //private int ignoreAgentCommand;
+    public int ignoreTime;
 
     public TacticsAgent(T t) {
         super();
@@ -21,7 +21,7 @@ public abstract class TacticsAgent<T extends Tactics, E extends StandardEntity> 
     @Override
     public void postConnect() {
         super.postConnect();
-        //ignoreAgentCommand = config.getIntValue(kernel.KernelConstants.IGNORE_AGENT_COMMANDS_KEY);
+        this.ignoreTime = this.config.getIntValue(kernel.KernelConstants.IGNORE_AGENT_COMMANDS_KEY);
         //set value
         this.tactics.random = this.random;
         this.tactics.model = this.model;
@@ -51,6 +51,10 @@ public abstract class TacticsAgent<T extends Tactics, E extends StandardEntity> 
     
     @Override
     public void think(int time, ChangeSet changed) {
+        if(time <= this.ignoreTime) { //TODO: これでいいのか．．．
+            return;
+        }
+
         Message actMessage = this.tactics.think(time, changed, this.manager);
         this.send(actMessage == null ? new AKRest(this.getID(), time) : actMessage);
     }
