@@ -4,7 +4,6 @@ import comlib.adk.team.Team;
 import comlib.adk.team.tactics.AmbulanceTeamTactics;
 import comlib.adk.team.tactics.FireBrigadeTactics;
 import comlib.adk.team.tactics.PoliceForceTactics;
-import rescuecore2.config.Config;
 
 public class DummyTeam extends Team {
 

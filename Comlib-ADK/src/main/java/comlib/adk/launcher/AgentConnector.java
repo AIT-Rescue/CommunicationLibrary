@@ -4,8 +4,6 @@ import rescuecore2.registry.Registry;
 import rescuecore2.standard.entities.StandardEntityFactory;
 import rescuecore2.standard.entities.StandardPropertyFactory;
 import rescuecore2.standard.messages.StandardMessageFactory;
-import sample.SampleAmbulanceTeam;
-import java.io.*;
 
 import comlib.adk.agent.AmbulanceTeamAgent;
 import comlib.adk.agent.FireBrigadeAgent;
@@ -36,7 +34,7 @@ public class AgentConnector {
         Registry.SYSTEM_REGISTRY.registerPropertyFactory(StandardPropertyFactory.INSTANCE);
 		this.config = ConfigInitializer.getConfig(args);
 		System.out.println("Load Team");
-		this.loader = new TeamLoader(new File(config.getValue(ConfigKey.KEY_DIRECTORY, "."), "tactics"), config);
+		this.loader = new TeamLoader(new File(config.getValue(ConfigKey.KEY_DIRECTORY, "."), "tactics"));
 	}
 
 	public void start() {

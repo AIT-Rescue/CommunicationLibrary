@@ -6,7 +6,6 @@ import comlib.adk.team.tactics.basic.event.BasicCivilianEvent;
 import comlib.adk.team.tactics.basic.event.BasicFireEvent;
 import comlib.adk.team.tactics.basic.event.BasicPoliceEvent;
 import comlib.adk.util.route.RouteSearcher;
-import comlib.adk.util.route.sample.SampleRouteSearcher;
 import comlib.adk.util.route.serversample.ServerSampleRouteSearcher;
 import comlib.adk.util.target.VictimSelector;
 import comlib.adk.util.target.sample.SampleVictimSelector;

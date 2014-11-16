@@ -2,7 +2,6 @@ package comlib.adk.launcher;
 
 import comlib.adk.launcher.dummy.DummyTeam;
 import comlib.adk.team.Team;
-import rescuecore2.config.Config;
 
 import java.io.File;
 import java.io.IOException;
@@ -24,12 +23,12 @@ public class TeamLoader {
 
     private Team dummy;
     
-    public TeamLoader(File dir, Config config) {
+    public TeamLoader(File dir) {
         this.teamMap = new HashMap<>();
         this.nameList = new ArrayList<>();
         this.random = new Random((new Date()).getTime());
         this.dummy = new DummyTeam();
-        this.load(dir, config);
+        this.load(dir);
     }
 
     public Team get(String name) {
@@ -49,16 +48,23 @@ public class TeamLoader {
         return this.teamMap.get(this.nameList.get(this.random.nextInt(this.nameList.size())));
     }
 
-    private void load(File file, Config config) {
+    private void load(File file) {
         if (!file.exists()) {
-            file.mkdir();
-            return;
+            if(file.mkdir()) {
+                this.addDummyTeam();
+                return;
+            }
+            else {
+                System.out.println("Directory Error");
+                this.addDummyTeam();
+                return;
+            }
         }
 
         URLClassLoader loader = (URLClassLoader) this.getClass().getClassLoader();
         List<String> list = new ArrayList<>();
         this.loadJar(file, loader, list);
-        this.loadTeam(loader, list, config);
+        this.loadTeam(loader, list);
         if(this.nameList.isEmpty()) {
             this.addDummyTeam();
         }
@@ -80,7 +86,8 @@ public class TeamLoader {
             System.out.println("Found Jar : " + file.getName());
             try {
                 //add url
-                Method method = URLClassLoader.class.getDeclaredMethod("addURL", new Class[]{URL.class});
+                //Method method = URLClassLoader.class.getDeclaredMethod("addURL", new Class[]{URL.class});
+                Method method = URLClassLoader.class.getDeclaredMethod("addURL", URL.class);
                 method.setAccessible(true);
                 //method.invoke(loader, new Object[]{file.toURI().toURL()});
                 method.invoke(loader, file.toURI().toURL());
@@ -99,7 +106,7 @@ public class TeamLoader {
         }
     }
 
-    private void loadTeam(URLClassLoader loader, List<String> list, Config config) {
+    private void loadTeam(URLClassLoader loader, List<String> list) {
         for (String target : list) {
             try {
                 Class teamClass = loader.loadClass(target);
