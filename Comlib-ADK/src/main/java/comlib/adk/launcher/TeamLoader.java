@@ -51,6 +51,7 @@ public class TeamLoader {
     private void load(File file) {
         if (!file.exists()) {
             if(file.mkdir()) {
+                System.out.println("Make Directory");
                 this.addDummyTeam();
                 return;
             }
