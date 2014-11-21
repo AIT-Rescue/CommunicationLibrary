@@ -6,10 +6,10 @@ apply plugin: 'idea'
 //apply from:"config.gradle"
 
 //チーム名です。コンパイル時に、Jarのファイル名になります。デフォルトでは、プロジェクトのディレクトリ名になります。
-//String teamName = name
+String teamName = name
 
 //Jarを読み込むための記述です。Teamを実装したクラスを、パッケージを含めて記述してください。
-//String teamClassName = 'sample.SampleTeam'
+String teamClassName = 'sample.SampleTeam'
 
 //バージョンの記述です。設定すると、Jarの名前が、[teamName]-[version].jarになります。
 //version = '1.0.0'
